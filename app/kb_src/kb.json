@@ -1,0 +1,1752 @@
+{
+ "version": 1,
+ "entries": [
+  {
+   "class_id": "chilli__cercospora",
+   "crop": "chilli",
+   "name_en": "Cercospora leaf spot (frog-eye)",
+   "type": "fungal",
+   "cause": "Cercospora capsici (fungus)",
+   "symptoms": [
+    "Brown, round leaf spots with light grey centres and dark brown edges.",
+    "Spots can grow large and join together.",
+    "Stem, leaf stalk and pod spots are oval with grey centres and dark borders.",
+    "Badly infected leaves fall early, so yield drops."
+   ],
+   "look_alikes": "Bacterial leaf spot is also listed by TNAU; the sources opened do not give a way to tell them apart. Ask an extension officer.",
+   "cultural_actions": [
+    "Scout leaves regularly for round spots with grey centres.",
+    "Spray at first signs rather than waiting for leaf drop."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "TNAU advises two sprays, 10 to 15 days apart.",
+   "ask_back": [
+    {
+     "question": "Do the spots have a grey centre with a dark brown ring?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is there white powder under the leaves?",
+     "if_yes": "chilli__powdery_mildew",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli - Cercospora leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu (TNAU). Only one source opened; CIB&RC registration not verified for these products."
+  },
+  {
+   "class_id": "chilli__healthy",
+   "crop": "chilli",
+   "name_en": "Healthy chilli plant",
+   "type": "healthy",
+   "cause": "No disease or pest detected",
+   "symptoms": [
+    "Leaves are flat, evenly green and not curled or crinkled.",
+    "No spots, white powder or yellow patches on leaves.",
+    "Buds and flowers stay on the plant.",
+    "Plant grows with normal-length leaf stalks and normal-sized leaves."
+   ],
+   "look_alikes": "Early thrips, mite or virus damage can be subtle. Check the underside of young leaves and growing tips.",
+   "cultural_actions": [
+    "Check leaves, tips and buds every week, including undersides.",
+    "Remove and destroy any plant that shows virus signs.",
+    "Protect nursery beds with nylon net.",
+    "Choose disease-free seed."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are any leaves curled, crinkled or spotted?",
+     "if_yes": "chilli__murda_complex",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli - Leaf curl and mosaic viruses",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Portal: Chilli thrips",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "No source opened describes a healthy leaf directly. Symptom lines are the opposite of damage the sources list. Preventive actions are from TNAU virus page."
+  },
+  {
+   "class_id": "chilli__murda_complex",
+   "crop": "chilli",
+   "name_en": "Leaf curl / murda complex",
+   "type": "viral",
+   "cause": "Chilli leaf curl virus with thrips, mites and whitefly together (murda complex)",
+   "symptoms": [
+    "Leaves curl towards the midrib and look deformed.",
+    "Plants are stunted, with short gaps between leaves and tiny leaves.",
+    "Thrips damage: leaves crinkle and curl upwards, buds turn brittle and drop.",
+    "Yellow mite damage: leaves curl downwards and crinkle, with long leaf stalks.",
+    "Flower buds drop before opening."
+   ],
+   "look_alikes": "Mosaic virus gives light and dark green patches and ring spots, not mainly curling. Calcium or sulphur deficiency can also curl leaves.",
+   "cultural_actions": [
+    "Pull out and destroy infected plants early.",
+    "Raise seedlings under nylon net or straw cover.",
+    "Plant border crops such as maize or sorghum.",
+    "Avoid monoculture and choose disease-free seed.",
+    "Do not grow chilli after sorghum or mixed with onion (thrips).",
+    "Use yellow sticky traps and neem-based products to reduce whitefly."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid (thrips; seed treatment listed by TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Spinosad, emamectin benzoate, fipronil, acetamiprid (thrips options listed by TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Diafenthiuron, spiromesifen, fenpyroximate, hexythiazox, propargite (yellow mite options listed by TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://www.agritech.tnau.ac.in/crop_protection/chilli/chilli_5.html",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate, acephate (systemic sprays against leaf curl vectors, per TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Lecanicillium lecanii, Pseudomonas fluorescens, neem-based products; predatory mite Amblyseius ovalis",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://www.ijcmas.com/10-2-2021/Mallikharjun%20Chirumella,%20et%20al.pdf",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": "One study began foliar sprays 20 days after transplanting, then repeated every 15 days. TNAU gives no threshold.",
+   "ask_back": [
+    {
+     "question": "Are leaves curled with tiny crinkled new growth and dropping buds?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are leaf edges yellow or brown, or veins yellow with green between?",
+     "if_yes": "chilli__nutritional_deficiency",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli viral diseases (leaf curl, mosaic)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Portal: Chilli thrips, Scirtothrips dorsalis",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Portal: Yellow mite or muranai mite",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_5.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Management of Chilli Leaf Curl Disease by Vector Control (IJCMAS 2021)",
+     "url": "https://www.ijcmas.com/10-2-2021/Mallikharjun%20Chirumella,%20et%20al.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "Churda murda (malformation) disease of chilli in Vidarbha, Current Science 1977 (abstract)",
+     "url": "https://eurekamag.com/research/000/414/000414214.php",
+     "publisher": "other"
+    },
+    {
+     "title": "Impact of pest management modules against sucking pests of chilli, Indian Journal of Agricultural Sciences",
+     "url": "https://epubs.icar.org.in/index.php/IJAgS/article/view/58983",
+     "publisher": "ICAR"
+    }
+   ],
+   "caveats": "TNAU pages do not use the word murda for leaf curl. Murda complex as virus plus thrips, mites and whitefly comes from a journal paper (IJCMAS) and a 1977 abstract. Written mainly for Tamil Nadu. No CIB&RC check done."
+  },
+  {
+   "class_id": "chilli__nutritional_deficiency",
+   "crop": "chilli",
+   "name_en": "Nutrient deficiency",
+   "type": "nutrient",
+   "cause": "Shortage of one or more plant nutrients in soil or plant",
+   "symptoms": [
+    "Nitrogen: pale green or yellow leaves, stunted plants, small pale fruits.",
+    "Potassium: leaf edges dry and burn, leaves crinkle.",
+    "Magnesium: yellowing between green veins, early leaf drop.",
+    "Calcium: growing tips brown, blossom end rot on fruit, leaves curl upward.",
+    "Phosphorus: purple colour on stem and leaf undersides; boron and zinc cause malformed or small leaves."
+   ],
+   "look_alikes": "Calcium, sulphur and boron deficiency can curl or deform leaves like virus or mite damage. Pests and virus come with insects or patchy spread.",
+   "cultural_actions": [
+    "Get a soil test (state soil testing lab/KVK) before applying any fertiliser.",
+    "Ask the KVK which nutrient matches the symptoms.",
+    "Check leaf undersides for insects first to rule out pests."
+   ],
+   "treatment_options": [
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Nutrient to be chosen only after a soil test",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Get a soil test (state soil testing lab/KVK) before applying any fertiliser.",
+     "source_url": "https://celkau.in/ecropdoctor/vegetables/chilli/deficiency.php",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are there insects, white powder or round spots on the leaves?",
+     "if_yes": "chilli__murda_complex",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Are leaves curled and deformed with tiny new growth?",
+     "if_yes": "chilli__murda_complex",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "e-Crop Doctor: Chilli deficiency symptoms (Centre for e-Learning, Kerala Agricultural University)",
+     "url": "https://celkau.in/ecropdoctor/vegetables/chilli/deficiency.php",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Source is Kerala Agricultural University, a state university. Symptom lines are condensed from its table of 11 nutrients. Rates not given here."
+  },
+  {
+   "class_id": "chilli__powdery_mildew",
+   "crop": "chilli",
+   "name_en": "Powdery mildew",
+   "type": "fungal",
+   "cause": "Leveillula taurica (fungus)",
+   "symptoms": [
+    "White powdery growth on the underside of leaves.",
+    "Leaves are shed (defoliation) in bad attacks.",
+    "Fewer and smaller fruits per plant."
+   ],
+   "look_alikes": "Not covered by the sources opened. Check the underside of the leaf for white powder.",
+   "cultural_actions": [
+    "Scout the underside of leaves often.",
+    "Start spraying at the first appearance, not later."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Dinocap",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propiconazole, myclobutanil (best in a field trial)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://www.ijcmas.com/special/6/A.%20T.%20Daunde%20et%20al.pdf",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": "TNAU: three sprays 15 days apart, starting at first appearance of symptoms. A field trial used 7-day gaps.",
+   "ask_back": [
+    {
+     "question": "Is there white powder on the underside of leaves?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are there round brown spots with grey centres?",
+     "if_yes": "chilli__cercospora",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli - Powdery mildew",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Management of Chilli Powdery Mildew caused by Leveillula taurica (IJCMAS 2018)",
+     "url": "https://www.ijcmas.com/special/6/A.%20T.%20Daunde%20et%20al.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "TNAU text is for Tamil Nadu; spray gaps differ between TNAU and the trial. No CIB&RC check done."
+  },
+  {
+   "class_id": "groundnut__early_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "Early leaf spot",
+   "type": "fungal",
+   "cause": "Cercospora arachidicola (fungus)",
+   "symptoms": [
+    "Small yellowish spots appear on leaflets about a month after sowing.",
+    "Spots enlarge and turn brown to dark brown on the upper leaf surface.",
+    "Underside of the spot is a lighter shade of brown.",
+    "A yellow ring (halo) around the spot is often present.",
+    "Many spots merge, and leaves dry and drop early."
+   ],
+   "look_alikes": "Late leaf spot: spots are smaller, rounder, darker, and black and rough on the underside. Rust has pustules, not flat spots.",
+   "cultural_actions": [
+    "Rotate groundnut with other crops; leave a clear break between groundnut crops.",
+    "Remove or bury crop residue after harvest.",
+    "Pull out volunteer groundnut plants.",
+    "Keep weeds under control.",
+    "Adjust sowing date to avoid peak infection period."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Calotropis leaf extract spray",
+     "note": "Listed by TNAU as an alternative; FOLLOW PRODUCT LABEL or local extension advice; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "TNAU: spray, then repeat after 15 days if necessary. ICRISAT notes sprays work best started before symptoms show.",
+   "ask_back": [
+    {
+     "question": "Are the spots dark brown on top with a yellow ring around them?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the spots small, nearly round, and black and rough on the underside?",
+     "if_yes": "groundnut__late_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Are there raised pustules on the underside of the leaf instead of flat spots?",
+     "if_yes": "groundnut__rust",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "TNAU page does not name the organism or say 'early'; organism and spot description from ICRISAT (1985). Fungicide advice is from TNAU (Tamil Nadu); check label and local KVK."
+  },
+  {
+   "class_id": "groundnut__healthy_leaf",
+   "crop": "groundnut",
+   "name_en": "Healthy leaf",
+   "type": "healthy",
+   "cause": "No disease found",
+   "symptoms": [
+    "Leaflets show no brown or black spots on the upper surface.",
+    "Underside shows no black rough spots and no pustules.",
+    "Petioles and stems show no lesions.",
+    "Leaves stay on the plant and do not dry early."
+   ],
+   "look_alikes": "Early leaf spot, late leaf spot and rust can start as a few tiny spots; check the underside of leaves.",
+   "cultural_actions": [
+    "Scout fields regularly, checking the underside of leaves.",
+    "Watch from about a month after sowing, when leaf spots begin.",
+    "Pull out volunteer groundnut plants.",
+    "Bury crop residue after harvest and rotate crops.",
+    "Keep weeds under control."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do you see any spots on the leaf, top or underside?",
+     "if_yes": "groundnut__early_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Do you see raised pustules on the underside?",
+     "if_yes": "groundnut__rust",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "No source describes a healthy leaf; the symptom lines are the absence of the disease signs the sources describe."
+  },
+  {
+   "class_id": "groundnut__late_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "Late leaf spot",
+   "type": "fungal",
+   "cause": "Phaeoisariopsis personata (fungus)",
+   "symptoms": [
+    "Black, nearly round spots appear on the underside of leaflets.",
+    "Spots feel rough on the lower surface.",
+    "Spots are usually smaller and darker than early leaf spot.",
+    "Many spots merge, causing early leaf decline and leaflet drop."
+   ],
+   "look_alikes": "Early leaf spot: larger, dark brown on top, lighter brown underneath, often with a yellow ring. Rust: pustules on underside.",
+   "cultural_actions": [
+    "Intercrop pearl millet or sorghum with groundnut, as TNAU suggests.",
+    "Rotate with non-host crops, preferably cereals.",
+    "Bury crop residue deep after harvest.",
+    "Remove volunteer groundnut plants.",
+    "Keep weeds under control."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "TNAU: infection starts about 55-57 days after sowing in kharif, 42-46 days in rabi. No spray threshold given.",
+   "ask_back": [
+    {
+     "question": "Are the spots small, nearly round, and black and rough on the underside?",
+     "if_yes": "consistent",
+     "if_no": "groundnut__early_leaf_spot"
+    },
+    {
+     "question": "Are there raised pustules on the underside of the leaf instead of flat spots?",
+     "if_yes": "groundnut__rust",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut late leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "TNAU page title was not visible; identified as late leaf spot from its content. Organism name from ICRISAT (1985). Written for Tamil Nadu."
+  },
+  {
+   "class_id": "groundnut__nutrition_deficiency",
+   "crop": "groundnut",
+   "name_en": "Nutrient deficiency",
+   "type": "nutrient",
+   "cause": "Shortage of soil nutrients such as zinc, iron, boron, calcium or sulphur",
+   "symptoms": [
+    "TNAU lists zinc, iron, boron, calcium and sulphur deficiencies in groundnut.",
+    "Visible signs are not described on the page opened.",
+    "Leaf-spot lesions or rust pustules are not expected with a pure deficiency.",
+    "Get a soil test before concluding which nutrient is short."
+   ],
+   "look_alikes": "Leaf spots and rust: look for spots or pustules; deficiency alone does not make them.",
+   "cultural_actions": [
+    "Get a soil test (state soil testing lab/KVK) before applying any fertiliser.",
+    "Apply NPK as per soil test recommendation.",
+    "If no soil test is done, follow the state blanket recommendation.",
+    "Gypsum helps in soils low in calcium and sulphur, per TNAU."
+   ],
+   "treatment_options": [
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Zinc sulphate",
+     "note": "Only if soil or leaf test shows zinc deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Ferrous sulphate",
+     "note": "TNAU lists a foliar spray for iron deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Borax with gypsum",
+     "note": "TNAU lists this for boron deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Gypsum",
+     "note": "TNAU lists this for calcium and sulphur deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are there brown or black spots, or pustules on the underside of leaves?",
+     "if_yes": "groundnut__early_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Has a soil test been done for this field?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut crop production",
+     "url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "TNAU page lists deficiency management but visible symptoms were not found in what was opened. Written for Tamil Nadu soils. CIB&RC does not apply to fertilisers; status left unchecked."
+  },
+  {
+   "class_id": "groundnut__rust",
+   "crop": "groundnut",
+   "name_en": "Rust",
+   "type": "fungal",
+   "cause": "Puccinia arachidis (fungus)",
+   "symptoms": [
+    "Pustules appear first on the underside of leaflets.",
+    "Pustules can also appear on the upper leaf surface.",
+    "In susceptible varieties, new pustules form around the first ones.",
+    "Lesions form on all green parts except flowers and pegs.",
+    "Badly hit leaves dry up but stay attached to the plant."
+   ],
+   "look_alikes": "Leaf spots are flat brown or black spots; rust makes raised pustules, mainly on the underside.",
+   "cultural_actions": [
+    "Scout the underside of leaves regularly.",
+    "Remove or bury crop residue after harvest.",
+    "Pull out volunteer groundnut plants.",
+    "Rotate with other crops."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Tridemorph",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "TNAU: spray one of the listed fungicides, and repeat after 15 days if necessary. No spray threshold given.",
+   "ask_back": [
+    {
+     "question": "Do you see raised pustules on the underside of the leaves?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the marks flat brown or black spots with no raised pustules?",
+     "if_yes": "groundnut__early_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Are the spots black, round and rough on the underside?",
+     "if_yes": "groundnut__late_leaf_spot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut rust",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Groundnut leaf spot (rust and leaf spot together)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "Pustule colour not described on the pages opened. Cultural actions are general leaf-disease hygiene from ICRISAT, not rust-specific. TNAU also lists carbendazim with mancozeb, or chlorothalonil, when rust and leaf spot occur together. Written for Tamil Nadu."
+  },
+  {
+   "class_id": "okra__alternaria_leaf_spot",
+   "crop": "okra",
+   "name_en": "Alternaria leaf spot",
+   "type": "fungal",
+   "cause": "Alternaria alternata (fungus); TNAU lists Alternaria hibiscinum as a minor leaf spot",
+   "symptoms": [
+    "Small brown to black round spots on leaves.",
+    "Spots have a yellow ring (halo) around them.",
+    "Many spots can make the leaf look blotchy and unhealthy."
+   ],
+   "look_alikes": "Looks like Cercospora and Phyllosticta spots; the sources only separate them by spot colour and margin, so confirm with a local expert.",
+   "cultural_actions": [
+    "Scout leaves regularly, especially in warm humid weather.",
+    "Keep field edges and weeds cleared."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim + Mancozeb (combination)",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Best result in a 2024-25 Punjab field trial; not an advisory.",
+     "source_url": "https://horizonepublishing.com/journals/index.php/PST/article/view/12072",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma viride",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Tested in lab and trial; ask KVK for a registered product.",
+     "source_url": "https://horizonepublishing.com/journals/index.php/PST/article/view/12072",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do the spots have a clear yellow ring around a dark brown centre?",
+     "if_yes": "consistent",
+     "if_no": "okra__phyllosticta_leaf_spot"
+    },
+    {
+     "question": "Are the spots grey in the centre with a dark edge?",
+     "if_yes": "okra__cercospora_leaf_spot",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Sustainable management of Alternaria alternata-caused okra leaf spot",
+     "url": "https://horizonepublishing.com/journals/index.php/PST/article/view/12072",
+     "publisher": "other"
+    },
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Only research-paper and dataset sources found; no TNAU/ICAR advisory page on this disease. Treatment shown is from a trial, not an official recommendation."
+  },
+  {
+   "class_id": "okra__cercospora_leaf_spot",
+   "crop": "okra",
+   "name_en": "Cercospora leaf spot",
+   "type": "fungal",
+   "cause": "Cercospora malayensis and C. abelmoschi (fungi)",
+   "symptoms": [
+    "Brown, irregular spots, often with grey centres and dark edges.",
+    "Some spots are sooty black and angular.",
+    "Sooty black growth can appear under the leaf.",
+    "Severe cases cause leaves to drop, mostly in humid weather."
+   ],
+   "look_alikes": "Confused with Alternaria and Phyllosticta spots; Cercospora spots are described with grey centres and sooty underside growth.",
+   "cultural_actions": [
+    "Clean and trim field boundaries.",
+    "Scout more often in humid weather."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose. TNAU says spraying controls the disease.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem seed kernel extract",
+     "note": "FOLLOW PRODUCT LABEL or KVK guidance; no dose. Listed in TNAU organic farming page.",
+     "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Cow urine spray",
+     "note": "Listed in TNAU organic farming page; no dose given here.",
+     "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are the spots grey in the middle with dark brown edges?",
+     "if_yes": "consistent",
+     "if_no": "okra__alternaria_leaf_spot"
+    },
+    {
+     "question": "Is there sooty black growth under the spots?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Bhendi Cercospora Leaf Spots",
+     "url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management (organic)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. TNAU gives no spray threshold."
+  },
+  {
+   "class_id": "okra__downy_mildew",
+   "crop": "okra",
+   "name_en": "Downy mildew",
+   "type": "fungal",
+   "cause": "Not stated in the sources found (oomycete downy mildew type)",
+   "symptoms": [
+    "Yellow patches on the upper leaf surface.",
+    "Purplish fungal growth on the underside of the leaf.",
+    "Thrives in cool, wet conditions."
+   ],
+   "look_alikes": "Powdery mildew has grey-white powder on both leaf sides; downy mildew growth is purplish and only underneath.",
+   "cultural_actions": [
+    "Scout leaf undersides during cool, wet spells.",
+    "Show affected leaves to your KVK or state agriculture office."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Is the growth purplish and only under the leaf, below a yellow patch?",
+     "if_yes": "consistent",
+     "if_no": "okra__alternaria_leaf_spot"
+    },
+    {
+     "question": "Is the powder grey-white and on both leaf sides?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Only a dataset description found. No TNAU/ICAR management advice located, so no treatment is listed. Ask a local expert."
+  },
+  {
+   "class_id": "okra__healthy",
+   "crop": "okra",
+   "name_en": "Healthy okra leaf",
+   "type": "healthy",
+   "cause": "Not applicable",
+   "symptoms": [
+    "Leaves are bright green.",
+    "No spots, lesions or curling.",
+    "Veins are green, not yellow.",
+    "Plants grow normally without stunting."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout leaves, both sides, every week.",
+    "Look for whiteflies on leaf undersides.",
+    "Pull out and burn any plant with yellow veins.",
+    "Keep weeds and field edges clean."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are there any spots, curling or yellow veins on the leaves?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Healthy-leaf description is from a Tamil Nadu image dataset paper."
+  },
+  {
+   "class_id": "okra__leaf_curly_virus",
+   "crop": "okra",
+   "name_en": "Leaf curl / Yellow vein mosaic virus",
+   "type": "viral",
+   "cause": "Bhendi yellow vein mosaic virus, spread by whitefly (Bemisia tabaci); a dataset calls the leaf-curl form whitefly-spread",
+   "symptoms": [
+    "Whole network of leaf veins turns yellow.",
+    "Leaves may curl upward and look distorted.",
+    "Young leaves turn yellow and stay small.",
+    "Plants are stunted with few flowers.",
+    "Fruits are small, hard and unfit for sale."
+   ],
+   "look_alikes": "Nutrient yellowing is not limited to veins; here the veins themselves go yellow while whiteflies are present.",
+   "cultural_actions": [
+    "Remove affected plants and burn them.",
+    "Destroy weeds and wild host plants nearby.",
+    "Avoid susceptible varieties in summer sowing, when whiteflies are high.",
+    "Choose tolerant varieties such as Parbhani Kranti or Arka Anamika.",
+    "Do not use synthetic pyrethroids; TNAU says they worsen it."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam (whitefly control)",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Controls the vector, not the virus.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Methyl demeton (whitefly control)",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Listed by TNAU; check current legal status locally.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Azadirachtin (neem-based)",
+     "note": "FOLLOW PRODUCT LABEL; no dose.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem seed kernel extract",
+     "note": "Listed in TNAU organic farming page; no dose given here.",
+     "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "Avoid susceptible varieties when sowing in summer, when whitefly activity is high. TNAU gives no spray threshold.",
+   "ask_back": [
+    {
+     "question": "Are the leaf veins yellow while the leaf between them stays green?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do you see tiny white flies on the underside of leaves?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Bhendi Yellow Vein Mosaic",
+     "url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management (organic)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "TNAU calls it Yellow Vein Mosaic; the dataset says Leaf Curl Virus. Written for Tamil Nadu. No cure for the virus; insecticides target whitefly only."
+  },
+  {
+   "class_id": "okra__phyllosticta_leaf_spot",
+   "crop": "okra",
+   "name_en": "Phyllosticta leaf spot",
+   "type": "fungal",
+   "cause": "Phyllosticta hibiscini / Phyllosticta sp. (fungus)",
+   "symptoms": [
+    "Round or irregular leaf spots with tan or pale centres.",
+    "Spots can be circular brown with dark edges.",
+    "Spots can reach about 1 cm or larger.",
+    "Spot centres may get thin and tear.",
+    "Worse in warm, humid weather."
+   ],
+   "look_alikes": "Similar to Alternaria and Cercospora spots; Phyllosticta spots are larger with tan centres and no yellow ring was reported.",
+   "cultural_actions": [
+    "Avoid keeping leaves wet for long.",
+    "Adjust overhead irrigation to reduce leaf wetness.",
+    "Scout often, as spores spread by water splash."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Per University of Florida, protective fungicide before symptoms appear helps in repeat problems; it works poorly once the disease is visible.",
+   "ask_back": [
+    {
+     "question": "Are the spots large with tan, thin centres and no yellow ring?",
+     "if_yes": "consistent",
+     "if_no": "okra__alternaria_leaf_spot"
+    },
+    {
+     "question": "Are the spots grey-centred with sooty growth underneath?",
+     "if_yes": "okra__cercospora_leaf_spot",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Phyllosticta leaf spot of okra - UF/IFAS Plant Pathology",
+     "url": "https://plantpath.ifas.ufl.edu/u-scout/blog/Entries/2011/8/phyllosticta-leaf-spot-of-okra-1.html",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management (minor diseases)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Management text is from a Florida (USA) source; TNAU only lists it as a minor leaf spot. No Indian chemical advice found, so none listed."
+  },
+  {
+   "class_id": "tomato__bacterial_spot",
+   "crop": "tomato",
+   "name_en": "Bacterial leaf spot",
+   "type": "bacterial",
+   "cause": "Xanthomonas axonopodis pv. vesicatoria (bacterium)",
+   "symptoms": [
+    "Small, brown, water-soaked, round spots on leaves with a yellow halo.",
+    "Older leaves may drop off.",
+    "Small water-soaked spots on green fruit.",
+    "Fruit spot centres turn light brown, sunken and scabby."
+   ],
+   "look_alikes": "Early blight spots are larger with concentric rings; bacterial spots are small, water-soaked and haloed. Late blight lesions spread fast over whole leaves.",
+   "cultural_actions": [
+    "Use disease-free seedlings.",
+    "Remove and destroy infected plant debris.",
+    "Rotate with crops that are not tomato relatives.",
+    "Avoid working in the field when leaves are wet."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Streptocycline (antibiotic spray)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_11.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are the spots small, brown, water-soaked and round with a yellow halo?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do the spots have concentric rings like a bull's eye?",
+     "if_yes": "tomato__early_blight",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Bacterial leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_11.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Organic Farming: Tomato disease management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_tomato_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. TNAU names its antibiotic as a spray option; I could not verify CIB&RC registration for tomato. Ask your KVK or agriculture officer."
+  },
+  {
+   "class_id": "tomato__early_blight",
+   "crop": "tomato",
+   "name_en": "Early blight",
+   "type": "fungal",
+   "cause": "Alternaria solani (fungus)",
+   "symptoms": [
+    "Brown leaf spots with rings inside, like a bull's eye.",
+    "A yellow edge often surrounds the spot.",
+    "Fruit gets infected at the stalk end, with brown rings on it.",
+    "Fruit lesions can look leathery with black velvety spores.",
+    "Infected fruit often drop."
+   ],
+   "look_alikes": "Late blight lesions are water-soaked with white growth in humid weather, not ringed. Bacterial spot spots are small, water-soaked, with a yellow halo.",
+   "cultural_actions": [
+    "Remove and destroy crop debris after harvest.",
+    "Rotate with non-tomato-family crops.",
+    "Sow disease-free seed.",
+    "Keep field clean and avoid water stress with steady irrigation."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma asperellum (seed treatment)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Pyraclostrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Iprodione, metiram or zineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do the brown leaf spots have rings inside, like a bull's eye, with a yellow edge?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the lesions water-soaked and black with white growth in humid weather?",
+     "if_yes": "tomato__late_blight",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Are the spots small, round and water-soaked with a yellow halo?",
+     "if_yes": "tomato__bacterial_spot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Early Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech: Tomato Early Blight (post-harvest/fruit page)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_phdiseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Organic Farming: Tomato disease management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_tomato_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. TNAU lists these active ingredients; CIB&RC registration for tomato not verified (registry page blocked). Check with KVK before buying."
+  },
+  {
+   "class_id": "tomato__healthy",
+   "crop": "tomato",
+   "name_en": "Healthy tomato leaf",
+   "type": "healthy",
+   "cause": "No disease detected",
+   "symptoms": [
+    "No brown spots with rings inside.",
+    "No water-soaked black patches or white growth under leaves.",
+    "No small water-soaked spots with a yellow halo.",
+    "No yellow patches on top with olive-green mould underneath."
+   ],
+   "look_alikes": "Early disease can be mild. Magnesium deficiency can look like early leaf mould, so check both leaf sides.",
+   "cultural_actions": [
+    "Scout the field regularly, especially after rain or fog.",
+    "Check lower leaves first, then upper leaves and fruit.",
+    "Use disease-free seedlings.",
+    "Remove and destroy infected plant debris.",
+    "Provide good drainage and rotate crops."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do you see any ringed brown spots, water-soaked patches, white growth or haloed spots?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Early Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech: Tomato Late Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech: Tomato Bacterial leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_11.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Cornell Vegetables: Tomato Leaf Mold",
+     "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "No source page describes a healthy leaf directly; the signs listed are the absence of symptoms the sources give. Leaf mould item is from a US university page."
+  },
+  {
+   "class_id": "tomato__late_blight",
+   "crop": "tomato",
+   "name_en": "Late blight",
+   "type": "fungal",
+   "cause": "Phytophthora infestans (oomycete, fungus-like)",
+   "symptoms": [
+    "Water-soaked, black lesions on leaves and stems.",
+    "Lesions spread fast and the whole leaf dies.",
+    "White growth appears on leaves in wet weather.",
+    "Dark brown lesions on fruit, then soft rot."
+   ],
+   "look_alikes": "Early blight spots have rings like a bull's eye and are dark brown. Late blight is water-soaked, spreads fast, shows white growth.",
+   "cultural_actions": [
+    "Provide proper drainage in the field.",
+    "Rotate crops.",
+    "Scout often during cool nights and long wet spells.",
+    "Remove and destroy infected plant parts."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma asperellum (soil application)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Cyazofamid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Zineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "TNAU gives no spray threshold. It favours cool nights, warm days and long wet spells from rain and fog.",
+   "ask_back": [
+    {
+     "question": "Are the lesions water-soaked and black, spreading fast, with white growth in humid weather?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do the brown spots have rings inside, like a bull's eye?",
+     "if_yes": "tomato__early_blight",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Late Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Organic Farming: Tomato disease management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_tomato_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. CIB&RC registration for tomato not verified (registry page blocked). Check with KVK before buying."
+  },
+  {
+   "class_id": "tomato__leaf_mold",
+   "crop": "tomato",
+   "name_en": "Leaf mould",
+   "type": "fungal",
+   "cause": "Passalora fulva, also called Cladosporium fulvum (fungus)",
+   "symptoms": [
+    "Light green spots appear on the upper leaf surface.",
+    "Spots later turn dead and brown.",
+    "Olive-green mould grows on the underside of leaves.",
+    "Starts on lower leaves and moves upward.",
+    "Heavy attack causes leaf drop and lower fruit yield."
+   ],
+   "look_alikes": "Magnesium deficiency can look similar early on. Mould spots are more distinct and have olive growth underneath.",
+   "cultural_actions": [
+    "Remove infected plants and nearby plant debris quickly.",
+    "Clean tools and equipment after use.",
+    "Rotate crops and use clean seed.",
+    "Reduce humidity, especially in polyhouses and tunnels."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Trifloxystrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agris.fao.org/search/en/records/65df381e0f3e94b9e5d62762",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are there pale yellow-green spots on top and olive-green mould on the underside?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Cornell Vegetables: Tomato Leaf Mold",
+     "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "publisher": "other"
+    },
+    {
+     "title": "Management of tomato leaf mould with trifloxystrobin (Veloukas et al. 2007, Greece), AGRIS record",
+     "url": "https://agris.fao.org/search/en/records/65df381e0f3e94b9e5d62762",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "No TNAU, ICAR or Indian university page on leaf mould was found; sources are a US university and a Greek study. Products named are not checked for India. Confirm with your KVK."
+  },
+  {
+   "class_id": "tomato__mosaic_virus",
+   "crop": "tomato",
+   "name_en": "Mosaic virus",
+   "type": "viral",
+   "cause": "Cucumber mosaic virus (CMV) / Tomato mosaic virus (ToMV)",
+   "symptoms": [
+    "Light and dark green mottling on leaves.",
+    "Young leaves may wilt on sunny days.",
+    "Leaflets are distorted, puckered and smaller; may look fern-like.",
+    "Plants look stunted, pale and spindly."
+   ],
+   "look_alikes": "Leaf curl virus mainly rolls leaves downward and crinkles them; mosaic mainly shows green mottling and puckering.",
+   "cultural_actions": [
+    "There is no cure; prevent spread and remove infected plants.",
+    "Use disease-free seed from healthy plants.",
+    "Rinse seed thoroughly and dry it in shade.",
+    "Remove infected nursery plants carefully and destroy them.",
+    "Do not plant after tobacco, potato, chilli, capsicum or brinjal.",
+    "Practise crop rotation.",
+    "Virus spreads on hands, clothing and farm tools; keep them clean."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are the leaves rolled downward and crinkled, with the whole plant stunted and bushy?",
+     "if_yes": "tomato__yellow_leaf_curl_virus",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Tomato Mosaic",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_12.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease Management of Horticultural Crops (organic farming)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu (TNAU). Sources give no chemical control for the virus. Ask the local KVK for advice."
+  },
+  {
+   "class_id": "tomato__septoria_leaf_spot",
+   "crop": "tomato",
+   "name_en": "Septoria leaf spot",
+   "type": "fungal",
+   "cause": "Septoria lycopersici (fungus)",
+   "symptoms": [
+    "Small round to irregular spots on leaves.",
+    "Spots have a grey centre and dark margin.",
+    "Spots merge, causing leaf blight and heavy leaf drop.",
+    "Stems and flowers can also be affected."
+   ],
+   "look_alikes": "Early blight spots show concentric rings in a bull's-eye pattern; Septoria spots are small with grey centres and dark borders.",
+   "cultural_actions": [
+    "Remove and destroy affected plant parts promptly.",
+    "Expect more disease in high humidity.",
+    "Spores spread by rain splash and wind; keep fields clean."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma asperellum (seed treatment)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Fluxapyroxad + Pyraclostrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do the spots have concentric rings like a bull's-eye?",
+     "if_yes": "tomato__target_spot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Septoria Leaf Spot of Tomato",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Early Blight of Tomato (for look-alike)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease Management of Horticultural Crops (organic farming)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu (TNAU). CIB&RC registration for tomato not verified; check the label and with the KVK."
+  },
+  {
+   "class_id": "tomato__spider_mites",
+   "crop": "tomato",
+   "name_en": "Spider mites (red spider mite)",
+   "type": "pest",
+   "cause": "Red spider mite, Tetranychus species (mite)",
+   "symptoms": [
+    "Leaves turn reddish brown and bronzy.",
+    "Silken webbing appears on leaves.",
+    "Badly attacked leaves wither and dry.",
+    "Flower and fruit development is affected."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Check the underside of leaves for tiny red mites, yellowish nymphs and egg clusters.",
+    "Look for webbing to confirm mites."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as the control measure.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do you see fine silk webbing and tiny red specks under the leaves?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Red Spider Mite on Tomato",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu (TNAU). Source gives no spray threshold. CIB&RC status not verified (portal blocked); check the label."
+  },
+  {
+   "class_id": "tomato__target_spot",
+   "crop": "tomato",
+   "name_en": "Target spot",
+   "type": "fungal",
+   "cause": "Corynespora cassiicola (fungus)",
+   "symptoms": [
+    "Dark brown pinpoint spots on leaves at first.",
+    "Spot centres turn light brown to grey with dark rings.",
+    "Yellowing often surrounds the spots; bad cases lose leaves.",
+    "Fruit gets sunken brown pits, sometimes X-shaped cracks.",
+    "Stems and leaf stalks get dark brown oval lesions."
+   ],
+   "look_alikes": "Looks like early blight, bacterial spot and gray leaf spot; early spots resemble bacterial spot.",
+   "cultural_actions": [
+    "Rotate with non-solanaceous crops.",
+    "Start with clean, healthy transplants.",
+    "Remove weeds, volunteer plants and crop debris.",
+    "Remove infected plant material."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Difenoconazole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do the leaf spots have concentric dark rings and grey-brown centres?",
+     "if_yes": "consistent",
+     "if_no": "tomato__septoria_leaf_spot"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Target Spot of Tomato in Florida (UF/IFAS)",
+     "url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Early Blight of Tomato (look-alike)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "No Indian (TNAU/ICAR) page found for target spot; main source is a Florida university. Fungicide list is from Florida; CIB&RC status for India unchecked. Ask the KVK."
+  },
+  {
+   "class_id": "tomato__yellow_leaf_curl_virus",
+   "crop": "tomato",
+   "name_en": "Leaf curl virus (whitefly-borne)",
+   "type": "viral",
+   "cause": "Tomato leaf curl virus, spread by whitefly Bemisia tabaci",
+   "symptoms": [
+    "Plants are severely stunted.",
+    "Leaves roll downward and crinkle.",
+    "New leaves may turn yellow before curling.",
+    "Older leaves become leathery and brittle.",
+    "Plants look pale and bushy with short internodes."
+   ],
+   "look_alikes": "Mosaic shows green mottling and puckering; leaf curl shows downward rolling, stunting and a bushy look.",
+   "cultural_actions": [
+    "There is no cure; focus on prevention and whitefly control.",
+    "Raise nurseries under protected conditions.",
+    "Grow barrier crops such as sorghum, maize or bajra.",
+    "Use disease-free seed.",
+    "Hang yellow sticky traps.",
+    "Remove weed hosts such as Abutilon indicum.",
+    "Remove and destroy affected plants."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Methyl demeton (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are the leaves rolled downward and crinkled, with a bushy stunted plant?",
+     "if_yes": "consistent",
+     "if_no": "tomato__mosaic_virus"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Tomato Leaf Curl Virus",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease Management of Horticultural Crops (organic farming)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu (TNAU). Insecticides target the whitefly, not the virus. CIB&RC status unchecked; check the label."
+  }
+ ]
+}

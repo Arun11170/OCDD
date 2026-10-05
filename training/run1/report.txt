@@ -1,0 +1,39 @@
+best epoch 13 (val macro-F1 0.887), temperature 0.76
+TEST accuracy 0.949   macro-F1 0.916
+  domain field   n= 1340  accuracy 0.853
+  domain lab     n= 2719  accuracy 0.997
+calibration error (ECE) 0.010   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 99.4% of photos, accuracy on those 0.953
+  >= 0.6 : answers 97.7% of photos, accuracy on those 0.961
+  >= 0.7 : answers 96.6% of photos, accuracy on those 0.965
+  >= 0.8 : answers 94.4% of photos, accuracy on those 0.973
+  >= 0.9 : answers 92.3% of photos, accuracy on those 0.979
+
+class                                      prec recall     f1     n
+chilli__cercospora                        0.848  0.873  0.860   268
+chilli__healthy                           0.744  0.653  0.696    98
+chilli__murda_complex                     0.873  0.756  0.810    82
+chilli__nutritional_deficiency            0.735  0.900  0.809    80
+chilli__powdery_mildew                    0.913  0.875  0.894    48
+groundnut__early_leaf_spot                0.941  0.841  0.888   132
+groundnut__healthy_leaf                   0.860  0.971  0.912   139
+groundnut__late_leaf_spot                 1.000  0.971  0.985   103
+groundnut__nutrition_deficiency           1.000  0.980  0.990    49
+groundnut__rust                           1.000  1.000  1.000    33
+okra__alternaria_leaf_spot                0.894  0.913  0.903    46
+okra__cercospora_leaf_spot                1.000  0.857  0.923    28
+okra__downy_mildew                        1.000  0.621  0.766    29
+okra__healthy                             0.796  1.000  0.887    43
+okra__leaf_curly_virus                    1.000  1.000  1.000    25
+okra__phyllosticta_leaf_spot              0.688  0.759  0.721    29
+tomato__bacterial_spot                    0.964  0.961  0.963   335
+tomato__early_blight                      0.952  0.963  0.957   163
+tomato__healthy                           0.996  0.988  0.992   247
+tomato__late_blight                       0.987  0.990  0.988   302
+tomato__leaf_mold                         0.980  0.955  0.967   155
+tomato__mosaic_virus                      0.983  0.921  0.951    63
+tomato__septoria_leaf_spot                0.962  0.976  0.969   287
+tomato__spider_mites                      0.992  0.996  0.994   251
+tomato__target_spot                       0.991  0.995  0.993   210
+tomato__yellow_leaf_curl_virus            0.995  0.996  0.996   814

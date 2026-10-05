@@ -1,0 +1,1752 @@
+{
+ "version": 1,
+ "entries": [
+  {
+   "class_id": "chilli__cercospora",
+   "crop": "chilli",
+   "name_en": "सर्कोस्पोरा पत्ती धब्बा (मेंढक की आँख जैसा धब्बा)",
+   "type": "fungal",
+   "cause": "फफूंद (Cercospora capsici)",
+   "symptoms": [
+    "पत्तों पर भूरे गोल धब्बे बनते हैं। बीच का रंग हल्का स्लेटी और किनारा गहरा भूरा होता है।",
+    "धब्बे बड़े हो सकते हैं और आपस में जुड़ सकते हैं।",
+    "तने, पत्ती की डंडी और फलियों पर धब्बे अंडाकार होते हैं। बीच में स्लेटी रंग और किनारे गहरे होते हैं।",
+    "ज़्यादा बीमार पत्ते जल्दी झड़ जाते हैं, इसलिए उपज घट जाती है।"
+   ],
+   "look_alikes": "टीएनएयू (TNAU) ने जीवाणु पत्ती धब्बा भी बताया है। जो स्रोत देखे गए, उनमें दोनों में फ़र्क करने का तरीका नहीं मिला। कृषि विस्तार अधिकारी से पूछें।",
+   "cultural_actions": [
+    "पत्तों को नियमित देखें। स्लेटी बीच वाले गोल धब्बे खोजें।",
+    "पत्ते झड़ने का इंतज़ार न करें। पहले लक्षण दिखते ही छिड़काव करें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "टीएनएयू (TNAU) 10 से 15 दिन के अंतर पर दो छिड़काव की सलाह देता है।",
+   "ask_back": [
+    {
+     "question": "क्या धब्बों का बीच स्लेटी है और उसके चारों ओर गहरा भूरा घेरा है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या पत्तों के नीचे सफेद चूर्ण है?",
+     "if_yes": "chilli__powdery_mildew",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli - Cercospora leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह सलाह तमिलनाडु (TNAU) के लिए लिखी गई है। केवल एक स्रोत देखा गया। इन दवाओं का सीआईबी एंड आरसी (CIB&RC) पंजीकरण जाँचा नहीं गया है।"
+  },
+  {
+   "class_id": "chilli__healthy",
+   "crop": "chilli",
+   "name_en": "स्वस्थ मिर्च का पौधा",
+   "type": "healthy",
+   "cause": "कोई रोग या कीट नहीं मिला",
+   "symptoms": [
+    "पत्ते सपाट और एक समान हरे हैं। मुड़े या सिकुड़े नहीं हैं।",
+    "पत्तों पर धब्बे, सफेद चूर्ण या पीले चकत्ते नहीं हैं।",
+    "कलियाँ और फूल पौधे पर टिके रहते हैं।",
+    "पौधा सामान्य लंबाई की डंडी और सामान्य आकार के पत्तों के साथ बढ़ता है।"
+   ],
+   "look_alikes": "शुरू में थ्रिप्स, माइट या विषाणु का नुकसान हल्का हो सकता है। नए पत्तों के नीचे और बढ़ती नोक को देखें।",
+   "cultural_actions": [
+    "हर हफ्ते पत्ते, नोक और कलियाँ देखें। पत्तों के नीचे भी देखें।",
+    "जिस पौधे में विषाणु के लक्षण दिखें, उसे उखाड़कर नष्ट कर दें।",
+    "नर्सरी की क्यारियों को नायलॉन की जाली से ढकें।",
+    "रोग-मुक्त बीज चुनें।"
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या कोई पत्ता मुड़ा, सिकुड़ा या धब्बेदार है?",
+     "if_yes": "chilli__murda_complex",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli - Leaf curl and mosaic viruses",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Portal: Chilli thrips",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "जो स्रोत देखे गए, उनमें स्वस्थ पत्ते का सीधा वर्णन नहीं है। लक्षण वही हैं जो स्रोतों में बताए नुकसान के उलट हैं। बचाव के उपाय टीएनएयू (TNAU) के विषाणु पन्ने से हैं।"
+  },
+  {
+   "class_id": "chilli__murda_complex",
+   "crop": "chilli",
+   "name_en": "पर्ण कुंचन / मुरड़ा रोग (पत्ता मोड़क)",
+   "type": "viral",
+   "cause": "मिर्च का पर्ण कुंचन विषाणु, साथ में थ्रिप्स, माइट और सफेद मक्खी (मुरड़ा रोग)",
+   "symptoms": [
+    "पत्ते बीच की नस की ओर मुड़ जाते हैं और बिगड़े दिखते हैं।",
+    "पौधे बौने रह जाते हैं। पत्तों के बीच की दूरी कम होती है और पत्ते बहुत छोटे होते हैं।",
+    "थ्रिप्स का नुकसान: पत्ते सिकुड़कर ऊपर की ओर मुड़ते हैं। कलियाँ भुरभुरी होकर गिर जाती हैं।",
+    "पीली माइट का नुकसान: पत्ते नीचे की ओर मुड़कर सिकुड़ते हैं। पत्ती की डंडी लंबी हो जाती है।",
+    "फूल की कलियाँ खिलने से पहले गिर जाती हैं।"
+   ],
+   "look_alikes": "मोज़ेक विषाणु में पत्तों पर हल्के और गहरे हरे चकत्ते और गोल छल्ले बनते हैं। उसमें मुख्य रूप से मुड़ना नहीं होता। कैल्शियम या गंधक की कमी से भी पत्ते मुड़ सकते हैं।",
+   "cultural_actions": [
+    "बीमार पौधों को जल्दी उखाड़कर नष्ट करें।",
+    "पौध को नायलॉन की जाली या पुआल के ढक्कन के नीचे तैयार करें।",
+    "खेत के किनारे मक्का या ज्वार जैसी फसलें लगाएँ।",
+    "एक ही फसल बार-बार न लगाएँ। रोग-मुक्त बीज चुनें।",
+    "ज्वार के बाद या प्याज़ के साथ मिर्च न उगाएँ (थ्रिप्स के कारण)।",
+    "सफेद मक्खी कम करने के लिए पीले चिपचिपे जाल और नीम वाले उत्पाद इस्तेमाल करें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid (thrips; seed treatment listed by TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Spinosad, emamectin benzoate, fipronil, acetamiprid (thrips options listed by TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Diafenthiuron, spiromesifen, fenpyroximate, hexythiazox, propargite (yellow mite options listed by TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://www.agritech.tnau.ac.in/crop_protection/chilli/chilli_5.html",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate, acephate (systemic sprays against leaf curl vectors, per TNAU)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Lecanicillium lecanii, Pseudomonas fluorescens, neem-based products; predatory mite Amblyseius ovalis",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://www.ijcmas.com/10-2-2021/Mallikharjun%20Chirumella,%20et%20al.pdf",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": "एक अध्ययन में रोपाई के 20 दिन बाद पत्तों पर छिड़काव शुरू किया गया, फिर हर 15 दिन पर दोहराया गया। टीएनएयू (TNAU) कोई सीमा नहीं बताता।",
+   "ask_back": [
+    {
+     "question": "क्या पत्ते मुड़े हैं, नई बढ़त छोटी और सिकुड़ी है और कलियाँ गिर रही हैं?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या पत्तों के किनारे पीले या भूरे हैं, या नसें पीली और बीच में हरा है?",
+     "if_yes": "chilli__nutritional_deficiency",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli viral diseases (leaf curl, mosaic)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Portal: Chilli thrips, Scirtothrips dorsalis",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Portal: Yellow mite or muranai mite",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_5.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Management of Chilli Leaf Curl Disease by Vector Control (IJCMAS 2021)",
+     "url": "https://www.ijcmas.com/10-2-2021/Mallikharjun%20Chirumella,%20et%20al.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "Churda murda (malformation) disease of chilli in Vidarbha, Current Science 1977 (abstract)",
+     "url": "https://eurekamag.com/research/000/414/000414214.php",
+     "publisher": "other"
+    },
+    {
+     "title": "Impact of pest management modules against sucking pests of chilli, Indian Journal of Agricultural Sciences",
+     "url": "https://epubs.icar.org.in/index.php/IJAgS/article/view/58983",
+     "publisher": "ICAR"
+    }
+   ],
+   "caveats": "टीएनएयू (TNAU) के पन्ने पर पर्ण कुंचन के लिए मुरड़ा शब्द नहीं मिलता। विषाणु के साथ थ्रिप्स, माइट और सफेद मक्खी वाला मुरड़ा रोग एक शोध पत्र (IJCMAS) और 1977 के सार से लिया गया है। मुख्य रूप से तमिलनाडु के लिए लिखा गया है। सीआईबी एंड आरसी (CIB&RC) की जाँच नहीं की गई।"
+  },
+  {
+   "class_id": "chilli__nutritional_deficiency",
+   "crop": "chilli",
+   "name_en": "पोषक तत्वों की कमी",
+   "type": "nutrient",
+   "cause": "मिट्टी या पौधे में एक या अधिक पोषक तत्वों की कमी",
+   "symptoms": [
+    "नाइट्रोजन: पत्ते हल्के हरे या पीले, पौधे बौने, फल छोटे और पीले।",
+    "पोटाश: पत्तों के किनारे सूखकर जल जाते हैं, पत्ते सिकुड़ जाते हैं।",
+    "मैग्नीशियम: हरी नसों के बीच पीलापन, पत्ते जल्दी झड़ते हैं।",
+    "कैल्शियम: बढ़ती नोक भूरी, फल का निचला सिरा सड़ता है, पत्ते ऊपर की ओर मुड़ते हैं।",
+    "फॉस्फोरस: तने और पत्तों के नीचे बैंगनी रंग। बोरॉन और ज़िंक की कमी से पत्ते बिगड़े या छोटे होते हैं।"
+   ],
+   "look_alikes": "कैल्शियम, गंधक और बोरॉन की कमी से पत्ते विषाणु या माइट जैसे मुड़ या बिगड़ सकते हैं। कीट और विषाणु कीड़ों के साथ आते हैं या खेत में टुकड़ों में फैलते हैं।",
+   "cultural_actions": [
+    "कोई भी खाद डालने से पहले मिट्टी की जाँच कराएँ (राज्य की मिट्टी जाँच प्रयोगशाला या कृषि विज्ञान केंद्र)।",
+    "लक्षणों से कौन सा तत्व मेल खाता है, यह कृषि विज्ञान केंद्र से पूछें।",
+    "पहले पत्तों के नीचे कीड़े देखें, ताकि कीटों की संभावना हट सके।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Nutrient to be chosen only after a soil test",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Get a soil test (state soil testing lab/KVK) before applying any fertiliser.",
+     "source_url": "https://celkau.in/ecropdoctor/vegetables/chilli/deficiency.php",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्तों पर कीड़े, सफेद चूर्ण या गोल धब्बे हैं?",
+     "if_yes": "chilli__murda_complex",
+     "if_no": "consistent"
+    },
+    {
+     "question": "क्या पत्ते मुड़े और बिगड़े हैं और नई बढ़त छोटी है?",
+     "if_yes": "chilli__murda_complex",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "e-Crop Doctor: Chilli deficiency symptoms (Centre for e-Learning, Kerala Agricultural University)",
+     "url": "https://celkau.in/ecropdoctor/vegetables/chilli/deficiency.php",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "स्रोत केरल कृषि विश्वविद्यालय है, जो एक राज्य विश्वविद्यालय है। लक्षण उसकी 11 पोषक तत्वों की तालिका से संक्षेप में लिए गए हैं। मात्रा यहाँ नहीं दी गई है।"
+  },
+  {
+   "class_id": "chilli__powdery_mildew",
+   "crop": "chilli",
+   "name_en": "सफेद चूर्णी रोग",
+   "type": "fungal",
+   "cause": "फफूंद (Leveillula taurica)",
+   "symptoms": [
+    "पत्तों के नीचे सफेद चूर्ण जैसी परत।",
+    "ज़्यादा प्रकोप में पत्ते झड़ जाते हैं।",
+    "प्रति पौधा फल कम और छोटे लगते हैं।"
+   ],
+   "look_alikes": "जो स्रोत देखे गए, उनमें यह नहीं बताया गया। पत्ते के नीचे सफेद चूर्ण देखें।",
+   "cultural_actions": [
+    "पत्तों के नीचे की ओर बार-बार देखें।",
+    "पहले लक्षण दिखते ही छिड़काव शुरू करें, देर न करें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Dinocap",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propiconazole, myclobutanil (best in a field trial)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://www.ijcmas.com/special/6/A.%20T.%20Daunde%20et%20al.pdf",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": "टीएनएयू (TNAU): लक्षण दिखते ही शुरू करके 15 दिन के अंतर पर तीन छिड़काव। एक खेत परीक्षण में 7 दिन का अंतर रखा गया।",
+   "ask_back": [
+    {
+     "question": "क्या पत्तों के नीचे सफेद चूर्ण है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या स्लेटी बीच वाले गोल भूरे धब्बे हैं?",
+     "if_yes": "chilli__cercospora",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli - Powdery mildew",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Management of Chilli Powdery Mildew caused by Leveillula taurica (IJCMAS 2018)",
+     "url": "https://www.ijcmas.com/special/6/A.%20T.%20Daunde%20et%20al.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "टीएनएयू (TNAU) का पाठ तमिलनाडु के लिए है। टीएनएयू और परीक्षण में छिड़काव का अंतर अलग है। सीआईबी एंड आरसी (CIB&RC) की जाँच नहीं की गई।"
+  },
+  {
+   "class_id": "groundnut__early_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "अगेती पत्ती धब्बा (मूंगफली)",
+   "type": "fungal",
+   "cause": "फफूंद (Cercospora arachidicola)",
+   "symptoms": [
+    "बुवाई के लगभग एक महीने बाद पत्तियों पर छोटे पीले धब्बे दिखते हैं।",
+    "धब्बे बड़े होकर पत्ती के ऊपर भूरे से गहरे भूरे हो जाते हैं।",
+    "धब्बे के नीचे का हिस्सा हल्का भूरा होता है।",
+    "धब्बे के चारों ओर अक्सर पीला घेरा होता है।",
+    "बहुत से धब्बे जुड़ जाते हैं, और पत्ते सूखकर जल्दी झड़ जाते हैं।"
+   ],
+   "look_alikes": "पछेती पत्ती धब्बा: धब्बे छोटे, ज़्यादा गोल, ज़्यादा काले और नीचे से काले व खुरदरे होते हैं। रतुआ में उभरे दाने होते हैं, सपाट धब्बे नहीं।",
+   "cultural_actions": [
+    "मूंगफली के साथ दूसरी फसलों का फसल चक्र अपनाएँ। दो मूंगफली फसलों के बीच साफ अंतर रखें।",
+    "कटाई के बाद फसल अवशेष हटा दें या मिट्टी में दबा दें।",
+    "अपने आप उगे मूंगफली के पौधे उखाड़ दें।",
+    "खरपतवार को काबू में रखें।",
+    "बुवाई की तारीख ऐसी रखें कि रोग के सबसे तेज़ समय से बचा जा सके।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Calotropis leaf extract spray",
+     "note": "Listed by TNAU as an alternative; FOLLOW PRODUCT LABEL or local extension advice; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "टीएनएयू (TNAU): छिड़काव करें, और ज़रूरत हो तो 15 दिन बाद दोहराएँ। इक्रिसैट (ICRISAT) के अनुसार लक्षण दिखने से पहले शुरू किया छिड़काव सबसे अच्छा काम करता है।",
+   "ask_back": [
+    {
+     "question": "क्या धब्बे ऊपर से गहरे भूरे हैं और उनके चारों ओर पीला घेरा है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या धब्बे छोटे, लगभग गोल, और नीचे से काले व खुरदरे हैं?",
+     "if_yes": "groundnut__late_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "क्या पत्ते के नीचे सपाट धब्बों की जगह उभरे दाने हैं?",
+     "if_yes": "groundnut__rust",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "टीएनएयू (TNAU) के पन्ने पर फफूंद का नाम नहीं है और न ही 'अगेती' लिखा है। फफूंद का नाम और धब्बे का वर्णन इक्रिसैट (ICRISAT, 1985) से है। फफूंदनाशक की सलाह टीएनएयू (तमिलनाडु) की है। लेबल और अपने कृषि विज्ञान केंद्र से जाँच करें।"
+  },
+  {
+   "class_id": "groundnut__healthy_leaf",
+   "crop": "groundnut",
+   "name_en": "स्वस्थ पत्ता (मूंगफली)",
+   "type": "healthy",
+   "cause": "कोई रोग नहीं मिला",
+   "symptoms": [
+    "पत्तियों के ऊपर भूरे या काले धब्बे नहीं हैं।",
+    "नीचे की ओर काले खुरदरे धब्बे और उभरे दाने नहीं हैं।",
+    "डंडी और तनों पर घाव नहीं हैं।",
+    "पत्ते पौधे पर टिके रहते हैं और जल्दी नहीं सूखते।"
+   ],
+   "look_alikes": "अगेती पत्ती धब्बा, पछेती पत्ती धब्बा और रतुआ कुछ छोटे धब्बों से शुरू हो सकते हैं। पत्तों के नीचे देखें।",
+   "cultural_actions": [
+    "खेत को नियमित देखें। पत्तों के नीचे भी देखें।",
+    "बुवाई के लगभग एक महीने बाद से नज़र रखें, जब पत्ती धब्बे शुरू होते हैं।",
+    "अपने आप उगे मूंगफली के पौधे उखाड़ दें।",
+    "कटाई के बाद फसल अवशेष दबा दें और फसल चक्र अपनाएँ।",
+    "खरपतवार को काबू में रखें।"
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्ते पर ऊपर या नीचे कोई धब्बा दिखता है?",
+     "if_yes": "groundnut__early_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "क्या नीचे की ओर उभरे दाने दिखते हैं?",
+     "if_yes": "groundnut__rust",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "किसी स्रोत में स्वस्थ पत्ते का वर्णन नहीं है। लक्षण वही हैं जो स्रोतों में बताए रोग-चिह्नों के न होने से बनते हैं।"
+  },
+  {
+   "class_id": "groundnut__late_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "पछेती पत्ती धब्बा (मूंगफली)",
+   "type": "fungal",
+   "cause": "फफूंद (Phaeoisariopsis personata)",
+   "symptoms": [
+    "पत्तियों के नीचे काले, लगभग गोल धब्बे दिखते हैं।",
+    "निचली सतह पर धब्बे खुरदरे लगते हैं।",
+    "धब्बे आमतौर पर अगेती पत्ती धब्बे से छोटे और ज़्यादा गहरे होते हैं।",
+    "बहुत से धब्बे जुड़ जाते हैं, जिससे पत्ते जल्दी कमज़ोर होकर झड़ते हैं।"
+   ],
+   "look_alikes": "अगेती पत्ती धब्बा: बड़े, ऊपर से गहरे भूरे, नीचे से हल्के भूरे और अक्सर पीले घेरे वाले। रतुआ: नीचे की ओर उभरे दाने।",
+   "cultural_actions": [
+    "टीएनएयू (TNAU) के सुझाव अनुसार मूंगफली के साथ बाजरा या ज्वार की अंतर-फसल लगाएँ।",
+    "ऐसी फसलों के साथ फसल चक्र अपनाएँ जिन पर यह रोग नहीं लगता, खासकर अनाज।",
+    "कटाई के बाद फसल अवशेष गहराई में दबा दें।",
+    "अपने आप उगे मूंगफली के पौधे हटा दें।",
+    "खरपतवार को काबू में रखें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "टीएनएयू (TNAU): खरीफ में बुवाई के लगभग 55-57 दिन बाद और रबी में 42-46 दिन बाद संक्रमण शुरू होता है। छिड़काव की कोई सीमा नहीं बताई गई।",
+   "ask_back": [
+    {
+     "question": "क्या धब्बे छोटे, लगभग गोल, और नीचे से काले व खुरदरे हैं?",
+     "if_yes": "consistent",
+     "if_no": "groundnut__early_leaf_spot"
+    },
+    {
+     "question": "क्या पत्ते के नीचे सपाट धब्बों की जगह उभरे दाने हैं?",
+     "if_yes": "groundnut__rust",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut late leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "टीएनएयू (TNAU) के पन्ने का शीर्षक नहीं दिखा। इसे उसके विवरण से पछेती पत्ती धब्बा माना गया। फफूंद का नाम इक्रिसैट (ICRISAT, 1985) से है। तमिलनाडु के लिए लिखा गया है।"
+  },
+  {
+   "class_id": "groundnut__nutrition_deficiency",
+   "crop": "groundnut",
+   "name_en": "पोषक तत्वों की कमी (मूंगफली)",
+   "type": "nutrient",
+   "cause": "मिट्टी में ज़िंक, लोहा, बोरॉन, कैल्शियम या गंधक जैसे पोषक तत्वों की कमी",
+   "symptoms": [
+    "टीएनएयू (TNAU) मूंगफली में ज़िंक, लोहा, बोरॉन, कैल्शियम और गंधक की कमी बताता है।",
+    "जो पन्ना देखा गया, उसमें दिखने वाले लक्षण नहीं बताए गए हैं।",
+    "सिर्फ कमी हो तो पत्ती के धब्बे या रतुआ के दाने नहीं होने चाहिए।",
+    "कौन सा तत्व कम है, यह तय करने से पहले मिट्टी की जाँच कराएँ।"
+   ],
+   "look_alikes": "पत्ती धब्बे और रतुआ: धब्बे या दाने खोजें। केवल कमी से ये नहीं बनते।",
+   "cultural_actions": [
+    "कोई भी खाद डालने से पहले मिट्टी की जाँच कराएँ (राज्य की मिट्टी जाँच प्रयोगशाला या कृषि विज्ञान केंद्र)।",
+    "मिट्टी जाँच की सिफारिश के अनुसार एनपीके (NPK) डालें।",
+    "मिट्टी जाँच न हुई हो तो राज्य की सामान्य सिफारिश मानें।",
+    "टीएनएयू (TNAU) के अनुसार कैल्शियम और गंधक की कमी वाली मिट्टी में जिप्सम मदद करता है।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Zinc sulphate",
+     "note": "Only if soil or leaf test shows zinc deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Ferrous sulphate",
+     "note": "TNAU lists a foliar spray for iron deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Borax with gypsum",
+     "note": "TNAU lists this for boron deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "nutrient",
+     "active_ingredient": "Gypsum",
+     "note": "TNAU lists this for calcium and sulphur deficiency; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्तों के नीचे भूरे या काले धब्बे या उभरे दाने हैं?",
+     "if_yes": "groundnut__early_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "क्या इस खेत की मिट्टी की जाँच हो चुकी है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut crop production",
+     "url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Oilseeds/oilseeds_groundnut01.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "टीएनएयू (TNAU) के पन्ने पर कमी का प्रबंधन है, पर जो हिस्सा देखा गया उसमें दिखने वाले लक्षण नहीं मिले। तमिलनाडु की मिट्टी के लिए लिखा गया है। सीआईबी एंड आरसी (CIB&RC) खाद पर लागू नहीं होता, इसलिए स्थिति 'जाँची नहीं' रखी गई है।"
+  },
+  {
+   "class_id": "groundnut__rust",
+   "crop": "groundnut",
+   "name_en": "रतुआ रोग (मूंगफली)",
+   "type": "fungal",
+   "cause": "फफूंद (Puccinia arachidis)",
+   "symptoms": [
+    "उभरे दाने पहले पत्तियों के नीचे दिखते हैं।",
+    "दाने पत्ती के ऊपर भी आ सकते हैं।",
+    "रोग-ग्राही किस्मों में पहले दानों के आसपास नए दाने बनते हैं।",
+    "फूल और खूँटियों को छोड़कर सभी हरे हिस्सों पर घाव बनते हैं।",
+    "बहुत प्रभावित पत्ते सूख जाते हैं, पर पौधे पर लगे रहते हैं।"
+   ],
+   "look_alikes": "पत्ती धब्बे सपाट भूरे या काले धब्बे होते हैं। रतुआ में उभरे दाने बनते हैं, खासकर नीचे की ओर।",
+   "cultural_actions": [
+    "पत्तों के नीचे की ओर नियमित देखें।",
+    "कटाई के बाद फसल अवशेष हटा दें या दबा दें।",
+    "अपने आप उगे मूंगफली के पौधे उखाड़ दें।",
+    "दूसरी फसलों के साथ फसल चक्र अपनाएँ।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Tridemorph",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "टीएनएयू (TNAU): बताए गए फफूंदनाशकों में से एक का छिड़काव करें, और ज़रूरत हो तो 15 दिन बाद दोहराएँ। छिड़काव की कोई सीमा नहीं बताई गई।",
+   "ask_back": [
+    {
+     "question": "क्या पत्तों के नीचे उभरे दाने दिखते हैं?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या निशान सपाट भूरे या काले धब्बे हैं, उभरे दाने नहीं?",
+     "if_yes": "groundnut__early_leaf_spot",
+     "if_no": "consistent"
+    },
+    {
+     "question": "क्या धब्बे काले, गोल और नीचे से खुरदरे हैं?",
+     "if_yes": "groundnut__late_leaf_spot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Groundnut rust",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Groundnut leaf spot (rust and leaf spot together)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Early and Late Leaf Spots of Groundnut (ICRISAT Information Bulletin 21)",
+     "url": "https://oar.icrisat.org/821/1/RA_00080.pdf",
+     "publisher": "ICRISAT"
+    }
+   ],
+   "caveats": "जो पन्ने देखे गए, उनमें दानों का रंग नहीं बताया गया। खेती के उपाय आम पत्ती रोग की साफ-सफाई के हैं, जो इक्रिसैट (ICRISAT) से हैं, सिर्फ रतुआ के लिए नहीं। जब रतुआ और पत्ती धब्बा साथ हों तो टीएनएयू (TNAU) कार्बेन्डाज़िम के साथ मैन्कोज़ेब, या क्लोरोथैलोनिल भी बताता है। तमिलनाडु के लिए लिखा गया है।"
+  },
+  {
+   "class_id": "okra__alternaria_leaf_spot",
+   "crop": "okra",
+   "name_en": "भिंडी का आल्टरनेरिया पत्ती धब्बा",
+   "type": "fungal",
+   "cause": "फफूंद (Alternaria alternata)। टीएनएयू (TNAU) Alternaria hibiscinum को एक छोटा पत्ती धब्बा बताता है।",
+   "symptoms": [
+    "पत्तों पर छोटे भूरे से काले गोल धब्बे।",
+    "धब्बों के चारों ओर पीला घेरा होता है।",
+    "बहुत से धब्बों से पत्ता चितकबरा और कमज़ोर दिखता है।"
+   ],
+   "look_alikes": "सर्कोस्पोरा और फिलोस्टिक्टा के धब्बों जैसा दिखता है। स्रोत इन्हें सिर्फ धब्बे के रंग और किनारे से अलग करते हैं, इसलिए स्थानीय विशेषज्ञ से पक्का करें।",
+   "cultural_actions": [
+    "पत्तों को नियमित देखें, खासकर गर्म और नम मौसम में।",
+    "खेत के किनारे और खरपतवार साफ रखें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim + Mancozeb (combination)",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Best result in a 2024-25 Punjab field trial; not an advisory.",
+     "source_url": "https://horizonepublishing.com/journals/index.php/PST/article/view/12072",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma viride",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Tested in lab and trial; ask KVK for a registered product.",
+     "source_url": "https://horizonepublishing.com/journals/index.php/PST/article/view/12072",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या धब्बों के गहरे भूरे बीच के चारों ओर साफ पीला घेरा है?",
+     "if_yes": "consistent",
+     "if_no": "okra__phyllosticta_leaf_spot"
+    },
+    {
+     "question": "क्या धब्बों का बीच स्लेटी है और किनारा गहरा है?",
+     "if_yes": "okra__cercospora_leaf_spot",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Sustainable management of Alternaria alternata-caused okra leaf spot",
+     "url": "https://horizonepublishing.com/journals/index.php/PST/article/view/12072",
+     "publisher": "other"
+    },
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "सिर्फ शोध पत्र और डेटा सेट के स्रोत मिले। इस रोग पर टीएनएयू या आईसीएआर (TNAU/ICAR) का सलाह पन्ना नहीं मिला। दिखाया गया उपचार एक परीक्षण से है, आधिकारिक सिफारिश नहीं।"
+  },
+  {
+   "class_id": "okra__cercospora_leaf_spot",
+   "crop": "okra",
+   "name_en": "भिंडी का सर्कोस्पोरा पत्ती धब्बा",
+   "type": "fungal",
+   "cause": "फफूंद (Cercospora malayensis और C. abelmoschi)",
+   "symptoms": [
+    "भूरे, बेडौल धब्बे, अक्सर स्लेटी बीच और गहरे किनारे के साथ।",
+    "कुछ धब्बे कालिख जैसे काले और कोणीय होते हैं।",
+    "पत्ते के नीचे कालिख जैसी काली परत आ सकती है।",
+    "गंभीर हालत में पत्ते झड़ जाते हैं, ज़्यादातर नम मौसम में।"
+   ],
+   "look_alikes": "आल्टरनेरिया और फिलोस्टिक्टा के धब्बों से भ्रम होता है। सर्कोस्पोरा के धब्बे स्लेटी बीच और नीचे कालिख जैसी परत वाले बताए गए हैं।",
+   "cultural_actions": [
+    "खेत की मेड़ें साफ करें और छाँटें।",
+    "नम मौसम में ज़्यादा बार देखें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose. TNAU says spraying controls the disease.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_1.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem seed kernel extract",
+     "note": "FOLLOW PRODUCT LABEL or KVK guidance; no dose. Listed in TNAU organic farming page.",
+     "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Cow urine spray",
+     "note": "Listed in TNAU organic farming page; no dose given here.",
+     "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या धब्बों का बीच स्लेटी है और किनारे गहरे भूरे हैं?",
+     "if_yes": "consistent",
+     "if_no": "okra__alternaria_leaf_spot"
+    },
+    {
+     "question": "क्या धब्बों के नीचे कालिख जैसी काली परत है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Bhendi Cercospora Leaf Spots",
+     "url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management (organic)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "तमिलनाडु के लिए लिखा गया है। टीएनएयू (TNAU) छिड़काव की कोई सीमा नहीं बताता।"
+  },
+  {
+   "class_id": "okra__downy_mildew",
+   "crop": "okra",
+   "name_en": "मृदुरोमिल आसिता (डाउनी मिल्ड्यू)",
+   "type": "fungal",
+   "cause": "जो स्रोत मिले, उनमें नहीं बताया गया (मृदुरोमिल आसिता प्रकार की फफूंद जैसा जीव)",
+   "symptoms": [
+    "पत्ती की ऊपरी सतह पर पीले चकत्ते।",
+    "पत्ती के नीचे बैंगनी रंग की फफूंद की परत।",
+    "ठंडे और गीले मौसम में बढ़ता है।"
+   ],
+   "look_alikes": "सफेद चूर्णी रोग में दोनों तरफ स्लेटी-सफेद चूर्ण होता है। मृदुरोमिल आसिता की परत बैंगनी होती है और सिर्फ नीचे होती है।",
+   "cultural_actions": [
+    "ठंडे और गीले दिनों में पत्तों के नीचे देखें।",
+    "प्रभावित पत्ते अपने कृषि विज्ञान केंद्र या राज्य कृषि कार्यालय को दिखाएँ।"
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या परत बैंगनी है और पीले चकत्ते के नीचे, सिर्फ पत्ते के नीचे है?",
+     "if_yes": "consistent",
+     "if_no": "okra__alternaria_leaf_spot"
+    },
+    {
+     "question": "क्या चूर्ण स्लेटी-सफेद है और पत्ते के दोनों तरफ है?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "सिर्फ डेटा सेट का वर्णन मिला। टीएनएयू या आईसीएआर (TNAU/ICAR) की कोई प्रबंधन सलाह नहीं मिली, इसलिए कोई उपचार नहीं दिया गया है। स्थानीय विशेषज्ञ से पूछें।"
+  },
+  {
+   "class_id": "okra__healthy",
+   "crop": "okra",
+   "name_en": "स्वस्थ भिंडी की पत्ती",
+   "type": "healthy",
+   "cause": "लागू नहीं",
+   "symptoms": [
+    "पत्तियाँ चमकदार हरी हैं।",
+    "कोई धब्बा, घाव या मुड़ना नहीं है।",
+    "नसें हरी हैं, पीली नहीं।",
+    "पौधे बिना बौनेपन के सामान्य बढ़ते हैं।"
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "हर हफ्ते पत्तियों को दोनों तरफ से देखें।",
+    "पत्तियों के नीचे सफेद मक्खी देखें।",
+    "पीली नसों वाले पौधे को उखाड़कर जला दें।",
+    "खरपतवार हटाएँ और खेत के किनारे साफ रखें।"
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्तियों पर कोई धब्बा, मुड़ना या पीली नसें हैं?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "स्वस्थ पत्ती का वर्णन तमिलनाडु के इमेज डेटासेट वाले शोध-पत्र से है।"
+  },
+  {
+   "class_id": "okra__leaf_curly_virus",
+   "crop": "okra",
+   "name_en": "पत्ता मोड़क / पीला शिरा मोज़ेक वायरस (Yellow vein mosaic)",
+   "type": "viral",
+   "cause": "भिंडी का पीला शिरा मोज़ेक वायरस, जो सफेद मक्खी (Bemisia tabaci) से फैलता है; एक डेटासेट पत्ता मोड़क रूप को भी सफेद मक्खी से फैलने वाला बताता है",
+   "symptoms": [
+    "पत्तियों की नसों का पूरा जाल पीला हो जाता है।",
+    "पत्तियाँ ऊपर की ओर मुड़ सकती हैं और बेढंगी दिखती हैं।",
+    "नई पत्तियाँ पीली पड़ती हैं और छोटी रह जाती हैं।",
+    "पौधे बौने रहते हैं और फूल कम आते हैं।",
+    "फल छोटे, सख्त और बेचने लायक नहीं होते।"
+   ],
+   "look_alikes": "पोषक तत्व की कमी का पीलापन सिर्फ नसों तक सीमित नहीं होता। यहाँ सफेद मक्खी के साथ नसें खुद पीली पड़ती हैं।",
+   "cultural_actions": [
+    "बीमार पौधों को हटाकर जला दें।",
+    "आसपास के खरपतवार और जंगली पौधों को नष्ट करें।",
+    "गर्मी की बुवाई में, जब सफेद मक्खी ज्यादा होती है, संवेदनशील किस्में न लगाएँ।",
+    "परभणी क्रांति या अर्का अनामिका जैसी सहनशील किस्में चुनें।",
+    "सिंथेटिक पायरेथ्रॉइड दवा न डालें; TNAU के अनुसार इससे रोग बढ़ता है।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam (whitefly control)",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Controls the vector, not the virus.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Methyl demeton (whitefly control)",
+     "note": "FOLLOW PRODUCT LABEL; no dose. Listed by TNAU; check current legal status locally.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Azadirachtin (neem-based)",
+     "note": "FOLLOW PRODUCT LABEL; no dose.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem seed kernel extract",
+     "note": "Listed in TNAU organic farming page; no dose given here.",
+     "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "गर्मी में बुवाई करते समय, जब सफेद मक्खी ज्यादा होती है, संवेदनशील किस्में न लगाएँ। TNAU ने छिड़काव की कोई सीमा नहीं बताई है।",
+   "ask_back": [
+    {
+     "question": "क्या पत्ती की नसें पीली हैं और बीच का हिस्सा हरा है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या पत्तियों के नीचे छोटी सफेद मक्खियाँ दिखती हैं?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Bhendi Yellow Vein Mosaic",
+     "url": "https://agritech.tnau.ac.in/crop_protection/bhendi_diseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management (organic)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "TNAU इसे पीला शिरा मोज़ेक कहता है; डेटासेट इसे पत्ता मोड़क वायरस कहता है। यह जानकारी तमिलनाडु के लिए लिखी गई है। वायरस का कोई इलाज नहीं है; कीटनाशक सिर्फ सफेद मक्खी पर काम करते हैं।"
+  },
+  {
+   "class_id": "okra__phyllosticta_leaf_spot",
+   "crop": "okra",
+   "name_en": "फिलोस्टिक्टा पत्ती धब्बा (Phyllosticta leaf spot)",
+   "type": "fungal",
+   "cause": "फफूंद (Phyllosticta hibiscini / Phyllosticta sp.)",
+   "symptoms": [
+    "गोल या बेढंगे पत्ती के धब्बे, जिनका बीच का हिस्सा भूरा-पीला या हल्का होता है।",
+    "धब्बे गोल, भूरे और गहरे किनारे वाले हो सकते हैं।",
+    "धब्बे लगभग 1 सेमी या उससे बड़े हो सकते हैं।",
+    "धब्बों का बीच का हिस्सा पतला होकर फट सकता है।",
+    "गर्म और नम मौसम में ज्यादा होता है।"
+   ],
+   "look_alikes": "यह अल्टरनेरिया और सर्कोस्पोरा के धब्बों जैसा लगता है। फिलोस्टिक्टा के धब्बे बड़े होते हैं, बीच का हिस्सा भूरा-पीला होता है और पीला घेरा नहीं बताया गया है।",
+   "cultural_actions": [
+    "पत्तियों को ज्यादा देर गीला न रहने दें।",
+    "ऊपर से सिंचाई में बदलाव करें ताकि पत्तियाँ कम गीली रहें।",
+    "बार-बार खेत देखें, क्योंकि फफूंद के बीजाणु पानी की छींटों से फैलते हैं।"
+   ],
+   "treatment_options": [],
+   "when_to_act": "फ्लोरिडा विश्वविद्यालय के अनुसार, जिन खेतों में बार-बार यह समस्या आती है, वहाँ लक्षण आने से पहले बचाव की फफूंदनाशक दवा मदद करती है। रोग दिखने के बाद यह कम काम करती है।",
+   "ask_back": [
+    {
+     "question": "क्या धब्बे बड़े हैं, बीच से भूरे-पीले और पतले हैं, और पीला घेरा नहीं है?",
+     "if_yes": "consistent",
+     "if_no": "okra__alternaria_leaf_spot"
+    },
+    {
+     "question": "क्या धब्बों का बीच का हिस्सा स्लेटी है और नीचे कालिख जैसी परत है?",
+     "if_yes": "okra__cercospora_leaf_spot",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Phyllosticta leaf spot of okra - UF/IFAS Plant Pathology",
+     "url": "https://plantpath.ifas.ufl.edu/u-scout/blog/Entries/2011/8/phyllosticta-leaf-spot-of-okra-1.html",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Bhendi Disease Management (minor diseases)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Okra disease dataset (Tamil Nadu) - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12275076/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "प्रबंधन की जानकारी फ्लोरिडा (अमेरिका) के स्रोत से है; TNAU इसे सिर्फ एक छोटा पत्ती धब्बा बताता है। भारत की कोई रासायनिक सलाह नहीं मिली, इसलिए कोई नहीं दी गई।"
+  },
+  {
+   "class_id": "tomato__bacterial_spot",
+   "crop": "tomato",
+   "name_en": "जीवाणु पत्ती धब्बा (Bacterial leaf spot)",
+   "type": "bacterial",
+   "cause": "जीवाणु (Xanthomonas axonopodis pv. vesicatoria)",
+   "symptoms": [
+    "पत्तियों पर छोटे, भूरे, पानी जैसे गोल धब्बे, जिनके चारों ओर पीला घेरा होता है।",
+    "पुरानी पत्तियाँ झड़ सकती हैं।",
+    "हरे फलों पर छोटे पानी जैसे धब्बे पड़ते हैं।",
+    "फल के धब्बों का बीच का हिस्सा हल्का भूरा, धँसा और खुरदरा हो जाता है।"
+   ],
+   "look_alikes": "अगेती झुलसा के धब्बे बड़े होते हैं और उनमें गोल छल्ले होते हैं। जीवाणु धब्बे छोटे, पानी जैसे और पीले घेरे वाले होते हैं। पछेती झुलसा के घाव पूरी पत्ती पर तेज़ी से फैलते हैं।",
+   "cultural_actions": [
+    "रोग-मुक्त पौध इस्तेमाल करें।",
+    "संक्रमित पौधों के अवशेष हटाकर नष्ट करें।",
+    "ऐसी फसलों के साथ फेरबदल करें जो टमाटर की रिश्तेदार नहीं हैं।",
+    "पत्तियाँ गीली हों तो खेत में काम न करें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Streptocycline (antibiotic spray)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_11.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या धब्बे छोटे, भूरे, पानी जैसे और गोल हैं, जिनके चारों ओर पीला घेरा है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या धब्बों में निशाने जैसे गोल छल्ले हैं?",
+     "if_yes": "tomato__early_blight",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Bacterial leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_11.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Organic Farming: Tomato disease management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_tomato_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु के लिए लिखी गई है। TNAU ने छिड़काव के लिए अपनी एंटीबायोटिक का नाम बताया है; टमाटर के लिए CIB&RC पंजीकरण मैं जाँच नहीं पाया। अपने KVK या कृषि अधिकारी से पूछें।"
+  },
+  {
+   "class_id": "tomato__early_blight",
+   "crop": "tomato",
+   "name_en": "अगेती झुलसा (Early blight)",
+   "type": "fungal",
+   "cause": "फफूंद (Alternaria solani)",
+   "symptoms": [
+    "पत्तियों पर भूरे धब्बे, जिनके अंदर निशाने जैसे छल्ले होते हैं।",
+    "धब्बे के चारों ओर अक्सर पीला किनारा होता है।",
+    "फल डंठल वाले सिरे से संक्रमित होता है और उस पर भूरे छल्ले बनते हैं।",
+    "फल के घाव चमड़े जैसे हो सकते हैं, जिन पर काले मखमली बीजाणु होते हैं।",
+    "संक्रमित फल अक्सर झड़ जाते हैं।"
+   ],
+   "look_alikes": "पछेती झुलसा के घाव पानी जैसे होते हैं और नमी वाले मौसम में उन पर सफेद फफूंद आती है; उनमें छल्ले नहीं होते। जीवाणु धब्बे छोटे, पानी जैसे और पीले घेरे वाले होते हैं।",
+   "cultural_actions": [
+    "कटाई के बाद फसल के अवशेष हटाकर नष्ट करें।",
+    "टमाटर के परिवार से बाहर की फसलों के साथ फेरबदल करें।",
+    "रोग-मुक्त बीज बोएँ।",
+    "खेत साफ रखें और नियमित सिंचाई से पानी की कमी न होने दें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma asperellum (seed treatment)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Pyraclostrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Iprodione, metiram or zineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या भूरे पत्ती धब्बों के अंदर निशाने जैसे छल्ले और पीला किनारा है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या घाव पानी जैसे और काले हैं और नमी में उन पर सफेद फफूंद है?",
+     "if_yes": "tomato__late_blight",
+     "if_no": "consistent"
+    },
+    {
+     "question": "क्या धब्बे छोटे, गोल और पानी जैसे हैं, जिनके चारों ओर पीला घेरा है?",
+     "if_yes": "tomato__bacterial_spot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Early Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech: Tomato Early Blight (post-harvest/fruit page)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_phdiseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Organic Farming: Tomato disease management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_tomato_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु के लिए लिखी गई है। TNAU ने ये सक्रिय तत्व बताए हैं; टमाटर के लिए CIB&RC पंजीकरण जाँचा नहीं गया (रजिस्ट्री पेज नहीं खुला)। खरीदने से पहले KVK से पूछ लें।"
+  },
+  {
+   "class_id": "tomato__healthy",
+   "crop": "tomato",
+   "name_en": "स्वस्थ टमाटर की पत्ती",
+   "type": "healthy",
+   "cause": "कोई रोग नहीं मिला",
+   "symptoms": [
+    "अंदर छल्ले वाले भूरे धब्बे नहीं हैं।",
+    "पानी जैसे काले धब्बे या पत्तियों के नीचे सफेद फफूंद नहीं है।",
+    "पीले घेरे वाले छोटे पानी जैसे धब्बे नहीं हैं।",
+    "ऊपर पीले धब्बे और नीचे जैतूनी-हरी फफूंद नहीं है।"
+   ],
+   "look_alikes": "शुरुआती रोग हल्का हो सकता है। मैग्नीशियम की कमी शुरुआती पत्ती फफूंद जैसी लग सकती है, इसलिए पत्ती के दोनों तरफ देखें।",
+   "cultural_actions": [
+    "खेत को नियमित देखें, खासकर बारिश या कोहरे के बाद।",
+    "पहले नीचे की पत्तियाँ देखें, फिर ऊपर की पत्तियाँ और फल।",
+    "रोग-मुक्त पौध इस्तेमाल करें।",
+    "संक्रमित पौधों के अवशेष हटाकर नष्ट करें।",
+    "पानी निकासी अच्छी रखें और फसल की फेरबदल करें।"
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या कोई छल्ले वाला भूरा धब्बा, पानी जैसा धब्बा, सफेद फफूंद या पीले घेरे वाला धब्बा दिखता है?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Early Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech: Tomato Late Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech: Tomato Bacterial leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_11.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Cornell Vegetables: Tomato Leaf Mold",
+     "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "किसी स्रोत में स्वस्थ पत्ती का सीधा वर्णन नहीं है; यहाँ दिए संकेत स्रोतों में बताए लक्षणों का न होना हैं। पत्ती फफूंद वाली बात अमेरिका के विश्वविद्यालय के पेज से है।"
+  },
+  {
+   "class_id": "tomato__late_blight",
+   "crop": "tomato",
+   "name_en": "पछेती झुलसा (Late blight)",
+   "type": "fungal",
+   "cause": "Phytophthora infestans (फफूंद जैसा जीव)",
+   "symptoms": [
+    "पत्तियों और तनों पर पानी जैसे काले घाव।",
+    "घाव तेज़ी से फैलते हैं और पूरी पत्ती मर जाती है।",
+    "गीले मौसम में पत्तियों पर सफेद फफूंद दिखती है।",
+    "फल पर गहरे भूरे घाव बनते हैं, फिर फल सड़कर नरम हो जाता है।"
+   ],
+   "look_alikes": "अगेती झुलसा के धब्बे निशाने जैसे छल्ले वाले और गहरे भूरे होते हैं। पछेती झुलसा पानी जैसा होता है, तेज़ी से फैलता है और उस पर सफेद फफूंद दिखती है।",
+   "cultural_actions": [
+    "खेत में पानी निकासी ठीक रखें।",
+    "फसल की फेरबदल करें।",
+    "ठंडी रातों और लंबे गीले दौर में बार-बार खेत देखें।",
+    "संक्रमित पौधों के हिस्से हटाकर नष्ट करें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma asperellum (soil application)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Cyazofamid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Zineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": "TNAU ने छिड़काव की कोई सीमा नहीं बताई है। ठंडी रातें, गर्म दिन और बारिश व कोहरे से लंबे गीले दौर में यह रोग बढ़ता है।",
+   "ask_back": [
+    {
+     "question": "क्या घाव पानी जैसे और काले हैं, तेज़ी से फैल रहे हैं और नमी में सफेद फफूंद है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "क्या भूरे धब्बों के अंदर निशाने जैसे छल्ले हैं?",
+     "if_yes": "tomato__early_blight",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech: Tomato Late Blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Organic Farming: Tomato disease management",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_tomato_diseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु के लिए लिखी गई है। टमाटर के लिए CIB&RC पंजीकरण जाँचा नहीं गया (रजिस्ट्री पेज नहीं खुला)। खरीदने से पहले KVK से पूछ लें।"
+  },
+  {
+   "class_id": "tomato__leaf_mold",
+   "crop": "tomato",
+   "name_en": "पत्ती फफूंद (Leaf mould)",
+   "type": "fungal",
+   "cause": "फफूंद (Passalora fulva, जिसे Cladosporium fulvum भी कहते हैं)",
+   "symptoms": [
+    "पत्ती की ऊपरी सतह पर हल्के हरे धब्बे आते हैं।",
+    "बाद में धब्बे सूखकर भूरे हो जाते हैं।",
+    "पत्तियों के नीचे जैतूनी-हरी फफूंद उगती है।",
+    "यह नीचे की पत्तियों से शुरू होकर ऊपर बढ़ता है।",
+    "ज्यादा हमले में पत्तियाँ झड़ती हैं और उपज घटती है।"
+   ],
+   "look_alikes": "मैग्नीशियम की कमी शुरू में ऐसी ही लग सकती है। फफूंद के धब्बे ज्यादा साफ होते हैं और नीचे जैतूनी रंग की फफूंद होती है।",
+   "cultural_actions": [
+    "संक्रमित पौधे और आसपास के अवशेष जल्दी हटाएँ।",
+    "इस्तेमाल के बाद औज़ार और उपकरण साफ करें।",
+    "फसल की फेरबदल करें और साफ बीज इस्तेमाल करें।",
+    "नमी कम रखें, खासकर पॉलीहाउस और सुरंगों में।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Trifloxystrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agris.fao.org/search/en/records/65df381e0f3e94b9e5d62762",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या ऊपर हल्के पीले-हरे धब्बे हैं और नीचे जैतूनी-हरी फफूंद है?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Cornell Vegetables: Tomato Leaf Mold",
+     "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+     "publisher": "other"
+    },
+    {
+     "title": "Management of tomato leaf mould with trifloxystrobin (Veloukas et al. 2007, Greece), AGRIS record",
+     "url": "https://agris.fao.org/search/en/records/65df381e0f3e94b9e5d62762",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "पत्ती फफूंद पर TNAU, ICAR या किसी भारतीय विश्वविद्यालय का पेज नहीं मिला; स्रोत अमेरिका के विश्वविद्यालय और यूनान का अध्ययन हैं। बताए गए उत्पाद भारत के लिए जाँचे नहीं गए हैं। अपने KVK से पक्का करें।"
+  },
+  {
+   "class_id": "tomato__mosaic_virus",
+   "crop": "tomato",
+   "name_en": "मोज़ेक वायरस (Mosaic virus)",
+   "type": "viral",
+   "cause": "Cucumber mosaic virus (CMV) / Tomato mosaic virus (ToMV)",
+   "symptoms": [
+    "पत्तियों पर हल्के और गहरे हरे चितकबरे निशान।",
+    "धूप वाले दिनों में नई पत्तियाँ मुरझा सकती हैं।",
+    "पत्रक बेढंगे, सिकुड़े और छोटे होते हैं; फर्न जैसे भी दिख सकते हैं।",
+    "पौधे बौने, पीले और पतले दिखते हैं।"
+   ],
+   "look_alikes": "पत्ता मोड़क वायरस मुख्य रूप से पत्तियों को नीचे की ओर मोड़ता और सिकोड़ता है। मोज़ेक में मुख्य रूप से हरे चितकबरे निशान और सिकुड़न दिखती है।",
+   "cultural_actions": [
+    "इसका कोई इलाज नहीं है; फैलाव रोकें और संक्रमित पौधे हटाएँ।",
+    "स्वस्थ पौधों से लिया रोग-मुक्त बीज इस्तेमाल करें।",
+    "बीज को अच्छी तरह धोएँ और छाया में सुखाएँ।",
+    "नर्सरी के संक्रमित पौधों को सावधानी से निकालकर नष्ट करें।",
+    "तंबाकू, आलू, मिर्च, शिमला मिर्च या बैंगन के बाद टमाटर न लगाएँ।",
+    "फसल की फेरबदल करें।",
+    "वायरस हाथों, कपड़ों और खेत के औज़ारों से फैलता है; इन्हें साफ रखें।"
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्तियाँ नीचे की ओर मुड़ी और सिकुड़ी हैं, और पूरा पौधा बौना और झाड़ीदार है?",
+     "if_yes": "tomato__yellow_leaf_curl_virus",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Tomato Mosaic",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_12.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease Management of Horticultural Crops (organic farming)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु (TNAU) के लिए लिखी गई है। स्रोतों में वायरस के लिए कोई रासायनिक नियंत्रण नहीं बताया गया है। सलाह के लिए अपने KVK से पूछें।"
+  },
+  {
+   "class_id": "tomato__septoria_leaf_spot",
+   "crop": "tomato",
+   "name_en": "सेप्टोरिया पत्ती धब्बा (Septoria leaf spot)",
+   "type": "fungal",
+   "cause": "फफूंद (Septoria lycopersici)",
+   "symptoms": [
+    "पत्तियों पर छोटे गोल से बेढंगे धब्बे।",
+    "धब्बों का बीच का हिस्सा स्लेटी और किनारा गहरा होता है।",
+    "धब्बे आपस में मिल जाते हैं, जिससे पत्ती झुलस जाती है और बहुत पत्तियाँ झड़ती हैं।",
+    "तने और फूल भी प्रभावित हो सकते हैं।"
+   ],
+   "look_alikes": "अगेती झुलसा के धब्बों में निशाने जैसे गोल छल्ले होते हैं। सेप्टोरिया के धब्बे छोटे होते हैं, जिनका बीच स्लेटी और किनारा गहरा होता है।",
+   "cultural_actions": [
+    "प्रभावित पौधों के हिस्से तुरंत हटाकर नष्ट करें।",
+    "ज्यादा नमी में रोग ज्यादा होने की उम्मीद रखें।",
+    "बीजाणु बारिश की छींटों और हवा से फैलते हैं; खेत साफ रखें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma asperellum (seed treatment)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Fluxapyroxad + Pyraclostrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या धब्बों में निशाने जैसे गोल छल्ले हैं?",
+     "if_yes": "tomato__target_spot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Septoria Leaf Spot of Tomato",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Early Blight of Tomato (for look-alike)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease Management of Horticultural Crops (organic farming)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु (TNAU) के लिए लिखी गई है। टमाटर के लिए CIB&RC पंजीकरण जाँचा नहीं गया; लेबल देखें और KVK से पूछें।"
+  },
+  {
+   "class_id": "tomato__spider_mites",
+   "crop": "tomato",
+   "name_en": "लाल मकड़ी / माइट (Spider mites)",
+   "type": "pest",
+   "cause": "लाल मकड़ी, Tetranychus प्रजाति (माइट)",
+   "symptoms": [
+    "पत्तियाँ लालिमा लिए भूरी और काँसे जैसी हो जाती हैं।",
+    "पत्तियों पर रेशम जैसा जाला दिखता है।",
+    "ज्यादा हमले वाली पत्तियाँ मुरझाकर सूख जाती हैं।",
+    "फूल और फल का विकास प्रभावित होता है।"
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "पत्तियों के नीचे छोटे लाल माइट, पीलापन लिए शिशु और अंडों के गुच्छे देखें।",
+    "माइट पक्का करने के लिए जाला देखें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as the control measure.",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्तियों के नीचे बारीक रेशमी जाला और छोटे लाल कण दिखते हैं?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Red Spider Mite on Tomato",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु (TNAU) के लिए लिखी गई है। स्रोत में छिड़काव की कोई सीमा नहीं दी गई है। CIB&RC स्थिति जाँची नहीं गई (पोर्टल नहीं खुला); लेबल देखें।"
+  },
+  {
+   "class_id": "tomato__target_spot",
+   "crop": "tomato",
+   "name_en": "टारगेट स्पॉट (निशाना धब्बा)",
+   "type": "fungal",
+   "cause": "फफूंद (Corynespora cassiicola)",
+   "symptoms": [
+    "शुरू में पत्तियों पर गहरे भूरे बारीक बिंदु जैसे धब्बे।",
+    "धब्बों का बीच हल्के भूरे से स्लेटी रंग का हो जाता है और उसके चारों ओर गहरे छल्ले बनते हैं।",
+    "धब्बों के चारों ओर अक्सर पीलापन आता है; ज्यादा रोग में पत्तियाँ झड़ जाती हैं।",
+    "फल पर धँसे हुए भूरे गड्ढे बनते हैं, कभी-कभी X आकार की दरारें भी।",
+    "तनों और पत्ती के डंठलों पर गहरे भूरे अंडाकार घाव बनते हैं।"
+   ],
+   "look_alikes": "यह अगेती झुलसा, जीवाणु धब्बा और ग्रे लीफ स्पॉट जैसा दिखता है; शुरुआती धब्बे जीवाणु धब्बे जैसे लगते हैं।",
+   "cultural_actions": [
+    "बैंगन-टमाटर परिवार से बाहर की फसलों के साथ फेरबदल करें।",
+    "साफ, स्वस्थ पौध से शुरुआत करें।",
+    "खरपतवार, अपने-आप उगे पौधे और फसल के अवशेष हटाएँ।",
+    "संक्रमित पौधों का हिस्सा हटाएँ।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Difenoconazole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "cibrc_status": "unchecked",
+     "indian_source": false
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्ती के धब्बों में गहरे गोल छल्ले और स्लेटी-भूरा बीच है?",
+     "if_yes": "consistent",
+     "if_no": "tomato__septoria_leaf_spot"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Target Spot of Tomato in Florida (UF/IFAS)",
+     "url": "https://ask.ifas.ufl.edu/publication/PP351",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Early Blight of Tomato (look-alike)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "टारगेट स्पॉट पर भारत (TNAU/ICAR) का कोई पेज नहीं मिला; मुख्य स्रोत फ्लोरिडा का विश्वविद्यालय है। फफूंदनाशकों की सूची फ्लोरिडा की है; भारत के लिए CIB&RC स्थिति जाँची नहीं गई। KVK से पूछें।"
+  },
+  {
+   "class_id": "tomato__yellow_leaf_curl_virus",
+   "crop": "tomato",
+   "name_en": "पत्ता मोड़क वायरस (सफेद मक्खी से फैलने वाला)",
+   "type": "viral",
+   "cause": "टमाटर पत्ता मोड़क वायरस, जो सफेद मक्खी (Bemisia tabaci) से फैलता है",
+   "symptoms": [
+    "पौधे बहुत बौने रह जाते हैं।",
+    "पत्तियाँ नीचे की ओर मुड़ती और सिकुड़ती हैं।",
+    "नई पत्तियाँ मुड़ने से पहले पीली पड़ सकती हैं।",
+    "पुरानी पत्तियाँ चमड़े जैसी और भंगुर हो जाती हैं।",
+    "पौधे पीले और झाड़ीदार दिखते हैं, गाँठों के बीच की दूरी कम होती है।"
+   ],
+   "look_alikes": "मोज़ेक में हरे चितकबरे निशान और सिकुड़न दिखती है; पत्ता मोड़क में पत्तियाँ नीचे मुड़ती हैं, पौधा बौना और झाड़ीदार दिखता है।",
+   "cultural_actions": [
+    "इसका कोई इलाज नहीं है; बचाव और सफेद मक्खी की रोकथाम पर ध्यान दें।",
+    "नर्सरी सुरक्षित हालात में तैयार करें।",
+    "ज्वार, मक्का या बाजरा जैसी बाड़ फसलें लगाएँ।",
+    "रोग-मुक्त बीज इस्तेमाल करें।",
+    "पीले चिपचिपे जाल लटकाएँ।",
+    "Abutilon indicum जैसे खरपतवार हटाएँ।",
+    "प्रभावित पौधों को हटाकर नष्ट करें।"
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Methyl demeton (whitefly vector)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "cibrc_status": "unchecked",
+     "indian_source": true
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "क्या पत्तियाँ नीचे की ओर मुड़ी और सिकुड़ी हैं, और पौधा झाड़ीदार व बौना है?",
+     "if_yes": "consistent",
+     "if_no": "tomato__mosaic_virus"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Tomato Leaf Curl Virus",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease Management of Horticultural Crops (organic farming)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "यह जानकारी तमिलनाडु (TNAU) के लिए लिखी गई है। कीटनाशक सफेद मक्खी पर असर करते हैं, वायरस पर नहीं। CIB&RC स्थिति जाँची नहीं गई; लेबल देखें।"
+  }
+ ]
+}
