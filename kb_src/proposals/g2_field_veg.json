@@ -1,0 +1,854 @@
+{
+ "maize__gray_leaf_spot": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Tebuconazole",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Zambian (CABI Plantwise) factsheet lists it; consider only when the disease is seen on leaves. Not an Indian source.",
+    "source_url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['tebuconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Carbendazim",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same factsheet lists it (sold with flusilazole). Not an Indian source.",
+    "source_url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['carbendazim'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Flusilazole",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same factsheet lists it. Not an Indian source.",
+    "source_url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['flusilazole'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Grey leaf spot of maize - Factsheets for Farmers (Plantwise/CABI, Zambia Ministry of Agriculture)",
+    "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "publisher": "CABI Plantwise"
+   }
+  ],
+  "new_cultural_actions": [
+   "Rotate maize with beans, cowpeas, groundnuts or cereals other than maize.",
+   "Sow on time, at the start of the rains.",
+   "Use varieties that resist gray leaf spot.",
+   "Crop rotation and tillage cut down the fungus in crop residue."
+  ],
+  "when_to_act": "If you use a fungicide, spray when the disease is first seen on the leaves and follow the label.",
+  "evidence": [
+   {
+    "claim": "Fungicides can be considered when disease is seen on leaves; products named include flusilazole/carbendazim and tebuconazole",
+    "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "quote": "You may also consider spraying fungicides when the disease is seen on the leaves."
+   },
+   {
+    "claim": "Rotation with legumes or non-maize cereals",
+    "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "quote": "Rotate maize with legumes such as beans, cowpeas and groundnuts, or cereals other than maize"
+   },
+   {
+    "claim": "Sow on time",
+    "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20147801404.pdf",
+    "quote": "Plant on time, preferably at the onset of rains, because the disease will attack later."
+   },
+   {
+    "claim": "Resistant hybrids exist",
+    "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn",
+    "quote": "Resistant hybrids and inbreds are available."
+   },
+   {
+    "claim": "Rotation and tillage reduce fungus survival",
+    "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn",
+    "quote": "Crop rotation and tillage reduce survival of the fungus."
+   },
+   {
+    "claim": "Nepal/Asia review names no fungicide and calls fungicide an emergency tool (India not mentioned)",
+    "url": "https://www.nepjol.info/index.php/JMRD/article/view/14245",
+    "quote": ""
+   }
+  ],
+  "gaps": [
+   "No Indian source (ICAR/SAU/KVK/NIPHM) with gray leaf spot management found. ICAR-IIMR state pages for Andhra Pradesh, Karnataka, Himachal, Bihar and Manipur, and the IIMR 'predominant diseases' table, do not list gray leaf spot (pages opened: aicrpmaize.icar.gov.in/?p=1172,1163,1166,1168,1179; iimr.icar.gov.in/?p=959,1163,1168,2136).",
+   "All three fungicide names come from one Zambian factsheet; no Indian label or advisory confirms them for gray leaf spot. Crop Protection Network and the Asia review name no active ingredient.",
+   "Plantix page names more active ingredients (strobilurins, propiconazole, prothioconazole) but it is a commercial app page, so not used.",
+   "No spray threshold or growth-stage timing found beyond 'when seen on leaves'."
+  ]
+ },
+ "maize__common_rust": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Kresoxim-methyl",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as a foliar spray at about 35 and 50 days after sowing.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['kresoxim methyl'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Tebuconazole",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as a foliar spray at about 35 and 50 days after sowing.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['tebuconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Chlorothalonil",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as a foliar spray at about 35 and 50 days after sowing.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['chlorothalonil'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Mancozeb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU, ICAR-IIMR (Karnataka) and ICAR-IIMR (Bihar) all list it; Karnataka page says repeat after 10 days.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['mancozeb'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Hexaconazole",
+    "note": "FOLLOW PRODUCT LABEL; no dose. ICAR-IIMR Karnataka entry lists it for the second spray at 35-50 days after sowing.",
+    "source_url": "https://aicrpmaize.icar.gov.in/?p=1172",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['hexaconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. ICAR-IIMR Karnataka entry lists this mixture for the second spray at 35-50 days after sowing.",
+    "source_url": "https://aicrpmaize.icar.gov.in/?p=1172",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['azoxystrobin', 'difenoconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Zineb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. ICAR-IIMR Bihar page lists it with mancozeb at first appearance of pustules.",
+    "source_url": "https://aicrpmaize.icar.gov.in/?p=1166",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['zineb'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "ICAR-IIMR / AICRP Maize - Disease management, state-wise (Karnataka entry: common rust)",
+    "url": "https://aicrpmaize.icar.gov.in/?p=1172",
+    "publisher": "ICAR-IIMR"
+   },
+   {
+    "title": "ICAR-IIMR / AICRP Maize - State recommendations (Bihar: major maize diseases)",
+    "url": "https://aicrpmaize.icar.gov.in/?p=1166",
+    "publisher": "ICAR-IIMR"
+   }
+  ],
+  "new_cultural_actions": [
+   "Sow early (May-June in Karnataka, per ICAR-IIMR).",
+   "Remove Oxalis and other alternate host plants near the field.",
+   "Collect crop remains and destroy them by burning or burying."
+  ],
+  "when_to_act": "Spray when the first rust pustules appear (ICAR-IIMR Bihar); Indian pages also list a second spray at about 35-50 days after sowing. Follow the label.",
+  "evidence": [
+   {
+    "claim": "TNAU: remove crop remains",
+    "url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "quote": "Collect the remains of the crop and destroy by burning or burying."
+   },
+   {
+    "claim": "TNAU symptom wording",
+    "url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "quote": "Circular to elongate cinnamon brown, powdery, erumpent pustules on both leaf surfaces"
+   },
+   {
+    "claim": "TNAU lists foliar sprays of kresoxim-methyl, tebuconazole, chlorothalonil or mancozeb at 35 and 50 days after sowing",
+    "url": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "ICAR-IIMR Karnataka: early sowing for common rust",
+    "url": "https://aicrpmaize.icar.gov.in/?p=1172",
+    "quote": "Early sowing of the crop (May-June)."
+   },
+   {
+    "claim": "ICAR-IIMR Karnataka: mancozeb first, then hexaconazole or azoxystrobin+difenoconazole at 35-50 DAS",
+    "url": "https://aicrpmaize.icar.gov.in/?p=1172",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "ICAR-IIMR Bihar: mancozeb or zineb at first appearance of pustules",
+    "url": "https://aicrpmaize.icar.gov.in/?p=1166",
+    "quote": "at first appearance of pustule of Polysora rust or Common rust"
+   }
+  ],
+  "gaps": [
+   "Now 3 Indian pages (TNAU, ICAR-IIMR Karnataka, ICAR-IIMR Bihar). Doses and spray intervals exist on these pages but are deliberately not recorded.",
+   "No Indian page gave a numeric spray threshold; only 'first appearance' and crop-age timing.",
+   "Mancozeb is banned on guava, jowar and tapioca only; no restriction for maize found by the name check."
+  ]
+ },
+ "wheat__septoria": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Propiconazole",
+    "note": "FOLLOW PRODUCT LABEL; no dose. UC IPM (California) lists it; apply between tillering and heading to protect the flag leaf. Not an Indian source.",
+    "source_url": "https://ipm.ucanr.edu/agriculture/small-grains/septoria-tritici-blotch-of-wheat/",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['propiconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Mancozeb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. UC IPM (California) lists it as a contact fungicide. Not an Indian source.",
+    "source_url": "https://ipm.ucanr.edu/agriculture/small-grains/septoria-tritici-blotch-of-wheat/",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['mancozeb'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Septoria Tritici Blotch of Wheat - UC IPM Pest Management Guidelines",
+    "url": "https://ipm.ucanr.edu/agriculture/small-grains/septoria-tritici-blotch-of-wheat/",
+    "publisher": "University of California IPM"
+   }
+  ],
+  "new_cultural_actions": [
+   "Plant wheat varieties that are less affected by Septoria.",
+   "Use practices that speed up breakdown of crop residue and rotate crops."
+  ],
+  "when_to_act": "If a fungicide is needed, UC IPM says spray between tillering and heading to protect the flag leaf; check with your KVK for local timing.",
+  "evidence": [
+   {
+    "claim": "Fungicide timing",
+    "url": "https://ipm.ucanr.edu/agriculture/small-grains/septoria-tritici-blotch-of-wheat/",
+    "quote": "Apply between tillering and heading to protect the flag leaf."
+   },
+   {
+    "claim": "UC IPM says foliar fungicides are not usually economical but can control outbreaks",
+    "url": "https://ipm.ucanr.edu/agriculture/small-grains/septoria-tritici-blotch-of-wheat/",
+    "quote": "Foliar fungicides are usually not economical, but they can control outbreaks and provide partial control."
+   },
+   {
+    "claim": "Less susceptible varieties, residue breakdown and rotation",
+    "url": "https://cropprotectionnetwork.org/encyclopedia/septoria-tritici-blotch-of-wheat",
+    "quote": "effective disease management strategies"
+   },
+   {
+    "claim": "Crop Protection Network names no active ingredient",
+    "url": "https://cropprotectionnetwork.org/encyclopedia/septoria-tritici-blotch-of-wheat",
+    "quote": ""
+   }
+  ],
+  "gaps": [
+   "No Indian source found for Septoria tritici blotch. Opened Indian pages cover other wheat diseases only: COL/India wheat chapter (rust, smut, Karnal bunt, spot blotch), ICAR spot blotch paper (carboxin+thiram, propiconazole for Bipolaris), HP disease list (propiconazole for powdery mildew). None give Septoria advice, so they were not used.",
+   "Could not re-open the PMC South Asia paper (permission timed out), so its claim that Septoria is not a major South Asian concern was not re-verified.",
+   "UC IPM is from California; sowing-date advice there (avoid early planting) was not copied because it may not suit Indian wheat belts.",
+   "No Indian spray threshold or growth-stage timing found."
+  ]
+ },
+ "potato__early_blight": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Propiconazole",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Indian Journal of Plant Protection field trial (ICAR epubs): lowest disease index and highest tuber yield. Trial result, not an advisory.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJPP/article/view/104988",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['propiconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Pyraclostrobin",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same trial: second-best field treatment.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJPP/article/view/104988",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['pyraclostrobin'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Azoxystrobin",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same trial: third-best field treatment.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJPP/article/view/104988",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['azoxystrobin'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Chlorothalonil",
+    "note": "FOLLOW PRODUCT LABEL; no dose. GBPUAT/BAU/ICAR-RCER paper (Indian J. Agric. Sci.): best in lab and field. Trial result, not an advisory.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/123003/48768/344809",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['chlorothalonil'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Mancozeb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same paper: second best in lab test, used in field treatments.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/123003/48768/344809",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['mancozeb'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Management of early blight of potato, Alternaria solani using fungicides and botanicals (Indian Journal of Plant Protection)",
+    "url": "https://epubs.icar.org.in/index.php/IJPP/article/view/104988",
+    "publisher": "ICAR epubs / Plant Protection Association of India"
+   },
+   {
+    "title": "Cost effective management of early blight disease of potato (Indian Journal of Agricultural Sciences)",
+    "url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/123003/48768/344809",
+    "publisher": "ICAR epubs; GBPUAT, BAU, ICAR-RCER authors"
+   },
+   {
+    "title": "Potato Early Blight - UC IPM Pest Management Guidelines",
+    "url": "https://ipm.ucanr.edu/agriculture/potato/early-blight/",
+    "publisher": "University of California IPM"
+   }
+  ],
+  "new_cultural_actions": [
+   "Keep plants healthy with proper fertiliser and irrigation; stressed or ageing plants get early blight more.",
+   "Grow later-maturing, longer-season varieties.",
+   "Remove potato residue and other nightshade-family weeds that carry the fungus.",
+   "Scout the oldest leaves first."
+  ],
+  "when_to_act": "Spray only when the disease starts early enough to hurt yield; start when first spots show (TNAU: spray very early) and follow the label for repeats.",
+  "evidence": [
+   {
+    "claim": "Propiconazole best in ICAR-journal trial",
+    "url": "https://epubs.icar.org.in/index.php/IJPP/article/view/104988",
+    "quote": "showed the least Per cent disease index"
+   },
+   {
+    "claim": "Chlorothalonil best in Indian paper",
+    "url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/123003/48768/344809",
+    "quote": "chlorothalonil 75% wp gave the best results"
+   },
+   {
+    "claim": "Grow later maturing varieties",
+    "url": "https://ipm.ucanr.edu/agriculture/potato/early-blight/",
+    "quote": "Grow later maturing, longer season varieties."
+   },
+   {
+    "claim": "Keep optimum growing conditions",
+    "url": "https://ipm.ucanr.edu/agriculture/potato/early-blight/",
+    "quote": "maintaining optimum growing conditions, including proper fertilization, irrigation"
+   },
+   {
+    "claim": "Spray only if early and costly",
+    "url": "https://ipm.ucanr.edu/agriculture/potato/early-blight/",
+    "quote": "Fungicide application is justified only when the disease is initiated early enough to cause economic loss."
+   },
+   {
+    "claim": "Scout oldest leaves",
+    "url": "https://ipm.ucanr.edu/agriculture/potato/early-blight/",
+    "quote": "Watch for disease symptoms during routine monitoring, and keep records of your results."
+   }
+  ],
+  "gaps": [
+   "Existing Zineb and Captan entries cite the TNAU potato page; that page could not be re-opened this session (permission timed out), so they were not re-verified and are not repeated here.",
+   "The two new Indian sources are research trials, not official advisories. No ICAR-CPRI Shimla advisory page was found.",
+   "IJPP also tested copper oxychloride and Trichoderma harzianum but only in the lab; not listed. Hexaconazole and difenoconazole did worse than chlorothalonil in the Indian paper; not listed.",
+   "indianpotato.com lists mancozeb, chlorothalonil, propiconazole, difenoconazole, hexaconazole and a '5% lesion' trigger, but it is a private site and says its calendars are editorial syntheses; not used."
+  ]
+ },
+ "okra__downy_mildew": {
+  "treatment_options": [],
+  "no_chemical": null,
+  "new_sources": [],
+  "new_cultural_actions": [],
+  "when_to_act": null,
+  "evidence": [],
+  "gaps": [
+   "No source found that describes okra downy mildew management. Searches of TNAU, KAU, ICAR epubs, IIVR terms and general web found nothing for okra downy mildew.",
+   "TNAU bhendi organic-farming page (opened) says nothing about downy mildew. KAU okra mildew page (opened) is about powdery mildew only. Mississippi State page (opened) is about cucurbit downy mildew, not okra.",
+   "The existing PMC Tamil Nadu dataset source was not re-opened; it only describes images, per existing caveat.",
+   "No treatment, timing or cultural advice is added. Keep: show leaves to KVK."
+  ]
+ },
+ "okra__phyllosticta_leaf_spot": {
+  "treatment_options": [
+   {
+    "kind": "bio",
+    "active_ingredient": "Neem seed kernel extract",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as a general bhendi disease spray; not specific to Phyllosticta.",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['neem seed kernel extract'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Cow urine",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Traditional spray; TNAU lists it as a general bhendi disease spray; not specific to Phyllosticta.",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST [] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [],
+  "new_cultural_actions": [
+   "Manage overhead irrigation so leaves do not stay wet for long periods."
+  ],
+  "when_to_act": "If the problem comes back each season, protective sprays before infection work better; once spots show, control is harder (University of Florida, not Indian).",
+  "evidence": [
+   {
+    "claim": "TNAU names Phyllosticta hibiscini as an okra leaf spot but gives no separate control",
+    "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "quote": "Leaf spot : Alternaria hibiscinum, Phyllosticta hibiscini"
+   },
+   {
+    "claim": "TNAU general bhendi disease sprays (neem seed kernel extract, cow urine, mint leaf extract)",
+    "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "Limit leaf wetness",
+    "url": "https://plantpath.ifas.ufl.edu/u-scout/blog/Entries/2011/8/phyllosticta-leaf-spot-of-okra-1.html",
+    "quote": "Manage overhead irrigation with minimal chances of continued long periods of leaf wetness."
+   },
+   {
+    "claim": "Protect before infection",
+    "url": "https://plantpath.ifas.ufl.edu/u-scout/blog/Entries/2011/8/phyllosticta-leaf-spot-of-okra-1.html",
+    "quote": "use protective fungicides before any infection can happen."
+   },
+   {
+    "claim": "Harder once symptoms appear",
+    "url": "https://plantpath.ifas.ufl.edu/u-scout/blog/Entries/2011/8/phyllosticta-leaf-spot-of-okra-1.html",
+    "quote": "Fungicide management may be difficult once the symptoms develop."
+   }
+  ],
+  "gaps": [
+   "No Indian source with a chemical for Phyllosticta leaf spot of okra. TNAU only names the pathogen. UF page names no active ingredient.",
+   "Neem seed kernel extract and cow urine are generic TNAU organic sprays; the page does not say they work on Phyllosticta. Treat as weak, low-priority options.",
+   "Doses for the TNAU sprays exist on the page but are deliberately not recorded."
+  ]
+ },
+ "okra__alternaria_leaf_spot": {
+  "treatment_options": [
+   {
+    "kind": "bio",
+    "active_ingredient": "Neem seed kernel extract",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it as a general bhendi disease spray; the page names Alternaria hibiscinum only as a minor leaf spot with no separate control.",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['neem seed kernel extract'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Cow urine",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Traditional spray; TNAU lists it as a general bhendi disease spray; not specific to Alternaria.",
+    "source_url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST [] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [],
+  "new_cultural_actions": [],
+  "when_to_act": null,
+  "evidence": [
+   {
+    "claim": "TNAU names Alternaria hibiscinum as a minor okra leaf spot without separate control",
+    "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "quote": "Leaf spot : Alternaria hibiscinum, Phyllosticta hibiscini"
+   },
+   {
+    "claim": "TNAU general bhendi disease sprays",
+    "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_bhendi_diseases.html",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   }
+  ],
+  "gaps": [
+   "No Indian source with a fungicide for Alternaria leaf spot on okra found. Existing entries (carbendazim+mancozeb, Trichoderma viride from a Punjab-linked journal page, 2024-25) could not be re-opened this session (permission timed out), so not re-verified here and not repeated.",
+   "Indian Alternaria trials found were on other crops (cotton: mancozeb, hexaconazole; ber; cauliflower; pomegranate; safflower) and TNAU's brinjal Alternaria page (mancozeb, copper oxychloride, zineb). Not used because they are not okra.",
+   "The Krishikosh record 'Studies on the management of Alternaria alternata causing leaf spot of okra' exists but the page returned no abstract.",
+   "No Indian cultural advice or timing specific to okra Alternaria found."
+  ]
+ },
+ "tomato__leaf_mold": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Chlorothalonil",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Cornell lists it; also best in a Greek strobilurin trial as standard. Not an Indian source.",
+    "source_url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['chlorothalonil'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Azoxystrobin + difenoconazole (mixture)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Cornell lists a mixture product with these two. Not an Indian source.",
+    "source_url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['azoxystrobin', 'difenoconazole'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Trifloxystrobin",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Greek trial in Crop Protection (2007): protective sprays gave over 88 percent control in growth-chamber tests. Not an Indian source.",
+    "source_url": "https://agris.fao.org/search/ar/records/65df381e0f3e94b9e5d62762",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['trifloxystrobin'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Leaf Mold of Tomato (PPFS-VG-52)",
+    "url": "https://plantpathology.mgcafe.uky.edu/sites/plantpathology.ca.uky.edu/files/PPFS-VG-52.pdf",
+    "publisher": "University of Kentucky Plant Pathology"
+   }
+  ],
+  "new_cultural_actions": [
+   "Space, prune and stake plants so leaves dry fast.",
+   "Avoid overhead irrigation.",
+   "In polyhouses, open vents and run fans when the air is very humid.",
+   "Remove infected leaves during the season and clean stakes before reuse.",
+   "Do not compost diseased plant material.",
+   "Remove diseased plants and the plants around them quickly in a polyhouse."
+  ],
+  "when_to_act": "In polyhouses start protective sprays when it turns warm and humid or at the first symptoms; in open fields spray only if disease develops (University of Kentucky).",
+  "evidence": [
+   {
+    "claim": "Cornell removes diseased and neighbouring plants",
+    "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+    "quote": "remove the diseased plants and surrounding plants to prevent pathogen spread."
+   },
+   {
+    "claim": "Cornell lists conventional fungicide products containing chlorothalonil and azoxystrobin+difenoconazole",
+    "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "Trifloxystrobin protective activity",
+    "url": "https://agris.fao.org/search/ar/records/65df381e0f3e94b9e5d62762",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "Kentucky: no overhead irrigation",
+    "url": "https://plantpathology.mgcafe.uky.edu/sites/plantpathology.ca.uky.edu/files/PPFS-VG-52.pdf",
+    "quote": "Avoid the use of overhead irrigation."
+   },
+   {
+    "claim": "Kentucky: do not compost",
+    "url": "https://plantpathology.mgcafe.uky.edu/sites/plantpathology.ca.uky.edu/files/PPFS-VG-52.pdf",
+    "quote": "Do NOT compost diseased material."
+   },
+   {
+    "claim": "Kentucky: timing in tunnels",
+    "url": "https://plantpathology.mgcafe.uky.edu/sites/plantpathology.ca.uky.edu/files/PPFS-VG-52.pdf",
+    "quote": "Fungicide applications should begin when temperatures reach 70°F and humidity approaches 85%, or when first symptoms appear."
+   }
+  ],
+  "gaps": [
+   "No Indian source (ICAR/SAU/KVK/TNAU/NIPHM) for tomato leaf mould management found. TNAU tomato disease index (opened) does not list leaf mould.",
+   "Kentucky fact sheet names no active ingredient. Trifloxystrobin source is a Greek journal record (AGRIS abstract). Cornell page also names branded products; only active ingredients are recorded.",
+   "Cornell does not give spray timing."
+  ]
+ },
+ "tomato__target_spot": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Chlorothalonil",
+    "note": "FOLLOW PRODUCT LABEL; no dose. University of Florida IPM and Pacific Pests fact sheet list it. Not an Indian source.",
+    "source_url": "https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['chlorothalonil'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Mancozeb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. University of Florida IPM and Pacific Pests fact sheet list it. Not an Indian source.",
+    "source_url": "https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['mancozeb'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Copper oxychloride",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Pacific Pests fact sheet (Lucid) lists it; spray both sides of leaves. Not an Indian source.",
+    "source_url": "https://apps.lucidcentral.org/ppp_v9/pdf/web_full/tomato_target_spot_163.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['copper oxychloride'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Azoxystrobin",
+    "note": "FOLLOW PRODUCT LABEL; no dose. University of Florida IPM: strobilurins gave good control in university trials; rotate with other groups. Not an Indian source.",
+    "source_url": "https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "REGISTERED_NAME ['azoxystrobin'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Target Spot (tomato) - UF/IFAS IPM",
+    "url": "https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf",
+    "publisher": "University of Florida IFAS"
+   },
+   {
+    "title": "Tomato Diseases: Target spot (AVRDC Publication 05-630)",
+    "url": "https://worldveg.tind.io/record/39590/files/f0164.pdf",
+    "publisher": "World Vegetable Center (AVRDC)"
+   },
+   {
+    "title": "Tomato target spot, Fact Sheet 163 (Pacific Pests, Pathogens & Weeds)",
+    "url": "https://apps.lucidcentral.org/ppp_v9/pdf/web_full/tomato_target_spot_163.pdf",
+    "publisher": "Lucid / Pacific Community fact sheets"
+   }
+  ],
+  "new_cultural_actions": [
+   "Destroy crop residue soon after harvest.",
+   "Do not overfeed nitrogen; lush growth worsens leaf loss.",
+   "Remove lower branches and leaves for airflow, and keep weeds down.",
+   "Avoid overhead irrigation.",
+   "Do not plant new tomato crops next to older diseased ones; discard spotted seedlings.",
+   "Rotate crops; do not replant tomato on the same land for several years."
+  ],
+  "when_to_act": "Spray protectant fungicides after the first symptoms appear (AVRDC); scout the inner canopy first.",
+  "evidence": [
+   {
+    "claim": "AVRDC: protectant sprays after first symptoms",
+    "url": "https://worldveg.tind.io/record/39590/files/f0164.pdf",
+    "quote": "protectant fungicides after first symptoms appear"
+   },
+   {
+    "claim": "AVRDC: remove debris",
+    "url": "https://worldveg.tind.io/record/39590/files/f0164.pdf",
+    "quote": "Remove affected debris to prevent carryover into the next crop."
+   },
+   {
+    "claim": "AVRDC: rotate",
+    "url": "https://worldveg.tind.io/record/39590/files/f0164.pdf",
+    "quote": "Use an adequate period of crop rotation."
+   },
+   {
+    "claim": "Lucid: no overhead irrigation",
+    "url": "https://apps.lucidcentral.org/ppp_v9/pdf/web_full/tomato_target_spot_163.pdf",
+    "quote": "Do not use overhead irrigation"
+   },
+   {
+    "claim": "Lucid: spray both leaf sides",
+    "url": "https://apps.lucidcentral.org/ppp_v9/pdf/web_full/tomato_target_spot_163.pdf",
+    "quote": "important to spray both sides of the leaves"
+   },
+   {
+    "claim": "UF IPM lists chlorothalonil, mancozeb and strobilurins incl. azoxystrobin",
+    "url": "https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   }
+  ],
+  "gaps": [
+   "No Indian source for tomato target spot found. The existing 'TNAU' source (tomato_diseases_2.html) is actually the TNAU Early Blight page and does not mention target spot or Corynespora; it should not be cited for target spot.",
+   "Existing UF PP351 entries (mancozeb, chlorothalonil, difenoconazole) could not be re-opened; mancozeb and chlorothalonil re-confirmed from UF IPM; difenoconazole not re-verified so omitted.",
+   "No Indian spray timing or threshold found. UF gave no intervals."
+  ]
+ },
+ "tomato__spider_mites": {
+  "treatment_options": [
+   {
+    "kind": "acaricide",
+    "active_ingredient": "Wettable sulphur",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU Red Spider Mite page lists it as the chemical measure. (Existing entry called it a fungicide; it is used here as an acaricide.)",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['sulphur'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "acaricide",
+    "active_ingredient": "Diafenthiuron",
+    "note": "FOLLOW PRODUCT LABEL; no dose. MPUAT Udaipur polyhouse trial (Indian J. Plant Protection): best of the products tested, but only about 62 percent fewer mites. Trial, not an advisory.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJPP/article/view/115042",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['diafenthiuron'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Beauveria bassiana",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same polyhouse trial tested it as a bio-agent. Trial, not an advisory; ask KVK for a registered product.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJPP/article/view/115042",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['beauveria bassiana'] (name check only; label/crop registration not checked)"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Neem oil",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Same trial: gave the weakest mite reduction of those tested. Use only as a mild option.",
+    "source_url": "https://epubs.icar.org.in/index.php/IJPP/article/view/115042",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['neem oil'] (name check only; label/crop registration not checked)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Pesticidal management of two spotted spider mite (Tetranychus urticae) infesting tomato under protected cultivation (Indian Journal of Plant Protection)",
+    "url": "https://epubs.icar.org.in/index.php/IJPP/article/view/115042",
+    "publisher": "ICAR epubs; MPUAT Udaipur authors"
+   },
+   {
+    "title": "Two-Spotted Spider Mite (vegetable IPM note)",
+    "url": "https://extension.usu.edu/pests/ipm/notes_ag/veg-spider-mites",
+    "publisher": "Utah State University Extension"
+   },
+   {
+    "title": "Seasonal population dynamics of spider mite Tetranychus ludeni and predatory mite Neoseiulus on tomato (Journal of Biological Control)",
+    "url": "https://www.doi.org/10.18311/JBC/2018/16207",
+    "publisher": "Journal of Biological Control (India)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Keep plants well watered; stressed plants get more mite damage.",
+   "Wash mites off with a strong stream of water from a hose nozzle.",
+   "Keep dust off the leaves.",
+   "Avoid malathion and pyrethroid sprays for other pests; they can make mites multiply.",
+   "Protect natural enemies such as predatory mites.",
+   "Look for fine yellow stippling on leaves in hot, dry weather, and check the underside of leaves."
+  ],
+  "when_to_act": "Check leaf undersides often in hot, dry weather and act when webbing or stippling first shows; no Indian spray threshold was found.",
+  "evidence": [
+   {
+    "claim": "TNAU symptoms",
+    "url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+    "quote": "Affected leaves become reddish brown and bronzy"
+   },
+   {
+    "claim": "TNAU lists wettable sulphur 50 WP as the chemical measure",
+    "url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_7.html",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "Trial: diafenthiuron best, neem oil least effective",
+    "url": "https://epubs.icar.org.in/index.php/IJPP/article/view/115042",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "USU: stressed plants",
+    "url": "https://extension.usu.edu/pests/ipm/notes_ag/veg-spider-mites",
+    "quote": "Stressed plants are more susceptible to spider mite damage."
+   },
+   {
+    "claim": "USU: pyrethroids stimulate mites",
+    "url": "https://extension.usu.edu/pests/ipm/notes_ag/veg-spider-mites",
+    "quote": "Avoid using malathion and pyrethroid insecticides for other pests, as these stimulate spider mite reproduction."
+   },
+   {
+    "claim": "Indian field record of a predatory mite on tomato at Solan",
+    "url": "https://www.doi.org/10.18311/JBC/2018/16207",
+    "quote": "(not captured word-for-word; fetch tool summarised the page)"
+   },
+   {
+    "claim": "TNAU-linked resistance study (not tomato-specific): very high resistance to spiromesifen and buprofezin",
+    "url": "https://indianentomology.org/index.php/ije/article/download/179/874/4731",
+    "quote": ""
+   }
+  ],
+  "gaps": [
+   "No Indian page gives a spray threshold, interval, or cultural steps for tomato mites. Cultural steps come from Utah State (foreign).",
+   "TNAU-authored resistance study (Indian J. Entomology 2023) found high resistance to propargite and chlorfenapyr and extreme resistance to spiromesifen and buprofezin in Coimbatore vegetable mites, and recommended fenpropathrin and fenazaquin there. It is not tomato-specific, so those were not added; spiromesifen is not listed because of that resistance.",
+   "The MPUAT trial also tested acephate and acetamiprid (insecticides); not listed. The trial was on polyhouse tomato at one site.",
+   "UC IPM mite page found was for walnut, so it was not used."
+  ]
+ },
+ "tomato__mosaic_virus": {
+  "treatment_options": [],
+  "no_chemical": {
+   "statement": "No cure for virus diseases: an Indian science magazine says so, and TNAU lists only cultural steps. A US university lists 'None recommended' for chemicals.",
+   "source_url": "https://www.downtoearth.org.in/amp/story/agriculture/how-maharashtra-s-tomato-belt-can-tackle-its-viral-menace-77696",
+   "indian_source": true
+  },
+  "new_sources": [
+   {
+    "title": "How Maharashtra's tomato belt can tackle its viral menace (Down To Earth)",
+    "url": "https://www.downtoearth.org.in/amp/story/agriculture/how-maharashtra-s-tomato-belt-can-tackle-its-viral-menace-77696",
+    "publisher": "Down To Earth (CSE, India); names IIHR Bengaluru and IARI-RS Pune"
+   },
+   {
+    "title": "Tomato: Mosaic viruses (HortSense)",
+    "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/",
+    "publisher": "Washington State University"
+   },
+   {
+    "title": "Tomato Pest Management Guidelines: Tobacco/Tomato mosaic",
+    "url": "https://ipm.ucanr.edu/PMG/r783102711.html",
+    "publisher": "University of California IPM"
+   }
+  ],
+  "new_cultural_actions": [
+   "Use clean seed from a trusted seller, and use resistant or tolerant varieties if you can get them.",
+   "Plant tall barrier crops such as maize around the tomato field; ICAR institutes IIHR and IARI-RS Pune advise this against aphid-spread viruses.",
+   "Do not count on insecticide sprays; aphid-spread viruses move in very short feeding visits.",
+   "Pull out and destroy infected plants at once.",
+   "Wash hands with soap and clean tools; mosaic can spread by hands, tools and clothing.",
+   "Do not handle tomato plants after using tobacco.",
+   "Control weeds in and around the field; they can host the viruses.",
+   "Control aphids to help stop cucumber mosaic virus; tomato mosaic virus itself is not spread by insects.",
+   "Remove old crop debris; the virus can survive in it for years."
+  ],
+  "when_to_act": "Remove and destroy infected plants as soon as you see mosaic.",
+  "evidence": [
+   {
+    "claim": "Indian magazine: no cure for viral diseases",
+    "url": "https://www.downtoearth.org.in/amp/story/agriculture/how-maharashtra-s-tomato-belt-can-tackle-its-viral-menace-77696",
+    "quote": "There is no cure for viral diseases."
+   },
+   {
+    "claim": "TNAU mosaic page lists only cultural steps",
+    "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_12.html",
+    "quote": "Disease free seeds"
+   },
+   {
+    "claim": "WSU: no chemical recommended",
+    "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/",
+    "quote": "None recommended"
+   },
+   {
+    "claim": "WSU: remove infected plants",
+    "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/",
+    "quote": "Immediately remove and destroy infected plants."
+   },
+   {
+    "claim": "WSU: wash hands",
+    "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/",
+    "quote": "Wash hands frequently with soap and water when handling plants."
+   },
+   {
+    "claim": "WSU: aphid control for CMV",
+    "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/",
+    "quote": "Control aphids to help prevent spread of disease."
+   },
+   {
+    "claim": "UC IPM: tomato mosaic virus not insect-spread",
+    "url": "https://ipm.ucanr.edu/PMG/r783102711.html",
+    "quote": "the tobamoviruses are not transmitted by insect, nematode or fungal vectors."
+   },
+   {
+    "claim": "UC IPM: persists in debris",
+    "url": "https://ipm.ucanr.edu/PMG/r783102711.html",
+    "quote": "can survive in plant debris for a number of years."
+   }
+  ],
+  "gaps": [
+   "TNAU's mosaic page (tomato_diseases_12) does NOT say 'no cure'; it only lists disease-free seed, removal of infected plants and crop rotation, and names no vector or chemical. The 'no cure' wording rests on Down To Earth, an Indian magazine, not an institute or university.",
+   "The existing cultural line 'Do not plant after tobacco, potato, chilli, capsicum or brinjal' and 'rinse seed, dry in shade' could not be re-checked (TNAU org-farm page timed out); not repeated.",
+   "No Indian institute page names whitefly as a mosaic vector. TNAU pages name whitefly as the vector of leaf curl only. Aphids spread cucumber mosaic virus (WSU, foreign); tomato mosaic virus spreads by contact and seed.",
+   "The IIHR / IARI-RS Pune barrier-crop advice is quoted second-hand through Down To Earth; no ICAR page itself was opened."
+  ]
+ }
+}

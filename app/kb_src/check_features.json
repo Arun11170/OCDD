@@ -1,0 +1,272 @@
+[
+ {
+  "id": "spots_any",
+  "kind": "leaf",
+  "en": "Are there spots or patches on the leaves?"
+ },
+ {
+  "id": "spots_yellow_halo",
+  "kind": "leaf",
+  "en": "Does each spot have a yellow ring around it?"
+ },
+ {
+  "id": "spots_target_rings",
+  "kind": "leaf",
+  "en": "Do the spots have rings inside, like a target or bull's eye?"
+ },
+ {
+  "id": "spots_grey_centre",
+  "kind": "leaf",
+  "en": "Are the spots grey or pale in the middle with a darker edge?"
+ },
+ {
+  "id": "spots_water_soaked",
+  "kind": "leaf",
+  "en": "Do the spots look wet and oily, and turn dark quickly in humid weather?"
+ },
+ {
+  "id": "spots_angular",
+  "kind": "leaf",
+  "en": "Are the spots angular, with straight edges that stop at the veins?"
+ },
+ {
+  "id": "spots_tiny_many",
+  "kind": "leaf",
+  "en": "Are the spots tiny, like pin-heads, and very many?"
+ },
+ {
+  "id": "big_dead_patches",
+  "kind": "leaf",
+  "en": "Are there big brown or dead patches, or burnt-looking leaf tips and edges?"
+ },
+ {
+  "id": "white_powder",
+  "kind": "leaf",
+  "en": "Is there white powder on the leaf that wipes off with a finger?"
+ },
+ {
+  "id": "white_fuzz_underside",
+  "kind": "leaf",
+  "en": "Is there white or grey fuzz under the leaf, with yellow patches on top?"
+ },
+ {
+  "id": "rust_pustules",
+  "kind": "leaf",
+  "en": "Are there orange or rust-brown raised dots that leave powder on your finger?"
+ },
+ {
+  "id": "sooty_coating",
+  "kind": "leaf",
+  "en": "Is there a black sooty coating on the leaf that can be rubbed off?"
+ },
+ {
+  "id": "black_dots_in_spots",
+  "kind": "leaf",
+  "en": "Can you see tiny black dots inside the spots?"
+ },
+ {
+  "id": "veins_yellow",
+  "kind": "leaf",
+  "en": "Are the veins yellow while the rest of the leaf stays green?"
+ },
+ {
+  "id": "yellow_between_veins",
+  "kind": "leaf",
+  "en": "Is the leaf yellow between the veins while the veins stay green?"
+ },
+ {
+  "id": "mosaic_pattern",
+  "kind": "leaf",
+  "en": "Is there a patchy mosaic of light and dark green on the leaf?"
+ },
+ {
+  "id": "leaf_curl_up",
+  "kind": "leaf",
+  "en": "Are the leaves curled upward or cupped, small and crinkled?"
+ },
+ {
+  "id": "leaf_rolled_folded",
+  "kind": "both",
+  "en": "Are leaves rolled or folded lengthwise, with something inside?"
+ },
+ {
+  "id": "yellowing_whole",
+  "kind": "leaf",
+  "en": "Is the whole leaf turning yellow, older leaves first?"
+ },
+ {
+  "id": "stunted_bunchy",
+  "kind": "leaf",
+  "en": "Are the plants stunted, with small bunchy new growth?"
+ },
+ {
+  "id": "wilting_moist_soil",
+  "kind": "leaf",
+  "en": "Is the plant wilting even though the soil is moist?"
+ },
+ {
+  "id": "stem_or_base_rot",
+  "kind": "leaf",
+  "en": "Is the stem or base rotting, or is there a dark streak inside the cut stem?"
+ },
+ {
+  "id": "fruit_spots",
+  "kind": "leaf",
+  "en": "Are there dark sunken spots or rot on the fruit?"
+ },
+ {
+  "id": "holes_or_bites",
+  "kind": "both",
+  "en": "Are there holes or bite marks in the leaves?"
+ },
+ {
+  "id": "long_stripes",
+  "kind": "leaf",
+  "en": "Are there long pale or yellow stripes along the leaf?"
+ },
+ {
+  "id": "rect_lesions",
+  "kind": "leaf",
+  "en": "Are the lesions long and rectangular, running between the veins?"
+ },
+ {
+  "id": "sticky_honeydew",
+  "kind": "both",
+  "en": "Is the leaf sticky or shiny, with ants or black mould on it?"
+ },
+ {
+  "id": "fine_stippling_webbing",
+  "kind": "both",
+  "en": "Is there fine yellow dotting or thin webbing under the leaf?"
+ },
+ {
+  "id": "humid_cool_weather",
+  "kind": "leaf",
+  "en": "Has the weather been cool, wet or humid for the last week?"
+ },
+ {
+  "id": "dead_heart",
+  "kind": "both",
+  "en": "Is the central shoot dead and easy to pull out?"
+ },
+ {
+  "id": "galls_swellings",
+  "kind": "both",
+  "en": "Are there galls, swellings or onion-like silver shoots?"
+ },
+ {
+  "id": "tip_orange_yellow",
+  "kind": "leaf",
+  "en": "Do the leaves turn orange-yellow starting from the tip?"
+ },
+ {
+  "id": "damage_from_edges",
+  "kind": "leaf",
+  "en": "Did the damage start at the leaf edges or tips and move inward?"
+ },
+ {
+  "id": "red_purple_leaves",
+  "kind": "leaf",
+  "en": "Are the leaves turning red or purple?"
+ },
+ {
+  "id": "only_old_leaves",
+  "kind": "leaf",
+  "en": "Is the problem mainly on the older, lower leaves?"
+ },
+ {
+  "id": "only_new_leaves",
+  "kind": "leaf",
+  "en": "Is the problem mainly on the new, top leaves?"
+ },
+ {
+  "id": "whole_field_patches",
+  "kind": "leaf",
+  "en": "Is the problem spreading in patches across the field?"
+ },
+ {
+  "id": "p_caterpillar",
+  "kind": "pest",
+  "en": "Is the insect a soft worm or caterpillar with legs?"
+ },
+ {
+  "id": "p_beetle_weevil",
+  "kind": "pest",
+  "en": "Is it a hard-shelled beetle or weevil, maybe with a snout?"
+ },
+ {
+  "id": "p_tiny_soft_groups",
+  "kind": "pest",
+  "en": "Is it very small (under 3 mm), soft, and sitting in groups?"
+ },
+ {
+  "id": "p_fly_midge",
+  "kind": "pest",
+  "en": "Is it a small fly or midge with two wings?"
+ },
+ {
+  "id": "p_hops",
+  "kind": "pest",
+  "en": "Does it jump or run sideways when you touch it?"
+ },
+ {
+  "id": "p_soil_grub",
+  "kind": "pest",
+  "en": "Was it found in the soil near the roots, curled in a C shape?"
+ },
+ {
+  "id": "p_inside_stem_fruit",
+  "kind": "pest",
+  "en": "Was it found inside the stem, shoot or fruit, with sawdust-like droppings?"
+ },
+ {
+  "id": "p_underside_leaf",
+  "kind": "pest",
+  "en": "Is it mostly on the underside of the leaf?"
+ },
+ {
+  "id": "p_cut_at_base",
+  "kind": "pest",
+  "en": "Are young plants cut at the base, with the pest hiding in the soil by day?"
+ },
+ {
+  "id": "p_large_numbers_moving",
+  "kind": "pest",
+  "en": "Are there large numbers stripping leaves and moving across the field?"
+ },
+ {
+  "id": "p_shovel_legs",
+  "kind": "pest",
+  "en": "Does it look like a cricket with big shovel-like front legs?"
+ },
+ {
+  "id": "p_maggots_in_fruit",
+  "kind": "pest",
+  "en": "Are there small white maggots inside the ripe or fallen fruit?"
+ },
+ {
+  "id": "p_in_flooded_field",
+  "kind": "pest",
+  "en": "Is the field flooded, with white scraped streaks on the leaves?"
+ },
+ {
+  "id": "p_edges_notched",
+  "kind": "pest",
+  "en": "Are the leaf edges notched or cut off in a neat pattern?"
+ },
+ {
+  "id": "p_tiny_round_holes",
+  "kind": "pest",
+  "en": "Are there many tiny round shot-holes in the leaves?"
+ },
+ {
+  "id": "p_silvery_streaks",
+  "kind": "pest",
+  "en": "Are there silvery streaks or scars on the leaves, with tiny dark specks?"
+ },
+ {
+  "id": "p_green_or_brown_color",
+  "kind": "pest",
+  "en": "Is the insect mainly green or pale (not dark brown or black)?"
+ }
+]

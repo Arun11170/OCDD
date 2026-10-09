@@ -1,0 +1,20 @@
+100 unseen test photos per crop, same models and steps as the app. 'free' = no crop chosen; 'crop' = farmer chose the crop (crop+pests only).
+crop          n |   free   crop | answered right|ans | healthy->red  sick->0%dmg | most common mistakes (crop chosen)
+apple       100 |  82.0%  86.0% |    90.0%    90.0% |     0/27         0/73    | apple_scab -> cedar_apple_rust x3; cedar_apple_rust -> apple_scab x3; black_rot -> apple_scab x3
+banana      100 |  96.0%  96.0% |    96.0%    97.9% |     0/12         1/88    | black_sigatoka_disease -> yellow_sigatoka_disease x1; yellow_sigatoka_disease -> black_sigatoka_disease x1; panama_disease -> pest__thrips x1
+capsicum    100 |  96.0% 100.0% |    98.0%   100.0% |     0/85         0/15    | 
+chilli      100 |  79.0%  79.0% |    92.0%    82.6% |     0/20        76/80    | nutritional_deficiency -> cercospora x5; murda_complex -> healthy x4; powdery_mildew -> healthy x3
+grape       100 |  94.0%  95.0% |    97.0%    97.9% |     0/25         0/75    | black_rot -> pest__thrips x2; black_rot -> pest__gall_midge_dasineura x1; black_rot -> pest__aphids x1
+groundnut   100 |  94.0%  94.0% |    93.0%    94.6% |     1/20        30/80    | early_leaf_spot -> healthy_leaf x5; late_leaf_spot -> early_leaf_spot x1
+maize       100 |  96.0%  97.0% |    95.0%    97.9% |     0/25         0/75    | gray_leaf_spot -> blight x3
+mango       100 | 100.0% 100.0% |   100.0%   100.0% |     0/12        13/88    | 
+okra        100 |  75.0%  75.0% |    88.0%    79.5% |     0/17        51/83    | downy_mildew -> alternaria_leaf_spot x8; phyllosticta_leaf_spot -> alternaria_leaf_spot x6; alternaria_leaf_spot -> cercospora_leaf_spot x4
+pest        100 |  76.0%  76.0% |    80.0%    86.2% |     0/0          0/0     | rice_gall_midge -> thrips x2; mole_cricket -> thrips x1; cutworm -> nutrition_deficiency x1
+potato       70 |  81.4%  85.7% |    92.9%    89.2% |     0/22         0/48    | early_blight -> late_blight x5; late_blight -> early_blight x3; early_blight -> pest__corn_borer x1
+rice        100 |  68.0%  68.0% |    72.0%    80.6% |     0/15        80/85    | rice_tungro -> rice_stripes x4; healthy -> rice_blast x3; leaf_scald -> rice_blast x2
+sugarcane   100 |  98.0%  98.0% |    98.0%    98.0% |     0/20        34/80    | healthy -> yellow x2
+tomato      100 |  68.0%  71.0% |    71.0%    80.3% |     4/9         15/91    | early_blight -> septoria_leaf_spot x5; bacterial_spot -> septoria_leaf_spot x3; septoria_leaf_spot -> early_blight x3
+wheat       100 |  94.0%  96.0% |    97.0%    95.9% |     0/15         0/85    | septoria -> stripe_rust x3; septoria -> pest__rice_leaf_folder x1
+
+ALL 1470 photos: right free 86.6%, right with crop chosen 87.8%, answers 90.6% of photos and is right 92.0% when it answers
+healthy->red = healthy leaves with more than 1% of the photo flagged as damage; sick->0%dmg = diseased leaves where almost nothing was marked.

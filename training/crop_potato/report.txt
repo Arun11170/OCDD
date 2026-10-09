@@ -1,0 +1,38 @@
+best epoch 12 (val macro-F1 0.834), temperature 0.84
+TEST accuracy 0.855   macro-F1 0.838
+  domain field   n= 4842  accuracy 0.846
+  domain lab     n=  322  accuracy 0.991
+calibration error (ECE) 0.023   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 92.7% of photos, accuracy on those 0.893
+  >= 0.6 : answers 88.6% of photos, accuracy on those 0.912
+  >= 0.7 : answers 84.4% of photos, accuracy on those 0.928
+  >= 0.8 : answers 79.0% of photos, accuracy on those 0.943
+  >= 0.9 : answers 68.7% of photos, accuracy on those 0.965
+
+class                                      prec recall     f1     n
+pest__aphids                              0.873  0.930  0.901   614
+pest__army_worm                           0.699  0.713  0.706   160
+pest__corn_borer                          0.770  0.752  0.761   254
+pest__cutworm                             0.831  0.901  0.864   272
+pest__flea_beetle                         0.899  0.915  0.907   117
+pest__gall_midge_dasineura                0.672  0.547  0.603    75
+pest__leafhopper                          0.926  0.908  0.917   921
+pest__mango_borer                         0.836  0.797  0.816   128
+pest__mango_hopper                        0.924  0.919  0.921   172
+pest__mango_leaf_cutting_weevil           0.833  0.806  0.820    31
+pest__mango_seed_weevil                   0.794  0.735  0.763    68
+pest__mole_cricket                        0.932  0.943  0.938   247
+pest__oriental_fruit_fly                  0.970  1.000  0.985    65
+pest__planthopper                         0.849  0.809  0.828   340
+pest__red_spider_mite                     0.929  0.823  0.872    79
+pest__rice_gall_midge                     0.667  0.773  0.716    75
+pest__rice_leaf_folder                    0.826  0.771  0.797   240
+pest__rice_stem_borer                     0.676  0.731  0.702   271
+pest__rice_water_weevil                   0.779  0.688  0.730   128
+pest__thrips                              0.831  0.819  0.825   276
+pest__white_grub                          0.908  0.837  0.871   129
+pest__wireworm                            0.850  0.902  0.875   132
+potato__early_blight                      0.955  0.960  0.957   175
+potato__healthy                           0.846  1.000  0.917    22
+potato__late_blight                       0.954  0.960  0.957   173

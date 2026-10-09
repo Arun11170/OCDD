@@ -1,0 +1,921 @@
+{
+ "entries": [
+  {
+   "class_id": "banana__black_sigatoka_disease",
+   "crop": "banana",
+   "name_en": "Black Sigatoka",
+   "type": "fungal",
+   "cause": "Mycosphaerella fijiensis (fungus)",
+   "symptoms": [
+    "Tiny pale spots appear first on the underside of young open leaves.",
+    "Spots grow into brown streaks that run along the leaf veins.",
+    "Streaks darken, turn black and become oval patches.",
+    "Badly hit leaves become blackened and water-soaked, then dry out.",
+    "Leaf loss reduces the green leaves the plant needs to fill bunches."
+   ],
+   "look_alikes": "Yellow Sigatoka: young streaks have a clear yellow halo, which black Sigatoka lacks, and it develops more slowly.",
+   "cultural_actions": [
+    "Remove infected leaves from the plantation regularly.",
+    "Keep the field well drained to reduce humidity.",
+    "Avoid close planting so leaves dry quickly.",
+    "Keep the field weed free."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propiconazole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Petroleum (banana spray) oil mixed with fungicide",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU lists Sigatoka sprays as a rotation of fungicides with oil; see your KVK for the local spray timing and green-leaf target.",
+   "ask_back": [
+    {
+     "question": "Do young streaks on the leaf have a clear yellow ring around them?",
+     "if_yes": "banana__yellow_sigatoka_disease",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Are the streaks black or dark brown and running along the veins?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "APS Education Center - Black Sigatoka",
+     "url": "https://www.apsnet.org/edcenter/pdlessons/Pages/BlackSigatoka.aspx",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU - IPM Schedule for Banana Pests (Extension Bulletin 3)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Symptom text is from APS (USA, not Indian); spray names are from TNAU and cover the Sigatoka complex including M. fijiensis. Written for Tamil Nadu; check label and local KVK."
+  },
+  {
+   "class_id": "banana__yellow_sigatoka_disease",
+   "crop": "banana",
+   "name_en": "Yellow Sigatoka",
+   "type": "fungal",
+   "cause": "Mycosphaerella musicola (fungus)",
+   "symptoms": [
+    "Pale yellow or greenish streaks appear parallel to the leaf veins.",
+    "Streaks turn into oval brown spots.",
+    "Spot centre turns light grey with a yellow ring around it.",
+    "Spots join to form large dried patches on the leaf.",
+    "Leaves dry fast and fall, so bunches may not fill well."
+   ],
+   "look_alikes": "Black Sigatoka: streaks turn black and lack the yellow halo, and it spreads faster.",
+   "cultural_actions": [
+    "Remove and destroy affected leaves.",
+    "Keep the field weed free and remove suckers on time.",
+    "Avoid close spacing when planting.",
+    "Provide good drainage and prevent waterlogging."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propiconazole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Teepol (sticking agent)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU: start sprays when the first leaf specks appear, and repeat at the interval on the label or your KVK advice.",
+   "ask_back": [
+    {
+     "question": "Do the oval spots have a grey centre with a yellow ring?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the streaks turning black without any yellow ring?",
+     "if_yes": "banana__black_sigatoka_disease",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Yellow Sigatoka of Banana",
+     "url": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Banana Expert System, Crop Protection",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. Spray intervals in the source are not repeated here; follow label and KVK."
+  },
+  {
+   "class_id": "banana__panama_disease",
+   "crop": "banana",
+   "name_en": "Panama wilt",
+   "type": "fungal",
+   "cause": "Fusarium oxysporum f. sp. cubense (soil-borne fungus)",
+   "symptoms": [
+    "Lower and oldest leaves turn yellow and wilt.",
+    "Leaf edges dry and the plant looks spiky.",
+    "Yellow to reddish streaks show along the pseudostem.",
+    "Cut rhizome shows reddish-brown to maroon discolouration in a circle.",
+    "Plant collapses as the disease advances."
+   ],
+   "look_alikes": "Moko (bacterial wilt): youngest leaves yellow first and a greyish-brown slimy ooze comes from cut stems.",
+   "cultural_actions": [
+    "Plant healthy suckers and avoid injuring roots.",
+    "Rotate with paddy or sugarcane before replanting banana.",
+    "Remove diseased plants with the soil around them.",
+    "Choose varieties TNAU lists as tolerant; avoid very susceptible ones.",
+    "Keep good drainage, balanced feeding and weed control."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propiconazole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichoderma",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Pseudomonas fluorescens",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Bacillus subtilis",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU stresses prevention: treat suckers before planting and apply bio-agents at planting and later stages as per label or KVK advice.",
+   "ask_back": [
+    {
+     "question": "Do the oldest leaves yellow first, with reddish streaks inside the pseudostem?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do the youngest leaves collapse first, with slimy ooze at cut stem ends?",
+     "if_yes": "banana__moko_disease",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU - IPM Schedule for Banana Pests (Extension Bulletin 3)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Banana Expert System, Crop Protection",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "NHB - Banana Diseases (Panama Wilt)",
+     "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Written mainly for Tamil Nadu. No chemical cures an infected plant; treatments are protective. Check label and local KVK."
+  },
+  {
+   "class_id": "banana__moko_disease",
+   "crop": "banana",
+   "name_en": "Moko disease (bacterial wilt)",
+   "type": "bacterial",
+   "cause": "Ralstonia solanacearum (Pseudomonas solanacearum), a bacterium",
+   "symptoms": [
+    "Youngest leaves turn yellow and collapse first, then older leaves.",
+    "Inner leaf blade near the petiole turns yellowish.",
+    "Young sword suckers wilt and turn black.",
+    "Cut pseudostem shows dark discoloured tissue and greyish-brown slimy ooze.",
+    "Fruit pulp turns dark brown."
+   ],
+   "look_alikes": "Panama wilt: oldest leaves yellow first and there is no slimy bacterial ooze.",
+   "cultural_actions": [
+    "Use only healthy planting material, such as tissue culture plants.",
+    "Remove infected plants early.",
+    "Disinfect pruning tools between plants.",
+    "Remove the male bud and bag bunches, as the sources describe.",
+    "Remove Heliconia and weeds in and around the field.",
+    "Use basin irrigation, not furrow irrigation."
+   ],
+   "treatment_options": [],
+   "when_to_act": "No spray cure is listed in the sources; act at the first wilting plant by removing it and report to your KVK.",
+   "ask_back": [
+    {
+     "question": "Do the youngest leaves collapse first, with slimy ooze at a cut stem?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do the oldest leaves yellow first, with no slimy ooze?",
+     "if_yes": "banana__panama_disease",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Kerala Agricultural University - Bacterial Wilt or Moko disease",
+     "url": "https://celkau.in/ecropdoctor/fruits/banana/bacterialWilt.php",
+     "publisher": "SAU"
+    },
+    {
+     "title": "NHB - Banana Diseases",
+     "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "Musalit/INIBAP - Moko and bacterial wilt (Molina)",
+     "url": "https://www.musalit.org/viewPdf.php?file=IN060593_eng.pdf&id=10013",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Management trial data in the Musalit source are from the Philippines. No chemical treatment found in the opened Indian pages."
+  },
+  {
+   "class_id": "banana__bract_mosaic_virus_disease",
+   "crop": "banana",
+   "name_en": "Banana bract mosaic virus",
+   "type": "viral",
+   "cause": "Banana bract mosaic virus (a potyvirus), spread by aphids and infected suckers",
+   "symptoms": [
+    "Spindle-shaped pink to reddish streaks appear on pseudostem, midrib and bunch stalk.",
+    "Mosaic streaks show on bracts and fingers.",
+    "New suckers show reddish-brown streaks.",
+    "Leaves cluster at the crown like a traveller's palm.",
+    "Bunch stalk is long and the hands are half filled."
+   ],
+   "look_alikes": "Banana bunchy top: dark green streaks along veins and narrow, bunched leaves. Cucumber mosaic: yellow mosaic bands on leaves.",
+   "cultural_actions": [
+    "Use virus-free planting material, such as tested tissue culture plants.",
+    "Remove diseased plants at once.",
+    "Keep the garden and nearby area free of weeds.",
+    "Inspect the field often for early signs.",
+    "Control aphids that carry the virus."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Neemkosol (neem-based product) for aphid vector control",
+     "note": "Vector control only; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "No cure for infected plants. Remove them early; see your KVK for aphid control timing.",
+   "ask_back": [
+    {
+     "question": "Are there pink to reddish streaks on the pseudostem or bunch stalk?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the leaves narrow and bunched with dark green streaks along veins?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Banana bract virus",
+     "url": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU - IPM Schedule for Banana Pests (Extension Bulletin 3)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Banana Expert System, Crop Protection",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Older TNAU pages also list some insecticides for aphids; some may be restricted now, so check CIB&RC status with your KVK before any spray."
+  },
+  {
+   "class_id": "banana__insect_pest_disease",
+   "crop": "banana",
+   "name_en": "Insect pest damage",
+   "type": "pest",
+   "cause": "Several insects attack banana; TNAU lists corm weevil, pseudostem borer, banana aphid, thrips, leaf-eating caterpillars and flea beetles",
+   "symptoms": [
+    "Identify the insect first, as each pest needs different action.",
+    "Corm weevil: yellowing leaves and tunnels in the corm.",
+    "Pseudostem borer: jelly-like ooze and holes on the stem.",
+    "Aphids: sticky honeydew, curled dwarf leaves.",
+    "Thrips and beetles scar the fruit skin and tender leaves."
+   ],
+   "look_alikes": "Damage can look like disease. Aphid spread viruses such as bunchy top and bract mosaic; check for virus signs.",
+   "cultural_actions": [
+    "Use clean, pest-free suckers or tissue culture plants.",
+    "Remove dried leaves and old stumps, and keep the field clean.",
+    "Uproot and burn badly infested plants.",
+    "Use pheromone and split-stem traps for weevils.",
+    "Keep weeds down."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Beauveria bassiana",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Metarhizium anisopliae",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Azadirachtin (neem)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Spray only after you identify the insect; see your KVK for local thresholds and timing.",
+   "ask_back": [
+    {
+     "question": "Do you see tunnels or jelly-like ooze on the pseudostem?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is there sticky honeydew with small insects under the pseudostem base?",
+     "if_yes": "pest__aphids",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU - IPM Schedule for Banana Pests (Extension Bulletin 3)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Banana Expert System, Crop Protection",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. Chemical names are from older TNAU pages; confirm CIB&RC registration for banana with your KVK."
+  },
+  {
+   "class_id": "banana__healthy_leaf",
+   "crop": "banana",
+   "name_en": "Healthy banana leaf",
+   "type": "healthy",
+   "cause": "Not applicable",
+   "symptoms": [
+    "Leaf is evenly green with no spots, streaks or dried patches.",
+    "No yellow halo or grey-centred spots on the blade.",
+    "No reddish streaks on stem, midrib or bunch stalk.",
+    "No sticky honeydew or insects under the leaf or stem base.",
+    "Plant keeps many green leaves for good bunch filling."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout the field regularly for spots, streaks and insects.",
+    "Remove old or affected leaves early.",
+    "Keep the field weed free with good drainage.",
+    "Use healthy, disease-free suckers or tissue culture plants.",
+    "Remove suckers on time and avoid close spacing."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are there any spots or streaks on the leaf?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Banana Expert System, Crop Protection",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU - IPM Schedule for Banana Pests (Extension Bulletin 3)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "The sources do not describe a healthy leaf directly; this entry lists the absence of the signs they describe. Written for Tamil Nadu."
+  },
+  {
+   "class_id": "pest__aphids",
+   "crop": "pest",
+   "name_en": "Aphids",
+   "type": "pest",
+   "cause": "Small sap-sucking insects (order Hemiptera, family Aphididae), e.g. Aphis gossypii, Aphis craccivora, Myzus persicae, Pentalonia nigronervosa",
+   "symptoms": [
+    "Small soft-bodied insects, green, yellowish, brown or black, sit on tender shoots and leaf undersides.",
+    "Nymphs and adults suck sap, so leaves curl, crinkle and look pale.",
+    "Plants become stunted.",
+    "Sticky honeydew attracts black sooty mould.",
+    "Some aphids spread plant viruses."
+   ],
+   "look_alikes": "Whiteflies and thrips also cause curling; aphids are soft, wingless or winged, with two small tubes at the rear.",
+   "cultural_actions": [
+    "Scout tender shoots and leaf undersides regularly.",
+    "Use yellow sticky traps to track winged aphids.",
+    "Use clean planting material and keep weeds down.",
+    "Protect ladybird beetles, lacewings and parasitoids; TNAU lists them for banana aphid.",
+    "Remove virus-infected plants before spraying."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Acetamiprid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bendi/bendi_9.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bendi/bendi_9.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Tolfenpyrad",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bendi/bendi_9.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Neem seed kernel extract (NSKE)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/bendi/bendi_9.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fipronil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Beauveria bassiana",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU pages opened give no threshold; see your KVK for the local threshold and spray only if needed.",
+   "ask_back": [
+    {
+     "question": "Are the insects small and soft-bodied in clusters on shoots or leaf undersides?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are they tiny slender insects with fringed wings, not clustered?",
+     "if_yes": "pest__thrips",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Aphid, Aphis gossypii (bhendi)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/bendi/bendi_9.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Chilli pest management",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Banana Expert System, Crop Protection",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/banana/cropprotection.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU - Insect Pests of Field Crops and their Management",
+     "url": "https://agritech.tnau.ac.in/pdf/6.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Compiled from several crop pages of TNAU (Tamil Nadu). Product choice depends on the crop; check label registration and KVK."
+  },
+  {
+   "class_id": "pest__thrips",
+   "crop": "pest",
+   "name_en": "Thrips",
+   "type": "pest",
+   "cause": "Tiny slender insects (order Thysanoptera) with fringed wings, e.g. chilli thrips Scirtothrips dorsalis, onion/cotton thrips Thrips tabaci, paddy thrips",
+   "symptoms": [
+    "Tiny slender straw-yellow to brown insects with fringed wings, found on leaves and buds.",
+    "Both nymphs and adults rasp tissue and suck sap.",
+    "Leaves crinkle and curl upward, with yellow or silvery streaks.",
+    "Buds turn brittle and drop; growth is stunted.",
+    "Flower and fruit set can stop early."
+   ],
+   "look_alikes": "Leaf curl from aphids or mites looks similar; check the leaf with a hand lens for fringed-wing thrips.",
+   "cultural_actions": [
+    "Scout young leaves, buds and seedlings often.",
+    "Intercrop agathi for shade, as TNAU suggests for chilli.",
+    "Sprinkle water over seedlings to slow thrips build-up.",
+    "Avoid sorghum before chilli and avoid growing chilli with onion."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Spinosad",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Emamectin benzoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fipronil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "The TNAU pages opened give no threshold; see your KVK for the local threshold.",
+   "ask_back": [
+    {
+     "question": "Are there tiny slender insects with fringed wings on leaves or buds?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the insects soft, round and clustered, with honeydew?",
+     "if_yes": "pest__aphids",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Chilli pest management",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Thrips management in chilli",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU - Insect Pests of Field Crops and their Management",
+     "url": "https://agritech.tnau.ac.in/pdf/6.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Based on chilli, cotton, paddy and groundnut pages of TNAU (Tamil Nadu). Grain and flower thrips not separately described in opened pages."
+  },
+  {
+   "class_id": "pest__leafhopper",
+   "crop": "pest",
+   "name_en": "Leafhoppers (jassids)",
+   "type": "pest",
+   "cause": "Sap-sucking insects (family Cicadellidae), e.g. Amrasca biguttula on cotton and sunflower, rice green leafhopper Nephotettix virescens",
+   "symptoms": [
+    "Small green, wedge-shaped insects that walk sideways on the leaf.",
+    "Nymphs are pale green and wingless, found under leaves.",
+    "They suck sap, so leaves turn pale yellow and curl downwards or inwards.",
+    "Leaf edges redden or turn pinkish brown; heavy attack causes hopper burn and stunting.",
+    "Rice green leafhopper also spreads tungro virus."
+   ],
+   "look_alikes": "Aphids are softer and stay in clusters; leafhoppers jump and move diagonally.",
+   "cultural_actions": [
+    "Choose hairy or resistant varieties where available.",
+    "Keep fields weed free and sow on time together.",
+    "Place rice nurseries away from street lamps.",
+    "Use light traps and resistant rice varieties, as TNAU suggests.",
+    "Scout leaf undersides regularly."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Flonicamid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Buprofezin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Azadirachtin (neem)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Beauveria bassiana",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU gives a count-based threshold for cotton and rice; see your KVK for the local threshold and spray only above it.",
+   "ask_back": [
+    {
+     "question": "Are there wedge-shaped green insects that run sideways on the leaf?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the insects soft, round and sitting in clusters?",
+     "if_yes": "pest__aphids",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Cotton leafhopper",
+     "url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Sunflower leaf hopper",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sunflower/crop_prot_crop_insect_oil_sunflower_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Green leafhopper, rice",
+     "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_2.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Compiled from cotton, sunflower and rice pages of TNAU (Tamil Nadu). Some rice insecticides listed there are old; check label and registration."
+  },
+  {
+   "class_id": "pest__red_spider_mite",
+   "crop": "pest",
+   "name_en": "Red spider mite",
+   "type": "pest",
+   "cause": "Spider mites (Acari, family Tetranychidae), e.g. Tetranychus urticae and T. cinnabarinus; mites, not insects",
+   "symptoms": [
+    "Tiny red or brown mites live on the underside of leaves.",
+    "Fine webbing is seen on the leaf underside.",
+    "Leaves show yellow stripes and streaks, then turn pale, dusty, silvery or bronze.",
+    "Leaves become distorted; severe attack stunts the plant."
+   ],
+   "look_alikes": "Thrips damage also looks silvery; spider mites leave fine webbing.",
+   "cultural_actions": [
+    "Keep the field clean and remove weeds.",
+    "Choose resistant or straight-leaved varieties where available.",
+    "Ensure good ventilation and adequate watering.",
+    "Scout leaf undersides regularly with a hand lens."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dicofol",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/tube_rose/tuberose_4.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/carnation/carnation_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorfenapyr",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/carnation/carnation_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fluvalinate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/carnation/carnation_1.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU carnation page gives a mites-per-leaf threshold; for your crop see your KVK for the local threshold.",
+   "ask_back": [
+    {
+     "question": "Do you see fine webbing and tiny mites under the leaf?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are there fringed-wing insects instead of webbing?",
+     "if_yes": "pest__thrips",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Red spider mite, carnation",
+     "url": "https://agritech.tnau.ac.in/crop_protection/carnation/carnation_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Red spider mite, tuberose",
+     "url": "https://agritech.tnau.ac.in/crop_protection/tube_rose/tuberose_4.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "TNAU pages are for ornamental crops; field-crop advice may differ. Dicofol may be restricted; check CIB&RC with your KVK."
+  },
+  {
+   "class_id": "pest__flea_beetle",
+   "crop": "pest",
+   "name_en": "Flea beetles",
+   "type": "pest",
+   "cause": "Small jumping leaf beetles (Coleoptera, Chrysomelidae, Alticinae), e.g. striped flea beetle Phyllotreta striolata; banana flea beetles Nodostoma and Colapsis",
+   "symptoms": [
+    "Small beetles that hop when disturbed.",
+    "Adults chew many tiny round holes in leaves, called shot-holes.",
+    "On banana, they scratch tender leaves and scar the fruit skin.",
+    "Grubs of some species feed on roots, causing grooves and poor growth."
+   ],
+   "look_alikes": "Caterpillar damage makes larger ragged holes; flea beetle holes are small and round.",
+   "cultural_actions": [
+    "Do deep summer ploughing to expose overwintering adults.",
+    "Use well-decomposed farmyard manure and neem cake before sowing.",
+    "Control weeds with timely intercultural operations.",
+    "Grow sorghum or maize border rows or mustard trap crop.",
+    "Use yellow sticky traps for monitoring."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Metarhizium anisopliae",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/138123/53430/394603",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem oil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/138123/53430/394603",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Malathion dust",
+     "note": "Listed as a last resort; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/138123/53430/394603",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbaryl",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "See your KVK for the local threshold; the opened sources give none.",
+   "ask_back": [
+    {
+     "question": "Are there tiny round shot-holes in leaves and small hopping beetles?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the holes large and ragged with caterpillars present?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "ICAR - IPM strategy for striped flea beetle on radish (Indian J. Agric. Sci.)",
+     "url": "https://epubs.icar.org.in/index.php/IJAgS/article/download/138123/53430/394603",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "TNAU - IPM Schedule for Banana Pests (Extension Bulletin 3)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Banana-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "IPM details come from a radish study (ICAR journal); banana flea beetle note from TNAU. Check label and KVK."
+  }
+ ]
+}

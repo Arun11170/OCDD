@@ -1,0 +1,38 @@
+leaf finder (synthetic val, held-out PlantVillage leaves): IoU 0.953, false leaf area on empty backgrounds 0.000
+leafseg.onnx 12.9 MB
+
+damage % measured on your testphotos (green tint = leaf found, red = damage):
+01_groundnut__early_leaf_spot.JPG                damage  13.1 %   leaf area   83 %
+02_groundnut__healthy_leaf.JPG                   damage  20.9 %   leaf area   37 %
+03_groundnut__late_leaf_spot.JPG                 damage  74.7 %   leaf area   73 %
+04_groundnut__nutrition_deficiency.JPG           damage  20.5 %   leaf area   34 %
+05_groundnut__rust.JPG                           damage  31.4 %   leaf area   45 %
+06_chilli__cerocospora.JPG                       damage  36.7 %   leaf area   47 %
+07_chilli__healthy.JPG                           damage   3.7 %   leaf area   28 %
+08_chilli__murda_complex.JPG                     damage  15.2 %   leaf area   22 %
+09_chilli__nutritional_deficiency.JPG            damage  30.9 %   leaf area   53 %
+10_chilli__powdery_mildew.JPG                    damage  44.1 %   leaf area   15 %
+11_okra__alternaria_leaf_spot.JPG                damage  38.5 %   leaf area   94 %
+12_okra__cercospora_leaf_spot.JPG                damage   5.6 %   leaf area   62 %
+13_okra__downy_mildew.JPG                        damage  34.8 %   leaf area   79 %
+14_okra__healthy.JPG                             damage   8.3 %   leaf area   56 %
+15_okra__leaf_curly_virus.JPG                    damage  18.4 %   leaf area   25 %
+16_okra__phyllosticta_leaf_spot.JPG              damage  19.4 %   leaf area   94 %
+17_tomato__plantdoc_tomato_leaf.jpg              damage   8.5 %   leaf area   19 %
+18_tomato__plantdoc_tomato_leaf_bacterial_spot.j damage  61.9 %   leaf area   85 %
+19_tomato__plantdoc_tomato_leaf_mosaic_virus.jpg damage  17.2 %   leaf area   99 %
+20_tomato__plantdoc_tomato_septoria_leaf_spot.jp damage  43.9 %   leaf area   98 %
+21_tomato__plantdoc_tomato_early_blight_leaf.jpg damage  42.1 %   leaf area   22 %
+22_tomato__plantdoc_tomato_leaf_late_blight.jpg  damage  10.6 %   leaf area   94 %
+23_tomato__plantdoc_tomato_leaf_yellow_virus.jpg damage  19.2 %   leaf area   81 %
+24_tomato__plantdoc_tomato_mold_leaf.jpg         damage  16.5 %   leaf area   65 %
+25_tomato__pv_bacterial_spot.jpg                 damage   4.5 %   leaf area   55 %
+26_tomato__pv_early_blight.jpg                   damage  28.5 %   leaf area   54 %
+27_tomato__pv_healthy.jpg                        damage  21.8 %   leaf area   34 %
+28_tomato__pv_late_blight.jpg                    damage  79.4 %   leaf area   26 %
+29_tomato__pv_leaf_mold.jpg                      damage   9.4 %   leaf area   43 %
+30_tomato__pv_septoria_leaf_spot.jpg             damage  41.5 %   leaf area   52 %
+31_tomato__pv_spider_mites_two-spotted_spider_mi damage   8.5 %   leaf area   33 %
+32_tomato__pv_target_spot.jpg                    damage  11.5 %   leaf area   43 %
+33_tomato__pv_tomato_mosaic_virus.jpg            damage   4.5 %   leaf area   25 %
+34_tomato__pv_tomato_yellow_leaf_curl_virus.jpg  damage   7.6 %   leaf area   31 %

@@ -6,19 +6,36 @@ import org.json.JSONObject
 
 object Kb {
     private var en: Map<String, Entry> = emptyMap()
-    private var hi: Map<String, Entry> = emptyMap()
+    private val overlay = HashMap<String, Entry>()
 
     fun load(ctx: Context) {
         en = parse(read(ctx, "kb.json"))
-        hi = try { parse(read(ctx, "kb_hi.json")) } catch (e: Exception) { emptyMap() }
+        I18n.init(ctx)
+        overlay.clear()
         Grounding.knownCauses = en.values.map { it.cause }
     }
 
     /** Hindi entry if we have one, otherwise English. */
-    fun get(classId: String, lang: Lang): Entry? =
-        (if (lang == Lang.HI) hi[classId] else null) ?: en[classId]
+    fun get(classId: String, lang: Lang): Entry? {
+        val base = en[classId] ?: return null
+        if (lang == Lang.EN || !I18n.has(lang)) return base
+        return synchronized(overlay) { overlay.getOrPut(lang.code + "|" + classId) { translate(base, lang) } }
+    }
 
-    fun hasHindi(classId: String) = hi.containsKey(classId)
+    fun hasHindi(classId: String) = I18n.has(Lang.HI) && en.containsKey(classId)
+
+    private fun translate(e: Entry, l: Lang): Entry {
+        fun t(s: String) = I18n.t(l, s)
+        return e.copy(
+            name = t(e.name), cause = t(e.cause),
+            symptoms = e.symptoms.map { t(it) },
+            lookAlikes = e.lookAlikes?.let { t(it) },
+            actions = e.actions.map { t(it) },
+            whenToAct = e.whenToAct?.let { t(it) },
+            ask = e.ask.map { it.copy(question = t(it.question)) },
+            caveats = e.caveats?.let { t(it) },
+        )
+    }
 
     fun allEnglish(): Collection<Entry> = en.values
 

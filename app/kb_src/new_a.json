@@ -1,0 +1,732 @@
+{
+ "entries": [
+  {
+   "class_id": "apple__apple_scab",
+   "crop": "apple",
+   "name_en": "Apple scab",
+   "type": "fungal",
+   "cause": "Venturia inaequalis (fungus)",
+   "symptoms": [
+    "Dull olive-green patches appear on young leaves.",
+    "Underside spots turn dark brown to black and feel velvety.",
+    "Leaves may curl, twist and turn yellow early.",
+    "Fruit gets small, rough, black round spots, often at the flower end.",
+    "Young fruit spots can have a yellow ring."
+   ],
+   "look_alikes": "Black rot leaf spots have a purple edge and tan centre (frogeye). Cedar apple rust spots are yellow-orange and swollen.",
+   "cultural_actions": [
+    "Keep the orchard clean.",
+    "Collect and destroy fallen leaves.",
+    "Follow university and horticulture department spray schedules."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://himachalwatcher.com/2020/07/09/himachal-pradesh-save-apple-crop-from-scab/",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Dodine",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://himachalwatcher.com/2020/07/09/himachal-pradesh-save-apple-crop-from-scab/",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Tebuconazole + captan (blend)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://himachalwatcher.com/2020/07/09/himachal-pradesh-save-apple-crop-from-scab/",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim + flusilazole (combination)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://ojs.pphouse.org/index.php/IJEP/article/view/4705",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Himachal advisory: follow the spray schedule from the university and horticulture department. Disease favours cool, moist early spring.",
+   "ask_back": [
+    {
+     "question": "Are the spots olive-green to dark brown, velvety, on the leaf underside?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the leaf spots yellow-orange, swollen, with a red border?",
+     "if_yes": "apple__cedar_apple_rust",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Do leaf spots have a purple edge with a tan-brown centre?",
+     "if_yes": "apple__black_rot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Organic farming: diseases of apple",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Himachal Watcher - Apple scab advisory from Dr YS Parmar University of Horticulture and Forestry, Nauni (news report)",
+     "url": "https://himachalwatcher.com/2020/07/09/himachal-pradesh-save-apple-crop-from-scab/",
+     "publisher": "other"
+    },
+    {
+     "title": "Apple scab management using a novel fungicide combination in the north-western Himalayas of India (journal abstract)",
+     "url": "https://ojs.pphouse.org/index.php/IJEP/article/view/4705",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Symptoms and cleaning advice from TNAU (general); fungicide names from a news report of a Himachal university advisory and a journal abstract, not label pages. In India apple is grown in Jammu and Kashmir, Himachal Pradesh, Uttarakhand and Arunachal Pradesh; check local advice."
+  },
+  {
+   "class_id": "apple__black_rot",
+   "crop": "apple",
+   "name_en": "Black rot and frogeye leaf spot",
+   "type": "fungal",
+   "cause": "Diplodia seriata, formerly Botryosphaeria obtusa (fungus)",
+   "symptoms": [
+    "Small purple spots on leaves grow into round spots.",
+    "Spot edge stays purple while the centre turns brown or tan (frogeye).",
+    "Fruit rots at the flower end, usually one spot per fruit.",
+    "Rotten patch is firm and leathery with dark and light bands.",
+    "Rotten fruit dries into a hard mummy; limbs get sunken reddish-brown cankers."
+   ],
+   "look_alikes": "Bitter rot usually has many spots per fruit. Scab leaf spots are olive-green and velvety, without a purple edge.",
+   "cultural_actions": [
+    "Remove cankers, dead wood and mummified fruit.",
+    "Cut out cankers well below the diseased edge.",
+    "Dispose of removed material properly."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Captan",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://extension.psu.edu/apple-disease-black-rot-and-frogeye-leaf-spot",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Strobilurin-group fungicides",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://extension.psu.edu/apple-disease-black-rot-and-frogeye-leaf-spot",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do leaf spots have a purple edge and brown or tan centre?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is the fruit rot at the flower end, usually one spot per fruit?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are leaf spots olive-green and velvety underneath?",
+     "if_yes": "apple__apple_scab",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Penn State Extension - Black rot and frogeye leaf spot of pome fruit",
+     "url": "https://extension.psu.edu/apple-disease-black-rot-and-frogeye-leaf-spot",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Organic farming: diseases of apple",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Source is a US extension page; no Indian source found. Spray timing not given there. In India apple is grown in Jammu and Kashmir, Himachal Pradesh, Uttarakhand and Arunachal Pradesh; check local advice. Whether this disease is common in India is not confirmed by the sources."
+  },
+  {
+   "class_id": "apple__cedar_apple_rust",
+   "crop": "apple",
+   "name_en": "Cedar apple rust",
+   "type": "fungal",
+   "cause": "Gymnosporangium juniperi-virginianae (fungus, needs juniper or cedar)",
+   "symptoms": [
+    "Tiny yellow spots appear on leaves in spring.",
+    "Spots grow, turn yellow-orange and swell, with a red border.",
+    "Black dots show in the centre of the spots.",
+    "Fruit and twigs of susceptible varieties can also be hit."
+   ],
+   "look_alikes": "Scab spots are olive-green to black and velvety, not swollen and yellow-orange.",
+   "cultural_actions": [
+    "Choose resistant varieties.",
+    "Remove galls from nearby juniper before spore horns form.",
+    "Ask local extension or garden centre about fungicide options."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Source: wet spring weather gives severe infection; removing juniper galls early stops spore release.",
+   "ask_back": [
+    {
+     "question": "Are the leaf spots yellow-orange, swollen, with a red border and black dots?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are juniper or cedar trees growing near the orchard?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the leaf spots olive-green and velvety underneath?",
+     "if_yes": "apple__apple_scab",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "University of Illinois Extension - Cedar apple rust",
+     "url": "https://extension.illinois.edu/plant-problems/cedar-apple-rust",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "US source only. The disease needs juniper or cedar hosts, which may be absent in Indian apple areas, so a match here is less likely; confirm with the local horticulture officer. In India apple is grown in Jammu and Kashmir, Himachal Pradesh, Uttarakhand and Arunachal Pradesh; check local advice. No chemicals named on the page."
+  },
+  {
+   "class_id": "apple__healthy",
+   "crop": "apple",
+   "name_en": "Healthy apple",
+   "type": "healthy",
+   "cause": "None (healthy plant)",
+   "symptoms": [
+    "Leaves are free of olive-green, velvety patches.",
+    "No purple-edged frogeye spots on leaves.",
+    "No yellow-orange swollen spots on leaves.",
+    "Fruit has no rough black spots or rotten patches."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout leaves and fruit regularly.",
+    "Collect and destroy fallen leaves.",
+    "Remove mummified fruit and dead wood.",
+    "Handle fruit carefully to avoid wounds."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Organic farming: diseases of apple",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_hortidiseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Penn State Extension - Black rot and frogeye leaf spot of pome fruit",
+     "url": "https://extension.psu.edu/apple-disease-black-rot-and-frogeye-leaf-spot",
+     "publisher": "other"
+    },
+    {
+     "title": "University of Illinois Extension - Cedar apple rust",
+     "url": "https://extension.illinois.edu/plant-problems/cedar-apple-rust",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Healthy signs are described by the absence of disease signs in the sources, not from a source page on healthy leaves. In India apple is grown in Jammu and Kashmir, Himachal Pradesh, Uttarakhand and Arunachal Pradesh; check local advice."
+  },
+  {
+   "class_id": "grape__black_rot",
+   "crop": "grape",
+   "name_en": "Black rot",
+   "type": "fungal",
+   "cause": "Guignardia bidwellii (fungus)",
+   "symptoms": [
+    "Irregular reddish-brown spots appear on leaves.",
+    "Berries get a black scab and shrivel.",
+    "Dark sunken spots can appear on stems and tendrils."
+   ],
+   "look_alikes": "Leaf blight (Isariopsis) on clusters looks like black rot, but the whole cluster collapses, not single berries.",
+   "cultural_actions": [
+    "Collect and destroy mummified berries.",
+    "Keep good air flow in the vine canopy.",
+    "Protect young bunches with sprays."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Bordeaux mixture",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Copper fungicides",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "NHB: protective sprays on young bunches. Warm, humid, rainy and cloudy weather favours the disease.",
+   "ask_back": [
+    {
+     "question": "Are berries turning black and hard, with reddish-brown leaf spots?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Does the whole bunch collapse rather than single berries?",
+     "if_yes": "grape__leaf_blight_(isariopsis_leaf_spot)",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "National Horticulture Board - Grapes diseases (NHB, Government of India)",
+     "url": "https://nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "PlantVillage (Penn State) - Grape diseases and pests",
+     "url": "https://plantvillage.psu.edu/topics/grape/infos/diseases_and_pests_description_uses_propagation",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "NHB page is a national horticulture board note, not a state or ICAR page. A separate post-harvest black rot caused by Aspergillus niger exists; this entry is the field disease. Check local advice."
+  },
+  {
+   "class_id": "grape__esca_(black_measles)",
+   "crop": "grape",
+   "name_en": "Esca (black measles)",
+   "type": "fungal",
+   "cause": "Fungal complex including Phaeoacremonium and Phaeomoniella chlamydospora",
+   "symptoms": [
+    "Stripes appear between leaf veins, dark red or yellow.",
+    "Striped leaf areas dry out and die.",
+    "Berries get small dark spots with brown-purple borders.",
+    "Affected berries may crack, dry or spoil.",
+    "Cut wood shows rings of dark spots."
+   ],
+   "look_alikes": "Esca belongs to the trunk disease group with Botryosphaeria, Eutypa and Phomopsis dieback.",
+   "cultural_actions": [
+    "Do not rely on sprays: wood infection cannot be cleared by fungicide.",
+    "Know that pruning wounds are where infection enters.",
+    "Ask a grape specialist about pruning-wound care."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Source: infection enters pruning wounds during rainy periods from fall to spring.",
+   "ask_back": [
+    {
+     "question": "Do leaves show stripes between veins that turn red or yellow, then dry?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do berries have small dark spots with purple-brown borders?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "UC IPM - Esca (black measles) in grape",
+     "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Only a California (UC IPM) page was found. No Indian source found; presence and local advice in India not confirmed. Page names no chemicals."
+  },
+  {
+   "class_id": "grape__healthy",
+   "crop": "grape",
+   "name_en": "Healthy grape",
+   "type": "healthy",
+   "cause": "None (healthy plant)",
+   "symptoms": [
+    "Leaves have no reddish-brown or irregular dead spots.",
+    "No red or yellow stripes between leaf veins.",
+    "Berries are free of black scab and dark spots.",
+    "Bunches are intact, not collapsing."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout leaves and bunches regularly.",
+    "Collect and destroy mummified berries.",
+    "Keep good air flow in the canopy.",
+    "Handle berries carefully at harvest."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [],
+   "sources": [
+    {
+     "title": "National Horticulture Board - Grapes diseases (NHB, Government of India)",
+     "url": "https://nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "UC IPM - Esca (black measles) in grape",
+     "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+     "publisher": "other"
+    },
+    {
+     "title": "PlantVillage (Penn State) - Grape diseases and pests",
+     "url": "https://plantvillage.psu.edu/topics/grape/infos/diseases_and_pests_description_uses_propagation",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Healthy signs are described by the absence of disease signs in the sources, not from a source page on healthy leaves."
+  },
+  {
+   "class_id": "grape__leaf_blight_(isariopsis_leaf_spot)",
+   "crop": "grape",
+   "name_en": "Leaf blight (Isariopsis leaf spot)",
+   "type": "fungal",
+   "cause": "Pseudocercospora vitis (fungus)",
+   "symptoms": [
+    "Irregular spots appear on leaves, dull red to brown at first.",
+    "Spots darken as they age.",
+    "In bad attacks, spots join together.",
+    "On bunches it looks like black rot, but the whole cluster collapses.",
+    "It usually shows late in the growing season."
+   ],
+   "look_alikes": "Black rot damages single berries and has reddish-brown leaf spots; here the whole cluster collapses.",
+   "cultural_actions": [
+    "Sprays used for other grape diseases may also reduce this disease."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Source gives no threshold. It appears late in the season; sprays for other diseases may help.",
+   "ask_back": [
+    {
+     "question": "Does the whole bunch collapse together?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are single berries turning black and hard instead?",
+     "if_yes": "grape__black_rot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "PlantVillage (Penn State) - Grape diseases and pests",
+     "url": "https://plantvillage.psu.edu/topics/grape/infos/diseases_and_pests_description_uses_propagation",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Weak sourcing: one non-Indian page only; no Indian page found. Page says the disease is common in tropical and subtropical grapes. Ask local horticulture officer."
+  },
+  {
+   "class_id": "potato__early_blight",
+   "crop": "potato",
+   "name_en": "Early blight",
+   "type": "fungal",
+   "cause": "Alternaria solani (fungus)",
+   "symptoms": [
+    "Brown-black dead spots appear on leaves.",
+    "Spots are angular or oval with rings inside, like a target.",
+    "Spots join and spread over the whole leaf."
+   ],
+   "look_alikes": "Late blight spots are water-soaked, turn purple-brown to black, with white growth underneath.",
+   "cultural_actions": [
+    "Plant disease-free seed tubers.",
+    "Remove infected plant debris; spores in soil start infection.",
+    "Try Kufri Sindhuri, which has fair resistance."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Zineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Captan",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_2.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU: spray very early, then repeat as the label advises. Favoured by dry warm weather with some rain.",
+   "ask_back": [
+    {
+     "question": "Are the spots brown-black with rings inside, like a target?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are spots water-soaked with white growth under the leaf?",
+     "if_yes": "potato__late_blight",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Potato early blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_2.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu (TNAU). Only one source page; no ICAR-CPRI page opened."
+  },
+  {
+   "class_id": "potato__late_blight",
+   "crop": "potato",
+   "name_en": "Late blight",
+   "type": "fungal",
+   "cause": "Phytophthora infestans",
+   "symptoms": [
+    "Water-soaked spots appear on leaves and grow larger.",
+    "Spots turn purple-brown, then black.",
+    "White growth appears on the underside of leaves.",
+    "Stems get affected, often at nodes, and plants topple.",
+    "Tubers get purplish-brown spots with rusty brown rot inside."
+   ],
+   "look_alikes": "Early blight spots are brown-black with rings inside and no white growth underneath.",
+   "cultural_actions": [
+    "Remove infected tubers and cull piles near storage.",
+    "Use certified, disease-free seed tubers.",
+    "Avoid injuries at harvest; remove visibly infected tubers before storage.",
+    "Destroy infected foliage before harvest.",
+    "Plant earlier, use wider spacing and hill properly.",
+    "Choose resistant varieties such as Kufri Jyoti or Kufri Jeevan."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Zineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Chlorothalonil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://pau.edu/potato/lb_mang.php",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Propineb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://pau.edu/potato/lb_mang.php",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Cymoxanil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://pau.edu/potato/lb_mang.php",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mandipropamid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://pau.edu/potato/lb_mang.php",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "PAU: start protective sprays before symptoms show. TNAU: protective sprays prevent tuber infection.",
+   "ask_back": [
+    {
+     "question": "Are leaf spots water-soaked, turning purple-brown, with white growth underneath?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the spots brown-black with rings inside, like a target?",
+     "if_yes": "potato__early_blight",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Potato late blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Punjab Agricultural University - Management of late blight (potato)",
+     "url": "https://pau.edu/potato/lb_mang.php",
+     "publisher": "SAU"
+    }
+   ],
+   "caveats": "TNAU page is for Tamil Nadu; PAU page is for Punjab plains. Resistant varieties named differ by page. PAU says to alternate protectants with systemic products; follow label and local advice. No ICAR-CPRI page opened."
+  },
+  {
+   "class_id": "potato__healthy",
+   "crop": "potato",
+   "name_en": "Healthy potato",
+   "type": "healthy",
+   "cause": "None (healthy plant)",
+   "symptoms": [
+    "Leaves have no brown-black ringed spots.",
+    "No water-soaked spots turning purple-brown.",
+    "No white growth under the leaves.",
+    "Stems stand upright; tubers have no purplish-brown spots."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout leaves and stems regularly.",
+    "Plant disease-free seed tubers.",
+    "Remove infected plant debris and infected tubers.",
+    "Avoid injuries at harvest and check tubers carefully."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Potato early blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Potato late blight",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Punjab Agricultural University - Management of late blight (potato)",
+     "url": "https://pau.edu/potato/lb_mang.php",
+     "publisher": "SAU"
+    }
+   ],
+   "caveats": "Healthy signs are described by the absence of disease signs in the sources, not from a source page on healthy leaves."
+  },
+  {
+   "class_id": "capsicum__bacterial_spot",
+   "crop": "capsicum",
+   "name_en": "Bacterial spot",
+   "type": "bacterial",
+   "cause": "Xanthomonas campestris pv. vesicatoria (bacterium)",
+   "symptoms": [
+    "Small round or irregular spots appear on leaves, dark brown or black and greasy.",
+    "Spot centre turns lighter, with a dark edge.",
+    "Badly hit leaves turn yellow and fall.",
+    "Stems may get cankers and branches wilt.",
+    "Fruit gets raised, water-soaked spots with a pale yellow border."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Use disease-free seed.",
+    "Keep the field clean.",
+    "Use drip, not overhead watering.",
+    "Avoid handling wet plants.",
+    "Work crop residue into soil after harvest.",
+    "Rotate away from tomato, chilli and other related crops."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Copper oxychloride",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Bordeaux mixture",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Streptomycin (antibiotic)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU: avoid antibiotic sprays once fruit development has begun.",
+   "ask_back": [
+    {
+     "question": "Are leaf spots dark, greasy, with a lighter centre and dark edge?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are there raised, water-soaked spots with a yellow border on fruit?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Chilli bacterial leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "PNW Plant Disease Handbook - Pepper bacterial spot",
+     "url": "https://pnwhandbooks.org/plantdisease/host-disease/pepper-capsicum-spp-bacterial-spot",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "TNAU page is about chilli, same bacterium; used for capsicum. Rotation advice from a US page. Copper-resistant strains may reduce control; ask local KVK."
+  },
+  {
+   "class_id": "capsicum__healthy",
+   "crop": "capsicum",
+   "name_en": "Healthy capsicum",
+   "type": "healthy",
+   "cause": "None (healthy plant)",
+   "symptoms": [
+    "Leaves have no dark, greasy brown or black spots.",
+    "Leaves stay green and do not drop early.",
+    "Stems have no cankers and branches do not wilt.",
+    "Fruit has no raised, water-soaked spots."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout leaves and fruit regularly.",
+    "Use disease-free seed.",
+    "Keep the field clean.",
+    "Use drip, not overhead watering.",
+    "Avoid handling wet plants."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Chilli bacterial leaf spot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "PNW Plant Disease Handbook - Pepper bacterial spot",
+     "url": "https://pnwhandbooks.org/plantdisease/host-disease/pepper-capsicum-spp-bacterial-spot",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Healthy signs are described by the absence of disease signs in the sources, not from a source page on healthy leaves."
+  }
+ ]
+}

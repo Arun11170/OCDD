@@ -16,6 +16,7 @@ DATASETS = {
     "cotton": "seroshkarim/cotton-leaf-infection",
     "wheat": "olyadgetch/wheat-leaf-dataset",
     "banana": "sujaykapadnis/banana-disease-recognition-dataset",
+    "okra_yvmv": "manojgadde/yellow-vein-mosaic-disease",           # extra okra photos (content not yet checked)
 }
 EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 out = []

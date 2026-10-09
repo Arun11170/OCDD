@@ -1,0 +1,45 @@
+best epoch 11 (val macro-F1 0.863), temperature 0.81
+TEST accuracy 0.887   macro-F1 0.855
+  domain field   n= 5083  accuracy 0.830
+  domain lab     n= 2719  accuracy 0.994
+calibration error (ECE) 0.022   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 95.1% of photos, accuracy on those 0.918
+  >= 0.6 : answers 92.2% of photos, accuracy on those 0.932
+  >= 0.7 : answers 88.9% of photos, accuracy on those 0.947
+  >= 0.8 : answers 85.6% of photos, accuracy on those 0.958
+  >= 0.9 : answers 79.7% of photos, accuracy on those 0.971
+
+class                                      prec recall     f1     n
+pest__aphids                              0.879  0.915  0.897   614
+pest__army_worm                           0.747  0.719  0.732   160
+pest__corn_borer                          0.812  0.768  0.789   254
+pest__cutworm                             0.793  0.890  0.839   272
+pest__flea_beetle                         0.929  0.897  0.913   117
+pest__gall_midge_dasineura                0.603  0.507  0.551    75
+pest__leafhopper                          0.914  0.904  0.909   921
+pest__mango_borer                         0.833  0.781  0.806   128
+pest__mango_hopper                        0.946  0.919  0.932   172
+pest__mango_leaf_cutting_weevil           0.793  0.742  0.767    31
+pest__mango_seed_weevil                   0.758  0.735  0.746    68
+pest__mole_cricket                        0.948  0.955  0.952   247
+pest__oriental_fruit_fly                  0.952  0.923  0.938    65
+pest__planthopper                         0.813  0.806  0.809   340
+pest__red_spider_mite                     0.931  0.848  0.887    79
+pest__rice_gall_midge                     0.622  0.747  0.679    75
+pest__rice_leaf_folder                    0.791  0.771  0.781   240
+pest__rice_stem_borer                     0.692  0.771  0.729   271
+pest__rice_water_weevil                   0.771  0.656  0.709   128
+pest__thrips                              0.781  0.801  0.791   276
+pest__white_grub                          0.900  0.837  0.867   129
+pest__wireworm                            0.836  0.886  0.860   132
+tomato__bacterial_spot                    0.925  0.930  0.927   357
+tomato__early_blight                      0.928  0.900  0.914   200
+tomato__healthy                           0.988  0.992  0.990   247
+tomato__late_blight                       0.959  0.976  0.967   335
+tomato__leaf_mold                         0.946  0.946  0.946   186
+tomato__mosaic_virus                      0.816  0.816  0.816    76
+tomato__septoria_leaf_spot                0.930  0.939  0.935   313
+tomato__spider_mites                      1.000  1.000  1.000   251
+tomato__target_spot                       0.995  0.995  0.995   210
+tomato__yellow_leaf_curl_virus            0.993  0.971  0.982   833

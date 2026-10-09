@@ -1,0 +1,921 @@
+{
+ "apple__cedar_apple_rust": {
+  "treatment_options": [],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Texas A&M AgriLife - Cedar-Apple Rust (factsheet PLPA-104)",
+    "url": "https://plantclinic.tamu.edu/helpful-factsheets/cedar-apple-rust",
+    "publisher": "Texas A&M AgriLife Extension Service (foreign; biology and cultural only)"
+   },
+   {
+    "title": "A checklist of rust fungi from Himachal Pradesh, India (Gautam and Avasthi, J. Threatened Taxa 2019)",
+    "url": "https://doaj.org/article/90395ad9f382435f84c9904d35800dd2",
+    "publisher": "Journal of Threatened Taxa (presence of the genus only; no advice)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Cut out and destroy galls on nearby juniper or cedar before the spore horns form in spring."
+  ],
+  "when_to_act": "Remove galls from juniper or cedar before the spore horns form in spring.",
+  "evidence": [
+   {
+    "claim": "Remove galls before horns form",
+    "url": "https://plantclinic.tamu.edu/helpful-factsheets/cedar-apple-rust",
+    "quote": "Remove and destroy galls from the cedar tree before the telial horns are formed to reduce spores in the spring."
+   },
+   {
+    "claim": "Rust fungus genus Gymnosporangium is recorded in Himachal Pradesh (genus only, not this species)",
+    "url": "https://doaj.org/article/90395ad9f382435f84c9904d35800dd2",
+    "quote": "A checklist of rust fungi from Himachal Pradesh, India"
+   }
+  ],
+  "gaps": [
+   "No Indian page found that names this disease on apple, so no Indian advice, no Indian chemical and no timing.",
+   "HP Horticulture Dept apple spray schedule (2023) does not mention cedar rust.",
+   "The Himachal rust checklist lists the genus Gymnosporangium but the abstract does not say which species or whether apple is hit.",
+   "Texas A&M page names myclobutanil and Bordeaux mixture; dropped because foreign pages are not allowed for chemical advice. The old Illinois Extension source was not re-opened (blocked); text kept as is.",
+   "Whether juniper or cedar hosts occur near Indian apple orchards was not verified."
+  ]
+ },
+ "apple__apple_scab": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Captan",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed by the Himachal horticulture schedule at green tip and again before harvest for scab.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['captan']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Dodine",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed at green tip and at fruit development for scab.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['dodine']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Ziram",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed at green tip and before harvest for scab.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['ziram']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Mancozeb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed at pink bud and fruit development for scab.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['mancozeb']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Propineb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed at pink bud, fruit development and the later spray for scab.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['propineb']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Zineb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed for the later spray (about 20 days after the 4th spray) for scab and black rot.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['zineb']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Carbendazim + flusilazole (ready mix)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Found best in Himachal university field trials; four sprays starting when leaf spots first show.",
+    "source_url": "https://ojs.pphouse.org/index.php/IJEP/article/download/4705/2161/4344",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['carbendazim', 'flusilazole']"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Spray schedule for the control of diseases of apple, year 2023",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "publisher": "Dept of Horticulture, Himachal Pradesh and Dr YS Parmar University of Horticulture and Forestry, Nauni"
+   },
+   {
+    "title": "TNAU Agritech - Apple: scab (Venturia inaequalis)",
+    "url": "https://agritech.tnau.ac.in/crop_protection/apple_1.html",
+    "publisher": "Tamil Nadu Agricultural University"
+   },
+   {
+    "title": "Apple scab management using a novel fungicide combination in the north-western Himalayas of India (Verma, Gautam, Khosla)",
+    "url": "https://ojs.pphouse.org/index.php/IJEP/article/download/4705/2161/4344",
+    "publisher": "Indian Journal of Ecology/Plant Protection (pphouse); authors at Dr YS Parmar UHF Nauni"
+   }
+  ],
+  "new_cultural_actions": [
+   "Collect and destroy fallen leaves and pruned twigs in winter.",
+   "Spraying urea on leaves before leaf fall in autumn and before bud break helps them rot, so fewer spores start the next season.",
+   "In scab-prone places, keep a gap of 12 to 14 days between sprays until the primary scab stage.",
+   "Do not use the same chemical again and again.",
+   "If heavy rain falls soon after a spray, the spray may need to be repeated."
+  ],
+  "when_to_act": "Start sprays at green tip stage; in scab-prone orchards keep 12 to 14 days between sprays until primary scab stage.",
+  "evidence": [
+   {
+    "claim": "Green tip scab sprays",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "Green tip Captan* Dodine Ziram* Scab"
+   },
+   {
+    "claim": "Late spray covers scab and black rot",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "Scab, Black rot"
+   },
+   {
+    "claim": "Spray gap in scab-prone areas",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "In scab prone areas 12-14 days interval should be maintained between the sprays up to primary scab stage."
+   },
+   {
+    "claim": "Do not repeat chemical",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "Do not repeat the same chemical for spray."
+   },
+   {
+    "claim": "Repeat spray after heavy rain",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "In case of heavy rains within 12 hours of spray, the spray is to be repeated within seven days."
+   },
+   {
+    "claim": "Sanitation",
+    "url": "https://agritech.tnau.ac.in/crop_protection/apple_1.html",
+    "quote": "Clean cultivation, collection and destruction of fallen leaves and pruned materials in winter to prevent the sexual cycle."
+   },
+   {
+    "claim": "Urea on leaves",
+    "url": "https://agritech.tnau.ac.in/crop_protection/apple_1.html",
+    "quote": "prior to leaf fall in autumn"
+   },
+   {
+    "claim": "Best ready-mix in Himachal trials",
+    "url": "https://ojs.pphouse.org/index.php/IJEP/article/download/4705/2161/4344",
+    "quote": "superior and effective in comparison to other fungicides"
+   }
+  ],
+  "gaps": [
+   "Dropped by the name check: tridemorph (TNAU lists it; cibname BANNED) and captafol (TNAU lists it; NOT_ON_LIST).",
+   "HP schedule petal-fall group (carbendazim, thiophanate-methyl, hexaconazole, myclobutanil, flusilazole, tebuconazole mixes and others) was not recorded because the fetched table text did not clearly match each product to scab; also thiophanate-methyl is NOT_ON_LIST.",
+   "Asterisks next to some names in the HP schedule are not explained in the text I could read.",
+   "Old himachalwatcher news page was not re-opened; replaced by the official HP schedule and the journal paper.",
+   "The old TNAU org_farm page listed in the input was not re-opened (blocked); TNAU apple_1 page was used instead.",
+   "CIB&RC check is for the NAME only. Crop and pest label registration was not checked."
+  ]
+ },
+ "apple__black_rot": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Propineb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. HP schedule lists it for the later spray against scab and black rot.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['propineb']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Zineb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. HP schedule lists it for the later spray against scab and black rot.",
+    "source_url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['zineb']"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "Plant oils on stored fruit (linseed, mustard or castor oil)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists this only for black rot of harvested fruit in storage, not for the tree.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_diseases_postharvest_apple_6.html",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST []"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Spray schedule for the control of diseases of apple, year 2023",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "publisher": "Dept of Horticulture, Himachal Pradesh and Dr YS Parmar University of Horticulture and Forestry, Nauni"
+   },
+   {
+    "title": "TNAU Agritech - Apple post-harvest diseases: black rot (Botryosphaeria obtusa)",
+    "url": "https://agritech.tnau.ac.in/crop_protection/crop_diseases_postharvest_apple_6.html",
+    "publisher": "Tamil Nadu Agricultural University"
+   }
+  ],
+  "new_cultural_actions": [
+   "Remove and destroy infected parts, mummified fruit, dead twigs and pruned branches.",
+   "Avoid wounds on the tree, feed the tree in a balanced way, and water well in hot dry spells so the tree is not stressed.",
+   "Control insects and other diseases well."
+  ],
+  "when_to_act": "The HP schedule puts propineb or zineb about 20 days after the 4th spray, in the fruit development stage, for scab and black rot.",
+  "evidence": [
+   {
+    "claim": "Propineb or zineb row names black rot",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "Scab, Black rot"
+   },
+   {
+    "claim": "Canker sanitation (general canker advice in the schedule)",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "Canker- These include removal and destruction of infected plant parts, mummified fruits, dead twigs and pruned branches,"
+   },
+   {
+    "claim": "Canker stress care",
+    "url": "https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-of-apple-english.pdf",
+    "quote": "proper irrigation during hot dry periods to avoid tree stress, protecting plants from high and low temperature injuries"
+   },
+   {
+    "claim": "Stored-fruit black rot",
+    "url": "https://agritech.tnau.ac.in/crop_protection/crop_diseases_postharvest_apple_6.html",
+    "quote": "Treatment of fruits with linseed oil or mustard oil or castor oil"
+   },
+   {
+    "claim": "Black rot name on TNAU page",
+    "url": "https://agritech.tnau.ac.in/crop_protection/crop_diseases_postharvest_apple_6.html",
+    "quote": "Black rot: Botryosphaeria obtuse"
+   }
+  ],
+  "gaps": [
+   "No Indian page found that treats frogeye leaf spot or limb canker black rot on its own; the HP schedule only names black rot in one spray row and gives general canker advice.",
+   "Old captan and strobilurin entries came from Penn State (foreign) and are not backed by an Indian page for this disease, so they are not carried over. Captan is in the HP schedule only for scab.",
+   "Penn State page stays as a biology source. The old TNAU org_farm page was not re-opened (blocked).",
+   "The TNAU oil treatment is for harvested fruit in store; check whether to show it to a farmer diagnosing leaf spots.",
+   "CIB&RC check is for the NAME only."
+  ]
+ },
+ "grape__black_rot": {
+  "treatment_options": [],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "National Horticulture Board - Grapes: diseases (black rot)",
+    "url": "https://www.nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+    "publisher": "National Horticulture Board, Govt of India"
+   },
+   {
+    "title": "Black Rot of Grapes (D. Smith, Oklahoma State Univ.)",
+    "url": "https://grapes.extension.org/black-rot-of-grapes",
+    "publisher": "grapes.extension.org (foreign; biology and sanitation only)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Remove mummified berries from the vine and the ground.",
+   "Prune and train the vines so air moves freely and leaves dry fast.",
+   "Protect young bunches, because that is when sprays matter most."
+  ],
+  "when_to_act": "Warm, humid, cloudy and rainy weather favours the disease, so protect young bunches before and just after bloom.",
+  "evidence": [
+   {
+    "claim": "Weather that favours disease",
+    "url": "https://www.nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+    "quote": "Warm and moist climate with extended periods of rain and cloudy weather favours the development of the disease."
+   },
+   {
+    "claim": "Symptoms",
+    "url": "https://www.nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+    "quote": "irregularly shaped reddish brown spots on the leaves and a black scab on berries"
+   },
+   {
+    "claim": "Remove mummies",
+    "url": "https://grapes.extension.org/black-rot-of-grapes",
+    "quote": "Removal of mummies from the canopy"
+   },
+   {
+    "claim": "Airflow",
+    "url": "https://grapes.extension.org/black-rot-of-grapes",
+    "quote": "canopy management during the season can help to increase airflow"
+   },
+   {
+    "claim": "Spray window (US source, timing only)",
+    "url": "https://grapes.extension.org/black-rot-of-grapes",
+    "quote": "The most critical time for application of fungicides is just before bloom until at least four to six weeks post-bloom."
+   }
+  ],
+  "gaps": [
+   "NHB (Govt of India) names Bordeaux mixture and copper fungicides once or twice on young bunches. Both fail the name rule (cibname NOT_ON_LIST, kind fungicide) so they were dropped. Lead may decide to re-add Bordeaux mixture as a traditional product.",
+   "NHB also covers cultural steps (mummified berries, air flow) in text I could only read as a summary, so the cultural lines above are backed by the verbatim quotes from the OSU page.",
+   "NHB page was in the input marked indian_source false; it is a Govt of India body so true is right.",
+   "ICAR-NRC Grapes bulletin (TB-8, 2007) and the NRCG label-claim list (Annexure 5, 2019) do not cover black rot, so no ICAR advice found.",
+   "PlantVillage page not re-opened (permission timed out).",
+   "CIB&RC check is for the NAME only."
+  ]
+ },
+ "grape__esca_(black_measles)": {
+  "treatment_options": [],
+  "no_chemical": {
+   "statement": "Fungicide cannot clear esca once the wood is infected. Complete control in a vineyard is very hard.",
+   "source_url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+   "indian_source": false
+  },
+  "new_sources": [
+   {
+    "title": "Texas A&M AgriLife - Grapevine Trunk Diseases (EPLP-034)",
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/13/2020/05/Grapevine-Trunk-Diseases-EPLP-034.pdf",
+    "publisher": "Texas A&M AgriLife Extension Service (foreign)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Do not prune vines in rainy, wet weather.",
+   "Cut out infected wood back into healthy wood, then burn or bury it. This helps for some trunk diseases but not all."
+  ],
+  "when_to_act": "Pruning wounds are where infection enters, so avoid pruning in wet weather.",
+  "evidence": [
+   {
+    "claim": "No cure by fungicide",
+    "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+    "quote": "cannot be eradicated by fungicide applications"
+   },
+   {
+    "claim": "Wounds are the entry point",
+    "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+    "quote": "wounds made by dormant pruning provide infection sites."
+   },
+   {
+    "claim": "Wounds stay open for weeks",
+    "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+    "quote": "Wounds may remain susceptible to infection for several weeks after pruning with susceptibility declining over time."
+   },
+   {
+    "claim": "Leaf stripe symptom",
+    "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+    "quote": "The foliar symptom of Esca is an interveinal \"striping\"."
+   },
+   {
+    "claim": "Avoid wet pruning",
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/13/2020/05/Grapevine-Trunk-Diseases-EPLP-034.pdf",
+    "quote": "never prune vines during rainy, wet weather."
+   },
+   {
+    "claim": "Control is hard",
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/13/2020/05/Grapevine-Trunk-Diseases-EPLP-034.pdf",
+    "quote": "Complete control or eradication of GTDs in a vineyard is virtually impossible."
+   },
+   {
+    "claim": "Cutting out wood",
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/13/2020/05/Grapevine-Trunk-Diseases-EPLP-034.pdf",
+    "quote": "into healthy, green wood"
+   },
+   {
+    "claim": "Excision limit",
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/13/2020/05/Grapevine-Trunk-Diseases-EPLP-034.pdf",
+    "quote": "Excision is not effective in the case of Petri disease"
+   }
+  ],
+  "gaps": [
+   "No Indian source found for esca or grapevine trunk disease management (ICAR-NRCG bulletin TB-8 and Annexure 5 do not cover it; NHB covers Dead Arm, a different disease).",
+   "Whether esca is present in India was not confirmed.",
+   "No chemical or biological option from any source, so none listed.",
+   "No Indian view on pruning-wound paint or protectants."
+  ]
+ },
+ "grape__leaf_blight_(isariopsis_leaf_spot)": {
+  "treatment_options": [],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "University of Kentucky - Leaf Spots of Grapes (Scouting Guide for Problems of Fruit)",
+    "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes",
+    "publisher": "University of Kentucky Dept of Plant Pathology (foreign; cultural only)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Keep vines healthy and strong.",
+   "Prune, thin and weed so air moves and leaves dry quickly.",
+   "Sprays used early in the season for other grape diseases also help."
+  ],
+  "when_to_act": "No set time; sprays early in the season for other grape diseases also help against leaf spots.",
+  "evidence": [
+   {
+    "claim": "Vigor",
+    "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes",
+    "quote": "Promote plant vigor."
+   },
+   {
+    "claim": "Airflow",
+    "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes",
+    "quote": "Increase air circulation to encourage drying of plant tissues"
+   },
+   {
+    "claim": "Early-season fungicides",
+    "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes",
+    "quote": "Apply fungicides (especially early season fungicides used to control primary diseases)."
+   }
+  ],
+  "gaps": [
+   "No Indian source found for Isariopsis / Pseudocercospora leaf spot of grape. NHB grape disease page and ICAR-NRC Grapes TB-8 do not cover it; the NRCG label-claim list (Annexure 5, 2019) did not show it either.",
+   "ANGRAU course notes list mancozeb for Alternaria leaf spot of grape, a different disease, so not used.",
+   "Kentucky page names no product; so no chemical listed.",
+   "PlantVillage source not re-opened (permission timed out)."
+  ]
+ },
+ "mango__bacterial_canker": {
+  "treatment_options": [
+   {
+    "kind": "bactericide",
+    "active_ingredient": "Streptomycin + tetracycline (named Streptocycline in the source)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. National IPM bulletin lists repeat sprays against bacterial canker.",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['streptomycin', 'tetracycline']"
+   },
+   {
+    "kind": "bactericide",
+    "active_ingredient": "Copper oxychloride",
+    "note": "FOLLOW PRODUCT LABEL; no dose. National IPM bulletin lists it for severe infection.",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['copper oxychloride']"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Bacillus coagulans",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Antagonist bacterium found effective in the IPM bulletin.",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST []"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Pseudomonas (species not named on the page)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. KAU e-crop page lists a Pseudomonas spray.",
+    "source_url": "https://celkau.in/crops/fruits/Mango/canker.php",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST []"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "IPM Schedule for Mango Pests, Extension Bulletin No. 1 (National Horticulture Mission, Govt of India; hosted on TNAU Agritech)",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "publisher": "National Horticulture Mission, Ministry of Agriculture, Govt of India"
+   },
+   {
+    "title": "AESA based IPM - Mango",
+    "url": "https://niphm.gov.in/IPMPackages/Mango.pdf",
+    "publisher": "Directorate of Plant Protection, Quarantine and Storage and NIPHM, Govt of India"
+   },
+   {
+    "title": "KAU Centre for e-Learning - Mango: bacterial canker",
+    "url": "https://celkau.in/crops/fruits/Mango/canker.php",
+    "publisher": "Kerala Agricultural University"
+   },
+   {
+    "title": "Management of bacterial canker disease through antagonists (Kishun, Mishra, Ram, Verma)",
+    "url": "https://krishi.icar.gov.in/jspui/handle/123456789/54233",
+    "publisher": "ICAR (KRISHI repository)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Check the orchard often and keep it clean.",
+   "Use certified seedlings and take rootstock stones only from healthy fruit.",
+   "Plant windbreaks so wind does not rub and wound leaves and fruit.",
+   "Remove weeds and diseased plant parts."
+  ],
+  "when_to_act": "The national IPM calendar puts bacterial canker sprays in May and June.",
+  "evidence": [
+   {
+    "claim": "Preventive steps",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Regular inspection of orchards, sanitation and seedling certification are recommended as preventive measures."
+   },
+   {
+    "claim": "Healthy stones",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Mango stones for raising seedlings (root stock) should always be taken from healthy fruits."
+   },
+   {
+    "claim": "Windbreaks",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Use of wind-breaks helps in reducing brushing/ wounding and thus reduces chance of infection."
+   },
+   {
+    "claim": "Antibiotic spray (dose left out)",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "In severe infection, spraying of Streptocycline"
+   },
+   {
+    "claim": "Copper for severe infection (dose left out)",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "or copper oxychloride"
+   },
+   {
+    "claim": "Bio agent",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "An antagonistic phytoplane bacterium, Bacillus coagulans, is found effective."
+   },
+   {
+    "claim": "May calendar row",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Fruit fly, Black tip, Internal necrosis, Sooty mould, Bacterial canker"
+   },
+   {
+    "claim": "June calendar row",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Fruit fly, Anthracnose, Bacterial canker"
+   },
+   {
+    "claim": "KAU cultural",
+    "url": "https://celkau.in/crops/fruits/Mango/canker.php",
+    "quote": "Field sanitation."
+   },
+   {
+    "claim": "KAU healthy seed",
+    "url": "https://celkau.in/crops/fruits/Mango/canker.php",
+    "quote": "Use disease free seeds."
+   },
+   {
+    "claim": "KAU biological",
+    "url": "https://celkau.in/crops/fruits/Mango/canker.php",
+    "quote": "Spray Psuedomonas"
+   }
+  ],
+  "gaps": [
+   "Old entry marked Streptocycline as kind fungicide and indian_source false; the bulletin is from the National Horticulture Mission, Govt of India, so indian_source true and kind bactericide.",
+   "KAU page also lists Bordeaux mixture (cibname NOT_ON_LIST, dropped) and carbendazim (a fungicide for a bacterial disease, left out; ask an expert).",
+   "NIPHM package gives only cultural steps for canker and no chemical.",
+   "ICAR record (Kishun et al.) says antagonist bacteria and streptocycline both cut disease in trials; only the abstract summary was read.",
+   "Whether streptomycin/tetracycline is allowed on mango at the label level was not checked (name check only).",
+   "CIB&RC check is for the NAME only."
+  ]
+ },
+ "mango__die_back": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Copper oxychloride",
+    "note": "FOLLOW PRODUCT LABEL; no dose. After pruning, spray or paste the cut ends, as the national IPM bulletin says.",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['copper oxychloride']"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "Cow dung paste on cut ends",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed in the IPM bulletin as another way to cover cut ends.",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST []"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "IPM Schedule for Mango Pests, Extension Bulletin No. 1 (National Horticulture Mission, Govt of India; hosted on TNAU Agritech)",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "publisher": "National Horticulture Mission, Ministry of Agriculture, Govt of India"
+   },
+   {
+    "title": "AESA based IPM - Mango",
+    "url": "https://niphm.gov.in/IPMPackages/Mango.pdf",
+    "publisher": "Directorate of Plant Protection, Quarantine and Storage and NIPHM, Govt of India"
+   }
+  ],
+  "new_cultural_actions": [
+   "Use scion wood for grafting that is free from infection.",
+   "Prune an infected branch at once and cut some healthy wood too.",
+   "Collect and burn the cut branches.",
+   "Take care not to bring the disease into new orchards."
+  ],
+  "when_to_act": "Die back shows most in October and November; prune as soon as you see it.",
+  "evidence": [
+   {
+    "claim": "Scion wood",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Scion wood selected for propagation should be free from infection"
+   },
+   {
+    "claim": "Prune and paste",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Any infected portion should immediately be pruned, followed by spraying/ pasting of copper oxychloride"
+   },
+   {
+    "claim": "Cow dung option",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "or pasting with cow dung at the cut ends."
+   },
+   {
+    "claim": "Cut into healthy wood",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Pruning should be done in such a way that some healthy portion is also removed,"
+   },
+   {
+    "claim": "Burn branches",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "The affected branches should be collected and burnt."
+   },
+   {
+    "claim": "October calendar row",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Eggs of Mealy bug, Pupae of midge, Fruit fly, Die-back, Anthracnose, Phoma blight, Malformation, Gummosis"
+   },
+   {
+    "claim": "NIPHM prune and paste",
+    "url": "https://niphm.gov.in/IPMPackages/Mango.pdf",
+    "quote": "Any infected portion should immediately be pruned, followed by spraying/ pasting of copper oxy-chloride or pasting with cow dung at the cut ends."
+   }
+  ],
+  "gaps": [
+   "Old entry marked the IPM bulletin as not Indian; it is a National Horticulture Mission (Govt of India) bulletin, so indian_source true.",
+   "The old TNAU anthracnose page in the input was not re-opened.",
+   "Only one active ingredient (copper oxychloride) is named in Indian sources for this problem.",
+   "CIB&RC check is for the NAME only."
+  ]
+ },
+ "mango__cutting_weevil": {
+  "treatment_options": [],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "IPM Schedule for Mango Pests, Extension Bulletin No. 1 (National Horticulture Mission, Govt of India; hosted on TNAU Agritech)",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "publisher": "National Horticulture Mission, Ministry of Agriculture, Govt of India"
+   },
+   {
+    "title": "Insect-pest complex of nursery plants of mango with special reference to bioecology and control of key pest (PhD thesis, BCKV, 1996)",
+    "url": "https://krishikosh.egranth.ac.in/server/api/core/bitstreams/2890a2d2-b1b0-4dcd-bd0a-3cd34e4c0d1c/content",
+    "publisher": "Bidhan Chandra Krishi Viswavidyalaya (state agricultural university, West Bengal)"
+   },
+   {
+    "title": "Biology, morphology and seasonal population dynamics of the mango leaf-cutting weevil Deporaus marginatus (Mukherjee et al., 2016)",
+    "url": "https://krishi.icar.gov.in/jspui/handle/123456789/52489",
+    "publisher": "ICAR Research Complex for Eastern Region, Ranchi"
+   },
+   {
+    "title": "ICAR-NBAIR - Deporaus marginatus",
+    "url": "https://databases.nbair.res.in/insectpests/Deporaus-marginatus.php",
+    "publisher": "ICAR-National Bureau of Agricultural Insect Resources"
+   },
+   {
+    "title": "Susceptibility of different varieties of mango to leaf cutting weevil and its control (Uddin et al. 2003)",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9",
+    "publisher": "Bangladesh Agricultural Research Institute, via AGRIS/FAO (foreign)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Pick up the cut leaves every day and burn them.",
+   "Plough or hoe the soil under the tree to disturb the grubs and pupae.",
+   "In nurseries, cover young plants with fine net or polythene bags (Bangladesh trial).",
+   "Watch grafted seedlings and young trees when new leaves come, mostly June to October.",
+   "Some varieties are attacked less than others."
+  ],
+  "when_to_act": "Watch new flushes on grafted seedlings and young trees; attack peaks after flushes from June to October.",
+  "evidence": [
+   {
+    "claim": "Burn fallen leaves",
+    "url": "https://krishikosh.egranth.ac.in/server/api/core/bitstreams/2890a2d2-b1b0-4dcd-bd0a-3cd34e4c0d1c/content",
+    "quote": "affected and fallen leaves and their prompt destruction by burning was effective in checking the pest population"
+   },
+   {
+    "claim": "Pest is a leaf-cutting weevil of mango nurseries",
+    "url": "https://krishi.icar.gov.in/jspui/handle/123456789/52489",
+    "quote": "Biology, morphology and seasonal population dynamics of the mango leaf-cutting weevil, Deporaus marginatus"
+   },
+   {
+    "claim": "NHM calendar April row names leaf cutting weevils",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Hopper, Powdery mildew, Sooty mould, Fruit fly, Leaf cutting weevils, Black Tip, Internal Necrosis"
+   },
+   {
+    "claim": "Pest status",
+    "url": "https://databases.nbair.res.in/insectpests/Deporaus-marginatus.php",
+    "quote": "Minor, rarely serious."
+   },
+   {
+    "claim": "Netting or bags",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9",
+    "quote": "100 % reduction of leaf infestation"
+   },
+   {
+    "claim": "Variety differences",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9",
+    "quote": "The experiments were conducted on 12 mango graft varieties/cultivars."
+   }
+  ],
+  "gaps": [
+   "NHM bulletin April row names carbaryl and dimethoate for leaf cutting weevils; cibname says carbaryl BANNED and dimethoate RESTRICTED_FOR_THIS_CROP (mango), so both dropped. No allowed chemical remains.",
+   "BCKV thesis lists many old insecticides from past trials (some banned); they are trial history, not advice, and none were used.",
+   "Plantix deltamethrin and fenvalerate entries are not Indian official advice and are not carried over.",
+   "Ploughing and burning advice comes from literature review quotes (Singh 1960, Butani 1979) inside a 1996 thesis; no current Indian bulletin found.",
+   "Netting or bag result is a Bangladesh trial, not Indian.",
+   "TNAU mango_12 page is about leaf twisting weevil (Apoderus), a different pest, and gives no management, so not used. The ICAR-RCER record gives June to October peak only in summary form.",
+   "No Indian page gives a spray threshold or a date for farmers."
+  ]
+ },
+ "pest__mango_leaf_cutting_weevil": {
+  "treatment_options": [],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "IPM Schedule for Mango Pests, Extension Bulletin No. 1 (National Horticulture Mission, Govt of India; hosted on TNAU Agritech)",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "publisher": "National Horticulture Mission, Ministry of Agriculture, Govt of India"
+   },
+   {
+    "title": "Insect-pest complex of nursery plants of mango with special reference to bioecology and control of key pest (PhD thesis, BCKV, 1996)",
+    "url": "https://krishikosh.egranth.ac.in/server/api/core/bitstreams/2890a2d2-b1b0-4dcd-bd0a-3cd34e4c0d1c/content",
+    "publisher": "Bidhan Chandra Krishi Viswavidyalaya (state agricultural university, West Bengal)"
+   },
+   {
+    "title": "Biology, morphology and seasonal population dynamics of the mango leaf-cutting weevil Deporaus marginatus (Mukherjee et al., 2016)",
+    "url": "https://krishi.icar.gov.in/jspui/handle/123456789/52489",
+    "publisher": "ICAR Research Complex for Eastern Region, Ranchi"
+   },
+   {
+    "title": "ICAR-NBAIR - Deporaus marginatus",
+    "url": "https://databases.nbair.res.in/insectpests/Deporaus-marginatus.php",
+    "publisher": "ICAR-National Bureau of Agricultural Insect Resources"
+   },
+   {
+    "title": "Susceptibility of different varieties of mango to leaf cutting weevil and its control (Uddin et al. 2003)",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9",
+    "publisher": "Bangladesh Agricultural Research Institute, via AGRIS/FAO (foreign)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Pick up the cut leaves every day and burn them.",
+   "Plough or hoe the soil under the tree to disturb the grubs and pupae.",
+   "In nurseries, cover young plants with fine net or polythene bags (Bangladesh trial).",
+   "Watch grafted seedlings and young trees when new leaves come, mostly June to October.",
+   "Some varieties are attacked less than others."
+  ],
+  "when_to_act": "Watch new flushes on grafted seedlings and young trees; attack peaks after flushes from June to October.",
+  "evidence": [
+   {
+    "claim": "Burn fallen leaves",
+    "url": "https://krishikosh.egranth.ac.in/server/api/core/bitstreams/2890a2d2-b1b0-4dcd-bd0a-3cd34e4c0d1c/content",
+    "quote": "affected and fallen leaves and their prompt destruction by burning was effective in checking the pest population"
+   },
+   {
+    "claim": "Pest is a leaf-cutting weevil of mango nurseries",
+    "url": "https://krishi.icar.gov.in/jspui/handle/123456789/52489",
+    "quote": "Biology, morphology and seasonal population dynamics of the mango leaf-cutting weevil, Deporaus marginatus"
+   },
+   {
+    "claim": "NHM calendar April row names leaf cutting weevils",
+    "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+    "quote": "Hopper, Powdery mildew, Sooty mould, Fruit fly, Leaf cutting weevils, Black Tip, Internal Necrosis"
+   },
+   {
+    "claim": "Pest status",
+    "url": "https://databases.nbair.res.in/insectpests/Deporaus-marginatus.php",
+    "quote": "Minor, rarely serious."
+   },
+   {
+    "claim": "Netting or bags",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9",
+    "quote": "100 % reduction of leaf infestation"
+   },
+   {
+    "claim": "Variety differences",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9",
+    "quote": "The experiments were conducted on 12 mango graft varieties/cultivars."
+   }
+  ],
+  "gaps": [
+   "NHM bulletin April row names carbaryl and dimethoate for leaf cutting weevils; cibname says carbaryl BANNED and dimethoate RESTRICTED_FOR_THIS_CROP (mango), so both dropped. No allowed chemical remains.",
+   "BCKV thesis lists many old insecticides from past trials (some banned); they are trial history, not advice, and none were used.",
+   "Plantix deltamethrin and fenvalerate entries are not Indian official advice and are not carried over.",
+   "Ploughing and burning advice comes from literature review quotes (Singh 1960, Butani 1979) inside a 1996 thesis; no current Indian bulletin found.",
+   "Netting or bag result is a Bangladesh trial, not Indian.",
+   "TNAU mango_12 page is about leaf twisting weevil (Apoderus), a different pest, and gives no management, so not used. The ICAR-RCER record gives June to October peak only in summary form.",
+   "No Indian page gives a spray threshold or a date for farmers."
+  ]
+ },
+ "banana__moko_disease": {
+  "treatment_options": [
+   {
+    "kind": "cultural",
+    "active_ingredient": "Fresh cow dung slurry in the banana basin",
+    "note": "FOLLOW PRODUCT LABEL; no dose. KAU lists this as a management step; it is not a proven cure.",
+    "source_url": "https://celkau.in/crops/fruits/banana/bacterialWilt.php",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST []"
+   }
+  ],
+  "no_chemical": {
+   "statement": "No direct chemical treatment for Moko is known; rely on healthy planting material and removing sick plants.",
+   "source_url": "https://plantix.net/en/library/plant-diseases/300016/moko-disease/",
+   "indian_source": false
+  },
+  "new_sources": [
+   {
+    "title": "Kerala Agricultural University CeL - Banana: Bacterial wilt or Moko disease",
+    "url": "https://celkau.in/crops/fruits/banana/bacterialWilt.php",
+    "publisher": "Kerala Agricultural University"
+   },
+   {
+    "title": "NHB - Banana diseases (Moko / bacterial wilt)",
+    "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+    "publisher": "National Horticulture Board, Govt of India"
+   },
+   {
+    "title": "Pacific Pests, Pathogens, Weeds and Pesticides - Banana Moko disease (525)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_full/entities/banana_moko_disease_525.htm",
+    "publisher": "University of Queensland / Pacific Community / ACIAR (foreign)"
+   },
+   {
+    "title": "Diseases of Horticultural Crops and Their Management - course notes (ANGRAU)",
+    "url": "https://rajneeshrajoria.weebly.com/uploads/4/9/0/6/49069889/horticultural_disease.pdf",
+    "publisher": "Acharya N G Ranga Agricultural University (file hosted on a personal site)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Use only disease-free planting material.",
+   "Find and destroy suspected plants early.",
+   "Disinfect pruning and cutting tools between plants.",
+   "Remove the male flowers as soon as the last hand of fruit has opened.",
+   "Bag the young flower bunch as it bends down (Pacific Pests page).",
+   "Remove Heliconia and weeds in and around the field.",
+   "Use basin irrigation, not furrow irrigation.",
+   "Rotate crops, leave the field fallow for a time, and keep drainage good (ANGRAU notes)."
+  ],
+  "when_to_act": "Act at the first sick plant: find it early and destroy it to stop spread.",
+  "evidence": [
+   {
+    "claim": "Basin irrigation",
+    "url": "https://celkau.in/crops/fruits/banana/bacterialWilt.php",
+    "quote": "Avoid furrow irrigation and follow basin irrigation."
+   },
+   {
+    "claim": "Healthy planting material",
+    "url": "https://celkau.in/crops/fruits/banana/bacterialWilt.php",
+    "quote": "Use disease free planting material."
+   },
+   {
+    "claim": "Heliconia and weeds",
+    "url": "https://celkau.in/crops/fruits/banana/bacterialWilt.php",
+    "quote": "Remove Heliconia spp. and other weeds from the field and nearby area."
+   },
+   {
+    "claim": "Cow dung slurry",
+    "url": "https://celkau.in/crops/fruits/banana/bacterialWilt.php",
+    "quote": "fresh cow dung slurry in the banana basin"
+   },
+   {
+    "claim": "Early destruction",
+    "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+    "quote": "Early detection and destruction of the suspected plants may help in preventing the spread of the disease."
+   },
+   {
+    "claim": "Tool disinfection",
+    "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+    "quote": "All the tools used for pruning and cutting should be disinfected with formaldehyde."
+   },
+   {
+    "claim": "Male flower removal",
+    "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+    "quote": "removal of the male flowers as soon as the last female hand emerge"
+   },
+   {
+    "claim": "Yellow fingers sign",
+    "url": "https://nhb.gov.in/pdf/fruits/banana/ban002.pdf",
+    "quote": "The presence of yellow fingers in an otherwise green stem often indicates the presence of moko disease."
+   },
+   {
+    "claim": "No direct chemical treatment (non-Indian)",
+    "url": "https://plantix.net/en/library/plant-diseases/300016/moko-disease/",
+    "quote": "There is no direct chemical treatment for the moko disease."
+   },
+   {
+    "claim": "Bagging (foreign)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_full/entities/banana_moko_disease_525.htm",
+    "quote": "Bag the young inflorescence (flowers) as it emerges and bends down."
+   },
+   {
+    "claim": "Insects spread it (foreign)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_full/entities/banana_moko_disease_525.htm",
+    "quote": "Insects may spread bacteria from diseased to healthy plants."
+   },
+   {
+    "claim": "Fallow and rotation (ANGRAU)",
+    "url": "https://rajneeshrajoria.weebly.com/uploads/4/9/0/6/49069889/horticultural_disease.pdf",
+    "quote": "Allow fallow period or flooding during off-season"
+   },
+   {
+    "claim": "Drainage (ANGRAU)",
+    "url": "https://rajneeshrajoria.weebly.com/uploads/4/9/0/6/49069889/horticultural_disease.pdf",
+    "quote": "Crop rotation (3 years rotation with sugarcane or rice) & providing good drainage"
+   }
+  ],
+  "gaps": [
+   "No Indian page says in words that no chemical cures Moko. The two Indian pages (KAU, NHB) list only cultural steps. The 'no chemical' line is from Plantix (commercial, not Indian).",
+   "ANGRAU notes also list killing plants with herbicide, soil fumigation, bleaching powder and Bordeaux drenches. These were not recorded: the file is on a personal website, and the chemicals were not on an official page.",
+   "Musalit/INIBAP source in the input was not re-opened (permission timed out), so nothing from it is repeated. Bagging and insect-spread now rest on the Pacific Pests page.",
+   "ICAR-NRCB pages found had no Moko advice.",
+   "CIB&RC check is for the NAME only; no chemical is listed."
+  ]
+ }
+}

@@ -43,11 +43,11 @@ object LlmFiles {
     data class Found(val model: String, val tokenizer: String)
 
     /** Looks for the .pte and tokenizer.model in the app's own folders, then in /data/local/tmp/llama. */
-    fun find(ctx: Context): Found? {
+    fun find(ctx: Context, dirName: String = "llama"): Found? {
         val dirs = listOfNotNull(
-            ctx.getExternalFilesDir(null)?.let { File(it, "llama") },
-            File(ctx.filesDir, "llama"),
-            File("/data/local/tmp/llama"),
+            ctx.getExternalFilesDir(null)?.let { File(it, dirName) },
+            File(ctx.filesDir, dirName),
+            File("/data/local/tmp/$dirName"),
         )
         for (d in dirs) {
             val pte = d.listFiles { f -> f.isFile && f.name.endsWith(".pte") }?.firstOrNull()

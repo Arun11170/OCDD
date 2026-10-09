@@ -1,0 +1,36 @@
+# Third-party software and models in Crop Advisor
+
+Crop Advisor's own code (the app, severity measurement, check-question logic, safety filter, training and export scripts)
+is the work of the team. It uses the following open-source software and models.
+
+## Llama 3.2 1B Instruct (mandatory model for this challenge)
+Built with Llama.
+Llama 3.2 is licensed under the Llama 3.2 Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+Licence: https://www.llama.com/llama3_2/license/   Acceptable Use Policy: https://www.llama.com/llama3_2/use-policy/
+Ship a copy of the licence with any distribution of the app, show "Built with Llama" in the app and report, and do not use
+the model for anything the Acceptable Use Policy forbids. The app only uses Llama to rephrase verified advice; every
+answer is checked against the advice database before it is shown.
+
+## Libraries used by the app
+| Component | Licence |
+|---|---|
+| ExecuTorch (org.pytorch:executorch-android 1.5.1), runs Llama | BSD-style (Meta) |
+| ONNX Runtime (com.microsoft.onnxruntime:onnxruntime-android 1.20.0), runs the disease model | MIT |
+| OpenCV (org.opencv:opencv 4.9.0), leaf damage measurement | Apache 2.0 |
+| AndroidX, Jetpack Compose, Material 3, Lifecycle, ExifInterface | Apache 2.0 |
+| Kotlin and kotlinx.coroutines | Apache 2.0 |
+| fbjni, SoLoader (Meta; required by ExecuTorch) | open source; copy the licence text from each project before release |
+
+## Training tools (not shipped in the app)
+PyTorch and torchvision (BSD-3), NumPy, Pillow, OpenCV, scikit-learn, ONNX and ONNX Runtime (MIT/Apache 2.0).
+The vision model was fine-tuned from MobileNetV3-Large (torchvision), initialised from ImageNet-pretrained weights.
+
+## Training photos
+See DATA_LICENSES.md. Authors of each dataset are credited there; some sets are CC BY-NC (non-commercial).
+
+## Advice content
+Advice is written by the team in short, own-words lines, based on public guidance from TNAU Agritech, ICAR, ICRISAT,
+state agricultural universities and the Central Insecticides Board and Registration Committee (CIB&RC) lists
+(registered products as on 31.03.2026; banned/restricted list updated 31.07.2026). Each entry links its sources.
+No doses are given. Hindi text is machine-translated and not yet reviewed by a speaker or an agriculture expert.
+The app is a decision aid and not a substitute for advice from a local agriculture officer (KVK).

@@ -55,6 +55,7 @@ class LlmService : Service() {
                             val rc: Any? = mod.load()                // Int status in some versions, Unit in others
                             if (rc is Int && rc != 0) throw IllegalStateException("load status $rc")
                             module = mod
+                            android.util.Log.i("CropAdvisor", "llama loaded: PSS ${android.os.Debug.getPss() / 1024} MB, file ${java.io.File(model).length() / (1024 * 1024)} MB")
                         }
                         reply(to, R_LOADED, id) { putLong("ms", (System.nanoTime() - t0) / 1_000_000) }
                     } catch (t: Throwable) {

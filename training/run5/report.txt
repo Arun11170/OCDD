@@ -1,0 +1,108 @@
+best epoch 18 (val macro-F1 0.901), temperature 0.83
+TEST accuracy 0.911   macro-F1 0.889
+  domain field   n= 9188  accuracy 0.863
+  domain lab     n= 5074  accuracy 0.997
+calibration error (ECE) 0.023   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 98.1% of photos, accuracy on those 0.922
+  >= 0.6 : answers 96.4% of photos, accuracy on those 0.931
+  >= 0.7 : answers 94.7% of photos, accuracy on those 0.940
+  >= 0.8 : answers 92.3% of photos, accuracy on those 0.949
+  >= 0.9 : answers 88.1% of photos, accuracy on those 0.964
+
+class                                      prec recall     f1     n
+apple__apple_scab                         0.919  0.932  0.925   146
+apple__black_rot                          0.972  0.945  0.959   110
+apple__cedar_apple_rust                   0.940  0.913  0.926    69
+apple__healthy                            1.000  1.000  1.000   246
+banana__black_sigatoka_disease            0.977  0.977  0.977    43
+banana__bract_mosaic_virus_disease        1.000  1.000  1.000     7
+banana__healthy_leaf                      1.000  1.000  1.000    12
+banana__insect_pest_disease               0.923  1.000  0.960    12
+banana__moko_disease                      0.889  1.000  0.941     8
+banana__panama_disease                    0.944  0.895  0.919    19
+banana__yellow_sigatoka_disease           0.667  0.667  0.667     3
+capsicum__bacterial_spot                  1.000  0.976  0.988   164
+capsicum__healthy                         1.000  1.000  1.000   221
+chilli__cercospora                        0.862  0.866  0.864   268
+chilli__healthy                           0.650  0.796  0.716    98
+chilli__murda_complex                     0.725  0.805  0.763    82
+chilli__nutritional_deficiency            0.852  0.575  0.687    80
+chilli__powdery_mildew                    0.955  0.875  0.913    48
+grape__black_rot                          0.980  0.970  0.975   201
+grape__esca_(black_measles)               1.000  1.000  1.000   207
+grape__healthy                            1.000  1.000  1.000    63
+grape__leaf_blight_(isariopsis_leaf_spot)  1.000  1.000  1.000   161
+groundnut__early_leaf_spot                0.941  0.841  0.888   132
+groundnut__healthy_leaf                   0.859  0.964  0.908   139
+groundnut__late_leaf_spot                 0.990  0.971  0.980   103
+groundnut__nutrition_deficiency           1.000  0.959  0.979    49
+groundnut__rust                           0.971  1.000  0.985    33
+maize__blight                             0.950  0.930  0.940   344
+maize__common_rust                        0.993  0.976  0.984   409
+maize__gray_leaf_spot                     0.904  0.918  0.911   184
+maize__healthy                            1.000  1.000  1.000   348
+mango__anthracnose                        1.000  0.987  0.993    75
+mango__bacterial_canker                   1.000  1.000  1.000    75
+mango__cutting_weevil                     0.987  1.000  0.993    74
+mango__die_back                           1.000  1.000  1.000    75
+mango__gall_midge                         1.000  1.000  1.000    75
+mango__healthy                            1.000  1.000  1.000    75
+mango__powdery_mildew                     1.000  1.000  1.000    75
+mango__sooty_mould                        1.000  1.000  1.000    75
+okra__alternaria_leaf_spot                0.435  0.652  0.522    46
+okra__cercospora_leaf_spot                0.571  0.857  0.686    28
+okra__downy_mildew                        0.750  0.414  0.533    29
+okra__healthy                             0.964  0.899  0.930   178
+okra__leaf_curly_virus                    1.000  0.958  0.979   192
+okra__phyllosticta_leaf_spot              0.765  0.448  0.565    29
+pest__aphids                              0.873  0.925  0.898   614
+pest__army_worm                           0.738  0.669  0.702   160
+pest__corn_borer                          0.754  0.760  0.757   254
+pest__cutworm                             0.796  0.860  0.827   272
+pest__flea_beetle                         0.893  0.932  0.912   117
+pest__gall_midge_dasineura                0.679  0.480  0.563    75
+pest__leafhopper                          0.927  0.904  0.915   921
+pest__mango_borer                         0.821  0.789  0.805   128
+pest__mango_hopper                        0.897  0.907  0.902   172
+pest__mango_leaf_cutting_weevil           0.808  0.677  0.737    31
+pest__mango_seed_weevil                   0.831  0.721  0.772    68
+pest__mole_cricket                        0.958  0.931  0.945   247
+pest__oriental_fruit_fly                  0.868  0.908  0.887    65
+pest__planthopper                         0.841  0.791  0.815   340
+pest__red_spider_mite                     0.920  0.873  0.896    79
+pest__rice_gall_midge                     0.707  0.773  0.739    75
+pest__rice_leaf_folder                    0.810  0.779  0.794   240
+pest__rice_stem_borer                     0.696  0.768  0.730   271
+pest__rice_water_weevil                   0.783  0.703  0.741   128
+pest__thrips                              0.757  0.837  0.795   276
+pest__white_grub                          0.894  0.853  0.873   129
+pest__wireworm                            0.846  0.917  0.880   132
+potato__early_blight                      0.949  0.949  0.949   175
+potato__healthy                           1.000  1.000  1.000    22
+potato__late_blight                       0.934  0.977  0.955   173
+rice__healthy                             0.800  0.764  0.782    89
+rice__insect                              0.905  0.905  0.905    42
+rice__leaf_scald                          0.781  0.794  0.787    63
+rice__rice_blast                          0.827  0.868  0.847   121
+rice__rice_leaffolder                     0.805  0.892  0.846    37
+rice__rice_stripes                        0.684  0.667  0.675    39
+rice__rice_tungro                         0.677  0.600  0.636    35
+sugarcane__healthy                        0.987  0.962  0.974    78
+sugarcane__mosaic                         0.958  0.986  0.971    69
+sugarcane__redrot                         0.974  0.961  0.967    77
+sugarcane__rust                           1.000  1.000  1.000    77
+sugarcane__yellow                         0.924  0.973  0.948    75
+tomato__bacterial_spot                    0.957  0.936  0.946   357
+tomato__early_blight                      0.910  0.915  0.913   200
+tomato__healthy                           0.992  0.996  0.994   247
+tomato__late_blight                       0.956  0.964  0.960   335
+tomato__leaf_mold                         0.957  0.952  0.954   186
+tomato__mosaic_virus                      0.929  0.855  0.890    76
+tomato__septoria_leaf_spot                0.928  0.949  0.938   313
+tomato__spider_mites                      1.000  1.000  1.000   251
+tomato__target_spot                       0.986  0.995  0.991   210
+tomato__yellow_leaf_curl_virus            0.995  0.992  0.993   833
+wheat__healthy                            1.000  1.000  1.000    15
+wheat__septoria                           0.869  0.883  0.876    60
+wheat__stripe_rust                        0.927  0.981  0.953   103

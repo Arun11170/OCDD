@@ -20,8 +20,8 @@ from PIL import Image
 from train import unify, cpath          # same label merging + cache naming as training
 
 ROOT = "/mnt/d/OCDD"
-RUN = os.path.join(ROOT, "training", "run1")
-OUT = os.path.join(ROOT, "export"); os.makedirs(OUT, exist_ok=True)
+RUN = os.path.join(ROOT, "training", os.environ.get("OCDD_RUN", "run1"))
+OUT = os.path.join(ROOT, os.environ.get("OCDD_OUT", "export")); os.makedirs(OUT, exist_ok=True)
 CACHE_WIN = r"D:\OCDD\data\interim\cache256"          # cache names were hashed from Windows paths
 
 
@@ -54,7 +54,7 @@ model = Deploy(base, temperature).eval()
 
 # ---- images for calibration (val) and for checking accuracy (test) ----
 rows = []
-with open(os.path.join(ROOT, "data", "interim", "manifest.csv"), newline="", encoding="utf-8") as f:
+with open(os.path.join(ROOT, "data", os.environ.get("OCDD_INTERIM", "interim"), "manifest.csv"), newline="", encoding="utf-8") as f:
     for r in csv.DictReader(f):
         c = unify(r["crop"], r["label"])
         if c is not None and r["split"] in ("val", "test"):
@@ -69,7 +69,7 @@ def load(r):
     return tf(Image.open(cache_file(r["path"])).convert("RGB")).unsqueeze(0)
 
 
-cal = [load(r) for r in val[:300]]
+cal = [load(r) for r in val[:1000]]
 chk = [(load(r), r["y"]) for r in test[:1000]]
 print("calibration images: %d, check images: %d" % (len(cal), len(chk)))
 

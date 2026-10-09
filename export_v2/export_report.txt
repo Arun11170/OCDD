@@ -1,0 +1,3 @@
+vision_fp32.pte    17.4 MB   accuracy on 1000 test photos: 0.895   (3.0 ms/photo on this PC)
+vision_int8.pte     4.6 MB   accuracy on 1000 test photos: 0.873   (2.3 ms/photo on this PC)
+original PyTorch model: accuracy 0.895

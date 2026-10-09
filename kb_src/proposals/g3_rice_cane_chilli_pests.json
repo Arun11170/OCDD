@@ -1,0 +1,1085 @@
+{
+ "rice__insect": {
+  "treatment_options": [
+   {
+    "kind": "bio",
+    "active_ingredient": "Trichogramma japonicum and Trichogramma chilonis (egg parasitoid wasps)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Released when stem borer or leaf folder egg masses appear.",
+    "source_url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "NOT_ON_LIST [] (bio agent; kept as bio)"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Beauveria bassiana",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed by KAU as an eco-friendly option for leaf folder, with the wasps above.",
+    "source_url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['beauveria bassiana']"
+   },
+   {
+    "kind": "bio",
+    "active_ingredient": "Azadirachtin (neem-based)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Listed by KAU as a neem option for leaf folder.",
+    "source_url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['azadirachtin','azadirachtin']"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Drain the field when brown planthopper hopper-burn starts and keep it drained until numbers fall.",
+    "source_url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": {
+   "statement": "No single spray fits all rice insects. First find which insect it is, then use its own entry: stem borer (pest__rice_stem_borer), leaf folder (pest__rice_leaf_folder), planthopper (pest__planthopper), gall midge (pest__rice_gall_midge), root weevil (pest__rice_water_weevil). Spray only as a last choice, when pest numbers cross the threshold.",
+   "source_url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+   "indian_source": true
+  },
+  "new_sources": [
+   {
+    "title": "NIPHM - IPM Package for Rice",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "publisher": "NIPHM (Govt of India, Ministry of Agriculture)"
+   },
+   {
+    "title": "KAU Information Gateway on Agriculture - Rice pests",
+    "url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "publisher": "Kerala Agricultural University, Centre for e-Learning"
+   }
+  ],
+  "new_cultural_actions": [
+   "Check the field every 3 to 5 days so you catch the insect early.",
+   "Clip the tips of seedlings before transplanting. This cuts the eggs carried over from the seedbed.",
+   "Do not over-fertilise. Heavily fertilised plots draw egg-laying moths.",
+   "Plant neighbouring fields within about 3 weeks of each other and keep a rice-free gap.",
+   "Protect natural habitat on the farm. It helps the friendly insects that eat pests.",
+   "Use a spray only as a last choice, and only when the pest count crosses the threshold."
+  ],
+  "when_to_act": "Spray only when counts cross the threshold for that insect; NIPHM gives 2 fully damaged leaves per hill for leaf folder and 10 to 15 hoppers per hill for planthoppers at tillering.",
+  "evidence": [
+   {
+    "claim": "Main rice insects in India: yellow stem borer, planthoppers, leaf folder, gall midge (national); hispa, thrips, green leafhopper, case worm (regional)",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Resort to chemical as the last choice only after the regular pest and when pest population cross ETL."
+   },
+   {
+    "claim": "Leaf folder threshold",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "2 Fully damaged leaves (FDL) with larva/hill"
+   },
+   {
+    "claim": "Planthopper threshold at tillering",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "10-15 hoppers/hill"
+   },
+   {
+    "claim": "Clip seedling tips",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Clipping the tips of seedlings before transplanting greatly reduces the carryover of eggs from the seedbed."
+   },
+   {
+    "claim": "Avoid over-fertilising",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Highly fertilized plots seem to attract females for oviposition. Therefore, it is advisable to avoid over-fertilization."
+   },
+   {
+    "claim": "Synchronous planting",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Synchronous planting (planting neighboring fields within 3 weeks) and maintaining a rice-free period may be effective."
+   },
+   {
+    "claim": "Protect natural enemies",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Protection of natural habitats within the farm boundary may help in conserving natural enemies of pests."
+   },
+   {
+    "claim": "Scouting every 3-5 days",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Field scouting for pests and bio-control fauna by extension agencies and farmers once in 3-5 days"
+   },
+   {
+    "claim": "Trichogramma release when egg masses appear",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Trichogramma japonicum and T chilonis may be released"
+   },
+   {
+    "claim": "Leaf folder eco options (KAU)",
+    "url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "quote": "Trichogramma japonicum and T. chilonis each"
+   },
+   {
+    "claim": "Drain for brown planthopper (KAU)",
+    "url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "quote": "Drain away water from the field and keep it in that conditions until the pest population dwindle."
+   },
+   {
+    "claim": "Act only above threshold (KAU)",
+    "url": "https://www.celkau.in/crops/Cereals/Rice/pests.aspx",
+    "quote": "Adopt control measures only if the pest / disease population exceeds the economic threshold levels."
+   }
+  ],
+  "gaps": [
+   "No chemical named for the generic class on purpose: the right one depends on the insect, and NIPHM/KAU list different ones per pest (see pest entries).",
+   "Thrips, hispa and case worm have no own pest entry in the app; NIPHM gives no threshold for thrips and names no chemical for thrips.",
+   "TNAU per-pest pages (stem borer, BPH, gall midge, leaf folder) could not be opened (fetch errors), so TNAU was not used for this class.",
+   "Quotes from NIPHM/KAU pages come from a page-reading tool's output; they are short exact excerpts, doses left out."
+  ]
+ },
+ "rice__rice_stripes": {
+  "treatment_options": [
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plant resistant varieties; resistance to the virus works better than resistance to the planthopper.",
+    "source_url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plant so the crop is past seedling to early tillering when planthoppers migrate in.",
+    "source_url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Remove old ratoon, stubble and weeds that keep the virus and the planthopper.",
+    "source_url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plant at the same time as neighbours over a wide area.",
+    "source_url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Time any planthopper spray with advice; do not overuse insecticide because pests become resistant.",
+    "source_url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Stripe (Rice stripe virus), Lucid rice diseases key",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "publisher": "Lucid Central key server (factsheet, no named publisher)"
+   },
+   {
+    "title": "Control strategy for rice stripe virus transmitted by small brown plant hopper",
+    "url": "https://core.ac.uk/works/85958393",
+    "publisher": "core.ac.uk abstract (publisher not named)"
+   },
+   {
+    "title": "Virus Diseases of Rice in India (abstract of 1985 article, Anjaneyulu)",
+    "url": "https://www.jircas.go.jp/en/publication/tars/19/14",
+    "publisher": "JIRCAS (Japan), abstract"
+   }
+  ],
+  "new_cultural_actions": [
+   "Plant a resistant variety if one is listed for your area.",
+   "Time planting so young plants are not in the field when planthoppers fly in.",
+   "Remove ratoon, stubble and weeds from the last crop.",
+   "Plant at the same time as your neighbours.",
+   "Use insecticide only when needed, not repeatedly."
+  ],
+  "when_to_act": null,
+  "evidence": [
+   {
+    "claim": "Rice stripe virus occurs in East Asia; India not mentioned",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "quote": "occurs in the temperate regions of East Asia"
+   },
+   {
+    "claim": "Resistance to virus is better",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "quote": "Resistance to the virus is more effective in controlling RSVD than resistance to the vector."
+   },
+   {
+    "claim": "Synchronous planting",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm",
+    "quote": "Practice synchronous planting over wide areas."
+   },
+   {
+    "claim": "Vector control is by timing planthopper sprays; resistant varieties cut disease in Japan",
+    "url": "https://core.ac.uk/works/85958393",
+    "quote": "RSV was severe in Japan from 1960 to 1985"
+   },
+   {
+    "claim": "Rice virus diseases in India are tungro, grassy stunt, ragged stunt, necrotic mosaic; stripe not listed",
+    "url": "https://www.jircas.go.jp/en/publication/tars/19/14",
+    "quote": "Rice is affected by four virus diseases in India."
+   }
+  ],
+  "gaps": [
+   "NO Indian source on rice stripe virus found. Two Indian-focused virus reviews (JIRCAS abstract 1985; JIRCAS PDF) list only tungro, grassy stunt, ragged stunt and necrotic mosaic for India and do not mention rice stripe.",
+   "The Lucid factsheet says rice stripe virus is in temperate East Asia and does not mention India. The app entry may really be another stripe-type virus; farmer should confirm with KVK.",
+   "No page opened says outright 'no chemical cure' for rice stripe; so no_chemical left null. Lucid says only to use insecticides selectively.",
+   "No insecticide recorded: no page opened names an active ingredient against the vector for this disease.",
+   "The JIRCAS pages are Japanese-hosted abstracts of Indian work, not ICAR pages; old (1985)."
+  ]
+ },
+ "rice__rice_tungro": {
+  "treatment_options": [
+   {
+    "kind": "insecticide",
+    "active_ingredient": "Carbofuran (granules)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists it for the nursery against the leafhopper vector. CIB&RC check is on the name only.",
+    "source_url": "https://agritech.tnau.ac.in/expert_system/paddy/cpdistungro.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['carbofuran']"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plant tungro-resistant varieties; NIPHM lists Vikramarya, Nidhi, Amulya, Dinesh, Lakshmi and Nalini.",
+    "source_url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Transplant older seedlings (over 3 weeks); they catch the virus less.",
+    "source_url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plough in stubble right after harvest and destroy weed hosts on bunds.",
+    "source_url": "https://agritech.tnau.ac.in/expert_system/paddy/cpdistungro.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": {
+   "statement": "A plant that has tungro cannot be cured. Prevent it with resistant varieties, planting time and leafhopper control; sprays often fail because leafhoppers fly in from nearby fields.",
+   "source_url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Tungro.htm",
+   "indian_source": false
+  },
+  "new_sources": [
+   {
+    "title": "NIPHM - IPM Package for Rice (tungro vector management)",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "publisher": "NIPHM (Govt of India)"
+   },
+   {
+    "title": "Tungro, Lucid rice diseases key",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Tungro.htm",
+    "publisher": "Lucid Central key server (factsheet)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Transplant seedlings older than 3 weeks.",
+   "Plant neighbouring fields within about 3 weeks of each other and keep a rice-free gap.",
+   "Plant resistant varieties listed for your area.",
+   "Plough in infected stubble right after harvest.",
+   "Rotate with a non-rice crop in the dry season."
+  ],
+  "when_to_act": "NIPHM gives a trigger of about 2 green leafhoppers per hill together with tungro-infected plants in tungro areas; check it with your KVK before spraying.",
+  "evidence": [
+   {
+    "claim": "Tungro resistant varieties (TNAU)",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cpdistungro.html",
+    "quote": "the most economical means of managing the disease."
+   },
+   {
+    "claim": "Fallow break (TNAU)",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cpdistungro.html",
+    "quote": "observing a fallow period of at least a month."
+   },
+   {
+    "claim": "Nursery granules incl. carbofuran (TNAU)",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cpdistungro.html",
+    "quote": "Carbofuran 3G"
+   },
+   {
+    "claim": "Older seedlings (NIPHM)",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Transplanting older seedlings (>3 weeks) also reduces viral disease susceptibility transmitted by leafhoppers."
+   },
+   {
+    "claim": "Resistant varieties (NIPHM)",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "RTD Vikramarya, Nidhi, Amulya, Dinesh, Lakshmi and Nalini."
+   },
+   {
+    "claim": "Synchronous planting (NIPHM)",
+    "url": "https://www.niphm.gov.in/IPMPackages/Rice.pdf",
+    "quote": "Synchronous planting (planting neighboring fields within 3 weeks) and maintaining a rice-free period may be effective."
+   },
+   {
+    "claim": "No cure (Lucid)",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Tungro.htm",
+    "quote": "Once a rice plant is infected by tungro, it cannot be cured."
+   }
+  ],
+  "gaps": [
+   "Fenthion and Phorate are named by TNAU for tungro but cibname.py says BANNED, so dropped.",
+   "NIPHM names no insecticide for green leafhopper/tungro, so no second Indian insecticide source.",
+   "TNAU also lists foliar urea with mancozeb and potassium nitrate to reduce yellowing; not added (symptom relief only, exact quotes not secured).",
+   "'No cure' line is from a foreign factsheet (Lucid), not an Indian page.",
+   "Carbofuran: the CIB&RC check is name-only; farmer must confirm label for rice/nursery use and state restrictions."
+  ]
+ },
+ "sugarcane__mosaic": {
+  "treatment_options": [
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plant healthy seed cane from a certified or disease-free source.",
+    "source_url": "https://www.ijcrt.org/papers/IJCRT2405856.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plant resistant varieties, especially where mosaic is common.",
+    "source_url": "https://www.ijcrt.org/papers/IJCRT2405856.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Rogue (remove) infected plants early in new or small outbreaks; where mosaic is widespread, replant with more resistant varieties.",
+    "source_url": "https://sasri.org.za/wp-content/uploads/Information_Sheets/IS_2.4-Mosaic.pdf",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Control weeds that host the virus and watch for aphids, which spread it.",
+    "source_url": "https://plantix.net/en/library/plant-diseases/200031/sugarcane-mosaic-virus/",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": {
+   "statement": "No chemical cures mosaic. Control rests on clean planting material, resistant varieties and removing infected plants; spraying for aphids is reported to be ineffective.",
+   "source_url": "https://plantix.net/en/library/plant-diseases/200031/sugarcane-mosaic-virus/",
+   "indian_source": false
+  },
+  "new_sources": [
+   {
+    "title": "A review on major diseases of sugarcane (Lucknow college authors)",
+    "url": "https://www.ijcrt.org/papers/IJCRT2405856.pdf",
+    "publisher": "IJCRT journal; BSNV PG College, Lucknow authors"
+   },
+   {
+    "title": "Sugarcane mosaic information sheet (IS 2.4)",
+    "url": "https://sasri.org.za/wp-content/uploads/Information_Sheets/IS_2.4-Mosaic.pdf",
+    "publisher": "SASRI, South Africa"
+   },
+   {
+    "title": "Sugarcane mosaic virus (Plantix library)",
+    "url": "https://plantix.net/en/library/plant-diseases/200031/sugarcane-mosaic-virus/",
+    "publisher": "Plantix (PEAT GmbH)"
+   },
+   {
+    "title": "Insect vectors of virus diseases of sugarcane (abstract)",
+    "url": "https://link.springer.com/article/10.1007/BF03186253",
+    "publisher": "Springer; Sugarcane Breeding Institute, Coimbatore authors"
+   }
+  ],
+  "new_cultural_actions": [
+   "Plant healthy, disease-free seed cane.",
+   "Plant resistant varieties.",
+   "Pull out and remove infected plants early when only a few are affected.",
+   "Control weeds in and around the field.",
+   "Where mosaic is widespread, replant with a more resistant variety."
+  ],
+  "when_to_act": "Rogue as soon as mosaic is seen in a small number of plants; spraying does not cure it.",
+  "evidence": [
+   {
+    "claim": "Healthy seed cane and field practices (Indian review)",
+    "url": "https://www.ijcrt.org/papers/IJCRT2405856.pdf",
+    "quote": "Field control practices and ensuring the use of healthy seed cane are essential for effective management."
+   },
+   {
+    "claim": "Resistant varieties (Indian review)",
+    "url": "https://www.ijcrt.org/papers/IJCRT2405856.pdf",
+    "quote": "Planting resistant varieties is crucial in high-risk areas."
+   },
+   {
+    "claim": "Aphids spread mosaic; roguing in nurseries",
+    "url": "https://sasri.org.za/wp-content/uploads/Information_Sheets/IS_2.4-Mosaic.pdf",
+    "quote": "meticulously rogued"
+   },
+   {
+    "claim": "No chemical cure; aphid sprays ineffective",
+    "url": "https://plantix.net/en/library/plant-diseases/200031/sugarcane-mosaic-virus/",
+    "quote": "this has been shown to be ineffective"
+   },
+   {
+    "claim": "Aphids are vectors; SBI Coimbatore authors",
+    "url": "https://link.springer.com/article/10.1007/BF03186253",
+    "quote": "insect vector associations have been established with virus/mycoplasma diseases only."
+   },
+   {
+    "claim": "SBI: clean seed programme is most effective control for sugarcane virus (record is on yellow leaf disease, not mosaic)",
+    "url": "https://krishi.icar.gov.in/jspui/handle/123456789/60603",
+    "quote": "clean seed programme"
+   }
+  ],
+  "gaps": [
+   "No ICAR-SBI/IISR page found that gives mosaic-specific management. The IISR/ISTI page only names strains (SCMV A, B, F) and gives no control.",
+   "The TNAU page already in the KB (orgfarm_agridiseases) could not be opened again (fetch blocked), so its roguing/burning/aphid claims were not re-verified here.",
+   "SBI KRISHI record 60603 is about yellow leaf disease; used only as general support for clean seed, not for mosaic.",
+   "'No chemical cure' and roguing-versus-replant details come from foreign pages (Plantix, SASRI); the Indian review (IJCRT) is by college authors, not ICAR.",
+   "India has mostly SCSMV with SCMV (Rao et al., Indian Phytopathology abstract); no control info on that page."
+  ]
+ },
+ "chilli__cercospora": {
+  "treatment_options": [
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Mancozeb",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Two sprays 10 to 15 days apart (TNAU). Also listed by the Lucid factsheet.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['mancozeb']"
+   },
+   {
+    "kind": "fungicide",
+    "active_ingredient": "Chlorothalonil",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Two sprays 10 to 15 days apart (TNAU). Also listed by the Lucid factsheet.",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+    "indian_source": true,
+    "cibrc_name_status": "REGISTERED_NAME ['chlorothalonil']"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Save seed only from healthy fruit.",
+    "source_url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Rotate: keep chilli or capsicum out of the field for 3 years.",
+    "source_url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. After harvest, collect and burn or bury crop remains.",
+    "source_url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Pacific Pests, Pathogens, Weeds & Pesticides - Capsicum frog-eye spot",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "publisher": "Lucid / Plant Health Australia-SPC (Pacific factsheet)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Take seed only from healthy fruit.",
+   "Use a 3-year crop rotation.",
+   "Collect and burn or bury crop remains after harvest."
+  ],
+  "when_to_act": "TNAU advises two sprays, 10 to 15 days apart, starting when the spots appear.",
+  "evidence": [
+   {
+    "claim": "Two sprays with mancozeb or chlorothalonil (TNAU)",
+    "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+    "quote": "Spray twice at 10-15 days interval with Mancozeb"
+   },
+   {
+    "claim": "Symptoms (TNAU)",
+    "url": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+    "quote": "Heavily infected leaves fall early"
+   },
+   {
+    "claim": "Fungicide names (Lucid)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "quote": "Chemical control: chlorothalonil, copper or mancozeb."
+   },
+   {
+    "claim": "Healthy seed (Lucid)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "quote": "take seed only from healthy fruits"
+   },
+   {
+    "claim": "Rotation (Lucid)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "quote": "3-year crop rotation"
+   },
+   {
+    "claim": "Burn or bury debris (Lucid)",
+    "url": "https://apps.lucidcentral.org/pppw_v13/text/web_mini/entities/capsicum_frogeye_spot_092.htm",
+    "quote": "collect, burn, or bury crop remains after harvest"
+   }
+  ],
+  "gaps": [
+   "Second source is a Pacific (non-Indian) factsheet. No IIHR/KVK chilli Cercospora page found; the other Indian-region hits were about tobacco frog-eye (C. nicotianae) or a Bangladesh chilli paper, so not used.",
+   "Copper is named by Lucid but not added (no Indian source).",
+   "TNAU page gives % concentrations and a brand name; deliberately not copied."
+  ]
+ },
+ "chilli__nutritional_deficiency": {
+  "treatment_options": [
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Zinc sulphate",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Foliar spray, with soil application at the last ploughing, for zinc deficiency (small leaves, yellowing between veins, stunting). Do it only after a soil or leaf test.",
+    "source_url": "https://agritech.tnau.ac.in/agriculture/pdf/Micronutrients%20for%20horticultural%20crops.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Gypsum (calcium sulphate)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists a calcium sulphate foliar spray or gypsum in soil for calcium deficiency (blossom-end rot). Test the soil first.",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/plant_nutri/chillies_calcium.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Borax",
+    "note": "FOLLOW PRODUCT LABEL; no dose. KAU lists borax for boron deficiency (fruit cracking and fall, small young leaves). Test the soil first.",
+    "source_url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Ferrous sulphate",
+    "note": "FOLLOW PRODUCT LABEL; no dose. KAU lists ferrous sulphate for iron deficiency (yellow leaves with green veins). Test the soil first.",
+    "source_url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Magnesium sulphate",
+    "note": "FOLLOW PRODUCT LABEL; no dose. KAU lists magnesium sulphate or dolomite for magnesium deficiency (yellow between veins). Test the soil first.",
+    "source_url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "TNAU - Micronutrients for horticultural crops (PDF)",
+    "url": "https://agritech.tnau.ac.in/agriculture/pdf/Micronutrients%20for%20horticultural%20crops.pdf",
+    "publisher": "TNAU"
+   },
+   {
+    "title": "TNAU Agritech - Chillies: calcium deficiency",
+    "url": "https://agritech.tnau.ac.in/horticulture/plant_nutri/chillies_calcium.html",
+    "publisher": "TNAU"
+   },
+   {
+    "title": "KAU Information Gateway - Chilli deficiency symptoms and corrective measures",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "publisher": "Kerala Agricultural University, Centre for e-Learning"
+   }
+  ],
+  "new_cultural_actions": [
+   "Do a soil analysis first; both KAU and TNAU tie the fix to the nutrient found short.",
+   "Match the visible sign to the nutrient: for example blossom-end rot points to calcium, small leaves with yellow between veins can point to zinc."
+  ],
+  "when_to_act": null,
+  "evidence": [
+   {
+    "claim": "Zinc signs in chilli (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/pdf/Micronutrients%20for%20horticultural%20crops.pdf",
+    "quote": "The entire foliage of the crop will be reduced in size with interveinal chlorosis, when zinc is in short supply"
+   },
+   {
+    "claim": "Zinc fix: foliar plus soil zinc sulphate (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/pdf/Micronutrients%20for%20horticultural%20crops.pdf",
+    "quote": "Foliar application of zinc sulphate"
+   },
+   {
+    "claim": "Calcium sign (TNAU)",
+    "url": "https://agritech.tnau.ac.in/horticulture/plant_nutri/chillies_calcium.html",
+    "quote": "Pale brown sunken areas will also develop around the blossom end of the pepper fruits"
+   },
+   {
+    "claim": "Calcium fix: gypsum (TNAU)",
+    "url": "https://agritech.tnau.ac.in/horticulture/plant_nutri/chillies_calcium.html",
+    "quote": "soil application of gypsum"
+   },
+   {
+    "claim": "Nitrogen sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "Pale green to light green colour change on leaves"
+   },
+   {
+    "claim": "Phosphorus sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "Purple discoloration of stem, petiole and underside of leaves"
+   },
+   {
+    "claim": "Potassium sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "marginal necrosis (tip burn) of leaves"
+   },
+   {
+    "claim": "Magnesium sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "interveinal chlorosis"
+   },
+   {
+    "claim": "Sulphur sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "Distinct reddish colour on veins and petioles"
+   },
+   {
+    "claim": "Boron sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "Cracking of fruits and fruit fall"
+   },
+   {
+    "claim": "Iron sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "Yellow leaves with dark green veins"
+   },
+   {
+    "claim": "Manganese sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "dark necrotic areas along the veins"
+   },
+   {
+    "claim": "Zinc sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "interveinal chlorosis with an eventual whiting"
+   },
+   {
+    "claim": "Molybdenum sign (KAU)",
+    "url": "https://celkau.in/crops/vegetables/chilli/deficiency.php",
+    "quote": "'Whiptail' formation"
+   }
+  ],
+  "gaps": [
+   "Corrective products for nitrogen, phosphorus, potassium, sulphur, manganese, molybdenum are listed on the KAU page but were not added as treatments (only the four named plus magnesium were).",
+   "No ICAR-IIHR or KVK chilli deficiency page found; sources are TNAU and KAU (state agricultural universities).",
+   "TNAU's calcium and zinc lines contain doses; omitted.",
+   "KAU symptom list for chilli differs a little from the KB text (KAU puts leaf drop under magnesium and iron)."
+  ]
+ },
+ "groundnut__nutrition_deficiency": {
+  "treatment_options": [
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Zinc sulphate",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU: basal soil application plus foliar spray for zinc deficiency. Only if soil or leaf test shows zinc is short.",
+    "source_url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_zinc.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Borax with gypsum",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU: applied to soil about 45 days after sowing for boron deficiency ('pop' pods).",
+    "source_url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_boron.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Ferrous sulphate",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU lists a foliar spray for iron deficiency; ICRISAT says soil or foliar, often with urea in the spray.",
+    "source_url": "https://agritech.tnau.ac.in/agriculture/agri_nutrientmgt_groundnut.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   },
+   {
+    "kind": "nutrient",
+    "active_ingredient": "Gypsum (calcium sulphate)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU: helps pod formation and filling; ICRISAT: apply at peak flowering; also covers sulphur.",
+    "source_url": "https://agritech.tnau.ac.in/agriculture/agri_nutrientmgt_groundnut.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a nutrient"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "TNAU Agritech - Groundnut zinc deficiency",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_zinc.html",
+    "publisher": "TNAU"
+   },
+   {
+    "title": "TNAU Agritech - Groundnut boron deficiency",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_boron.html",
+    "publisher": "TNAU"
+   },
+   {
+    "title": "TNAU Agritech - Groundnut nutrient management",
+    "url": "https://agritech.tnau.ac.in/agriculture/agri_nutrientmgt_groundnut.html",
+    "publisher": "TNAU"
+   },
+   {
+    "title": "KAU Information Gateway - Groundnut deficiency symptoms",
+    "url": "https://celkau.in/crops/oilseeds/Ground%20nut/deficiency.php",
+    "publisher": "Kerala Agricultural University, Centre for e-Learning"
+   },
+   {
+    "title": "Cultural Management Practices of Groundnut (Janila and Mula, 2015)",
+    "url": "https://oar.icrisat.org/8718/1/Cultural%20Management%20Practices.pdf",
+    "publisher": "ICRISAT (Odisha RKVY-supported booklet)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Get a soil test before choosing any nutrient.",
+   "Iron deficiency shows as yellowing between the veins of new leaves, common on lime-rich or poorly drained soil.",
+   "Boron shortage shows as small rosetted young leaves and 'pop' pods with hollow heart.",
+   "Zinc shortage shows as yellow stripes along veins and a stopped terminal bud.",
+   "Gypsum is the usual fix for calcium and sulphur shortage."
+  ],
+  "when_to_act": "Gypsum is applied about peak flowering (ICRISAT); borax with gypsum about 45 days after sowing (TNAU).",
+  "evidence": [
+   {
+    "claim": "Zinc signs (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_zinc.html",
+    "quote": "Light yellow stripes along with veins of leaf blade under acute condition"
+   },
+   {
+    "claim": "Zinc signs (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_zinc.html",
+    "quote": "veinally chlorosis and cessation of growth of terminal bud"
+   },
+   {
+    "claim": "Boron signs (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_boron.html",
+    "quote": "Growth of young leaves restricted giving a rosette effect."
+   },
+   {
+    "claim": "Boron signs (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_boron.html",
+    "quote": "The pod development is affected resulting in the production of 'pop' pods."
+   },
+   {
+    "claim": "Boron fix (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_boron.html",
+    "quote": "at 45 days after sowing."
+   },
+   {
+    "claim": "Iron fix (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/agri_nutrientmgt_groundnut.html",
+    "quote": "Iron deficiency: spray"
+   },
+   {
+    "claim": "Gypsum helps pods (TNAU)",
+    "url": "https://agritech.tnau.ac.in/agriculture/agri_nutrientmgt_groundnut.html",
+    "quote": "Application of gypsum encourages pod formation and better filling up of the pods."
+   },
+   {
+    "claim": "Iron sign (KAU)",
+    "url": "https://celkau.in/crops/oilseeds/Ground%20nut/deficiency.php",
+    "quote": "Interveinal chlorosis on new growth that affects the entire leaf"
+   },
+   {
+    "claim": "Calcium sign (KAU)",
+    "url": "https://celkau.in/crops/oilseeds/Ground%20nut/deficiency.php",
+    "quote": "poor pod formation"
+   },
+   {
+    "claim": "Sulphur sign (KAU)",
+    "url": "https://celkau.in/crops/oilseeds/Ground%20nut/deficiency.php",
+    "quote": "Yellowing of upper, younger leaves"
+   },
+   {
+    "claim": "Iron sign and fix (ICRISAT)",
+    "url": "https://oar.icrisat.org/8718/1/Cultural%20Management%20Practices.pdf",
+    "quote": "interveinal chlorosis in young leaves followed by full chlorosis."
+   },
+   {
+    "claim": "Gypsum at peak flowering (ICRISAT)",
+    "url": "https://oar.icrisat.org/8718/1/Cultural%20Management%20Practices.pdf",
+    "quote": "Calcium is essential for good seed development."
+   }
+  ],
+  "gaps": [
+   "TNAU groundnut iron, calcium and sulphur symptom pages could not be confirmed (index page only links names, some to sesame pages), so iron, calcium and sulphur signs come from KAU and ICRISAT.",
+   "KAU quotes are short excerpts shown by the page-reading tool; the KAU symptom lines quoted are partial phrases.",
+   "No ICAR-DGR page with symptom detail was opened; the DGR record 16488 gives only an abstract (chlorosis on calcareous, alkaline soils, multi-micronutrient correction).",
+   "Doses in TNAU/ICRISAT pages omitted."
+  ]
+ },
+ "pest__mole_cricket": {
+  "treatment_options": [
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Keep standing water in the field; it helps remove eggs from the soil.",
+    "source_url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Shave the bunds and plaster them with fresh wet soil to destroy eggs.",
+    "source_url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Level the field for better water control; avoid raised nurseries.",
+    "source_url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Pour water into fresh tunnels or flood the field so the crickets come out, then collect and kill them.",
+    "source_url": "https://agritech.tnau.ac.in/forestry/forest_pest_mole_crickets.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "Poisoned rice-bran bait (insecticide not named by source)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. TNAU mentions moist rice bran mixed with an insecticide along bunds, but names no active ingredient. Ask your KVK.",
+    "source_url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "indian_source": true,
+    "cibrc_name_status": "n/a (no active named)"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "TNAU Agritech - Pest management: mole crickets (forestry)",
+    "url": "https://agritech.tnau.ac.in/forestry/forest_pest_mole_crickets.html",
+    "publisher": "TNAU"
+   },
+   {
+    "title": "Crickets (Mole crickets), Lucid rice pests key",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Crickets_(Mole_crickets).htm",
+    "publisher": "Lucid Central key server (factsheet)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Keep standing water in the field.",
+   "Shave and plaster bunds with fresh wet soil.",
+   "Level the field and avoid raised nurseries.",
+   "Flood the field so crickets come out, then collect and kill them.",
+   "Collect nymphs and adults while preparing the land."
+  ],
+  "when_to_act": null,
+  "evidence": [
+   {
+    "claim": "Standing water",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "quote": "Cultural control includes maintaining standing water, which can help to remove the eggs on the soil."
+   },
+   {
+    "claim": "Bund plastering",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "quote": "The eggs can also be eliminated using bund shaving and plastering of fresh wet soil."
+   },
+   {
+    "claim": "Level field",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "quote": "Levelling the field provides better water control."
+   },
+   {
+    "claim": "Raised nursery",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "quote": "Construction of a raised nursery should be avoided to reduce feeding damage on seedlings."
+   },
+   {
+    "claim": "Bait with no active named",
+    "url": "https://agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+    "quote": "Poisoned baits made by mixing moistened rice bran and insecticide"
+   },
+   {
+    "claim": "Flooding brings them out (TNAU forestry)",
+    "url": "https://agritech.tnau.ac.in/forestry/forest_pest_mole_crickets.html",
+    "quote": "flooding"
+   },
+   {
+    "claim": "Damage: cut plants at base (Lucid)",
+    "url": "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Crickets_(Mole_crickets).htm",
+    "quote": "They can cut plants at the base resulting to loss of plant stand."
+   }
+  ],
+  "gaps": [
+   "TNAU paddy page names no insecticide for the bait. TNAU forestry page names carbaryl dust (different species G. africana, forest nursery); cibname.py says BANNED, so dropped.",
+   "No threshold found.",
+   "TNAU forestry quote 'flooding' is a one-word excerpt; sentence not secured verbatim.",
+   "Indian potato-journal paper on mole cricket (ICAR epubs) could not be read (login page only)."
+  ]
+ },
+ "pest__wireworm": {
+  "treatment_options": [
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Rotate crops to break the pest's life cycle.",
+    "source_url": "https://ctcri.org/public/publications/2025-02/tf-12_emerging-pests-of-tropical-tuber-crops.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Plough the soil to expose larvae to birds and harsh conditions.",
+    "source_url": "https://ctcri.org/public/publications/2025-02/tf-12_emerging-pests-of-tropical-tuber-crops.pdf",
+    "indian_source": true,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "Emerging pests of tropical tuber crops and their management strategies, TF-12/2024",
+    "url": "https://ctcri.org/public/publications/2025-02/tf-12_emerging-pests-of-tropical-tuber-crops.pdf",
+    "publisher": "ICAR-Central Tuber Crops Research Institute, Thiruvananthapuram"
+   }
+  ],
+  "new_cultural_actions": [
+   "Rotate crops.",
+   "Plough the soil to expose the larvae."
+  ],
+  "when_to_act": null,
+  "evidence": [
+   {
+    "claim": "Wireworm damage",
+    "url": "https://ctcri.org/public/publications/2025-02/tf-12_emerging-pests-of-tropical-tuber-crops.pdf",
+    "quote": "Wireworms bore into seeds, roots, and tubers, making plants susceptible to secondary infections."
+   },
+   {
+    "claim": "Crop rotation",
+    "url": "https://ctcri.org/public/publications/2025-02/tf-12_emerging-pests-of-tropical-tuber-crops.pdf",
+    "quote": "Crop Rotation: Disrupts the pest's life cycle."
+   },
+   {
+    "claim": "Ploughing",
+    "url": "https://ctcri.org/public/publications/2025-02/tf-12_emerging-pests-of-tropical-tuber-crops.pdf",
+    "quote": "Soil Ploughing: Exposes larvae to predators and unfavourable conditions."
+   }
+  ],
+  "gaps": [
+   "The CTCRI PDF also lists fipronil and chlorpyrifos plus flooding and bird/nematode lines just above the wireworm heading, but the page layout does not tie them to wireworm. Not recorded as treatments.",
+   "Wireworm is a minor pest in India; no ICAR/TNAU/KVK field recommendation or threshold found. The existing USU page remains the only detailed source and is US-based."
+  ]
+ },
+ "pest__rice_water_weevil": {
+  "treatment_options": [
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Delay the permanent flood, but not much past the tillering stage; early flooding makes weevils lay eggs.",
+    "source_url": "https://www.lsuagcenter.com/topics/crops/rice/insects/presentations/1-rice-water-weevil",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Avoid late planting of rice.",
+    "source_url": "https://www.lsuagcenter.com/topics/crops/rice/insects/presentations/1-rice-water-weevil",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   },
+   {
+    "kind": "cultural",
+    "active_ingredient": "n/a (cultural practice)",
+    "note": "FOLLOW PRODUCT LABEL; no dose. Remove weeds on levees and field edges, where weevils gather early in the season.",
+    "source_url": "https://ipm.ucanr.edu/agriculture/rice/rice-water-weevil/",
+    "indian_source": false,
+    "cibrc_name_status": "n/a cultural"
+   }
+  ],
+  "no_chemical": null,
+  "new_sources": [
+   {
+    "title": "EPPO Global Database - Lissorhoptrus oryzophilus distribution in India",
+    "url": "https://gd.eppo.int/taxon/LISSOR/distribution/IN",
+    "publisher": "EPPO"
+   },
+   {
+    "title": "Rice water weevil (LSU AgCenter)",
+    "url": "https://www.lsuagcenter.com/topics/crops/rice/insects/presentations/1-rice-water-weevil",
+    "publisher": "Louisiana State University AgCenter"
+   },
+   {
+    "title": "Rice water weevil (UC IPM)",
+    "url": "https://ipm.ucanr.edu/agriculture/rice/rice-water-weevil/",
+    "publisher": "University of California IPM"
+   },
+   {
+    "title": "On-farm management practices against rice root weevil (Echinocnemus oryzae)",
+    "url": "https://li01.tci-thaijo.org/index.php/anres/article/view/240134",
+    "publisher": "Agriculture and Natural Resources (journal); authors in Varanasi/Bhadohi, India (different weevil species)"
+   }
+  ],
+  "new_cultural_actions": [
+   "Delay the permanent flood, but not much past the tillering stage.",
+   "Avoid late planting of rice.",
+   "Clear weeds from bunds and field edges.",
+   "Ask your KVK before acting; Indian advice for this species was not found."
+  ],
+  "when_to_act": "No Indian threshold found; ask your KVK or state agriculture university before acting.",
+  "evidence": [
+   {
+    "claim": "Present in India, restricted distribution (status field on page, not a sentence)",
+    "url": "https://gd.eppo.int/taxon/LISSOR/distribution/IN",
+    "quote": "[page status] Present, restricted distribution"
+   },
+   {
+    "claim": "Larvae cause the damage",
+    "url": "https://www.lsuagcenter.com/topics/crops/rice/insects/presentations/1-rice-water-weevil",
+    "quote": "Most economic damage is caused by larvae feeding in or on rice roots."
+   },
+   {
+    "claim": "Delay flood",
+    "url": "https://www.lsuagcenter.com/topics/crops/rice/insects/presentations/1-rice-water-weevil",
+    "quote": "Delay the application of permanent flood (but not much past tillering stage of growth)."
+   },
+   {
+    "claim": "Avoid late planting",
+    "url": "https://www.lsuagcenter.com/topics/crops/rice/insects/presentations/1-rice-water-weevil",
+    "quote": "Avoid late planting of rice."
+   },
+   {
+    "claim": "Weeds on levees",
+    "url": "https://ipm.ucanr.edu/agriculture/rice/rice-water-weevil/",
+    "quote": "weedy vegetation on levees in spring"
+   }
+  ],
+  "gaps": [
+   "NO Indian page on Lissorhoptrus oryzophilus management found (EPPO says present in India, restricted; reports point to NE India but no ICAR/TNAU/KVK advice).",
+   "All cultural advice is from US pages (LSU, UC) and may not suit Indian fields.",
+   "No insecticide recorded: US pages name chemicals and no Indian page does; not recorded per rules.",
+   "A different Indian pest, rice root weevil (Echinocnemus oryzae), has Indian trial results (seedling dip and soil chemicals incl. chlorpyrifos, cartap hydrochloride) but is not this species; not used as treatment.",
+   "LSU quotes are exact; UC quote is a short excerpt from the page text as returned by the reader."
+  ]
+ }
+}

@@ -1,0 +1,35 @@
+best epoch 1 (val macro-F1 0.503), temperature 0.68
+TEST accuracy 0.643   macro-F1 0.617
+  domain field   n=  252  accuracy 0.643
+calibration error (ECE) 0.093   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 63.9% of photos, accuracy on those 0.832
+  >= 0.6 : answers 49.6% of photos, accuracy on those 0.872
+  >= 0.7 : answers 39.7% of photos, accuracy on those 0.880
+  >= 0.8 : answers 31.0% of photos, accuracy on those 0.949
+  >= 0.9 : answers 22.6% of photos, accuracy on those 0.947
+
+class                                      prec recall     f1     n
+chilli__cercospora                        0.600  0.750  0.667     8
+chilli__healthy                           1.000  0.222  0.364     9
+chilli__murda_complex                     0.857  0.923  0.889    13
+chilli__nutritional_deficiency            0.895  1.000  0.944    17
+chilli__powdery_mildew                    0.846  1.000  0.917    11
+groundnut__early_leaf_spot                0.526  0.909  0.667    11
+groundnut__healthy_leaf                   0.667  0.308  0.421    13
+groundnut__late_leaf_spot                 1.000  0.900  0.947    10
+groundnut__nutrition_deficiency           1.000  1.000  1.000    10
+groundnut__rust                           0.917  0.917  0.917    12
+okra__alternaria_leaf_spot                0.714  0.455  0.556    11
+okra__cercospora_leaf_spot                0.308  0.800  0.444    10
+okra__downy_mildew                        0.667  0.800  0.727    10
+okra__healthy                             0.667  0.167  0.267    12
+okra__leaf_curly_virus                    1.000  0.800  0.889    10
+okra__phyllosticta_leaf_spot              1.000  0.571  0.727     7
+rice__healthy                             0.444  0.615  0.516    13
+rice__insect                              0.500  0.667  0.571     9
+rice__leaf_scald                          0.400  0.500  0.444    12
+rice__rice_blast                          0.333  0.222  0.267     9
+rice__rice_leaffolder                     0.385  0.417  0.400    12
+rice__rice_stripes                        0.000  0.000  0.000    12
+rice__rice_tungro                         0.571  0.727  0.640    11

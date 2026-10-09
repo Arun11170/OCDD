@@ -1,0 +1,512 @@
+{
+ "entries": [
+  {
+   "class_id": "pest__gall_midge_dasineura",
+   "crop": "pest",
+   "name_en": "Mango gall midge (inflorescence midge)",
+   "type": "pest",
+   "cause": "Gall midges (Cecidomyiidae); on mango Erosomyia indica and Procontarinia mangiferae are named",
+   "symptoms": [
+    "Tiny maggots tunnel inside the flower stalk and tender parts.",
+    "The flower panicle can be destroyed completely before flowering.",
+    "Flower stalks bend and dry up.",
+    "Later attacks can affect fruits and tender leaves."
+   ],
+   "look_alikes": "Hopper damage also dries flowers, but hoppers are visible wedge-shaped insects with honeydew and sooty mould.",
+   "cultural_actions": [
+    "Collect and destroy infested panicles, leaves and twigs.",
+    "Plough the orchard to expose resting stages in soil to the sun."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos dust",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Sources say spray dimethoate at the bud burst stage.",
+   "ask_back": [
+    {
+     "question": "Are flower panicles bending, drying and dying before they open?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Can you see sap-sucking wedge-shaped hoppers on the panicles?",
+     "if_yes": "pest__mango_hopper",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1 - IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Mango insect pests and their integrated management strategies (ICAR-CISH, Indian Horticulture 2021)",
+     "url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "Mango pests and diseases (mango.org review)",
+     "url": "https://www.mango.org/wp-content/uploads/2020/08/Mango_Pests_and_Diseases_ENG.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Sources cover mango inflorescence midge (Erosomyia indica, Procontarinia mangiferae); Procontarinia matteiana leaf galls and Dasineura were not covered. Written for Indian mango; check label and local KVK."
+  },
+  {
+   "class_id": "pest__oriental_fruit_fly",
+   "crop": "pest",
+   "name_en": "Oriental fruit fly",
+   "type": "pest",
+   "cause": "Bactrocera dorsalis (fruit fly); sources also name B. correctus and B. zonatus on mango",
+   "symptoms": [
+    "Female pierces ripening fruit with a pointed egg-laying tube.",
+    "Eggs are laid in small groups inside the fruit pulp.",
+    "White maggots feed in the pulp.",
+    "Fruit may look normal outside but rots inside and drops."
+   ],
+   "look_alikes": "Mango seed weevil also spoils fruit, but its grub bores into the stone, not the soft pulp.",
+   "cultural_actions": [
+    "Collect and destroy fallen and infested fruits regularly.",
+    "Plough or rake soil under trees to expose the pupae.",
+    "Hang methyl eugenol traps before fruits mature.",
+    "Harvest mature-green fruit and remove damaged fruit."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Methyl eugenol trap (male annihilation)",
+     "note": "Trap lure; follow trap maker's label; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Malathion in methyl eugenol trap or in bait",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Protein hydrolysate or jaggery bait spray with insecticide",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Deltamethrin with azadirachtin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Hang traps and apply bait before fruits mature, before egg laying starts; sprays only before harvest as per label.",
+   "ask_back": [
+    {
+     "question": "Are there small holes or scars on ripening fruit with white maggots inside the pulp?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is the grub inside the hard stone instead of the pulp?",
+     "if_yes": "pest__mango_seed_weevil",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Mango insect pests and their integrated management strategies (ICAR-CISH, Indian Horticulture 2021)",
+     "url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "Extension Bulletin No. 1 - IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "NHB - Mango pests",
+     "url": "https://nhb.gov.in/pdf/fruits/mango/man008.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Written for Indian mango. Post-harvest hot water treatment is also described by sources; ask your KVK. Check label for pre-harvest waiting period."
+  },
+  {
+   "class_id": "pest__mango_hopper",
+   "crop": "pest",
+   "name_en": "Mango hopper",
+   "type": "pest",
+   "cause": "Mango hoppers Idioscopus clypealis, Idioscopus niveosparsus (nitidulus in ICAR source) and Amritodus atkinsoni",
+   "symptoms": [
+    "Wedge-shaped nymphs and adults crowd on flower panicles and tender shoots.",
+    "They suck sap, so flowers dry and fruit drops.",
+    "Leaves curl and wilt.",
+    "Sticky honeydew attracts black sooty mould."
+   ],
+   "look_alikes": "Gall midge also kills panicles, but the damage is from tiny maggots inside the flower stalk.",
+   "cultural_actions": [
+    "Prune to keep the canopy open.",
+    "Avoid dense planting and control growth flushes.",
+    "Keep the orchard clean.",
+    "Protect natural enemies like lacewings, ladybirds, spiders and egg parasites."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Lambda-cyhalothrin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Imidacloprid",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Azadirachtin / neem formulation (Nimbicidin)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Beauveria bassiana",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Verticillium lecanii",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Spray first at early panicle emergence if hoppers are above the local threshold; later at full panicle and after fruit set.",
+   "ask_back": [
+    {
+     "question": "Do you see small wedge-shaped hopping insects on panicles with sticky honeydew?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are panicles dying from tunnelling maggots inside the stalk?",
+     "if_yes": "pest__gall_midge_dasineura",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1 - IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Mango insect pests and their integrated management strategies (ICAR-CISH, Indian Horticulture 2021)",
+     "url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "NHB - Mango pests",
+     "url": "https://nhb.gov.in/pdf/fruits/mango/man008.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Flatid planthoppers (Lawana, Salurnis) were not covered by any opened Indian source. Older chemicals listed by some sources are left out; check CIB&RC and your KVK."
+  },
+  {
+   "class_id": "pest__mango_borer",
+   "crop": "pest",
+   "name_en": "Mango shoot borer and stem borer",
+   "type": "pest",
+   "cause": "Shoot borer Chlumetia transversa (moth); stem borer Batocera rufomaculata (beetle)",
+   "symptoms": [
+    "Shoot borer: dark pink caterpillar tunnels down the leaf midrib and into the shoot.",
+    "Tender shoots wilt, leaves drop, and shoot tips look bunchy.",
+    "Stem borer: grubs make tunnels and cavities in stems and branches.",
+    "Branches dry and may die in severe attack."
+   ],
+   "look_alikes": "Dieback from disease also dries shoots, but borer damage shows tunnels and excreta.",
+   "cultural_actions": [
+    "Remove and destroy attacked shoots.",
+    "Do summer ploughing to expose moth pupae.",
+    "Cut and destroy affected branches with grubs.",
+    "Clean the bored holes and plug them.",
+    "Keep the orchard clean and healthy; remove dead trees."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbaryl",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Quinalphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Lambda-cyhalothrin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dichlorvos on cotton wool in cleaned stem holes",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Malathion on cotton wick in cleaned stem holes",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Metarhizium anisopliae",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Beauveria bassiana",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Shoot borer: spray when a new flush starts and repeat through the flush. Stem borer: treat holes when found.",
+   "ask_back": [
+    {
+     "question": "Is the shoot tunnelled and wilting from the tip downward?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are young leaves cut or scraped at the tip, with no tunnel?",
+     "if_yes": "pest__mango_leaf_cutting_weevil",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Mango shoot borer",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Extension Bulletin No. 1 - IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Mango insect pests and their integrated management strategies (ICAR-CISH, Indian Horticulture 2021)",
+     "url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "publisher": "ICAR"
+    }
+   ],
+   "caveats": "Rhytidodera bowringii was not covered by any opened source. Older chemicals listed by some sources are left out; check CIB&RC and your KVK."
+  },
+  {
+   "class_id": "pest__mango_seed_weevil",
+   "crop": "pest",
+   "name_en": "Mango seed (stone) weevil",
+   "type": "pest",
+   "cause": "Sternochetus mangiferae (weevil beetle); S. frigidus not covered by opened sources",
+   "symptoms": [
+    "Adults are dark brown beetles.",
+    "Female lays eggs under the skin of marble-sized fruit.",
+    "White legless grubs bore through pulp to the seed.",
+    "They feed on the seed coat and the seed inside.",
+    "Pulp may be discoloured around the damaged spot."
+   ],
+   "look_alikes": "Fruit fly maggots feed in the soft pulp; seed weevil grubs end up in the stone.",
+   "cultural_actions": [
+    "Collect and destroy fallen infested fruits.",
+    "Plough or dig soil after harvest to expose hiding weevils.",
+    "Destroy leftover seeds.",
+    "Keep tree basins clean so adults cannot hide.",
+    "Use sticky bands on the upper trunk to block weevil movement."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Deltamethrin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Acephate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbaryl",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Spray at the marble stage of fruit and again after fruit set, as per label.",
+   "ask_back": [
+    {
+     "question": "Is there a white legless grub or tunnel inside the seed (stone)?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the maggots in the soft pulp, with small egg-laying holes in the skin?",
+     "if_yes": "pest__oriental_fruit_fly",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1 - IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Mango insect pests and their integrated management strategies (ICAR-CISH, Indian Horticulture 2021)",
+     "url": "https://epubs.icar.org.in/index.php/IndHort/article/download/117199/45400/473168",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "NHB - Mango pests",
+     "url": "https://nhb.gov.in/pdf/fruits/mango/man008.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Written for Indian mango. Quarantine or export rules may apply; ask CISH or your KVK. Older chemicals listed by some sources are left out."
+  },
+  {
+   "class_id": "pest__mango_leaf_cutting_weevil",
+   "crop": "pest",
+   "name_en": "Mango leaf cutting weevil",
+   "type": "pest",
+   "cause": "Deporaus marginatus (weevil beetle, family Attelabidae); attacks mango and cashew",
+   "symptoms": [
+    "Beetles scrape young leaf tissue and cut the leaf tip.",
+    "Female lays eggs on tender leaves and cuts them off.",
+    "Young leaves turn brown, curl and fall.",
+    "Cut leaf pieces pile up under the tree."
+   ],
+   "look_alikes": "Shoot borer also kills tender shoots, but borer damage is a tunnel inside the shoot.",
+   "cultural_actions": [
+    "Collect fallen cut leaf pieces from the orchard floor regularly.",
+    "Plough soil under the tree crown.",
+    "Watch tender flushes closely in the rainy season.",
+    "In nurseries, net or bag young plants (as tested in one study)."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Deltamethrin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://plantix.net/en/library/plant-diseases/600410/leaf-cutting-weevil/",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fenvalerate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://plantix.net/en/library/plant-diseases/600410/leaf-cutting-weevil/",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Act early when new leaves are small and tender; watch during rains and new flushes.",
+   "ask_back": [
+    {
+     "question": "Are young leaf tips cut or scraped, with cut pieces on the ground?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is the young shoot tunnelled and wilting?",
+     "if_yes": "pest__mango_borer",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "ICAR-NBAIR - Deporaus marginatus",
+     "url": "https://databases.nbair.res.in/insectpests/Deporaus-marginatus.php",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "Plantix - Leaf-cutting weevil",
+     "url": "https://plantix.net/en/library/plant-diseases/600410/leaf-cutting-weevil/",
+     "publisher": "other"
+    },
+    {
+     "title": "Susceptibility of mango varieties to leaf cutting weevil and its control (Pak. J. Biol. Sci. 2003)",
+     "url": "https://scialert.net/abstract/?doi=pjbs.2003.712.714",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Weak sourcing: no Indian university or CISH page found. NBAIR calls it minor and rarely serious; control advice is from a commercial site (Plantix) and a Pakistan study."
+  }
+ ]
+}

@@ -1,0 +1,422 @@
+## apple__cedar_apple_rust
+  - source + https://plantclinic.tamu.edu/helpful-factsheets/cedar-apple-
+  - source + https://doaj.org/article/90395ad9f382435f84c9904d35800dd2
+  - cultural + Cut out and destroy galls on nearby juniper or ced
+  - GAP: No Indian page found that names this disease on apple, so no Indian advice, no Indian chemical and no timing.
+  - GAP: HP Horticulture Dept apple spray schedule (2023) does not mention cedar rust.
+  - GAP: The Himachal rust checklist lists the genus Gymnosporangium but the abstract does not say which species or whether apple is hit.
+  - GAP: Texas A&M page names myclobutanil and Bordeaux mixture; dropped because foreign pages are not allowed for chemical advice. The old Illinois Extension source was not re-opened (blocked); text kept as is.
+  - GAP: Whether juniper or cedar hosts occur near Indian apple orchards was not verified.
+## apple__apple_scab
+  - treatment + Captan
+  - treatment + Ziram
+  - treatment + Mancozeb
+  - treatment + Zineb
+  - treatment + Carbendazim + flusilazole (ready mix)
+  - source + https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-o
+  - source + https://agritech.tnau.ac.in/crop_protection/apple_1.html
+  - source + https://ojs.pphouse.org/index.php/IJEP/article/download/4705
+  - cultural + Collect and destroy fallen leaves and pruned twigs
+  - cultural + Spraying urea on leaves before leaf fall in autumn
+  - cultural + In scab-prone places, keep a gap of 12 to 14 days 
+  - cultural + Do not use the same chemical again and again.
+  - cultural + If heavy rain falls soon after a spray, the spray 
+  - GAP: Dropped by the name check: tridemorph (TNAU lists it; cibname BANNED) and captafol (TNAU lists it; NOT_ON_LIST).
+  - GAP: HP schedule petal-fall group (carbendazim, thiophanate-methyl, hexaconazole, myclobutanil, flusilazole, tebuconazole mixes and others) was not recorded because the fetched table text did not clearly match each product to scab; also thiophanate-methyl is NOT_ON_LIST.
+  - GAP: Asterisks next to some names in the HP schedule are not explained in the text I could read.
+  - GAP: Old himachalwatcher news page was not re-opened; replaced by the official HP schedule and the journal paper.
+  - GAP: The old TNAU org_farm page listed in the input was not re-opened (blocked); TNAU apple_1 page was used instead.
+  - GAP: CIB&RC check is for the NAME only. Crop and pest label registration was not checked.
+## apple__black_rot
+  - treatment + Propineb
+  - treatment + Zineb
+  - cultural from treatment: Plant oils on stored fruit (linseed, mustard or castor oil)
+  - source + https://eudyan.hp.gov.in/cms/media/qadipm3c/spray-schedule-o
+  - source + https://agritech.tnau.ac.in/crop_protection/crop_diseases_po
+  - cultural + Remove and destroy infected parts, mummified fruit
+  - cultural + Avoid wounds on the tree, feed the tree in a balan
+  - cultural + Control insects and other diseases well.
+  - when_to_act set
+  - GAP: No Indian page found that treats frogeye leaf spot or limb canker black rot on its own; the HP schedule only names black rot in one spray row and gives general canker advice.
+  - GAP: Old captan and strobilurin entries came from Penn State (foreign) and are not backed by an Indian page for this disease, so they are not carried over. Captan is in the HP schedule only for scab.
+  - GAP: Penn State page stays as a biology source. The old TNAU org_farm page was not re-opened (blocked).
+  - GAP: The TNAU oil treatment is for harvested fruit in store; check whether to show it to a farmer diagnosing leaf spots.
+  - GAP: CIB&RC check is for the NAME only.
+## grape__black_rot
+  - source + https://www.nhb.gov.in/pdf/fruits/grape/gra002.pdf
+  - source + https://grapes.extension.org/black-rot-of-grapes
+  - cultural + Remove mummified berries from the vine and the gro
+  - cultural + Prune and train the vines so air moves freely and 
+  - cultural + Protect young bunches, because that is when sprays
+  - foreign caveat
+  - GAP: NHB (Govt of India) names Bordeaux mixture and copper fungicides once or twice on young bunches. Both fail the name rule (cibname NOT_ON_LIST, kind fungicide) so they were dropped. Lead may decide to re-add Bordeaux mixture as a traditional product.
+  - GAP: NHB also covers cultural steps (mummified berries, air flow) in text I could only read as a summary, so the cultural lines above are backed by the verbatim quotes from the OSU page.
+  - GAP: NHB page was in the input marked indian_source false; it is a Govt of India body so true is right.
+  - GAP: ICAR-NRC Grapes bulletin (TB-8, 2007) and the NRCG label-claim list (Annexure 5, 2019) do not cover black rot, so no ICAR advice found.
+  - GAP: PlantVillage page not re-opened (permission timed out).
+  - GAP: CIB&RC check is for the NAME only.
+## grape__esca_(black_measles)
+  - source + https://aggie-horticulture.tamu.edu/wp-content/uploads/sites
+  - cultural + Do not prune vines in rainy, wet weather.
+  - cultural + Cut out infected wood back into healthy wood, then
+  - no-chemical statement
+  - GAP: No Indian source found for esca or grapevine trunk disease management (ICAR-NRCG bulletin TB-8 and Annexure 5 do not cover it; NHB covers Dead Arm, a different disease).
+  - GAP: Whether esca is present in India was not confirmed.
+  - GAP: No chemical or biological option from any source, so none listed.
+  - GAP: No Indian view on pruning-wound paint or protectants.
+## grape__leaf_blight_(isariopsis_leaf_spot)
+  - source + https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes
+  - cultural + Keep vines healthy and strong.
+  - cultural + Prune, thin and weed so air moves and leaves dry q
+  - cultural + Sprays used early in the season for other grape di
+  - GAP: No Indian source found for Isariopsis / Pseudocercospora leaf spot of grape. NHB grape disease page and ICAR-NRC Grapes TB-8 do not cover it; the NRCG label-claim list (Annexure 5, 2019) did not show it either.
+  - GAP: ANGRAU course notes list mancozeb for Alternaria leaf spot of grape, a different disease, so not used.
+  - GAP: Kentucky page names no product; so no chemical listed.
+  - GAP: PlantVillage source not re-opened (permission timed out).
+## mango__bacterial_canker
+  - treatment + Streptomycin + tetracycline (named Streptocycline in the source)
+  - source + https://niphm.gov.in/IPMPackages/Mango.pdf
+  - source + https://celkau.in/crops/fruits/Mango/canker.php
+  - source + https://krishi.icar.gov.in/jspui/handle/123456789/54233
+  - cultural + Check the orchard often and keep it clean.
+  - cultural + Use certified seedlings and take rootstock stones 
+  - cultural + Plant windbreaks so wind does not rub and wound le
+  - cultural + Remove weeds and diseased plant parts.
+  - GAP: Old entry marked Streptocycline as kind fungicide and indian_source false; the bulletin is from the National Horticulture Mission, Govt of India, so indian_source true and kind bactericide.
+  - GAP: KAU page also lists Bordeaux mixture (cibname NOT_ON_LIST, dropped) and carbendazim (a fungicide for a bacterial disease, left out; ask an expert).
+  - GAP: NIPHM package gives only cultural steps for canker and no chemical.
+  - GAP: ICAR record (Kishun et al.) says antagonist bacteria and streptocycline both cut disease in trials; only the abstract summary was read.
+  - GAP: Whether streptomycin/tetracycline is allowed on mango at the label level was not checked (name check only).
+  - GAP: CIB&RC check is for the NAME only.
+## mango__die_back
+  - cultural from treatment: Cow dung paste on cut ends
+  - source + https://niphm.gov.in/IPMPackages/Mango.pdf
+  - cultural + Use scion wood for grafting that is free from infe
+  - cultural + Prune an infected branch at once and cut some heal
+  - cultural + Collect and burn the cut branches.
+  - cultural + Take care not to bring the disease into new orchar
+  - foreign caveat
+  - GAP: Old entry marked the IPM bulletin as not Indian; it is a National Horticulture Mission (Govt of India) bulletin, so indian_source true.
+  - GAP: The old TNAU anthracnose page in the input was not re-opened.
+  - GAP: Only one active ingredient (copper oxychloride) is named in Indian sources for this problem.
+  - GAP: CIB&RC check is for the NAME only.
+## mango__cutting_weevil
+  - source + https://krishikosh.egranth.ac.in/server/api/core/bitstreams/
+  - source + https://krishi.icar.gov.in/jspui/handle/123456789/52489
+  - source + https://databases.nbair.res.in/insectpests/Deporaus-marginat
+  - source + https://agris.fao.org/search/en/records/647240e108fd68d54600
+  - cultural + Pick up the cut leaves every day and burn them.
+  - cultural + Plough or hoe the soil under the tree to disturb t
+  - cultural + In nurseries, cover young plants with fine net or 
+  - cultural + Watch grafted seedlings and young trees when new l
+  - cultural + Some varieties are attacked less than others.
+  - GAP: NHM bulletin April row names carbaryl and dimethoate for leaf cutting weevils; cibname says carbaryl BANNED and dimethoate RESTRICTED_FOR_THIS_CROP (mango), so both dropped. No allowed chemical remains.
+  - GAP: BCKV thesis lists many old insecticides from past trials (some banned); they are trial history, not advice, and none were used.
+  - GAP: Plantix deltamethrin and fenvalerate entries are not Indian official advice and are not carried over.
+  - GAP: Ploughing and burning advice comes from literature review quotes (Singh 1960, Butani 1979) inside a 1996 thesis; no current Indian bulletin found.
+  - GAP: Netting or bag result is a Bangladesh trial, not Indian.
+  - GAP: TNAU mango_12 page is about leaf twisting weevil (Apoderus), a different pest, and gives no management, so not used. The ICAR-RCER record gives June to October peak only in summary form.
+  - GAP: No Indian page gives a spray threshold or a date for farmers.
+## pest__mango_leaf_cutting_weevil
+  - source + https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/n
+  - source + https://krishikosh.egranth.ac.in/server/api/core/bitstreams/
+  - source + https://krishi.icar.gov.in/jspui/handle/123456789/52489
+  - source + https://agris.fao.org/search/en/records/647240e108fd68d54600
+  - cultural + Pick up the cut leaves every day and burn them.
+  - cultural + Plough or hoe the soil under the tree to disturb t
+  - cultural + In nurseries, cover young plants with fine net or 
+  - cultural + Watch grafted seedlings and young trees when new l
+  - cultural + Some varieties are attacked less than others.
+  - foreign caveat
+  - GAP: NHM bulletin April row names carbaryl and dimethoate for leaf cutting weevils; cibname says carbaryl BANNED and dimethoate RESTRICTED_FOR_THIS_CROP (mango), so both dropped. No allowed chemical remains.
+  - GAP: BCKV thesis lists many old insecticides from past trials (some banned); they are trial history, not advice, and none were used.
+  - GAP: Plantix deltamethrin and fenvalerate entries are not Indian official advice and are not carried over.
+  - GAP: Ploughing and burning advice comes from literature review quotes (Singh 1960, Butani 1979) inside a 1996 thesis; no current Indian bulletin found.
+  - GAP: Netting or bag result is a Bangladesh trial, not Indian.
+  - GAP: TNAU mango_12 page is about leaf twisting weevil (Apoderus), a different pest, and gives no management, so not used. The ICAR-RCER record gives June to October peak only in summary form.
+  - GAP: No Indian page gives a spray threshold or a date for farmers.
+## banana__moko_disease
+  - cultural from treatment: Fresh cow dung slurry in the banana basin
+  - source + https://celkau.in/crops/fruits/banana/bacterialWilt.php
+  - source + https://apps.lucidcentral.org/pppw_v13/text/web_full/entitie
+  - source + https://rajneeshrajoria.weebly.com/uploads/4/9/0/6/49069889/
+  - cultural + Use only disease-free planting material.
+  - cultural + Find and destroy suspected plants early.
+  - cultural + Disinfect pruning and cutting tools between plants
+  - cultural + Remove the male flowers as soon as the last hand o
+  - cultural + Bag the young flower bunch as it bends down (Pacif
+  - no-chemical statement
+  - GAP: No Indian page says in words that no chemical cures Moko. The two Indian pages (KAU, NHB) list only cultural steps. The 'no chemical' line is from Plantix (commercial, not Indian).
+  - GAP: ANGRAU notes also list killing plants with herbicide, soil fumigation, bleaching powder and Bordeaux drenches. These were not recorded: the file is on a personal website, and the chemicals were not on an official page.
+  - GAP: Musalit/INIBAP source in the input was not re-opened (permission timed out), so nothing from it is repeated. Bagging and insect-spread now rest on the Pacific Pests page.
+  - GAP: ICAR-NRCB pages found had no Moko advice.
+  - GAP: CIB&RC check is for the NAME only; no chemical is listed.
+## maize__gray_leaf_spot
+  - treatment + Tebuconazole
+  - treatment + Carbendazim
+  - treatment + Flusilazole
+  - source + https://factsheetadmin.plantwise.org/Uploads/PDFs/2014780140
+  - cultural + Rotate maize with beans, cowpeas, groundnuts or ce
+  - cultural + Sow on time, at the start of the rains.
+  - cultural + Use varieties that resist gray leaf spot.
+  - cultural + Crop rotation and tillage cut down the fungus in c
+  - when_to_act set
+  - GAP: No Indian source (ICAR/SAU/KVK/NIPHM) with gray leaf spot management found. ICAR-IIMR state pages for Andhra Pradesh, Karnataka, Himachal, Bihar and Manipur, and the IIMR 'predominant diseases' table, do not list gray leaf spot (pages opened: aicrpmaize.icar.gov.in/?p=1172,1163,1166,1168,1179; iimr.icar.gov.in/?p=959,1163,1168,2136).
+  - GAP: All three fungicide names come from one Zambian factsheet; no Indian label or advisory confirms them for gray leaf spot. Crop Protection Network and the Asia review name no active ingredient.
+  - GAP: Plantix page names more active ingredients (strobilurins, propiconazole, prothioconazole) but it is a commercial app page, so not used.
+  - GAP: No spray threshold or growth-stage timing found beyond 'when seen on leaves'.
+## maize__common_rust
+  - treatment + Hexaconazole
+  - treatment + Azoxystrobin + difenoconazole (mixture)
+  - treatment + Zineb
+  - source + https://aicrpmaize.icar.gov.in/?p=1172
+  - source + https://aicrpmaize.icar.gov.in/?p=1166
+  - cultural + Sow early (May-June in Karnataka, per ICAR-IIMR).
+  - cultural + Remove Oxalis and other alternate host plants near
+  - GAP: Now 3 Indian pages (TNAU, ICAR-IIMR Karnataka, ICAR-IIMR Bihar). Doses and spray intervals exist on these pages but are deliberately not recorded.
+  - GAP: No Indian page gave a numeric spray threshold; only 'first appearance' and crop-age timing.
+  - GAP: Mancozeb is banned on guava, jowar and tapioca only; no restriction for maize found by the name check.
+## wheat__septoria
+  - treatment + Propiconazole
+  - treatment + Mancozeb
+  - source + https://ipm.ucanr.edu/agriculture/small-grains/septoria-trit
+  - cultural + Plant wheat varieties that are less affected by Se
+  - cultural + Use practices that speed up breakdown of crop resi
+  - when_to_act set
+  - GAP: No Indian source found for Septoria tritici blotch. Opened Indian pages cover other wheat diseases only: COL/India wheat chapter (rust, smut, Karnal bunt, spot blotch), ICAR spot blotch paper (carboxin+thiram, propiconazole for Bipolaris), HP disease list (propiconazole for powdery mildew). None give Septoria advice, so they were not used.
+  - GAP: Could not re-open the PMC South Asia paper (permission timed out), so its claim that Septoria is not a major South Asian concern was not re-verified.
+  - GAP: UC IPM is from California; sowing-date advice there (avoid early planting) was not copied because it may not suit Indian wheat belts.
+  - GAP: No Indian spray threshold or growth-stage timing found.
+## potato__early_blight
+  - treatment + Propiconazole
+  - treatment + Pyraclostrobin
+  - treatment + Azoxystrobin
+  - treatment + Chlorothalonil
+  - treatment + Mancozeb
+  - source + https://epubs.icar.org.in/index.php/IJPP/article/view/104988
+  - source + https://epubs.icar.org.in/index.php/IJAgS/article/download/1
+  - source + https://ipm.ucanr.edu/agriculture/potato/early-blight/
+  - cultural + Keep plants healthy with proper fertiliser and irr
+  - cultural + Grow later-maturing, longer-season varieties.
+  - cultural + Remove potato residue and other nightshade-family 
+  - cultural + Scout the oldest leaves first.
+  - GAP: Existing Zineb and Captan entries cite the TNAU potato page; that page could not be re-opened this session (permission timed out), so they were not re-verified and are not repeated here.
+  - GAP: The two new Indian sources are research trials, not official advisories. No ICAR-CPRI Shimla advisory page was found.
+  - GAP: IJPP also tested copper oxychloride and Trichoderma harzianum but only in the lab; not listed. Hexaconazole and difenoconazole did worse than chlorothalonil in the Indian paper; not listed.
+  - GAP: indianpotato.com lists mancozeb, chlorothalonil, propiconazole, difenoconazole, hexaconazole and a '5% lesion' trigger, but it is a private site and says its calendars are editorial syntheses; not used.
+## okra__downy_mildew
+  - gap caveat
+  - GAP: No source found that describes okra downy mildew management. Searches of TNAU, KAU, ICAR epubs, IIVR terms and general web found nothing for okra downy mildew.
+  - GAP: TNAU bhendi organic-farming page (opened) says nothing about downy mildew. KAU okra mildew page (opened) is about powdery mildew only. Mississippi State page (opened) is about cucurbit downy mildew, not okra.
+  - GAP: The existing PMC Tamil Nadu dataset source was not re-opened; it only describes images, per existing caveat.
+  - GAP: No treatment, timing or cultural advice is added. Keep: show leaves to KVK.
+## okra__phyllosticta_leaf_spot
+  - treatment + Neem seed kernel extract
+  - treatment + Cow urine
+  - cultural + Manage overhead irrigation so leaves do not stay w
+  - GAP: No Indian source with a chemical for Phyllosticta leaf spot of okra. TNAU only names the pathogen. UF page names no active ingredient.
+  - GAP: Neem seed kernel extract and cow urine are generic TNAU organic sprays; the page does not say they work on Phyllosticta. Treat as weak, low-priority options.
+  - GAP: Doses for the TNAU sprays exist on the page but are deliberately not recorded.
+## okra__alternaria_leaf_spot
+  - treatment + Neem seed kernel extract
+  - treatment + Cow urine
+  - GAP: No Indian source with a fungicide for Alternaria leaf spot on okra found. Existing entries (carbendazim+mancozeb, Trichoderma viride from a Punjab-linked journal page, 2024-25) could not be re-opened this session (permission timed out), so not re-verified here and not repeated.
+  - GAP: Indian Alternaria trials found were on other crops (cotton: mancozeb, hexaconazole; ber; cauliflower; pomegranate; safflower) and TNAU's brinjal Alternaria page (mancozeb, copper oxychloride, zineb). Not used because they are not okra.
+  - GAP: The Krishikosh record 'Studies on the management of Alternaria alternata causing leaf spot of okra' exists but the page returned no abstract.
+  - GAP: No Indian cultural advice or timing specific to okra Alternaria found.
+## tomato__leaf_mold
+  - source + https://plantpathology.mgcafe.uky.edu/sites/plantpathology.c
+  - cultural + Space, prune and stake plants so leaves dry fast.
+  - cultural + Avoid overhead irrigation.
+  - cultural + In polyhouses, open vents and run fans when the ai
+  - cultural + Remove infected leaves during the season and clean
+  - cultural + Do not compost diseased plant material.
+  - cultural + Remove diseased plants and the plants around them 
+  - when_to_act set
+  - foreign caveat
+  - GAP: No Indian source (ICAR/SAU/KVK/TNAU/NIPHM) for tomato leaf mould management found. TNAU tomato disease index (opened) does not list leaf mould.
+  - GAP: Kentucky fact sheet names no active ingredient. Trifloxystrobin source is a Greek journal record (AGRIS abstract). Cornell page also names branded products; only active ingredients are recorded.
+  - GAP: Cornell does not give spray timing.
+## tomato__target_spot
+  - treatment + Copper oxychloride
+  - treatment + Azoxystrobin
+  - source + https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf
+  - source + https://worldveg.tind.io/record/39590/files/f0164.pdf
+  - source + https://apps.lucidcentral.org/ppp_v9/pdf/web_full/tomato_tar
+  - cultural + Destroy crop residue soon after harvest.
+  - cultural + Do not overfeed nitrogen; lush growth worsens leaf
+  - cultural + Remove lower branches and leaves for airflow, and 
+  - cultural + Avoid overhead irrigation.
+  - cultural + Do not plant new tomato crops next to older diseas
+  - cultural + Rotate crops; do not replant tomato on the same la
+  - when_to_act set
+  - GAP: No Indian source for tomato target spot found. The existing 'TNAU' source (tomato_diseases_2.html) is actually the TNAU Early Blight page and does not mention target spot or Corynespora; it should not be cited for target spot.
+  - GAP: Existing UF PP351 entries (mancozeb, chlorothalonil, difenoconazole) could not be re-opened; mancozeb and chlorothalonil re-confirmed from UF IPM; difenoconazole not re-verified so omitted.
+  - GAP: No Indian spray timing or threshold found. UF gave no intervals.
+## tomato__spider_mites
+  - treatment + Diafenthiuron
+  - treatment + Beauveria bassiana
+  - treatment + Neem oil
+  - source + https://epubs.icar.org.in/index.php/IJPP/article/view/115042
+  - source + https://extension.usu.edu/pests/ipm/notes_ag/veg-spider-mite
+  - source + https://www.doi.org/10.18311/JBC/2018/16207
+  - cultural + Keep plants well watered; stressed plants get more
+  - cultural + Wash mites off with a strong stream of water from 
+  - cultural + Keep dust off the leaves.
+  - cultural + Avoid malathion and pyrethroid sprays for other pe
+  - cultural + Protect natural enemies such as predatory mites.
+  - cultural + Look for fine yellow stippling on leaves in hot, d
+  - when_to_act set
+  - GAP: No Indian page gives a spray threshold, interval, or cultural steps for tomato mites. Cultural steps come from Utah State (foreign).
+  - GAP: TNAU-authored resistance study (Indian J. Entomology 2023) found high resistance to propargite and chlorfenapyr and extreme resistance to spiromesifen and buprofezin in Coimbatore vegetable mites, and recommended fenpropathrin and fenazaquin there. It is not tomato-specific, so those were not added; spiromesifen is not listed because of that resistance.
+  - GAP: The MPUAT trial also tested acephate and acetamiprid (insecticides); not listed. The trial was on polyhouse tomato at one site.
+  - GAP: UC IPM mite page found was for walnut, so it was not used.
+## tomato__mosaic_virus
+  - source + https://www.downtoearth.org.in/amp/story/agriculture/how-mah
+  - source + https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-vi
+  - source + https://ipm.ucanr.edu/PMG/r783102711.html
+  - cultural + Use clean seed from a trusted seller, and use resi
+  - cultural + Plant tall barrier crops such as maize around the 
+  - cultural + Do not count on insecticide sprays; aphid-spread v
+  - cultural + Pull out and destroy infected plants at once.
+  - cultural + Wash hands with soap and clean tools; mosaic can s
+  - no-chemical statement
+  - GAP: TNAU's mosaic page (tomato_diseases_12) does NOT say 'no cure'; it only lists disease-free seed, removal of infected plants and crop rotation, and names no vector or chemical. The 'no cure' wording rests on Down To Earth, an Indian magazine, not an institute or university.
+  - GAP: The existing cultural line 'Do not plant after tobacco, potato, chilli, capsicum or brinjal' and 'rinse seed, dry in shade' could not be re-checked (TNAU org-farm page timed out); not repeated.
+  - GAP: No Indian institute page names whitefly as a mosaic vector. TNAU pages name whitefly as the vector of leaf curl only. Aphids spread cucumber mosaic virus (WSU, foreign); tomato mosaic virus spreads by contact and seed.
+  - GAP: The IIHR / IARI-RS Pune barrier-crop advice is quoted second-hand through Down To Earth; no ICAR page itself was opened.
+## rice__insect
+  - treatment + Trichogramma japonicum and Trichogramma chilonis (egg parasitoid wasps)
+  - treatment + Beauveria bassiana
+  - treatment + Azadirachtin (neem-based)
+  - source + https://www.niphm.gov.in/IPMPackages/Rice.pdf
+  - source + https://www.celkau.in/crops/Cereals/Rice/pests.aspx
+  - cultural + Check the field every 3 to 5 days so you catch the
+  - cultural + Clip the tips of seedlings before transplanting. T
+  - cultural + Do not over-fertilise. Heavily fertilised plots dr
+  - cultural + Plant neighbouring fields within about 3 weeks of 
+  - cultural + Protect natural habitat on the farm. It helps the 
+  - cultural + Use a spray only as a last choice, and only when t
+  - no-chemical statement
+  - GAP: No chemical named for the generic class on purpose: the right one depends on the insect, and NIPHM/KAU list different ones per pest (see pest entries).
+  - GAP: Thrips, hispa and case worm have no own pest entry in the app; NIPHM gives no threshold for thrips and names no chemical for thrips.
+  - GAP: TNAU per-pest pages (stem borer, BPH, gall midge, leaf folder) could not be opened (fetch errors), so TNAU was not used for this class.
+  - GAP: Quotes from NIPHM/KAU pages come from a page-reading tool's output; they are short exact excerpts, doses left out.
+## rice__rice_stripes
+  - source + https://core.ac.uk/works/85958393
+  - source + https://www.jircas.go.jp/en/publication/tars/19/14
+  - cultural + Plant a resistant variety if one is listed for you
+  - cultural + Time planting so young plants are not in the field
+  - cultural + Remove ratoon, stubble and weeds from the last cro
+  - cultural + Plant at the same time as your neighbours.
+  - cultural + Use insecticide only when needed, not repeatedly.
+  - GAP: NO Indian source on rice stripe virus found. Two Indian-focused virus reviews (JIRCAS abstract 1985; JIRCAS PDF) list only tungro, grassy stunt, ragged stunt and necrotic mosaic for India and do not mention rice stripe.
+  - GAP: The Lucid factsheet says rice stripe virus is in temperate East Asia and does not mention India. The app entry may really be another stripe-type virus; farmer should confirm with KVK.
+  - GAP: No page opened says outright 'no chemical cure' for rice stripe; so no_chemical left null. Lucid says only to use insecticides selectively.
+  - GAP: No insecticide recorded: no page opened names an active ingredient against the vector for this disease.
+  - GAP: The JIRCAS pages are Japanese-hosted abstracts of Indian work, not ICAR pages; old (1985).
+## rice__rice_tungro
+  - treatment + Carbofuran (granules)
+  - source + https://www.niphm.gov.in/IPMPackages/Rice.pdf
+  - source + https://keyserver.lucidcentral.org/key-server/data/0e090d01-
+  - cultural + Transplant seedlings older than 3 weeks.
+  - cultural + Plant neighbouring fields within about 3 weeks of 
+  - cultural + Plough in infected stubble right after harvest.
+  - cultural + Rotate with a non-rice crop in the dry season.
+  - no-chemical statement
+  - GAP: Fenthion and Phorate are named by TNAU for tungro but cibname.py says BANNED, so dropped.
+  - GAP: NIPHM names no insecticide for green leafhopper/tungro, so no second Indian insecticide source.
+  - GAP: TNAU also lists foliar urea with mancozeb and potassium nitrate to reduce yellowing; not added (symptom relief only, exact quotes not secured).
+  - GAP: 'No cure' line is from a foreign factsheet (Lucid), not an Indian page.
+  - GAP: Carbofuran: the CIB&RC check is name-only; farmer must confirm label for rice/nursery use and state restrictions.
+## sugarcane__mosaic
+  - source + https://www.ijcrt.org/papers/IJCRT2405856.pdf
+  - source + https://sasri.org.za/wp-content/uploads/Information_Sheets/I
+  - source + https://plantix.net/en/library/plant-diseases/200031/sugarca
+  - source + https://link.springer.com/article/10.1007/BF03186253
+  - cultural + Plant healthy, disease-free seed cane.
+  - cultural + Plant resistant varieties.
+  - cultural + Pull out and remove infected plants early when onl
+  - cultural + Control weeds in and around the field.
+  - cultural + Where mosaic is widespread, replant with a more re
+  - no-chemical statement
+  - GAP: No ICAR-SBI/IISR page found that gives mosaic-specific management. The IISR/ISTI page only names strains (SCMV A, B, F) and gives no control.
+  - GAP: The TNAU page already in the KB (orgfarm_agridiseases) could not be opened again (fetch blocked), so its roguing/burning/aphid claims were not re-verified here.
+  - GAP: SBI KRISHI record 60603 is about yellow leaf disease; used only as general support for clean seed, not for mosaic.
+  - GAP: 'No chemical cure' and roguing-versus-replant details come from foreign pages (Plantix, SASRI); the Indian review (IJCRT) is by college authors, not ICAR.
+  - GAP: India has mostly SCSMV with SCMV (Rao et al., Indian Phytopathology abstract); no control info on that page.
+## chilli__cercospora
+  - source + https://apps.lucidcentral.org/pppw_v13/text/web_mini/entitie
+  - cultural + Take seed only from healthy fruit.
+  - cultural + Use a 3-year crop rotation.
+  - cultural + Collect and burn or bury crop remains after harves
+  - GAP: Second source is a Pacific (non-Indian) factsheet. No IIHR/KVK chilli Cercospora page found; the other Indian-region hits were about tobacco frog-eye (C. nicotianae) or a Bangladesh chilli paper, so not used.
+  - GAP: Copper is named by Lucid but not added (no Indian source).
+  - GAP: TNAU page gives % concentrations and a brand name; deliberately not copied.
+## chilli__nutritional_deficiency
+  - treatment + Zinc sulphate
+  - treatment + Gypsum (calcium sulphate)
+  - treatment + Borax
+  - treatment + Ferrous sulphate
+  - treatment + Magnesium sulphate
+  - source + https://agritech.tnau.ac.in/agriculture/pdf/Micronutrients%2
+  - source + https://agritech.tnau.ac.in/horticulture/plant_nutri/chillie
+  - source + https://celkau.in/crops/vegetables/chilli/deficiency.php
+  - cultural + Do a soil analysis first; both KAU and TNAU tie th
+  - cultural + Match the visible sign to the nutrient: for exampl
+  - GAP: Corrective products for nitrogen, phosphorus, potassium, sulphur, manganese, molybdenum are listed on the KAU page but were not added as treatments (only the four named plus magnesium were).
+  - GAP: No ICAR-IIHR or KVK chilli deficiency page found; sources are TNAU and KAU (state agricultural universities).
+  - GAP: TNAU's calcium and zinc lines contain doses; omitted.
+  - GAP: KAU symptom list for chilli differs a little from the KB text (KAU puts leaf drop under magnesium and iron).
+## groundnut__nutrition_deficiency
+  - treatment + Gypsum (calcium sulphate)
+  - source + https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_zin
+  - source + https://agritech.tnau.ac.in/agriculture/plant_nutri/gnut_bor
+  - source + https://agritech.tnau.ac.in/agriculture/agri_nutrientmgt_gro
+  - source + https://celkau.in/crops/oilseeds/Ground%20nut/deficiency.php
+  - source + https://oar.icrisat.org/8718/1/Cultural%20Management%20Pract
+  - cultural + Get a soil test before choosing any nutrient.
+  - cultural + Iron deficiency shows as yellowing between the vei
+  - cultural + Boron shortage shows as small rosetted young leave
+  - cultural + Zinc shortage shows as yellow stripes along veins 
+  - cultural + Gypsum is the usual fix for calcium and sulphur sh
+  - when_to_act set
+  - GAP: TNAU groundnut iron, calcium and sulphur symptom pages could not be confirmed (index page only links names, some to sesame pages), so iron, calcium and sulphur signs come from KAU and ICRISAT.
+  - GAP: KAU quotes are short excerpts shown by the page-reading tool; the KAU symptom lines quoted are partial phrases.
+  - GAP: No ICAR-DGR page with symptom detail was opened; the DGR record 16488 gives only an abstract (chlorosis on calcareous, alkaline soils, multi-micronutrient correction).
+  - GAP: Doses in TNAU/ICRISAT pages omitted.
+## pest__mole_cricket
+  - source + https://agritech.tnau.ac.in/forestry/forest_pest_mole_cricke
+  - source + https://keyserver.lucidcentral.org/key-server/data/0e090d01-
+  - cultural + Keep standing water in the field.
+  - cultural + Shave and plaster bunds with fresh wet soil.
+  - cultural + Level the field and avoid raised nurseries.
+  - cultural + Flood the field so crickets come out, then collect
+  - cultural + Collect nymphs and adults while preparing the land
+  - GAP: TNAU paddy page names no insecticide for the bait. TNAU forestry page names carbaryl dust (different species G. africana, forest nursery); cibname.py says BANNED, so dropped.
+  - GAP: No threshold found.
+  - GAP: TNAU forestry quote 'flooding' is a one-word excerpt; sentence not secured verbatim.
+  - GAP: Indian potato-journal paper on mole cricket (ICAR epubs) could not be read (login page only).
+## pest__wireworm
+  - source + https://ctcri.org/public/publications/2025-02/tf-12_emerging
+  - cultural + Rotate crops.
+  - cultural + Plough the soil to expose the larvae.
+  - GAP: The CTCRI PDF also lists fipronil and chlorpyrifos plus flooding and bird/nematode lines just above the wireworm heading, but the page layout does not tie them to wireworm. Not recorded as treatments.
+  - GAP: Wireworm is a minor pest in India; no ICAR/TNAU/KVK field recommendation or threshold found. The existing USU page remains the only detailed source and is US-based.
+## pest__rice_water_weevil
+  - source + https://gd.eppo.int/taxon/LISSOR/distribution/IN
+  - source + https://www.lsuagcenter.com/topics/crops/rice/insects/presen
+  - source + https://ipm.ucanr.edu/agriculture/rice/rice-water-weevil/
+  - source + https://li01.tci-thaijo.org/index.php/anres/article/view/240
+  - cultural + Delay the permanent flood, but not much past the t
+  - cultural + Avoid late planting of rice.
+  - cultural + Clear weeds from bunds and field edges.
+  - cultural + Ask your KVK before acting; Indian advice for this
+  - GAP: NO Indian page on Lissorhoptrus oryzophilus management found (EPPO says present in India, restricted; reports point to NE India but no ICAR/TNAU/KVK advice).
+  - GAP: All cultural advice is from US pages (LSU, UC) and may not suit Indian fields.
+  - GAP: No insecticide recorded: US pages name chemicals and no Indian page does; not recorded per rules.
+  - GAP: A different Indian pest, rice root weevil (Echinocnemus oryzae), has Indian trial results (seedling dip and soil chemicals incl. chlorpyrifos, cartap hydrochloride) but is not this species; not used as treatment.
+  - GAP: LSU quotes are exact; UC quote is a short excerpt from the page text as returned by the reader.
+
+POSSIBLE DOSE TEXT (review):
+  tomato__spider_mites note: FOLLOW PRODUCT LABEL; no dose. MPUAT Udaipur polyhouse trial (Indian J. Plant Protection): best of the products tested, but only about 62 percent fewer mites. Trial, not an advisory. Name is on the CIB&RC registered list (31.03.2026); crop and pest label claims not checked.

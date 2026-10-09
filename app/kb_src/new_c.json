@@ -1,0 +1,873 @@
+{
+ "entries": [
+  {
+   "class_id": "mango__anthracnose",
+   "crop": "mango",
+   "name_en": "Anthracnose",
+   "type": "fungal",
+   "cause": "Colletotrichum gloeosporioides (fungus)",
+   "symptoms": [
+    "Small blister-like spots appear on leaves and twigs.",
+    "Spots are brown and may turn into shot-holes in leaves.",
+    "Young leaves wither and dry; tender twigs dry back.",
+    "Flowers blight and fall.",
+    "Black spots on fruit; fruit cracks and rots, mostly at ripening."
+   ],
+   "look_alikes": "Powdery mildew has white powder, not brown spots. Die back starts at the twig tip and moves downward.",
+   "cultural_actions": [
+    "Collect and burn diseased plant parts.",
+    "Cover fruits with paper bags before harvest, as the IPM bulletin lists.",
+    "Take care of fruit in transit and storage; rot is common there."
+   ],
+   "treatment_options": [
+    {
+     "kind": "bio",
+     "active_ingredient": "Pseudomonas fluorescens (FP 7)",
+     "note": "Listed by TNAU as a spray on flower branches; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango_1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Copper oxychloride",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Hexaconazole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: spray before and during flowering and fruiting, more in wet weather. Stop pre-harvest sprays in time before harvest, as per label.",
+   "ask_back": [
+    {
+     "question": "Are there brown spots on leaves or black spots on fruit, not white powder?",
+     "if_yes": "consistent",
+     "if_no": "mango__powdery_mildew"
+    },
+    {
+     "question": "Is the whole twig drying from the tip downward with gum on the branch?",
+     "if_yes": "mango__die_back",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Mango anthracnose",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango_1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "TNAU page and IPM bulletin are for Indian conditions; spray timing in the bulletin is general. Check label and local KVK."
+  },
+  {
+   "class_id": "mango__bacterial_canker",
+   "crop": "mango",
+   "name_en": "Bacterial canker",
+   "type": "bacterial",
+   "cause": "Xanthomonas campestris pv. mangiferaeindicae (bacterium)",
+   "symptoms": [
+    "Water-soaked, irregular to angular raised spots appear on leaves.",
+    "Spots enlarge into dark brown cankerous patches.",
+    "Fruit gets dark brown to black water-soaked spots.",
+    "Spots on fruit become raised or flat cankers.",
+    "Gummy bacterial ooze may come out of fruit spots."
+   ],
+   "look_alikes": "Anthracnose spots are brown and often shot-hole; canker spots are water-soaked, angular and raised.",
+   "cultural_actions": [
+    "Inspect orchard often and keep it clean.",
+    "Plant certified seedlings; use healthy mango stones for rootstock.",
+    "Use windbreaks to reduce wounding of leaves and fruit."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Streptocycline",
+     "note": "Listed in IPM bulletin as an antibiotic spray; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Copper oxychloride",
+     "note": "Listed for severe infection; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Bacillus coagulans",
+     "note": "Antagonistic bacterium listed in IPM bulletin; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: preventive sprays in the growing season, with intensive spraying in May-June (northern India bulletin).",
+   "ask_back": [
+    {
+     "question": "Are the leaf spots water-soaked, angular and slightly raised?",
+     "if_yes": "consistent",
+     "if_no": "mango__anthracnose"
+    },
+    {
+     "question": "Do fruit spots ooze gum?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Single source only (national IPM bulletin hosted by TNAU). Antibiotic and copper products: check CIB&RC registration for mango and ask your KVK."
+  },
+  {
+   "class_id": "mango__die_back",
+   "crop": "mango",
+   "name_en": "Die back",
+   "type": "fungal",
+   "cause": "Lasiodiplodia theobromae (fungus)",
+   "symptoms": [
+    "Twigs dry from the top downward.",
+    "Leaves dry later and look scorched.",
+    "Wood inside the twig turns brown when cut.",
+    "Gum oozes from branches before they die."
+   ],
+   "look_alikes": "Anthracnose also dries tender twigs, but with leaf and fruit spots. Die back moves down the branch and browns the wood.",
+   "cultural_actions": [
+    "Use disease-free scion wood for grafting.",
+    "Prune the dying branch, cutting well below the infected part into healthy wood.",
+    "Collect and burn all pruned branches.",
+    "Protect cut ends with paste, as listed in the IPM bulletin."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Copper oxychloride",
+     "note": "Listed for spraying or pasting cut ends; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: most visible in October-November; prune promptly and keep preventive care through the year.",
+   "ask_back": [
+    {
+     "question": "Is the twig drying from the tip downward with browned wood inside?",
+     "if_yes": "consistent",
+     "if_no": "mango__anthracnose"
+    },
+    {
+     "question": "Are there brown shot-hole spots on leaves or black spots on fruit?",
+     "if_yes": "mango__anthracnose",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Mango anthracnose",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango_1.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "IPM bulletin is the main source. Cow dung paste on cut ends is also mentioned there. Check with local KVK."
+  },
+  {
+   "class_id": "mango__powdery_mildew",
+   "crop": "mango",
+   "name_en": "Powdery mildew",
+   "type": "fungal",
+   "cause": "Oidium mangiferae (fungus)",
+   "symptoms": [
+    "White powdery growth on flower panicles, leaves and young fruit.",
+    "Affected flowers do not open and drop early.",
+    "Young fruit stops growing and may drop when very small.",
+    "Young leaves show purplish-brown patches and curl.",
+    "Infected fruit can crack and become corky."
+   ],
+   "look_alikes": "Sooty mould is a black coating, not white powder. Anthracnose gives brown spots.",
+   "cultural_actions": [
+    "Prune diseased leaves and malformed panicles to cut the source of spores.",
+    "Do not spray during full bloom, as the IPM bulletin advises."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Sulphur (wettable sulphur or sulphur dust)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango_2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango_2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Tridemorph",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango_2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Dinocap (karathane)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: first spray at early panicle stage, repeat as label says; worst in late March in northern plains. TNAU: dust shortly after flowering.",
+   "ask_back": [
+    {
+     "question": "Is there a white powder on panicles or young leaves?",
+     "if_yes": "consistent",
+     "if_no": "mango__sooty_mould"
+    },
+    {
+     "question": "Is the coating black and wipes off like soot?",
+     "if_yes": "mango__sooty_mould",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Mango powdery mildew",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Timing is from a northern India bulletin; flowering time differs by region. Confirm with local KVK."
+  },
+  {
+   "class_id": "mango__sooty_mould",
+   "crop": "mango",
+   "name_en": "Sooty mould",
+   "type": "fungal",
+   "cause": "Capnodium mangiferae (fungus) growing on insect honeydew",
+   "symptoms": [
+    "Thin black velvety coating on leaves, stems and fruits.",
+    "Black layer grows on sugary honeydew left by insects.",
+    "Coating reduces light reaching the leaf.",
+    "Insects such as hoppers, aphids or scales are often present."
+   ],
+   "look_alikes": "Powdery mildew is white powder. Sooty mould is black and can be flaked off.",
+   "cultural_actions": [
+    "Control the honeydew-making insects first; the mould follows them.",
+    "Avoid dense planting and keep the orchard clean, as TNAU says for hoppers."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Methyl demeton",
+     "note": "Listed by TNAU to kill honeydew-making insects; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango_7.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Monocrotophos",
+     "note": "Listed in IPM bulletin for honeydew insects; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Starch spray",
+     "note": "TNAU: starch dries and flakes off with the fungus; FOLLOW PRODUCT LABEL or extension advice; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango_7.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Wettable sulphur",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: treat when honeydew-making insects first appear.",
+   "ask_back": [
+    {
+     "question": "Is the black coating thin and can it be flaked off?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is the coating white and powdery instead of black?",
+     "if_yes": "mango__powdery_mildew",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Mango sooty mould",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango_7.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Mango hoppers",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_4.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Some older insecticides listed may be restricted; confirm registration with CIB&RC or your KVK first."
+  },
+  {
+   "class_id": "mango__healthy",
+   "crop": "mango",
+   "name_en": "Healthy mango leaf",
+   "type": "healthy",
+   "cause": "No disease or pest damage seen",
+   "symptoms": [
+    "Leaves are free of brown, black or angular spots.",
+    "No white powder on leaves or flower panicles.",
+    "No black sooty coating on leaves or stems.",
+    "No galls, cut edges or holes on leaves.",
+    "Twigs are green; tips are not drying back."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Scout leaves, new flush and panicles regularly.",
+    "Look closely at panicle emergence and flowering for midge, hoppers and mildew.",
+    "Prune and burn dead twigs.",
+    "Keep the orchard clean and plantings not too dense."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Do you see white powder, black coating or brown spots?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Are there small galls or cut leaf edges?",
+     "if_yes": "mango__gall_midge",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Mango hoppers",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Mango anthracnose",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango_1.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Healthy description is built from the absence of symptoms the TNAU pages list; no page gave a healthy leaf description."
+  },
+  {
+   "class_id": "mango__cutting_weevil",
+   "crop": "mango",
+   "name_en": "Leaf-cutting weevil damage",
+   "type": "pest",
+   "cause": "Leaf-cutting weevil, Deporaus marginatus (beetle)",
+   "symptoms": [
+    "Tender pinkish new leaves have small cavities near the midrib underneath.",
+    "Leaf is then cut off near its base.",
+    "Young shoots lose leaves and get weak.",
+    "Young grafts and young trees are hit more than old trees."
+   ],
+   "look_alikes": "Leaf twisting weevil rolls and twists terminal leaves; leaf-cutting weevil cuts the leaf off.",
+   "cultural_actions": [
+    "Check tender flush on grafted seedlings and young trees.",
+    "A Bangladesh trial found netting or perforated bags over shoots protected them.",
+    "Prefer varieties that are less attacked; susceptibility differs among varieties."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbaryl",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: act when damage appears on young leaves of grafted seedlings and young trees; April is mentioned.",
+   "ask_back": [
+    {
+     "question": "Are young pink leaves cut off near the base?",
+     "if_yes": "consistent",
+     "if_no": "mango__gall_midge"
+    },
+    {
+     "question": "Are the terminal leaves twisted and rolled instead of cut?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    },
+    {
+     "title": "Susceptibility of Different Varieties of Mango to Leaf Cutting Weevil and its Control (Bangladesh)",
+     "url": "https://scialert.net/fulltext/?doi=pjbs.2003.712.714",
+     "publisher": "other"
+    },
+    {
+     "title": "TNAU Agritech - Mango leaf twisting weevil",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_12.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "IPM bulletin gives only brief detail; damage description is from a Bangladesh study, not Indian. Check with local KVK."
+  },
+  {
+   "class_id": "mango__gall_midge",
+   "crop": "mango",
+   "name_en": "Gall midge damage",
+   "type": "pest",
+   "cause": "Gall midges: leaf gall midge and inflorescence midges (tiny flies)",
+   "symptoms": [
+    "Small galls appear on leaves.",
+    "Flower buds fail to open and drop.",
+    "Midge maggots feed inside flower stalks, flowers and small fruits.",
+    "Damaged flower stalks are stunted and bent.",
+    "Maggots are yellowish; adults look like tiny mosquitoes."
+   ],
+   "look_alikes": "Mango hoppers also shed flowers but suck sap and leave honeydew; midges leave galls and maggots.",
+   "cultural_actions": [
+    "Collect and destroy infested flowers, shoots and leaves.",
+    "Deep plough around trees in Oct-Nov, as the IPM bulletin says.",
+    "Watch for the first attack at early panicle emergence."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Methyl demeton",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_11.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos dust",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "IPM bulletin: first attack is at early panicle emergence; dimethoate spray at bud burst stage. Remove damaged parts first.",
+   "ask_back": [
+    {
+     "question": "Do you see galls on leaves or maggots in flower stalks?",
+     "if_yes": "consistent",
+     "if_no": "mango__cutting_weevil"
+    },
+    {
+     "question": "Is there sticky honeydew with black coating on leaves?",
+     "if_yes": "mango__sooty_mould",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Mango leaf gall midges",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_11.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Mango inflorescence midge",
+     "url": "https://agritech.tnau.ac.in/crop_protection/mango/mango_5.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Extension Bulletin No. 1: IPM Schedule for Mango Pests (hosted on TNAU Agritech)",
+     "url": "https://agritech.tnau.ac.in/horticulture/pdf/tech_bulletin/national/IPM-Mango-Revised-Sept2011.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Written for Indian conditions; timing words are from the IPM bulletin. Check label and local KVK."
+  },
+  {
+   "class_id": "sugarcane__healthy",
+   "crop": "sugarcane",
+   "name_en": "Healthy sugarcane leaf",
+   "type": "healthy",
+   "cause": "No disease seen",
+   "symptoms": [
+    "Leaves are green, with no yellow midrib.",
+    "No orange-brown pustules on the leaf underside.",
+    "No yellow-green stripes or mottling on leaves.",
+    "Leaves do not turn orange then yellow from the top.",
+    "Plant grows normally, not stunted."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [
+    "Plant healthy setts from disease-free areas.",
+    "Choose resistant varieties.",
+    "Keep field clean and drained; remove excess trash.",
+    "Scout regularly and remove affected clumps early.",
+    "Watch for aphids on leaves."
+   ],
+   "treatment_options": [],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Is there a yellow midrib, orange pustules or yellow-green stripes?",
+     "if_yes": "uncertain",
+     "if_no": "consistent"
+    },
+    {
+     "question": "Do leaves turn orange then yellow from the top?",
+     "if_yes": "sugarcane__redrot",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Sugarcane yellow leaf disease",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Sugarcane red rot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Sugarcane rust",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d3.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Healthy description is built from the absence of symptoms TNAU lists; TNAU pages are written for Tamil Nadu."
+  },
+  {
+   "class_id": "sugarcane__mosaic",
+   "crop": "sugarcane",
+   "name_en": "Mosaic",
+   "type": "viral",
+   "cause": "Sugarcane mosaic virus; in India also Sugarcane streak mosaic virus",
+   "symptoms": [
+    "Pale yellow stripes alternate with normal green areas on young leaves.",
+    "Stripes can spread to leaf sheaths and stalks.",
+    "Plant looks stunted and pale.",
+    "Severe cases show dead streaks on stalks and stem splitting."
+   ],
+   "look_alikes": "Yellow leaf disease turns the midrib yellow. Mosaic gives stripes and mottles across the leaf blade.",
+   "cultural_actions": [
+    "Plant virus-free setts; use resistant or tolerant varieties.",
+    "Remove and burn infected plants and clumps.",
+    "Do not keep ratoon from a diseased crop.",
+    "Control aphids early.",
+    "Test new varieties for resistance before large-scale planting."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Sources give no spray timing. Remove infected plants early by roguing.",
+   "ask_back": [
+    {
+     "question": "Are there pale yellow stripes alternating with green on young leaves?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is the midrib itself yellow, with leaves drying from the midrib?",
+     "if_yes": "sugarcane__yellow",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Disease management of agricultural crops (sugarcane mosaic)",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "ICAR KRISHI - Scoring system for sugarcane mosaic disease",
+     "url": "https://krishi.icar.gov.in/jspui/handle/123456789/68044",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "Diseases of Sugarcane (lecture notes, Bangladesh university)",
+     "url": "https://gau.edu.bd/tanbir/wp-content/uploads/sites/170/2021/09/18-21-Diseases-of-Sugarcane.pdf",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Symptom and spread details come from an unsigned Bangladesh university note; TNAU and ICAR pages did not describe symptoms. No insecticide listed for mosaic."
+  },
+  {
+   "class_id": "sugarcane__redrot",
+   "crop": "sugarcane",
+   "name_en": "Red rot",
+   "type": "fungal",
+   "cause": "Glomerella tucumanensis, formerly Colletotrichum falcatum (fungus)",
+   "symptoms": [
+    "Leaf colour changes from green to orange, then yellow, in the third or fourth leaf.",
+    "Inside the cane, tissue is reddish with white patches across the length.",
+    "Affected canes dry and break down."
+   ],
+   "look_alikes": "Yellow leaf disease yellows the midrib. Red rot is confirmed by reddish inner tissue when you split the cane.",
+   "cultural_actions": [
+    "Use setts from disease-free areas; grow resistant varieties.",
+    "Remove infected clumps early and burn affected plant material.",
+    "Rotate affected fields with rice or other crops.",
+    "Clear excess trash and keep good drainage.",
+    "Avoid ratooning infected fields; bund off affected fields."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Carbendazim",
+     "note": "TNAU lists it for sett treatment and soil drench around removed clumps; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d4.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Bordeaux mixture",
+     "note": "TNAU lists a sett dip before planting; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d4.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU: treat setts before planting; remove infected clumps early.",
+   "ask_back": [
+    {
+     "question": "When you split the cane, is the inside red with white patches?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are leaves mainly yellow along the midrib with no red inside the cane?",
+     "if_yes": "sugarcane__yellow",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Sugarcane red rot",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d4.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Sugarcane expert system",
+     "url": "https://agritech.tnau.ac.in/expert_system/sugar/cropprotection.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Disease management of agricultural crops",
+     "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu; variety names there are for tropical India. Check local KVK."
+  },
+  {
+   "class_id": "sugarcane__rust",
+   "crop": "sugarcane",
+   "name_en": "Rust",
+   "type": "fungal",
+   "cause": "Puccinia erianthi (fungus); brown or orange rust",
+   "symptoms": [
+    "Small yellowish spots appear on both sides of the leaf.",
+    "Spots turn brown, orange-brown or red-brown.",
+    "Orange-brown pustules form mostly on the underside of leaves.",
+    "Spots join into large dead patches; leaves die early."
+   ],
+   "look_alikes": "Red rot shows orange-yellow leaves but with red tissue inside the cane. Rust has pustules on leaves.",
+   "cultural_actions": [
+    "Grow resistant varieties.",
+    "Remove affected leaves and burn them at once.",
+    "Avoid applying mill mud, as TNAU says it raises susceptibility."
+   ],
+   "treatment_options": [
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Tridemorph",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d3.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Mancozeb",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d3.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Triazole fungicides",
+     "note": "Listed by TNAU as a class; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d3.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "fungicide",
+     "active_ingredient": "Pyraclostrobin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d3.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": null,
+   "ask_back": [
+    {
+     "question": "Are there orange-brown pustules on the leaf underside?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is the leaf yellow along the midrib with no pustules?",
+     "if_yes": "sugarcane__yellow",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Sugarcane rust",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Sugarcane expert system",
+     "url": "https://agritech.tnau.ac.in/expert_system/sugar/cropprotection.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "TNAU gives no spray timing. Written for Tamil Nadu; check variety and label with local KVK."
+  },
+  {
+   "class_id": "sugarcane__yellow",
+   "crop": "sugarcane",
+   "name_en": "Yellow leaf disease",
+   "type": "viral",
+   "cause": "Sugarcane yellow leaf virus (SCYLV), spread by aphids",
+   "symptoms": [
+    "Midrib turns yellow, with yellowing in nearby leaf blade.",
+    "Three to five top leaves dry along the midrib.",
+    "Reddish colour may show; growth is stunted.",
+    "Spindle may dry in severe cases; top may look bunchy.",
+    "Shows in crop of about five to six months and worsens with age."
+   ],
+   "look_alikes": "Red rot leaves go orange then yellow but cane is red inside. Mosaic gives stripes, not a yellow midrib.",
+   "cultural_actions": [
+    "Use disease-free setts and keep the field clean.",
+    "Raise seed in a nursery before moving to the main field.",
+    "Use tissue culture plants, especially meristem culture, if available.",
+    "Grow resistant varieties and manage nutrition well.",
+    "Control the aphid vectors."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Malathion",
+     "note": "TNAU lists it against aphid vectors, not the virus; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimecron",
+     "note": "Product name as written by TNAU; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbofuran",
+     "note": "TNAU lists soil application; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Phorate",
+     "note": "TNAU lists soil application; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d1.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU mentions malathion sprays after detrashing in September-October. No other threshold given.",
+   "ask_back": [
+    {
+     "question": "Is the midrib yellow, with the top leaves drying from the midrib?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are there yellow-green stripes across the leaf blade instead?",
+     "if_yes": "sugarcane__mosaic",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Sugarcane yellow leaf disease",
+     "url": "https://agritech.tnau.ac.in/crop_protection/sugarcane_diseases/sugarcane_d1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "Present Status and Future Management Strategies for Sugarcane Yellow Leaf Virus (review)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7721539/",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "Both pages name a virus (SCYLV); neither opened page mentions phytoplasma. The disease cannot be cured; insecticides target the aphid. TNAU is for Tamil Nadu."
+  }
+ ]
+}

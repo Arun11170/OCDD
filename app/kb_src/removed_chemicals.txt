@@ -1,0 +1,6 @@
+rice__rice_tungro: Carbofuran
+rice__rice_tungro: Fenthion
+mango__sooty_mould: Monocrotophos
+sugarcane__yellow: Carbofuran
+pest__planthopper: Phosphamidon
+pest__white_grub: Carbofuran

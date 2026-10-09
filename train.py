@@ -23,6 +23,19 @@ TOMATO_MAP = [
 ]
 
 
+# Pest classes that even experts cannot tell apart from a photo are merged into the group a farmer can act on
+PEST_MERGE = {
+    "black_cutworm": "cutworm", "large_cutworm": "cutworm", "yellow_cutworm": "cutworm",
+    "brown_plant_hopper": "planthopper", "small_brown_plant_hopper": "planthopper", "white_backed_plant_hopper": "planthopper",
+    "asiatic_rice_borer": "rice_stem_borer", "yellow_rice_borer": "rice_stem_borer", "paddy_stem_maggot": "rice_stem_borer",
+    "rice_leaf_roller": "rice_leaf_folder", "rice_leaf_caterpillar": "rice_leaf_folder",
+    "thrips": "thrips", "thrips_scirtothrips_dorsalis": "thrips", "grain_spreader_thrips": "thrips",
+    "leafhoppers": "leafhopper", "rice_leafhopper": "leafhopper",
+    "mango_flat_beak_leafhopper": "mango_hopper", "lawana_imitata": "mango_hopper", "salurnis_marginella": "mango_hopper",
+    "mango_shoot_borer": "mango_borer", "mango_stem_borer": "mango_borer",
+}
+
+
 def unify(crop, label):
     if crop == "tomato":
         if label.startswith("mh_"):
@@ -34,6 +47,12 @@ def unify(crop, label):
             if key in core:
                 return "tomato__" + out
         return None
+    if crop == "pest":
+        label = PEST_MERGE.get(label, label)
+    if label.startswith("pvall_"):
+        label = label[len("pvall_"):]
+    if crop == "maize":
+        label = {"northern_leaf_blight": "blight", "cercospora_leaf_spot_gray_leaf_spot": "gray_leaf_spot"}.get(label, label)
     if crop == "chilli" and label == "cerocospora":
         label = "cercospora"
     return "%s__%s" % (crop, label)
@@ -91,11 +110,21 @@ def main():
     ap.add_argument("--epochs", type=int, default=15)
     ap.add_argument("--batch", type=int, default=64)
     ap.add_argument("--lr", type=float, default=1e-3)
-    ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--workers", type=int, default=0, help="0 = automatic (CPU threads and free RAM)")
     ap.add_argument("--limit", type=int, default=0, help="use only N images per class (quick test)")
     ap.add_argument("--no-pretrained", action="store_true")
     ap.add_argument("--out", default="run1")
+    ap.add_argument("--sampling-power", type=float, default=0.5, help="rare-class boost: per-image weight = 1/count^p (0.5 = old, 0.75 = stronger)")
+    ap.add_argument("--arch", default="mobilenet_v3_large", choices=["mobilenet_v3_large", "efficientnet_v2_s", "efficientnet_b0"])
+    ap.add_argument("--crop", default="", help="train a small specialist: only this crop's classes plus the pest classes")
+    ap.add_argument("--crops", default="", help="comma list: train ONE model for just these crops (e.g. rice,okra,chilli)")
+    ap.add_argument("--no-pests", action="store_true", help="with --crops: leave the pest classes out")
+    ap.add_argument("--img", type=int, default=224, help="input size in pixels (224 = normal; 320 = larger photos for small spots)")
+    ap.add_argument("--interim", default="interim", help="folder under data\\ holding manifest.csv (interim, interim_v2 or interim_v3)")
+    ap.add_argument("--fresh", action="store_true", help="ignore a saved last.pt and start from epoch 1")
     a = ap.parse_args()
+    from ctl import lower_priority, pause_requested, exit_paused, atomic_save
+    lower_priority()
 
     import torch.nn as nn, torch.nn.functional as F
     from torch.utils.data import DataLoader, WeightedRandomSampler
@@ -104,14 +133,22 @@ def main():
     random.seed(0); np.random.seed(0); torch.manual_seed(0)
     dev = "cuda" if torch.cuda.is_available() else "cpu"
     print("device:", dev, torch.cuda.get_device_name(0) if dev == "cuda" else "")
+    if dev == "cuda": torch.backends.cudnn.benchmark = True      # faster convolutions for fixed-size images
 
-    interim = os.path.join(a.root, "data", "interim")
+    interim = os.path.join(a.root, "data", a.interim)
     rows = []
     with open(os.path.join(interim, "manifest.csv"), newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             r["cls"] = unify(r["crop"], r["label"])
             if r["cls"] is not None and r["split"] != "field_test":
                 rows.append(r)
+    if a.crop:
+        rows = [r for r in rows if r["cls"].split("__")[0] in (a.crop, "pest")]
+        print("specialist for", a.crop, "->", len(rows), "images")
+    if a.crops:
+        keep_c = set(a.crops.split(",")) | (set() if a.no_pests else {"pest"})
+        rows = [r for r in rows if r["cls"].split("__")[0] in keep_c]
+        print("model for crops", sorted(keep_c), "->", len(rows), "images")
     if a.limit:
         seen = {}
         keep = []
@@ -121,7 +158,8 @@ def main():
         rows = keep
     classes = sorted({r["cls"] for r in rows})
     cidx = {c: i for i, c in enumerate(classes)}
-    cache = os.path.join(interim, "cache256")
+    csize = 256 if a.img == 224 else int(round(a.img * 1.15))
+    cache = os.path.join(a.root, "data", "interim", "cache%d" % csize)   # shared cache (names are hashed from the path)
     for r in rows:
         r["y"] = cidx[r["cls"]]; r["cache"] = cpath(cache, r["path"])
     out = os.path.join(a.root, "training", a.out); os.makedirs(out, exist_ok=True)
@@ -129,16 +167,16 @@ def main():
     print("%d classes, %d images" % (len(classes), len(rows)))
     for sp in ("train", "val", "test"):
         print("  %-5s %d" % (sp, sum(1 for r in rows if r["split"] == sp)))
-    build_cache(rows, cache)
+    build_cache(rows, cache, csize)
 
     mean, std = (0.485, 0.456, 0.406), (0.229, 0.224, 0.225)
     tr_tf = T.Compose([
-        T.RandomResizedCrop(224, scale=(0.45, 1.0), ratio=(0.75, 1.33)),
+        T.RandomResizedCrop(a.img, scale=(0.45, 1.0), ratio=(0.75, 1.33)),
         T.RandomHorizontalFlip(), T.RandomVerticalFlip(0.3), T.RandomRotation(25),
         T.ColorJitter(0.35, 0.35, 0.3, 0.04),
         T.RandomApply([T.GaussianBlur(5, (0.1, 1.8))], p=0.25),
         T.ToTensor(), T.Normalize(mean, std), T.RandomErasing(p=0.2, scale=(0.02, 0.12))])
-    ev_tf = T.Compose([T.Resize(256), T.CenterCrop(224), T.ToTensor(), T.Normalize(mean, std)])
+    ev_tf = T.Compose([T.Resize(int(round(a.img * 256 / 224))), T.CenterCrop(a.img), T.ToTensor(), T.Normalize(mean, std)])
 
     tr, va, te = ([r for r in rows if r["split"] == s] for s in ("train", "val", "test"))
     if not (tr and va and te):
@@ -146,16 +184,27 @@ def main():
     # class-balanced sampling (square-root inverse frequency): rare diseases are seen more often
     cnt = {}
     for r in tr: cnt[r["y"]] = cnt.get(r["y"], 0) + 1
-    w = np.array([1.0 / np.sqrt(cnt[r["y"]]) for r in tr])
+    w = np.array([1.0 / (cnt[r["y"]] ** a.sampling_power) for r in tr])
     sampler = WeightedRandomSampler(w, num_samples=len(tr), replacement=True)
-    nw = a.workers
+    from progress import Beat, auto_workers
+    nw = a.workers or auto_workers()
+    # only the training loader keeps its workers alive. Validation/test loaders use a few short-lived workers:
+    # three full sets of persistent workers (e.g. 3 x 9 = 27 processes, each importing torch) exhausted Windows memory (WinError 1455)
     kw = dict(num_workers=nw, pin_memory=(dev == "cuda"), persistent_workers=nw > 0)
+    kw_ev = dict(num_workers=min(nw, 3), pin_memory=(dev == "cuda"), persistent_workers=False)
     dl_tr = DataLoader(DS(tr, tr_tf), batch_size=a.batch, sampler=sampler, drop_last=True, **kw)
-    dl_va = DataLoader(DS(va, ev_tf), batch_size=128, **kw)
-    dl_te = DataLoader(DS(te, ev_tf), batch_size=128, **kw)
+    dl_va = DataLoader(DS(va, ev_tf), batch_size=128, **kw_ev)
+    dl_te = DataLoader(DS(te, ev_tf), batch_size=128, **kw_ev)
 
-    model = models.mobilenet_v3_large(weights=None if a.no_pretrained else models.MobileNet_V3_Large_Weights.IMAGENET1K_V2)
-    model.classifier[3] = nn.Linear(model.classifier[3].in_features, len(classes))
+    if a.arch == "mobilenet_v3_large":
+        model = models.mobilenet_v3_large(weights=None if a.no_pretrained else models.MobileNet_V3_Large_Weights.IMAGENET1K_V2)
+        model.classifier[3] = nn.Linear(model.classifier[3].in_features, len(classes))
+    elif a.arch == "efficientnet_v2_s":
+        model = models.efficientnet_v2_s(weights=None if a.no_pretrained else models.EfficientNet_V2_S_Weights.IMAGENET1K_V1)
+        model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
+    else:
+        model = models.efficientnet_b0(weights=None if a.no_pretrained else models.EfficientNet_B0_Weights.IMAGENET1K_V1)
+        model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
     model = model.to(dev)
     opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.02)
     steps = a.epochs * len(dl_tr)
@@ -171,23 +220,40 @@ def main():
                 Y.append(y)
         return torch.cat(L), torch.cat(Y)
 
-    best, best_ep = -1, 0
-    for ep in range(a.epochs):
+    best, best_ep, start_ep = -1, 0, 0
+    last = os.path.join(out, "last.pt")
+    sig = {"arch": a.arch, "classes": classes, "epochs": a.epochs, "batch": a.batch, "lr": a.lr, "img": a.img}
+    if os.path.isfile(last) and not a.fresh:
+        ck = torch.load(last, map_location=dev, weights_only=False)
+        if ck.get("sig") == sig:
+            model.load_state_dict(ck["model"]); opt.load_state_dict(ck["opt"]); sched.load_state_dict(ck["sched"]); scaler.load_state_dict(ck["scaler"])
+            start_ep, best, best_ep = ck["ep"], ck["best"], ck["best_ep"]
+            print("RESUMING %s from epoch %d of %d (best so far: epoch %d, macro-F1 %.3f)" % (a.out, start_ep + 1, a.epochs, best_ep, best), flush=True)
+        else:
+            print("saved last.pt belongs to a different setup (classes/arch/epochs changed): starting fresh", flush=True)
+    beat = Beat(a.out, a.epochs, start_ep=start_ep)
+    for ep in range(start_ep, a.epochs):
         model.train(); t0 = time.time(); tot = 0; n = 0
-        for x, y in dl_tr:
+        for bi, (x, y) in enumerate(dl_tr):
             x, y = x.to(dev, non_blocking=True), y.to(dev, non_blocking=True)
             with torch.autocast(device_type=dev, enabled=(dev == "cuda")):
                 loss = F.cross_entropy(model(x), y, label_smoothing=0.1)
             opt.zero_grad(set_to_none=True)
             scaler.scale(loss).backward(); scaler.step(opt); scaler.update(); sched.step()
             tot += loss.item() * len(y); n += len(y)
+            beat.tick(ep, bi, len(dl_tr), tot / n)
         L, Y = logits_of(dl_va)
         pred = L.argmax(1).numpy()
         f1 = macro_f1(Y.numpy(), pred, len(classes)); acc = (pred == Y.numpy()).mean()
-        print("epoch %2d/%d  loss %.3f  val acc %.3f  macro-F1 %.3f  (%.0fs)" % (ep + 1, a.epochs, tot / n, acc, f1, time.time() - t0))
+        print(flush=True)
+        print("epoch %2d/%d  loss %.3f  val acc %.3f  macro-F1 %.3f  (%.0fs)" % (ep + 1, a.epochs, tot / n, acc, f1, time.time() - t0), flush=True)
         if f1 > best:
             best, best_ep = f1, ep + 1
-            torch.save({"model": model.state_dict(), "classes": classes}, os.path.join(out, "best.pt"))
+            atomic_save({"model": model.state_dict(), "classes": classes}, os.path.join(out, "best.pt"))
+        atomic_save({"model": model.state_dict(), "opt": opt.state_dict(), "sched": sched.state_dict(), "scaler": scaler.state_dict(),
+                     "ep": ep + 1, "best": best, "best_ep": best_ep, "sig": sig}, last)
+        if pause_requested() and ep + 1 < a.epochs:
+            exit_paused("epoch %d of %d of %s" % (ep + 1, a.epochs, a.out))
 
     # ---------- final evaluation with the best epoch ----------
     model.load_state_dict(torch.load(os.path.join(out, "best.pt"), map_location=dev)["model"])

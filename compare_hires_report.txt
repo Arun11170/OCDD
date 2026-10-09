@@ -1,0 +1,8 @@
+same unseen test photos, each model chooses only among the crop's own classes (no pests)
+crop           n | general: right / right|ans | 320px: right / right|ans | difference
+rice         426 |       80.0%       87.4% |       82.2%       88.8% | +2.1 points 
+okra         502 |       85.9%       88.4% |       85.5%       87.5% | -0.4 points 
+chilli       576 |       81.6%       84.2% |       83.3%       87.5% | +1.7 points 
+groundnut    456 |       92.3%       94.6% |       94.3%       95.3% | +2.0 points 
+
+VERDICT: NO real gain: keep the general model, do not ship the 320px model.

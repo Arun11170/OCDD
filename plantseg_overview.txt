@@ -1,0 +1,284 @@
+folders:
+   /Plantseg 4
+   /Plantseg/annotations 3
+   /Plantseg/images 3
+   /Plantseg/json 3
+meta files: ['/sessions/rcw-01btuve3flsgcbfoqdgs3zsu/mnt/OCDD/data/raw/plantseg/data/Plantseg/Metadata.csv']
+columns: ['Name', 'Index', 'Plant', 'Disease', 'Resolution', 'Label file', 'Mask ratio', 'URL', 'License', 'Split']  rows: 11458
+first rows:
+   {'Name': 'apple_black_rot_1.jpg', 'Index': '0', 'Plant': 'Apple', 'Disease': 'apple black rot', 'Resolution': '640x480', 'Label file': 'apple_black_rot_1.png', 'Mask ratio': '0.040439453125', 'URL': 'http://www.my478.com/html/20210418/372066.html', 'License': 'CC-BY', 'Split': 'Training'}
+   {'Name': 'apple_black_rot_11.jpg', 'Index': '0', 'Plant': 'Apple', 'Disease': 'apple black rot', 'Resolution': '1080x755', 'Label file': 'apple_black_rot_11.png', 'Mask ratio': '0.0575496688741721', 'URL': 'http://dy.163.com/v2/article/detail/EJ3OGOG60512L8KT.html', 'License': 'CC-BY', 'Split': 'Training'}
+   {'Name': 'apple_black_rot_12.jpg', 'Index': '0', 'Plant': 'Apple', 'Disease': 'apple black rot', 'Resolution': '1280x719', 'Label file': 'apple_black_rot_12.png', 'Mask ratio': '0.0247913769123783', 'URL': 'http://baijiahao.baidu.com/s?id=1620516093087182765&wfr=spider&for=pc', 'License': 'CC-BY', 'Split': 'Training'}
+
+== Index (114 values)
+     390  38
+     358  110
+     319  104
+     280  59
+     271  107
+     258  3
+     238  86
+     233  13
+     232  108
+     215  106
+     213  113
+     202  47
+     188  50
+     187  97
+     182  48
+     182  67
+     182  89
+     177  46
+     173  66
+     167  5
+     163  98
+     159  43
+     157  6
+     156  99
+     153  85
+     148  109
+     139  2
+     133  39
+     132  105
+     131  27
+     130  45
+     130  101
+     126  75
+     122  58
+     118  40
+     117  76
+     117  87
+     117  103
+     114  64
+     112  15
+     109  96
+     108  49
+     107  44
+     106  36
+     106  55
+      95  114
+      93  102
+      92  54
+      91  60
+      91  83
+      89  1
+      84  28
+      84  62
+      83  0
+      83  81
+      81  71
+      78  69
+      76  14
+      76  82
+      72  30
+      71  4
+      71  61
+      71  84
+      70  111
+      68  57
+      66  93
+      65  23
+      63  9
+      63  10
+      63  100
+      61  26
+      60  7
+      60  29
+      60  51
+      60  92
+      58  12
+      58  90
+      57  72
+      56  11
+      55  8
+      54  32
+      47  20
+      46  52
+      44  112
+      43  21
+      43  22
+      42  18
+      41  95
+      40  78
+      39  63
+      39  91
+      37  80
+      36  19
+      36  33
+      36  35
+      34  74
+      34  77
+      33  37
+      33  53
+      33  73
+      31  16
+      29  24
+      29  34
+      28  17
+      28  94
+      25  56
+      20  42
+      19  31
+      18  79
+      16  25
+      16  70
+      13  65
+       8  68
+       7  41
+
+== Plant (34 values)
+    1792  Wheat
+     901  Tomato
+     788  Soybean
+     616  Corn
+     573  Banana
+     569  Apple
+     564  Grape
+     523  Citrus
+     478  Cucumber
+     454  Peach
+     422  Zucchini
+     304  Coffee
+     276  Cabbage
+     247  Bell pepper
+     243  Potato
+     229  Bean
+     221  Plum
+     211  Blueberry
+     198  Garlic
+     195  Tobacco
+     182  Squash
+     159  Rice
+     151  Carrot
+     139  Cherry
+     139  Eggplant
+     129  Raspberry
+     123  Lettuce
+     114  Maple
+     110  Broccoli
+      97  Strawberry
+      93  Ginger
+      90  Cauliflower
+      65  Celery
+      63  Basil
+
+== Disease (114 values)
+     390  citrus canker
+     358  wheat stripe rust
+     319  wheat head scab
+     280  grape downy mildew
+     271  wheat powdery mildew
+     258  apple scab
+     238  soybean frog eye leaf spot
+     233  bean rust
+     232  wheat septoria blotch
+     215  wheat loose smut
+     213  zucchini powdery mildew
+     202  corn smut
+     188  cucumber powdery mildew
+     187  tomato early blight
+     182  cucumber angular leaf spot
+     182  peach leaf curl
+     182  squash powdery mildew
+     177  corn rust
+     173  peach brown rot
+     167  banana black leaf streak
+     163  tomato late blight
+     159  coffee leaf rust
+     157  banana bunchy top
+     156  tomato leaf mold
+     153  soybean downy mildew
+     148  wheat stem rust
+     139  apple rust
+     133  citrus greening disease
+     132  wheat leaf rust
+     131  cabbage black rot
+     130  corn northern leaf blight
+     130  tomato septoria leaf spot
+     126  potato early blight
+     122  grape black rot
+     118  coffee berry blotch
+     117  potato late blight
+     117  soybean mosaic
+     117  wheat bacterial leaf streak (black chaff)
+     114  maple tar spot
+     112  bell pepper blossom end rot
+     109  tomato bacterial leaf spot
+     108  cucumber bacterial wilt
+     107  corn gray leaf spot
+     106  cherry leaf spot
+     106  garlic rust
+      95  zucchini yellow mosaic virus
+      93  tomato yellow leaf curl virus
+      92  garlic leaf blight
+      91  grape leaf spot
+      91  soybean bacterial blight
+      89  apple mosaic virus
+      84  cabbage downy mildew
+      84  lettuce downy mildew
+      83  apple black rot
+      83  rice blast
+      81  plum brown rot
+      78  peach scab
+      76  bell pepper bacterial spot
+      76  rice sheath blight
+      72  carrot cavity spot
+      71  banana anthracnose
+      71  grapevine leafroll disease
+      71  soybean brown spot
+      70  zucchini bacterial wilt
+      68  ginger sheath blight
+      66  tobacco brown spot
+      65  broccoli alternaria leaf spot
+      63  banana panama disease
+      63  basil downy mildew
+      63  tomato mosaic virus
+      61  cabbage alternaria leaf spot
+      60  banana cigar end rot
+      60  carrot alternaria leaf blight
+      60  eggplant cercospora leaf spot
+      60  tobacco blue mold
+      58  bean mosaic virus
+      58  strawberry anthracnose
+      57  plum pocket disease
+      56  bean halo blight
+      55  banana cordana leaf spot
+      54  cauliflower alternaria leaf spot
+      47  blueberry mummy berry
+      46  eggplant phomopsis fruit rot
+      44  zucchini downy mildew
+      43  blueberry rust
+      43  blueberry scorch
+      42  blueberry anthracnose
+      41  tobacco mosaic virus
+      40  raspberry gray mold
+      39  lettuce mosaic virus
+      39  strawberry leaf scorch
+      37  raspberry yellow rust
+      36  blueberry botrytis blight
+      36  cauliflower bacterial soft rot
+      36  celery early blight
+      34  plum rust
+      34  raspberry fire blight
+      33  cherry powdery mildew
+      33  eggplant phytophthora blight
+      33  plum pox virus
+      31  bell pepper frogeye leaf spot
+      29  broccoli downy mildew
+      29  celery anthracnose
+      28  bell pepper powdery mildew
+      28  tobacco frogeye leaf spot
+      25  ginger leaf spot
+      20  coffee brown eye spot
+      19  carrot cercospora leaf blight
+      18  raspberry leaf spot
+      16  broccoli ring spot
+      16  plum bacterial spot
+      13  peach anthracnose
+       8  peach rust
+       7  coffee black rot
+
+== Split (3 values)
+    7916  Training
+    2295  Test
+    1247  Validation

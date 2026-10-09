@@ -1,0 +1,27 @@
+model: /mnt/d/OCDD/export_v5/vision_fp32.onnx   photos: 4000
+ALL            n= 4000  top1 0.910  top3 0.965 | answers 92.2% of photos, right 0.948 when it answers | says 'not sure' 7.8%
+test           n= 4000  top1 0.910  top3 0.965 | answers 92.2% of photos, right 0.948 when it answers | says 'not sure' 7.8%
+domain field   n= 2592  top1 0.862  top3 0.946 | answers 88.0% of photos, right 0.916 when it answers | says 'not sure' 12.0%
+domain lab     n= 1408  top1 0.999  top3 1.000 | answers 99.9% of photos, right 0.999 when it answers | says 'not sure' 0.1%
+
+per crop (top1):
+apple          n=  155  top1 0.974  top3 0.987 | answers 97.4% of photos, right 0.987 when it answers | says 'not sure' 2.6%
+banana         n=   20  top1 0.900  top3 0.900 | answers 90.0% of photos, right 1.000 when it answers | says 'not sure' 10.0%
+capsicum       n=  119  top1 1.000  top3 1.000 | answers 99.2% of photos, right 1.000 when it answers | says 'not sure' 0.8%
+chilli         n=  170  top1 0.847  top3 0.953 | answers 91.2% of photos, right 0.865 when it answers | says 'not sure' 8.8%
+grape          n=  172  top1 0.994  top3 1.000 | answers 99.4% of photos, right 1.000 when it answers | says 'not sure' 0.6%
+groundnut      n=  114  top1 0.939  top3 1.000 | answers 92.1% of photos, right 0.962 when it answers | says 'not sure' 7.9%
+maize          n=  342  top1 0.965  top3 0.991 | answers 98.5% of photos, right 0.973 when it answers | says 'not sure' 1.5%
+mango          n=  167  top1 0.994  top3 1.000 | answers 99.4% of photos, right 1.000 when it answers | says 'not sure' 0.6%
+okra           n=  150  top1 0.880  top3 0.953 | answers 91.3% of photos, right 0.912 when it answers | says 'not sure' 8.7%
+pest           n= 1405  top1 0.839  top3 0.929 | answers 85.8% of photos, right 0.905 when it answers | says 'not sure' 14.2%
+potato         n=   86  top1 0.977  top3 0.977 | answers 98.8% of photos, right 0.988 when it answers | says 'not sure' 1.2%
+rice           n=   95  top1 0.737  top3 0.926 | answers 75.8% of photos, right 0.806 when it answers | says 'not sure' 24.2%
+sugarcane      n=  106  top1 0.962  top3 1.000 | answers 98.1% of photos, right 0.971 when it answers | says 'not sure' 1.9%
+tomato         n=  855  top1 0.970  top3 0.988 | answers 96.0% of photos, right 0.989 when it answers | says 'not sure' 4.0%
+wheat          n=   44  top1 0.909  top3 1.000 | answers 93.2% of photos, right 0.951 when it answers | says 'not sure' 6.8%
+
+calibration error (ECE, lower is better): 0.021
+weakest classes: pest__gall_midge_dasineura 0.32 (n=19); chilli__nutritional_deficiency 0.48 (n=23); okra__phyllosticta_leaf_spot 0.50 (n=12); okra__alternaria_leaf_spot 0.55 (n=11); rice__rice_tungro 0.60 (n=10); pest__rice_gall_midge 0.65 (n=26); pest__mango_leaf_cutting_weevil 0.67 (n=9); rice__insect 0.67 (n=6); pest__corn_borer 0.70 (n=76); wheat__septoria 0.70 (n=10); pest__rice_water_weevil 0.71 (n=31); rice__rice_blast 0.72 (n=18)
+
+photos that were wrong or 'not sure': 506. Symptom tree reaches the right problem in 79.6% of them (best case, farmer answers as the tables say; real farmers will do worse).

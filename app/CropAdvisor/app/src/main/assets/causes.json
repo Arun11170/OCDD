@@ -1,0 +1,112 @@
+{
+ "tomato__spider_mites": [
+  {
+   "pest": "pest__red_spider_mite",
+   "name_en": "Spider mites",
+   "name_hi": "मकड़ी (माइट)",
+   "rel": "causes"
+  }
+ ],
+ "tomato__yellow_leaf_curl_virus": [
+  {
+   "pest": null,
+   "name_en": "Whitefly",
+   "name_hi": "सफेद मक्खी",
+   "rel": "spreads"
+  }
+ ],
+ "okra__leaf_curly_virus": [
+  {
+   "pest": null,
+   "name_en": "Whitefly",
+   "name_hi": "सफेद मक्खी",
+   "rel": "spreads"
+  }
+ ],
+ "chilli__murda_complex": [
+  {
+   "pest": "pest__thrips",
+   "name_en": "Thrips",
+   "name_hi": "थ्रिप्स",
+   "rel": "causes"
+  },
+  {
+   "pest": "pest__red_spider_mite",
+   "name_en": "Mites",
+   "name_hi": "माइट",
+   "rel": "causes"
+  }
+ ],
+ "sugarcane__mosaic": [
+  {
+   "pest": "pest__aphids",
+   "name_en": "Aphids",
+   "name_hi": "माहू (एफिड)",
+   "rel": "spreads"
+  }
+ ],
+ "sugarcane__yellow": [
+  {
+   "pest": "pest__aphids",
+   "name_en": "Aphids",
+   "name_hi": "माहू (एफिड)",
+   "rel": "spreads"
+  }
+ ],
+ "banana__bract_mosaic_virus_disease": [
+  {
+   "pest": "pest__aphids",
+   "name_en": "Aphids",
+   "name_hi": "माहू (एफिड)",
+   "rel": "spreads"
+  }
+ ],
+ "rice__rice_tungro": [
+  {
+   "pest": "pest__leafhopper",
+   "name_en": "Green leafhopper",
+   "name_hi": "हरा फुदका",
+   "rel": "spreads"
+  }
+ ],
+ "rice__rice_stripes": [
+  {
+   "pest": "pest__planthopper",
+   "name_en": "Planthopper",
+   "name_hi": "भूरा फुदका (प्लांटहॉपर)",
+   "rel": "spreads"
+  }
+ ],
+ "rice__rice_leaffolder": [
+  {
+   "pest": "pest__rice_leaf_folder",
+   "name_en": "Rice leaf folder",
+   "name_hi": "धान की पत्ती लपेटक इल्ली",
+   "rel": "causes"
+  }
+ ],
+ "mango__cutting_weevil": [
+  {
+   "pest": "pest__mango_leaf_cutting_weevil",
+   "name_en": "Mango leaf-cutting weevil",
+   "name_hi": "आम की पत्ती काटने वाला घुन",
+   "rel": "causes"
+  }
+ ],
+ "mango__gall_midge": [
+  {
+   "pest": "pest__gall_midge_dasineura",
+   "name_en": "Gall midge",
+   "name_hi": "गॉल मिज",
+   "rel": "causes"
+  }
+ ],
+ "mango__sooty_mould": [
+  {
+   "pest": "pest__mango_hopper",
+   "name_en": "Mango hopper (its honeydew feeds the mould)",
+   "name_hi": "आम का फुदका (इसका शहद-रस फफूंद को पनपाता है)",
+   "rel": "feeds"
+  }
+ ]
+}

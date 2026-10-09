@@ -1,0 +1,52 @@
+model /sessions/rcw-01btuve3flsgcbfoqdgs3zsu/mnt/OCDD/app/CropAdvisor/app/src/main/assets/vision.onnx, 1500 test photos (field 961, lab 539)
+
+== 1/2. test-time averaging ==
+baseline                           n=1500 top1 0.921 | answers 93.1%, right 0.951 when it answers
+baseline [field]                   n= 961 top1 0.878 | answers 89.6%, right 0.920 when it answers
+flip average                       n=1500 top1 0.919 | answers 91.8%, right 0.959 when it answers
+flip average [field]               n= 961 top1 0.873 | answers 87.7%, right 0.932 when it answers
+flip+zoom average                  n=1500 top1 0.921 | answers 89.6%, right 0.963 when it answers
+flip+zoom average [field]          n= 961 top1 0.876 | answers 84.3%, right 0.938 when it answers
+flip+zoom only when 0.35-0.92      n=1500 top1 0.920 | answers 91.0%, right 0.958 when it answers
+flip+zoom only when 0.35-0.92 [field] n= 961 top1 0.875 | answers 86.3%, right 0.931 when it answers
+photos where averaging runs in the 'near' version: 13.9%
+
+== 3. value of knowing the crop (crop picker) ==
+any crop                           n=1500 top1 0.921 | answers 93.1%, right 0.951 when it answers
+crop known (oracle)                n=1500 top1 0.923 | answers 93.9%, right 0.951 when it answers
+any crop [field]                   n= 961 top1 0.878 | answers 89.6%, right 0.920 when it answers
+crop known [field]                 n= 961 top1 0.881 | answers 90.7%, right 0.921 when it answers
+
+== 4. per-crop gate (lowest gate with right >= 0.92 when it answers) ==
+apple      n=  56 right@0.80 1.000 (answers 100%) -> gate for 0.92: 0.5
+banana     n=   8 right@0.80 1.000 (answers 100%) -> gate for 0.92: not reachable (needs more data/training)
+capsicum   n=  37 right@0.80 1.000 (answers 100%) -> gate for 0.92: 0.5
+chilli     n=  58 right@0.80 0.852 (answers 93%) -> gate for 0.92: 0.96
+grape      n=  59 right@0.80 1.000 (answers 100%) -> gate for 0.92: 0.5
+groundnut  n=  65 right@0.80 0.967 (answers 92%) -> gate for 0.92: 0.5
+maize      n= 124 right@0.80 0.967 (answers 99%) -> gate for 0.92: 0.5
+mango      n=  57 right@0.80 1.000 (answers 100%) -> gate for 0.92: 0.5
+okra       n=  66 right@0.80 0.898 (answers 89%) -> gate for 0.92: 0.93
+pest       n= 532 right@0.80 0.905 (answers 87%) -> gate for 0.92: 0.85
+potato     n=  38 right@0.80 1.000 (answers 100%) -> gate for 0.92: 0.5
+rice       n=  40 right@0.80 0.903 (answers 78%) -> gate for 0.92: 0.84
+sugarcane  n=  53 right@0.80 1.000 (answers 100%) -> gate for 0.92: 0.5
+tomato     n= 301 right@0.80 0.993 (answers 96%) -> gate for 0.92: 0.5
+wheat      n=   6 right@0.80 1.000 (answers 100%) -> gate for 0.92: not reachable (needs more data/training)
+
+== 5. most-swapped pairs (true -> predicted, wrong answers only) ==
+  4  pest__leafhopper -> pest__planthopper
+  4  pest__rice_leaf_folder -> pest__rice_stem_borer
+  3  pest__rice_stem_borer -> pest__corn_borer
+  3  pest__planthopper -> pest__leafhopper
+  3  pest__gall_midge_dasineura -> pest__thrips
+  3  maize__blight -> maize__gray_leaf_spot
+  3  chilli__healthy -> chilli__cercospora
+  3  groundnut__early_leaf_spot -> groundnut__healthy_leaf
+  3  pest__army_worm -> pest__corn_borer
+  2  pest__planthopper -> pest__corn_borer
+  2  pest__rice_stem_borer -> pest__wireworm
+  2  rice__rice_stripes -> rice__leaf_scald
+  2  chilli__cercospora -> chilli__healthy
+  2  okra__phyllosticta_leaf_spot -> okra__downy_mildew
+  2  pest__cutworm -> pest__army_worm

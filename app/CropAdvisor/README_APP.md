@@ -17,3 +17,11 @@
 - `LlmService.kt`: "overrides nothing" on `onError` -> delete that one line.
 - `LlmService.kt`: unresolved `LlmModule` -> paste the error; the AAR API changed.
 - Duplicate `libc++_shared.so` -> already handled with pickFirsts.
+
+## Added after the first release
+- Symptom tree (assets/symptom_tree.json, Checks.kt): questions per crop, Yes/No prune the candidate problems.
+- Crop picker (Classifier.predict(photo, crop)); optional per-crop models in assets/crops/<crop>.onnx + .json.
+- First-run Llama download (SetupScreen, ModelDownloader, DeviceProfile) from ModelDownloader.DEFAULT_SERVER.
+- Village hub (hub/hub_server.py, HubClient.kt) for phones that cannot run Llama.
+- The app now has the INTERNET permission, used only for the farmer-started model download and the hub on the local Wi-Fi.
+See docs/IMPLEMENTATION_PLAN.md for what is done and what is open.

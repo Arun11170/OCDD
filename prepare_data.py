@@ -59,7 +59,7 @@ def check(path):
         return (path, False, 0, 0, str(e)[:80])
 
 
-def collect(root, include_rice):
+def collect(root, include_rice, v2=False):
     """list of (path, crop, label, source, domain)"""
     raw = os.path.join(root, "data", "raw")
     items = []
@@ -95,8 +95,93 @@ def collect(root, include_rice):
     if include_rice:
         for dp, dn, _ in os.walk(os.path.join(raw, "rice")):
             if os.path.basename(dp) == "Original Dataset":
+                n0 = len(items)
                 add_dir(dp, "rice", "rice", "field")
+                items[n0:] = [it for it in items[n0:] if it[2] != "rice"]   # the loose "Rice" folder is not a disease class
+
+    if v2:
+        items += collect_v2(raw)
+        # okra yellow vein mosaic (2-class set): pool train/val/test, we split again ourselves
+        for dp, dn, _ in os.walk(os.path.join(raw, "okra_yvmv")):
+            nm = os.path.basename(dp).lower()
+            if nm == "diseased okra leaf":
+                for p in walk_images(dp):
+                    items.append((p, "okra", "leaf_curly_virus", "okra_yvmv", "field"))
+            elif nm == "fresh okra leaf":
+                for p in walk_images(dp):
+                    items.append((p, "okra", "healthy", "okra_yvmv", "field"))
     return items
+
+
+# ---- extra crops for the v2 model ------------------------------------------------------------
+# PlantVillage (lab photos): only crops grown in India that we do not already cover
+PV_CROPS = {"potato": "potato", "corn_(maize)": "maize", "pepper,_bell": "capsicum", "grape": "grape",
+            "apple": "apple"}
+# IP102 pest classes (folder number = line number in classes.txt minus 1) that matter for Indian crops
+IP102_KEEP = {
+    0: "rice_leaf_roller", 1: "rice_leaf_caterpillar", 2: "paddy_stem_maggot", 3: "asiatic_rice_borer",
+    4: "yellow_rice_borer", 5: "rice_gall_midge", 7: "brown_plant_hopper", 8: "white_backed_plant_hopper",
+    9: "small_brown_plant_hopper", 10: "rice_water_weevil", 11: "rice_leafhopper", 12: "grain_spreader_thrips",
+    14: "white_grub", 15: "mole_cricket", 16: "wireworm", 18: "black_cutworm", 19: "large_cutworm",
+    20: "yellow_cutworm", 21: "red_spider_mite", 22: "corn_borer", 23: "army_worm", 24: "aphids",
+    54: "thrips", 37: "flea_beetle", 92: "thrips_scirtothrips_dorsalis", 84: "oriental_fruit_fly",
+    97: "mango_shoot_borer", 98: "mango_flat_beak_leafhopper", 100: "mango_seed_weevil",
+    96: "mango_leaf_cutting_weevil", 93: "gall_midge_dasineura", 94: "lawana_imitata",
+    95: "salurnis_marginella", 99: "mango_stem_borer", 101: "leafhoppers",
+}
+
+
+def collect_v2(raw):
+    out = []
+    def lab(s):
+        return re.sub(r"_+$", "", clean_class(s)).strip("_")
+    # PlantVillage colour images, non-tomato crops
+    pv = os.path.join(raw, "plantvillage_all")
+    base = None
+    for dp, dn, _ in os.walk(pv):
+        if os.path.basename(dp) == "color":
+            base = dp; break
+    if base:
+        for cls in sorted(os.listdir(base)):
+            if "___" not in cls:
+                continue
+            c, l = cls.split("___", 1)
+            key = c.lower()
+            if key in PV_CROPS:
+                crop = PV_CROPS[key]
+                name = lab(l)
+                if crop == "maize":
+                    # same label as the maize dataset (which is copied from PlantVillage), so the de-duplication
+                    # puts the identical photos in ONE group and they cannot leak between train and test
+                    name = {"northern_leaf_blight": "blight", "cercospora_leaf_spot_gray_leaf_spot": "gray_leaf_spot"}.get(name, name)
+                for p_ in walk_images(os.path.join(base, cls)):
+                    out.append((p_, crop, name if crop == "maize" else "pvall_" + name, "plantvillage", "lab"))
+    # maize (field-style leaves), mango, sugarcane, wheat, banana (original photos only)
+    for name, crop, sub in (("maize", "maize", "data"), ("mango", "mango", ""), ("sugarcane", "sugarcane", ""),
+                            ("wheat", "wheat", "wheat_leaf")):
+        base = os.path.join(raw, name, sub) if sub else os.path.join(raw, name)
+        if os.path.isdir(base):
+            for cls in sorted(os.listdir(base)):
+                d = os.path.join(base, cls)
+                if os.path.isdir(d):
+                    for p_ in walk_images(d):
+                        out.append((p_, crop, lab(cls), name, "field"))
+    for dp, dn, _ in os.walk(os.path.join(raw, "banana")):
+        if os.path.basename(dp) == "Original Images" or dp.endswith(os.path.join("Original Images", "Original Images")):
+            if any(os.path.isdir(os.path.join(dp, d)) and "Banana" in d for d in os.listdir(dp)):
+                for cls in sorted(os.listdir(dp)):
+                    d = os.path.join(dp, cls)
+                    if os.path.isdir(d):
+                        for p_ in walk_images(d):
+                            out.append((p_, "banana", lab(re.sub(r"^banana\s+", "", cls, flags=re.I)), "banana", "field"))
+    # IP102 pests (original photos, train+val+test pooled, we split again by group)
+    ipc = os.path.join(raw, "ip102", "classification")
+    for split in ("train", "val", "test"):
+        for k, name in IP102_KEEP.items():
+            d = os.path.join(ipc, split, str(k))
+            for p_ in walk_images(d):
+                out.append((p_, "pest", name, "ip102", "field"))
+    return out
 
 
 def extract_plantvillage(root):
@@ -172,17 +257,18 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=r"D:\OCDD")
     ap.add_argument("--rice", action="store_true")
+    ap.add_argument("--v2", action="store_true", help="add the extra crops and pests, write to data\\interim_v2")
     ap.add_argument("--seed", type=int, default=42)
     a = ap.parse_args()
     root = a.root
-    interim = os.path.join(root, "data", "interim")
+    interim = os.path.join(root, "data", "interim_v2" if a.v2 else "interim")
     os.makedirs(interim, exist_ok=True)
     report = []
     def say(s=""):
         print(s); report.append(s)
 
     say("1/4 finding images ...")
-    items = collect(root, a.rice)
+    items = collect(root, a.rice, a.v2)
     pv_dir = os.path.join(root, "data", "raw", "tomato_plantvillage", "data")
     if os.path.isdir(pv_dir):
         say("    extracting tomato classes from PlantVillage parquet (once, a few minutes) ...")

@@ -1,0 +1,41 @@
+EVALUATION of best_v1.pt
+lesion overlap (IoU) on 3542 held-out photos with human-outlined lesions: 0.571   (target >= 0.50)
+does a worse leaf get a bigger number? rank correlation of predicted vs outlined damage: 0.793   (target >= 0.80)
+severity band (Low <5% / Moderate 5-20% / Severe >20% of the photo) exactly right: 71%   (target >= 80%)   within one band: 98%
+300 HEALTHY field photos: share of photos where >1% of the picture is wrongly flagged: 86.7%   (target <= 5%);  average flagged area 18.85%   (target <= 1%)
+
+lesion area as % of the photo for your testphotos (red = lesion found):
+01_groundnut__early_leaf_spot.JPG                lesion   7.0 % of photo
+02_groundnut__healthy_leaf.JPG                   lesion   0.8 % of photo
+03_groundnut__late_leaf_spot.JPG                 lesion  15.2 % of photo
+04_groundnut__nutrition_deficiency.JPG           lesion   5.2 % of photo
+05_groundnut__rust.JPG                           lesion   1.9 % of photo
+06_chilli__cerocospora.JPG                       lesion  21.3 % of photo
+07_chilli__healthy.JPG                           lesion  14.6 % of photo
+08_chilli__murda_complex.JPG                     lesion  12.7 % of photo
+09_chilli__nutritional_deficiency.JPG            lesion  15.6 % of photo
+10_chilli__powdery_mildew.JPG                    lesion   4.9 % of photo
+11_okra__alternaria_leaf_spot.JPG                lesion   3.4 % of photo
+12_okra__cercospora_leaf_spot.JPG                lesion  13.9 % of photo
+13_okra__downy_mildew.JPG                        lesion  20.2 % of photo
+14_okra__healthy.JPG                             lesion   2.7 % of photo
+15_okra__leaf_curly_virus.JPG                    lesion   3.4 % of photo
+16_okra__phyllosticta_leaf_spot.JPG              lesion  57.5 % of photo
+17_tomato__plantdoc_tomato_leaf.jpg              lesion   8.9 % of photo
+18_tomato__plantdoc_tomato_leaf_bacterial_spot.j lesion  22.4 % of photo
+19_tomato__plantdoc_tomato_leaf_mosaic_virus.jpg lesion  16.1 % of photo
+20_tomato__plantdoc_tomato_septoria_leaf_spot.jp lesion  30.4 % of photo
+21_tomato__plantdoc_tomato_early_blight_leaf.jpg lesion   3.0 % of photo
+22_tomato__plantdoc_tomato_leaf_late_blight.jpg  lesion   1.3 % of photo
+23_tomato__plantdoc_tomato_leaf_yellow_virus.jpg lesion  14.1 % of photo
+24_tomato__plantdoc_tomato_mold_leaf.jpg         lesion   5.8 % of photo
+25_tomato__pv_bacterial_spot.jpg                 lesion  50.7 % of photo
+26_tomato__pv_early_blight.jpg                   lesion  51.4 % of photo
+27_tomato__pv_healthy.jpg                        lesion  32.5 % of photo
+28_tomato__pv_late_blight.jpg                    lesion  21.9 % of photo
+29_tomato__pv_leaf_mold.jpg                      lesion  39.3 % of photo
+30_tomato__pv_septoria_leaf_spot.jpg             lesion  42.6 % of photo
+31_tomato__pv_spider_mites_two-spotted_spider_mi lesion  27.6 % of photo
+32_tomato__pv_target_spot.jpg                    lesion  41.5 % of photo
+33_tomato__pv_tomato_mosaic_virus.jpg            lesion  24.5 % of photo
+34_tomato__pv_tomato_yellow_leaf_curl_virus.jpg  lesion  29.5 % of photo

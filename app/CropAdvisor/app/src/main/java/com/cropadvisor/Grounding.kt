@@ -25,12 +25,15 @@ object Grounding {
 
     fun isDoseQuestion(q: String) = doseEn.containsMatchIn(q) || doseHi.any { q.contains(it) }
 
-    fun doseAnswer(l: Lang) = if (l == Lang.HI)
+    private const val DOSE_EN = "The app does not give amounts or mixing rates, because they depend on the product, the crop stage and the state. Read the product label and ask your KVK or agriculture officer. Kisan Call Centre (free):"
+    private const val REFUSE_EN = "I do not have verified advice on that. Please call the Kisan Call Centre (free):"
+
+    fun doseAnswer(l: Lang) = if (l != Lang.EN && l != Lang.HI) "${I18n.t(l, DOSE_EN)} $KCC" else if (l == Lang.HI)
         "यह ऐप मात्रा या घोल की जानकारी नहीं देता, क्योंकि यह उत्पाद, फसल की अवस्था और राज्य पर निर्भर करती है। उत्पाद का लेबल पढ़ें और अपने KVK या कृषि अधिकारी से पूछें। किसान कॉल सेंटर: $KCC (मुफ़्त)।"
     else
         "The app does not give amounts or mixing rates, because they depend on the product, the crop stage and the state. Read the product label and ask your KVK or agriculture officer. Kisan Call Centre: $KCC (free)."
 
-    fun refusalAnswer(l: Lang) = if (l == Lang.HI)
+    fun refusalAnswer(l: Lang) = if (l != Lang.EN && l != Lang.HI) "${I18n.t(l, REFUSE_EN)} $KCC" else if (l == Lang.HI)
         "इस बारे में मेरे पास जाँची हुई सलाह नहीं है। कृपया किसान कॉल सेंटर $KCC (मुफ़्त) पर बात करें।"
     else
         "I $REFUSAL_MARK on that. Please call the Kisan Call Centre on $KCC (free)."
@@ -39,11 +42,11 @@ object Grounding {
 
     private val kw: Map<Topic, List<String>> = mapOf(
         Topic.SYMPTOMS to listOf("symptom", "look like", "looks like", "sign", "identify", "recognise", "recognize", "how do i know", "लक्षण", "कैसा दिखता", "पहचान"),
-        Topic.CAUSE to listOf("cause", "why", "reason", "how did", "spread", "what is it", "what is this", "कारण", "क्यों", "फैलता", "यह क्या"),
+        Topic.CAUSE to listOf("cause", "why", "reason", "how did", "what is it", "what is this", "कारण", "क्यों", "यह क्या"),
         Topic.TREATMENT to listOf("spray", "fungicide", "pesticide", "insecticide", "medicine", "chemical", "treat", "which product", "which medicine", "छिड़काव", "दवा", "दवाई", "कीटनाशक", "फफूंदनाशक", "उपचार"),
         Topic.TIMING to listOf("when", "how often", "how soon", "how long", "wait", "late", "कब", "कितनी बार", "इंतज़ार"),
         Topic.LOOKALIKE to listOf("confus", "similar", "difference", "same as", "or is it", "फर्क", "अंतर", "मिलता"),
-        Topic.ACTIONS to listOf("what to do", "what should", "what do i do", "what can i do", "manage", "control", "prevent", "stop", "remove", "cure", "fix", "help", "save", "क्या करें", "क्या करूँ", "उपाय", "रोकथाम", "बचाव", "इलाज"),
+        Topic.ACTIONS to listOf("what to do", "what should", "what do i do", "what can i do", "manage", "control", "prevent", "stop", "remove", "cure", "fix", "help", "save", "spread", "फैलता", "क्या करें", "क्या करूँ", "उपाय", "रोकथाम", "बचाव", "इलाज"),
     )
 
     fun classify(q: String): Topic? {

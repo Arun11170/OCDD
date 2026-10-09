@@ -1,0 +1,39 @@
+best epoch 11 (val macro-F1 0.841), temperature 0.83
+TEST accuracy 0.858   macro-F1 0.841
+  domain field   n= 4891  accuracy 0.844
+  domain lab     n=  474  accuracy 1.000
+calibration error (ECE) 0.020   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 92.1% of photos, accuracy on those 0.899
+  >= 0.6 : answers 88.3% of photos, accuracy on those 0.918
+  >= 0.7 : answers 84.4% of photos, accuracy on those 0.934
+  >= 0.8 : answers 79.6% of photos, accuracy on those 0.951
+  >= 0.9 : answers 70.3% of photos, accuracy on those 0.967
+
+class                                      prec recall     f1     n
+apple__apple_scab                         0.909  0.959  0.933   146
+apple__black_rot                          0.954  0.945  0.950   110
+apple__cedar_apple_rust                   0.926  0.913  0.920    69
+apple__healthy                            0.988  1.000  0.994   246
+pest__aphids                              0.871  0.904  0.887   614
+pest__army_worm                           0.737  0.787  0.761   160
+pest__corn_borer                          0.777  0.768  0.772   254
+pest__cutworm                             0.805  0.879  0.840   272
+pest__flea_beetle                         0.855  0.906  0.880   117
+pest__gall_midge_dasineura                0.745  0.547  0.631    75
+pest__leafhopper                          0.929  0.900  0.915   921
+pest__mango_borer                         0.811  0.773  0.792   128
+pest__mango_hopper                        0.913  0.913  0.913   172
+pest__mango_leaf_cutting_weevil           0.727  0.774  0.750    31
+pest__mango_seed_weevil                   0.776  0.662  0.714    68
+pest__mole_cricket                        0.971  0.951  0.961   247
+pest__oriental_fruit_fly                  0.941  0.985  0.962    65
+pest__planthopper                         0.837  0.800  0.818   340
+pest__red_spider_mite                     0.971  0.861  0.913    79
+pest__rice_gall_midge                     0.731  0.760  0.745    75
+pest__rice_leaf_folder                    0.829  0.746  0.785   240
+pest__rice_stem_borer                     0.671  0.760  0.713   271
+pest__rice_water_weevil                   0.771  0.711  0.740   128
+pest__thrips                              0.804  0.833  0.819   276
+pest__white_grub                          0.904  0.876  0.890   129
+pest__wireworm                            0.862  0.902  0.881   132

@@ -1,0 +1,39 @@
+best epoch 12 (val macro-F1 0.848), temperature 0.83
+TEST accuracy 0.855   macro-F1 0.847
+  domain field   n= 5170  accuracy 0.855
+calibration error (ECE) 0.023   (lower is better)
+confidence gate: answer only if confidence >= threshold
+  >= 0.5 : answers 92.6% of photos, accuracy on those 0.896
+  >= 0.6 : answers 88.4% of photos, accuracy on those 0.915
+  >= 0.7 : answers 84.0% of photos, accuracy on those 0.933
+  >= 0.8 : answers 79.3% of photos, accuracy on those 0.950
+  >= 0.9 : answers 70.8% of photos, accuracy on those 0.967
+
+class                                      prec recall     f1     n
+pest__aphids                              0.876  0.912  0.894   614
+pest__army_worm                           0.737  0.700  0.718   160
+pest__corn_borer                          0.738  0.776  0.756   254
+pest__cutworm                             0.838  0.875  0.856   272
+pest__flea_beetle                         0.877  0.915  0.895   117
+pest__gall_midge_dasineura                0.690  0.533  0.602    75
+pest__leafhopper                          0.942  0.897  0.919   921
+pest__mango_borer                         0.781  0.781  0.781   128
+pest__mango_hopper                        0.859  0.924  0.891   172
+pest__mango_leaf_cutting_weevil           0.806  0.806  0.806    31
+pest__mango_seed_weevil                   0.839  0.691  0.758    68
+pest__mole_cricket                        0.952  0.960  0.956   247
+pest__oriental_fruit_fly                  0.886  0.954  0.919    65
+pest__planthopper                         0.843  0.824  0.833   340
+pest__red_spider_mite                     0.955  0.810  0.877    79
+pest__rice_gall_midge                     0.670  0.813  0.735    75
+pest__rice_leaf_folder                    0.803  0.779  0.791   240
+pest__rice_stem_borer                     0.704  0.745  0.724   271
+pest__rice_water_weevil                   0.748  0.695  0.721   128
+pest__thrips                              0.814  0.826  0.820   276
+pest__white_grub                          0.888  0.860  0.874   129
+pest__wireworm                            0.856  0.902  0.878   132
+sugarcane__healthy                        0.987  0.949  0.967    78
+sugarcane__mosaic                         0.931  0.971  0.950    69
+sugarcane__redrot                         0.987  0.974  0.980    77
+sugarcane__rust                           1.000  1.000  1.000    77
+sugarcane__yellow                         0.937  0.987  0.961    75

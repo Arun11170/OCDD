@@ -1,0 +1,836 @@
+{
+ "entries": [
+  {
+   "class_id": "pest__cutworm",
+   "crop": "pest",
+   "name_en": "Cutworms",
+   "type": "pest",
+   "cause": "Agrotis ipsilon (black or greasy cutworm) and related Agrotis species; moth larvae",
+   "symptoms": [
+    "Caterpillars hide in soil during the day and feed at night.",
+    "Older caterpillars cut young plant stems at ground level.",
+    "Young caterpillars first feed on the leaf surface.",
+    "Full-grown caterpillar is dirty black or dark brown with a greasy look.",
+    "Tubers can also be eaten into."
+   ],
+   "look_alikes": "Armyworms feed on leaves in groups and do not cut seedlings at the base; white grubs eat roots underground.",
+   "cultural_actions": [
+    "Flood the field and hand-pick caterpillars in the morning or evening.",
+    "Plough in summer to expose caterpillars and pupae to birds.",
+    "Use light traps and pheromone traps to watch for moths."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect_veg_potato_pest&disease.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem oil spray",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect_veg_potato_pest&disease.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Spray only when scouting shows cut seedlings or caterpillars; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Are young seedlings cut off at ground level, with dark greasy caterpillars in the soil at night?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are caterpillars feeding together in large groups on leaves, like an army?",
+     "if_yes": "pest__army_worm",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Potato pests: cutworm",
+     "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect_veg_potato_pest&disease.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - Cutworms in forest nurseries",
+     "url": "https://agritech.tnau.ac.in/forestry/forest_pest_cutworms.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "TNAU potato page used for control; the nursery page for general habits. Written for Tamil Nadu; check with local KVK."
+  },
+  {
+   "class_id": "pest__planthopper",
+   "crop": "pest",
+   "name_en": "Planthoppers (brown and white-backed)",
+   "type": "pest",
+   "cause": "Nilaparvata lugens (brown planthopper) and Sogatella furcifera (white-backed planthopper); sap-sucking insects of rice",
+   "symptoms": [
+    "Small insects sit at the base of rice plants and suck sap.",
+    "Brown planthopper adults are yellowish to dark brown; white-backed has a white band on the back.",
+    "Plants yellow, turn brown and dry in round or irregular patches called hopper burn.",
+    "Affected patches can lodge and look scorched.",
+    "Sooty mould and honeydew may show at the plant base."
+   ],
+   "look_alikes": "Stem borer deadhearts are single dead shoots, not dried patches with insects at the base.",
+   "cultural_actions": [
+    "Drain the field briefly during early attack.",
+    "Give nitrogen in split doses and avoid too much nitrogen.",
+    "Plant together within a short window across the area.",
+    "Leave rogue spacing lanes through the field.",
+    "Protect spiders, mirid bugs and other natural enemies.",
+    "Use light traps at night and yellow pan traps by day."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Acephate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbaryl",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Phosalone",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Phosphamidon",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dichlorvos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_WBPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem oil spray",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_WBPH.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Cyrtorhinus lividipennis (predatory bug) conservation",
+     "note": "Natural enemy listed by TNAU; protect it, do not spray it out",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU gives a hopper-per-tiller threshold that is lower when spiders are absent; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Are there round patches of rice drying and scorching, with small brown or white-backed insects at the base?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is it only single dead central shoots, with no insects at the plant base?",
+     "if_yes": "pest__rice_stem_borer",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Brown plant hopper",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_BPH.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - White backed plant hopper",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_WBPH.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. TNAU lists several old products; check CIB&RC status and local advice before spraying. Small brown planthopper not covered by these pages."
+  },
+  {
+   "class_id": "pest__rice_stem_borer",
+   "crop": "pest",
+   "name_en": "Rice stem borers",
+   "type": "pest",
+   "cause": "Scirpophaga incertulas (yellow stem borer); larvae bore inside rice stems",
+   "symptoms": [
+    "Female moth is bright yellowish brown with a black spot on the forewing.",
+    "Larva is pale yellow with a dark brown head and bores into the stem.",
+    "Early attack: central shoot dries, called dead heart; it pulls out easily.",
+    "Later attack: panicle dries and grains are chaffy, called white ear.",
+    "Brown egg masses sit near the leaf tip."
+   ],
+   "look_alikes": "Planthopper hopper burn comes in dried patches with insects at the base; gall midge makes a silver onion-leaf tube.",
+   "cultural_actions": [
+    "Clip seedling tips before transplanting to remove egg masses.",
+    "Scout the field regularly.",
+    "Disturb or destroy stubble after harvest.",
+    "Use light traps and pheromone traps to watch moths.",
+    "Release the egg parasitoid Trichogramma japonicum as advised by the source.",
+    "Choose resistant varieties recommended for your area."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorantraniliprole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Cartap hydrochloride",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fipronil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Flubendiamide",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Quinalphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_SB.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Profenophos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_SB.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem seed kernel extract or azadirachtin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichogramma japonicum (egg parasitoid)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Bacillus thuringiensis",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_SB.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU gives thresholds as egg masses, dead hearts and white ears; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Do the central shoots dry and pull out easily, with a bored stem inside?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is there a silver, onion-like tube instead of a dead shoot?",
+     "if_yes": "pest__rice_gall_midge",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Yellow stem borer",
+     "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Expert System - Stem borer",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_SB.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Sources cover only yellow stem borer, Tamil Nadu. Striped borer (Chilo suppressalis) and stem maggot (Atherigona oryzae) were not found in an opened source. TNAU pages disagree on the threshold values."
+  },
+  {
+   "class_id": "pest__rice_leaf_folder",
+   "crop": "pest",
+   "name_en": "Rice leaf folder",
+   "type": "pest",
+   "cause": "Cnaphalocrocis medinalis (rice leaf folder moth); larvae fold rice leaves",
+   "symptoms": [
+    "Caterpillars fold a leaf lengthwise and live inside it.",
+    "They scrape the green tissue from inside the fold.",
+    "Damaged leaves turn white and dry.",
+    "In severe attack the whole field looks scorched."
+   ],
+   "look_alikes": "Planthopper burn dries whole patches from the base; folded leaves with a caterpillar inside point to leaf folder.",
+   "cultural_actions": [
+    "Avoid too much nitrogen fertiliser.",
+    "Keep field bunds clean.",
+    "Release Trichogramma chilonis egg parasitoids as the source advises.",
+    "Clip affected leaves where practical, as TNAU lists.",
+    "Choose resistant varieties recommended for your area."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorantraniliprole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Flubendiamide",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Cartap hydrochloride",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fipronil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Acephate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbosulfan",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Neem seed kernel extract or azadirachtin",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichogramma chilonis (egg parasitoid)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU gives a leaf-damage threshold that is different for early growth and the flag leaf stage; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Are leaves folded lengthwise with a caterpillar inside and white scraped streaks?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are whole patches drying from the base with tiny hoppers on the stems?",
+     "if_yes": "pest__planthopper",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Leaf folder",
+     "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - 139 Insect Pests of Field Crops",
+     "url": "https://agritech.tnau.ac.in/pdf/6.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu. Moth appearance not given on the page used."
+  },
+  {
+   "class_id": "pest__rice_gall_midge",
+   "crop": "pest",
+   "name_en": "Rice gall midge",
+   "type": "pest",
+   "cause": "Orseolia oryzae (Asian rice gall midge); a small fly whose maggots attack the rice shoot",
+   "symptoms": [
+    "Adult is a small yellowish-brown or orange fly, like a mosquito.",
+    "Tiny maggots enter the growing bud at the shoot base.",
+    "The shoot turns into a hollow tube like an onion leaf, called silver shoot.",
+    "Infested tillers give no panicle, so yield falls."
+   ],
+   "look_alikes": "Stem borer deadheart is a dried shoot; gall midge gives a green-silver onion-leaf tube.",
+   "cultural_actions": [
+    "Plough the field soon after harvest.",
+    "Remove alternate host plants and grasses.",
+    "Plant early, as TNAU advises.",
+    "Apply potash in balance.",
+    "Use infrared light traps to monitor adult flies.",
+    "Grow resistant varieties listed for your area."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbosulfan",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Fipronil",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Thiamethoxam",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Platygaster oryzae (parasitoid) release",
+     "note": "Natural enemy listed by TNAU; follow local extension advice",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "TNAU gives a silver-shoot percentage threshold; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Do you see hollow silver-white onion-leaf tubes in place of tillers?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are shoots simply dried and pull out easily, with a bored stem?",
+     "if_yes": "pest__rice_stem_borer",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Gall midge",
+     "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech - 139 Insect Pests of Field Crops",
+     "url": "https://agritech.tnau.ac.in/pdf/6.pdf",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for Tamil Nadu."
+  },
+  {
+   "class_id": "pest__rice_water_weevil",
+   "crop": "pest",
+   "name_en": "Rice water weevil",
+   "type": "pest",
+   "cause": "Lissorhoptrus oryzophilus (weevil); larvae feed on rice roots",
+   "symptoms": [
+    "Adult weevils make feeding marks on leaves; this is minor harm.",
+    "Larvae feed on and prune the roots.",
+    "Plants are stunted and mature late.",
+    "Grain yield is reduced."
+   ],
+   "look_alikes": null,
+   "cultural_actions": [],
+   "treatment_options": [],
+   "when_to_act": "No Indian source found; ask your KVK or state agriculture university before acting.",
+   "ask_back": [
+    {
+     "question": "Are rice plants stunted with pruned roots in a flooded field, and no dried shoots?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the central shoots dried and pull out easily?",
+     "if_yes": "pest__rice_stem_borer",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "EPPO Reporting Service - First report of Lissorhoptrus oryzophilus in Italy and Europe",
+     "url": "https://gd.eppo.int/reporting/article-1337",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "No Indian source covering this pest was opened; the only page read is a European report. Damage lines come from it. Check local presence and advice with your KVK."
+  },
+  {
+   "class_id": "pest__army_worm",
+   "crop": "pest",
+   "name_en": "Armyworms",
+   "type": "pest",
+   "cause": "Mythimna separata and Spodoptera mauritia (swarming caterpillar); fall armyworm Spodoptera frugiperda also attacks maize",
+   "symptoms": [
+    "Caterpillars feed in groups and march from field to field.",
+    "They cut seedlings in large numbers.",
+    "Heavily eaten fields look like cattle have grazed them.",
+    "On rice and maize they eat leaf edges and can cut panicles.",
+    "Young caterpillars are light green; older ones turn brownish with dark marks."
+   ],
+   "look_alikes": "Cutworms act alone and cut single stems at ground level; armyworms come in groups and eat leaves too.",
+   "cultural_actions": [
+    "Flood nurseries so caterpillars are exposed to birds.",
+    "Let ducks and birds feed on the caterpillars.",
+    "Dig trenches filled with ash around the field as a barrier.",
+    "Bury stubble after harvest and keep fields weed-free.",
+    "Use pheromone traps and natural enemies like Telenomus remus for fall armyworm in maize."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyriphos",
+     "note": "Listed by TNAU for severe attack, evening spray; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m3.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Naturally diseased larvae collected and sprayed",
+     "note": "Lucid page mentions this; ask KVK before use; no dose",
+     "source_url": "https://apps.lucidcentral.org/pppw_v10/text/web_full/entities/rice_maize_armyworm_331.htm",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Act when scouting shows groups of caterpillars; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Are caterpillars in groups, eating leaves or cutting many seedlings in a patch?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is it a single caterpillar hiding in soil that cuts one stem at ground level?",
+     "if_yes": "pest__cutworm",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Swarming caterpillar (Spodoptera mauritia)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m3.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "ICAR-IIMR - Maize pest management",
+     "url": "https://iimr.icar.gov.in/?page_id=146",
+     "publisher": "ICAR"
+    },
+    {
+     "title": "Rice (maize) armyworm fact sheet (Lucid Apps)",
+     "url": "https://apps.lucidcentral.org/pppw_v10/text/web_full/entities/rice_maize_armyworm_331.htm",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "TNAU page is about swarming caterpillar of paddy. Mythimna details from a non-Indian Lucid fact sheet. Maize fall armyworm from ICAR-IIMR."
+  },
+  {
+   "class_id": "pest__corn_borer",
+   "crop": "pest",
+   "name_en": "Maize stem borers",
+   "type": "pest",
+   "cause": "Chilo partellus (spotted stem borer) and other stem borers of maize",
+   "symptoms": [
+    "Larvae are yellowish brown with a brown head; moths are straw coloured.",
+    "Young larvae make shot-hole holes in folded young leaves.",
+    "The central shoot dries, called dead heart.",
+    "Older larvae tunnel inside the stem, leaving bore holes."
+   ],
+   "look_alikes": "Cutworms cut the plant at ground level; stem borers leave a dry shoot and bore holes higher up.",
+   "cultural_actions": [
+    "Intercrop maize with cowpea as TNAU suggests.",
+    "Destroy stubble after harvest.",
+    "Remove and destroy dead hearts.",
+    "Release Trichogramma chilonis egg parasitoids as the source advises."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Dimethoate",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorantraniliprole",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_2.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "bio",
+     "active_ingredient": "Trichogramma chilonis (egg parasitoid)",
+     "note": "FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_2.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Spray when the infestation passes the local threshold; check it with your KVK.",
+   "ask_back": [
+    {
+     "question": "Are there shot holes in young leaves and dead central shoots with tunnels in the stem?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are caterpillars in groups chewing leaf edges?",
+     "if_yes": "pest__army_worm",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - Maize stem borer (Chilo partellus)",
+     "url": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_2.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "ICAR-IIMR - Maize pest management",
+     "url": "https://iimr.icar.gov.in/?page_id=146",
+     "publisher": "ICAR"
+    }
+   ],
+   "caveats": "Ostrinia corn borers not found in an opened Indian source. IIMR page also covers pink stem borer; written mainly for Tamil Nadu and maize areas."
+  },
+  {
+   "class_id": "pest__white_grub",
+   "crop": "pest",
+   "name_en": "White grubs",
+   "type": "pest",
+   "cause": "Holotrichia consanguinea and H. serrata (scarab beetle larvae); Leucopholis not covered",
+   "symptoms": [
+    "Grub is fleshy, whitish, and curled in a C shape in the soil.",
+    "Grubs eat fine roots and sometimes pods.",
+    "Plants turn pale and wilt, dying in patches.",
+    "Affected plants come off easily when pulled.",
+    "Adult beetles come out of the soil after rain."
+   ],
+   "look_alikes": "Cutworms eat stems above the roots; wilting from disease usually shows no grubs in the soil.",
+   "cultural_actions": [
+    "Plough deeply right after harvest.",
+    "Give adequate irrigation.",
+    "Use light traps to catch and kill adult beetles.",
+    "Collect and destroy adult beetles.",
+    "Pheromone trapping of beetles is being used by ICAR."
+   ],
+   "treatment_options": [
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Chlorpyrifos",
+     "note": "Listed by TNAU for groundnut; check CIB&RC status; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut/crop_prot_crop_insect_oil_ground%20nut_12.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Carbofuran",
+     "note": "Listed by TNAU for groundnut; check CIB&RC status; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut/crop_prot_crop_insect_oil_ground%20nut_12.html",
+     "cibrc_status": "unchecked"
+    },
+    {
+     "kind": "insecticide",
+     "active_ingredient": "Phorate",
+     "note": "Listed by TNAU for groundnut; check CIB&RC status; FOLLOW PRODUCT LABEL; no dose",
+     "source_url": "https://agritech.tnau.ac.in/crop_protection/groundnut/crop_prot_crop_insect_oil_ground%20nut_12.html",
+     "cibrc_status": "unchecked"
+    }
+   ],
+   "when_to_act": "Sources give no threshold; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "When you dig near wilted plants, do you find fat C-shaped white grubs?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Do you find a thin hard shiny yellow-brown worm instead?",
+     "if_yes": "pest__wireworm",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech - White grubs in groundnut",
+     "url": "https://agritech.tnau.ac.in/crop_protection/groundnut/crop_prot_crop_insect_oil_ground%20nut_12.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "TNAU Agritech Expert System - Sugarcane white grub",
+     "url": "https://agritech.tnau.ac.in/expert_system/sugar/cropprotection.html",
+     "publisher": "TNAU"
+    },
+    {
+     "title": "ICAR - NBAIR slow-release pheromone for Holotrichia consanguinea",
+     "url": "https://icar.org.in/node/5749",
+     "publisher": "ICAR"
+    }
+   ],
+   "caveats": "Cultural and trap advice from the sugarcane page, written for Tamil Nadu. The sugarcane page also lists a soil chemical (lindane); left out, check current rules. Leucopholis not found."
+  },
+  {
+   "class_id": "pest__wireworm",
+   "crop": "pest",
+   "name_en": "Wireworms",
+   "type": "pest",
+   "cause": "Wireworms are the soil-living larvae of click beetles (Elateridae)",
+   "symptoms": [
+    "Larvae are tan to black, smooth, shiny and segmented.",
+    "They bore into seeds as they germinate.",
+    "They feed on roots, crowns and tubers.",
+    "Affected plants wilt; potato tubers get tunnelled."
+   ],
+   "look_alikes": "White grubs are fat and C-shaped; wireworms are thin, hard and shiny.",
+   "cultural_actions": [
+    "Avoid planting susceptible crops where weedy pasture or grass was recently grown.",
+    "Remove dead plants promptly.",
+    "Plough several times in late spring and early summer.",
+    "Flood or dry the soil as the source describes, where practical.",
+    "Scout with grain bait traps buried in the soil."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Source ties treatment to bait-trap counts; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Are the soil worms thin, hard, shiny and yellow-brown to dark?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Are the soil grubs fat, soft and curled in a C shape?",
+     "if_yes": "pest__white_grub",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Utah State University Extension - Wireworms",
+     "url": "https://extension.usu.edu/pests/research/wireworms",
+     "publisher": "other"
+    }
+   ],
+   "caveats": "No Indian source found; this is a US page and practices may not suit Indian farms. Ask your KVK."
+  },
+  {
+   "class_id": "pest__mole_cricket",
+   "crop": "pest",
+   "name_en": "Mole crickets",
+   "type": "pest",
+   "cause": "Gryllotalpa orientalis (mole cricket); a burrowing soil insect",
+   "symptoms": [
+    "Insect is brownish and plump with short antennae.",
+    "Front legs are wide and toothed for digging.",
+    "Seedlings are cut at the base.",
+    "Plants are lost, leaving gaps in the stand.",
+    "Roots are damaged and seedlings die."
+   ],
+   "look_alikes": "Cutworms are caterpillars that cut stems at night; mole crickets are digging insects with strong front legs.",
+   "cultural_actions": [
+    "Keep standing water, which helps remove eggs on the soil.",
+    "Shave and plaster bunds with fresh wet soil to remove eggs.",
+    "Level the field for better water control.",
+    "Avoid raised nurseries.",
+    "Poisoned rice bran baits along bunds are mentioned by TNAU; ask your KVK which product."
+   ],
+   "treatment_options": [],
+   "when_to_act": "Source gives no threshold; check the local threshold with your KVK.",
+   "ask_back": [
+    {
+     "question": "Do you see a brown plump insect with wide digging front legs in the soil?",
+     "if_yes": "consistent",
+     "if_no": "uncertain"
+    },
+    {
+     "question": "Is it a smooth caterpillar that coils when touched?",
+     "if_yes": "pest__cutworm",
+     "if_no": "consistent"
+    }
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Expert System - Mole crickets",
+     "url": "http://www.agritech.tnau.ac.in/expert_system/paddy/cppests_molecricket.html",
+     "publisher": "TNAU"
+    }
+   ],
+   "caveats": "Written for paddy in Tamil Nadu. TNAU page names no insecticide."
+  }
+ ]
+}

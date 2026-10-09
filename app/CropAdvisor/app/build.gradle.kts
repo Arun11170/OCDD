@@ -25,7 +25,7 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     buildFeatures { compose = true }
-    androidResources { noCompress += listOf("pte") }
+    androidResources { noCompress += listOf("pte", "onnx") }
     packaging {
         jniLibs {
             useLegacyPackaging = true
@@ -51,6 +51,12 @@ dependencies {
     // If OpenCV's older copy is picked instead, the app dies with "cannot locate symbol ... basic_stringstream".
     implementation("com.facebook.fbjni:fbjni:0.7.0")
     implementation("com.facebook.soloader:soloader:0.10.5")
-    implementation("org.pytorch:executorch-android:1.5.1")   // on-device runtime
+    implementation("org.pytorch:executorch-android:1.5.1")   // Llama only (needs ARMv8.1 atomics, see CpuCheck)
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.20.0")   // disease model, runs on every 64-bit ARM phone
+    testImplementation("junit:junit:4.13.2")
+    implementation("androidx.camera:camera-core:1.3.4")
+    implementation("androidx.camera:camera-camera2:1.3.4")
+    implementation("androidx.camera:camera-lifecycle:1.3.4")
+    implementation("androidx.camera:camera-view:1.3.4")
     implementation("org.opencv:opencv:4.9.0")                 // leaf damage measurement
 }

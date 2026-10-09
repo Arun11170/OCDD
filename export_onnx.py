@@ -1,0 +1,113 @@
+"""Convert the trained model to ONNX for Android (ONNX Runtime runs on ANY 64-bit ARM phone,
+including old Cortex-A53/A73 chips that crash with the ExecuTorch build). Run INSIDE WSL:
+
+  source ~/et/bin/activate
+  pip install onnx onnxruntime onnxscript
+  OCDD_RUN=run3 OCDD_INTERIM=interim_v2 OCDD_OUT=export_v3 python /mnt/d/OCDD/export_onnx.py
+
+Makes in the OUT folder: vision_fp32.onnx (exact), vision_int8.onnx (smaller), onnx_report.txt.
+Input  : float32 RGB 0..1 [1,3,224,224] (normalisation + temperature are inside the model)
+Output : [1,N] temperature-scaled logits -> softmax in the app.
+"""
+import csv, json, os, random, sys, time
+sys.path.insert(0, "/mnt/d/OCDD")
+import numpy as np
+import torch, torch.nn as nn
+import torchvision.models as models
+from torchvision import transforms as T
+from PIL import Image
+from train import unify, cpath
+import onnxruntime as ort
+from onnxruntime.quantization import (CalibrationDataReader, QuantFormat, QuantType, quantize_static)
+
+ROOT = "/mnt/d/OCDD"
+RUN = os.path.join(ROOT, "training", os.environ.get("OCDD_RUN", "run1"))
+OUT = os.path.join(ROOT, os.environ.get("OCDD_OUT", "export")); os.makedirs(OUT, exist_ok=True)
+IMG = int(os.environ.get("OCDD_IMG", "224"))
+CACHE_WIN = r"D:\OCDD\data\interim\cache%d" % (256 if IMG == 224 else int(round(IMG * 1.15)))
+
+
+def cache_file(path):
+    return cpath(CACHE_WIN, path).replace("\\", "/").replace("D:/", "/mnt/d/")
+
+
+ck = torch.load(os.path.join(RUN, "best.pt"), map_location="cpu")
+classes = ck["classes"]
+temperature = json.load(open(os.path.join(RUN, "temperature.json")))["temperature"]
+cidx = {c: i for i, c in enumerate(classes)}
+ARCH = os.environ.get("OCDD_ARCH", "mobilenet_v3_large")
+if ARCH == "mobilenet_v3_large":
+    base = models.mobilenet_v3_large(weights=None)
+    base.classifier[3] = nn.Linear(base.classifier[3].in_features, len(classes))
+else:
+    base = getattr(models, ARCH)(weights=None)
+    base.classifier[1] = nn.Linear(base.classifier[1].in_features, len(classes))
+base.load_state_dict(ck["model"]); base.eval()
+
+
+class Deploy(nn.Module):
+    def __init__(self, m, t):
+        super().__init__()
+        self.m = m
+        self.register_buffer("mean", torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1))
+        self.register_buffer("std", torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1))
+        self.t = float(t)
+    def forward(self, x):
+        return self.m((x - self.mean) / self.std) / self.t
+
+
+model = Deploy(base, temperature).eval()
+
+rows = []
+with open(os.path.join(ROOT, "data", os.environ.get("OCDD_INTERIM", "interim"), "manifest.csv"), newline="", encoding="utf-8") as f:
+    for r in csv.DictReader(f):
+        c = unify(r["crop"], r["label"])
+        if c is not None and c in cidx and r["split"] in ("val", "test"):
+            r["y"] = cidx[c]; rows.append(r)
+random.seed(0)
+val = [r for r in rows if r["split"] == "val"]; test = [r for r in rows if r["split"] == "test"]
+random.shuffle(val); random.shuffle(test)
+tf = T.Compose([T.Resize(int(round(IMG * 256 / 224))), T.CenterCrop(IMG), T.ToTensor()])
+load = lambda r: tf(Image.open(cache_file(r["path"])).convert("RGB")).unsqueeze(0)
+cal = [load(r).numpy() for r in val[:500]]
+chk = [(load(r).numpy(), r["y"]) for r in test[:1000]]
+print("calibration %d, check %d" % (len(cal), len(chk)))
+
+fp = os.path.join(OUT, "vision_fp32.onnx"); i8 = os.path.join(OUT, "vision_int8.onnx")
+sample = torch.randn(1, 3, IMG, IMG)
+try:
+    torch.onnx.export(model, sample, fp, input_names=["image"], output_names=["logits"], opset_version=17, dynamo=False)
+except TypeError:
+    torch.onnx.export(model, sample, fp, input_names=["image"], output_names=["logits"], opset_version=17)
+print("fp32 onnx written")
+
+
+class Reader(CalibrationDataReader):
+    def __init__(self): self.it = iter(cal)
+    def get_next(self):
+        x = next(self.it, None)
+        return None if x is None else {"image": x}
+
+
+if os.environ.get("OCDD_SKIP_INT8") != "1":      # int8 was measurably worse (0.47 vs 0.92 on the general model): off for the new models
+    quantize_static(fp, i8, Reader(), quant_format=QuantFormat.QDQ, per_channel=True,
+                    activation_type=QuantType.QInt8, weight_type=QuantType.QInt8)
+    print("int8 onnx written")
+
+report = []
+def say(s):
+    print(s); report.append(s)
+for name in (("vision_fp32.onnx",) if os.environ.get("OCDD_SKIP_INT8") == "1" else ("vision_fp32.onnx", "vision_int8.onnx")):
+    p = os.path.join(OUT, name)
+    so = ort.SessionOptions(); so.intra_op_num_threads = 2
+    s = ort.InferenceSession(p, so, providers=["CPUExecutionProvider"])
+    ok = 0; t0 = time.time()
+    for x, y in chk:
+        ok += int(s.run(None, {"image": x})[0].argmax() == y)
+    say("%-18s %6.1f MB  accuracy on %d test photos: %.3f  (%.1f ms/photo, 2 threads, this PC)" % (
+        name, os.path.getsize(p) / 1e6, len(chk), ok / len(chk), 1000 * (time.time() - t0) / len(chk)))
+with torch.no_grad():
+    ok = sum(int(model(torch.from_numpy(x)).argmax().item() == y) for x, y in chk)
+say("original PyTorch model: accuracy %.3f" % (ok / len(chk)))
+open(os.path.join(OUT, "onnx_report.txt"), "w").write("\n".join(report))
+print("done")

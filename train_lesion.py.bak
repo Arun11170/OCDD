@@ -1,0 +1,214 @@
+"""Lesion finder: marks ONLY the diseased/damaged parts of a leaf. Run in Windows PowerShell (uses the RTX 3050):
+
+    cd D:\\OCDD
+    python get_data.py plantseg          # once (1.7 GB)
+    python train_lesion.py --smoke       # 2-3 minutes: checks that everything works
+    python train_lesion.py               # full run, about 2-3 hours
+
+Training photos: PlantSeg (CC BY 4.0), 11k in-the-wild photos where people outlined each lesion; healthy photos with empty
+masks teach it to leave healthy leaves alone. Model: DeepLabV3 + MobileNetV3-Large (ImageNet-pretrained backbone).
+Output: D:\\OCDD\\export_lesion\\lesionseg.onnx  (input float RGB 0..1 [1,3,512,512], output lesion probability [1,1,512,512]),
+        report.txt, check\\*.jpg (your testphotos with the lesion map)
+In the app: damage % = lesion area inside the leaf / leaf area.
+"""
+import glob, hashlib, json, os, random, sys, time
+import numpy as np
+import torch, torch.nn as nn, torch.nn.functional as F
+from PIL import Image, ImageEnhance, ImageFilter
+
+ROOT = "D:/OCDD" if os.name == "nt" else "/mnt/d/OCDD"
+if os.environ.get("OCDD_ROOT"): ROOT = os.environ["OCDD_ROOT"]
+DATA = ROOT + "/data/raw/plantseg"
+OUT = ROOT + "/export_lesion"; os.makedirs(OUT + "/check", exist_ok=True)
+S = 512
+SMOKE = "--smoke" in sys.argv
+DEMO = "--demo" in sys.argv          # synthetic data, only to test this script
+EPOCHS = 1 if SMOKE else int(next((a.split("=")[1] for a in sys.argv if a.startswith("--epochs=")), 30))
+BATCH = 4 if SMOKE else int(next((a.split("=")[1] for a in sys.argv if a.startswith("--batch=")), 8))
+GREY = (124, 116, 104)
+IMG_EXT = (".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG")
+
+
+def find_pairs():
+    """Returns (train, val) lists of (image_path, mask_path or None). Healthy photos have no mask."""
+    imgs, anns = {}, {}
+    for p in glob.glob(DATA + "/**/*", recursive=True):
+        if not p.endswith(IMG_EXT): continue
+        low = p.replace("\\", "/").lower()
+        stem = os.path.splitext(os.path.basename(p))[0]
+        if "/annotations/" in low or "/masks/" in low or "/labels/" in low:
+            anns.setdefault(stem, p)
+        elif "/json/" in low:
+            continue
+        else:
+            imgs.setdefault(stem, p)
+    pairs = []
+    for stem, p in imgs.items():
+        if stem in anns: pairs.append((p, anns[stem]))
+        elif "health" in p.replace("\\", "/").lower(): pairs.append((p, None))
+    tr, va = [], []
+    for p, m in pairs:
+        low = p.replace("\\", "/").lower()
+        if "/test/" in low or "/val/" in low: va.append((p, m))
+        elif "/train/" in low: tr.append((p, m))
+        else: (va if int(hashlib.md5(p.encode()).hexdigest(), 16) % 10 == 0 else tr).append((p, m))
+    return tr, va
+
+
+def demo_pairs():
+    d = OUT + "/demo"; os.makedirs(d, exist_ok=True)
+    rnd = np.random.RandomState(0); out = []
+    for i in range(60):
+        im = np.zeros((300, 400, 3), np.uint8); im[:] = (40, 140 + rnd.randint(0, 40), 50)
+        m = np.zeros((300, 400), np.uint8)
+        if i % 5:
+            for _ in range(rnd.randint(2, 7)):
+                x, y, r = rnd.randint(30, 370), rnd.randint(30, 270), rnd.randint(8, 25)
+                yy, xx = np.ogrid[:300, :400]; blob = (xx - x) ** 2 + (yy - y) ** 2 < r * r
+                im[blob] = (120, 80, 40); m[blob] = 1
+        a, b = "%s/d%d.jpg" % (d, i), "%s/d%d.png" % (d, i)
+        Image.fromarray(im).save(a); Image.fromarray(m).save(b); out.append((a, b))
+    return out[:48], out[48:]
+
+
+def letterbox(im, mask=None, size=S):
+    w, h = im.size; k = size / max(w, h)
+    nw, nh = max(1, round(w * k)), max(1, round(h * k))
+    r = im.resize((nw, nh), Image.BILINEAR)
+    sq = Image.new("RGB", (size, size), GREY); ox, oy = (size - nw) // 2, (size - nh) // 2; sq.paste(r, (ox, oy))
+    mm = None
+    if mask is not None:
+        mr = mask.resize((nw, nh), Image.NEAREST); mm = Image.new("L", (size, size), 0); mm.paste(mr, (ox, oy))
+    return sq, mm
+
+
+class DS(torch.utils.data.Dataset):
+    def __init__(self, pairs, train): self.pairs, self.train = pairs, train
+    def __len__(self): return len(self.pairs)
+    def __getitem__(self, i):
+        ip, mp = self.pairs[i]
+        im = Image.open(ip).convert("RGB")
+        m = Image.open(mp) if mp else Image.new("L", im.size, 0)
+        m = Image.fromarray(((np.asarray(m.convert("L") if m.mode != "L" else m) > 0) * 255).astype(np.uint8))
+        if self.train:
+            k = random.uniform(0.8, 1.5) * 512 / max(im.size)           # lesions are small: train a little larger than the app uses
+            im = im.resize((max(8, round(im.size[0] * k)), max(8, round(im.size[1] * k))), Image.BILINEAR); m = m.resize(im.size, Image.NEAREST)
+            w, h = im.size
+            if w < S or h < S:
+                pad = Image.new("RGB", (max(w, S), max(h, S)), GREY); pad.paste(im, (0, 0)); im = pad
+                pm = Image.new("L", im.size, 0); pm.paste(m, (0, 0)); m = pm
+                w, h = im.size
+            x0, y0 = random.randint(0, w - S), random.randint(0, h - S)
+            im = im.crop((x0, y0, x0 + S, y0 + S)); m = m.crop((x0, y0, x0 + S, y0 + S))
+            if random.random() < 0.5: im = im.transpose(Image.FLIP_LEFT_RIGHT); m = m.transpose(Image.FLIP_LEFT_RIGHT)
+            if random.random() < 0.3: im = im.transpose(Image.FLIP_TOP_BOTTOM); m = m.transpose(Image.FLIP_TOP_BOTTOM)
+            im = ImageEnhance.Brightness(im).enhance(random.uniform(0.7, 1.3)); im = ImageEnhance.Contrast(im).enhance(random.uniform(0.75, 1.3))
+            im = ImageEnhance.Color(im).enhance(random.uniform(0.7, 1.3))
+            if random.random() < 0.25: im = im.filter(ImageFilter.GaussianBlur(random.uniform(0.5, 1.6)))
+        else:
+            im, m = letterbox(im, m)
+        x = torch.from_numpy(np.asarray(im, np.float32) / 255.0).permute(2, 0, 1)
+        y = torch.from_numpy((np.asarray(m) > 127).astype(np.float32))[None]
+        return x, y
+
+
+class Deploy(nn.Module):
+    def __init__(self, m):
+        super().__init__(); self.m = m
+        self.register_buffer("mean", torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1))
+        self.register_buffer("std", torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1))
+    def forward(self, x):
+        return torch.sigmoid(self.m((x - self.mean) / self.std)["out"])
+
+
+def main():
+    from torchvision.models.segmentation import deeplabv3_mobilenet_v3_large
+    from torchvision.models import MobileNet_V3_Large_Weights
+    dev = "cuda" if torch.cuda.is_available() else "cpu"
+    print("device:", dev, "smoke:", SMOKE, "demo:", DEMO)
+    tr, va = demo_pairs() if DEMO else find_pairs()
+    if not tr:
+        print("folders found under", DATA, ":", [os.path.basename(p) for p in glob.glob(DATA + "/*")][:20])
+        sys.exit("No PlantSeg photos with masks found under %s. Run: python get_data.py plantseg, then python plantseg_overview.py and send me the output." % DATA)
+    if SMOKE: tr, va = tr[:40], va[:16]
+    print("training photos %d (with lesions %d, healthy %d), validation %d" % (len(tr), sum(1 for p in tr if p[1]), sum(1 for p in tr if not p[1]), len(va)))
+    from progress import Beat, auto_workers
+    nw = 0 if (SMOKE or DEMO) else auto_workers(cap=8, per_worker_gb=0.8)
+    dl = torch.utils.data.DataLoader(DS(tr, True), batch_size=BATCH, shuffle=True, num_workers=nw, drop_last=True, persistent_workers=nw > 0)
+    dv = torch.utils.data.DataLoader(DS(va, False), batch_size=4, num_workers=0)
+    net = deeplabv3_mobilenet_v3_large(weights=None, weights_backbone=None if DEMO else MobileNet_V3_Large_Weights.IMAGENET1K_V1, num_classes=1).to(dev)
+    dep = Deploy(net).to(dev)
+    opt = torch.optim.AdamW(net.parameters(), lr=1e-3, weight_decay=1e-4)
+    total = EPOCHS * len(dl)
+    sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=1e-3, total_steps=total, pct_start=0.1)
+    scaler = torch.amp.GradScaler("cuda", enabled=(dev == "cuda"))
+
+    def loss_fn(lg, y):
+        bce = F.binary_cross_entropy_with_logits(lg, y, pos_weight=torch.tensor(3.0, device=lg.device))
+        p = torch.sigmoid(lg); inter = (p * y).sum((1, 2, 3)); den = p.sum((1, 2, 3)) + y.sum((1, 2, 3))
+        has = (y.sum((1, 2, 3)) > 0).float()                   # dice only where there is something to find
+        dice = ((1 - (2 * inter + 1) / (den + 1)) * has).sum() / has.sum().clamp(min=1)
+        return bce + dice
+
+    def evaluate():
+        net.eval(); ious, fps = [], []
+        with torch.no_grad():
+            for x, y in dv:
+                pr = dep(x.to(dev)).cpu() > 0.5; yt = y > 0.5
+                for a, b in zip(pr, yt):
+                    if b.sum() == 0: fps.append(a.float().mean().item())
+                    else: ious.append(((a & b).sum() / ((a | b).sum() + 1e-6)).item())
+        net.train()
+        return (float(np.mean(ious)) if ious else 0.0), (float(np.mean(fps)) if fps else 0.0)
+
+    t0 = time.time(); best = -1; net.train()
+    beat = Beat('lesion', EPOCHS)
+    for ep in range(EPOCHS):
+        tot = n = 0
+        for bi, (x, y) in enumerate(dl):
+            x, y = x.to(dev), y.to(dev)
+            xin = (x - dep.mean) / dep.std
+            with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=(dev == "cuda")):
+                out = net(xin)["out"]
+            loss = loss_fn(out.float(), y)
+            opt.zero_grad(set_to_none=True); scaler.scale(loss).backward(); scaler.step(opt); scaler.update(); sched.step()
+            tot += loss.item(); n += 1
+            beat.tick(ep, bi, len(dl), tot / n)
+        iou, fp = evaluate()
+        print("epoch %2d/%d  loss %.3f  val lesion IoU %.3f  false lesion area on healthy %.3f  (%.0fs)" % (ep + 1, EPOCHS, tot / max(n, 1), iou, fp, time.time() - t0), flush=True)
+        score = iou - fp
+        if score > best:
+            best = score; torch.save(net.state_dict(), OUT + "/best.pt")
+    net.load_state_dict(torch.load(OUT + "/best.pt", map_location=dev)); net.eval()
+    iou, fp = evaluate()
+    report = ["lesion finder (held-out PlantSeg photos): IoU %.3f, false lesion area on healthy leaves %.3f" % (iou, fp)]
+    print(report[0])
+
+    # ---- export ----
+    net.cpu().eval(); dep = Deploy(net).eval()
+    path = OUT + "/lesionseg.onnx"
+    try: torch.onnx.export(dep, torch.zeros(1, 3, S, S), path, input_names=["image"], output_names=["lesion"], opset_version=17, dynamo=False)
+    except TypeError: torch.onnx.export(dep, torch.zeros(1, 3, S, S), path, input_names=["image"], output_names=["lesion"], opset_version=17)
+    report.append("lesionseg.onnx %.1f MB" % (os.path.getsize(path) / 1e6)); print(report[-1])
+
+    # ---- try on your test photos (lesion map only; damage % uses the leaf finder in the app) ----
+    try:
+        import onnxruntime as ort
+        sess = ort.InferenceSession(path, providers=["CPUExecutionProvider"])
+        tp = ROOT + "/testphotos"
+        if os.path.isdir(tp):
+            report += ["", "lesion area as % of the photo for your testphotos (red = lesion found):"]
+            for f in sorted(os.listdir(tp)):
+                if not f.lower().endswith((".jpg", ".jpeg", ".png")): continue
+                im = Image.open(os.path.join(tp, f)).convert("RGB"); sq, _ = letterbox(im)
+                p = sess.run(None, {"image": (np.asarray(sq, np.float32) / 255.0).transpose(2, 0, 1)[None]})[0][0, 0]
+                a = np.asarray(sq, np.float32).copy(); a[p > 0.5] = 0.35 * a[p > 0.5] + 0.65 * np.array([255, 0, 0])
+                Image.fromarray(np.hstack([np.asarray(sq), a.astype(np.uint8)])).save(OUT + "/check/" + os.path.splitext(f)[0] + ".jpg", quality=80)
+                report.append("%-48s lesion %5.1f %% of photo" % (f[:48], 100 * float((p > 0.5).mean())))
+    except Exception as e:
+        report.append("test photos skipped: %s" % e)
+    open(OUT + "/report.txt", "w").write("\n".join(report)); print("\n".join(report[-40:])); print("done. see", OUT)
+
+
+if __name__ == "__main__":
+    main()
