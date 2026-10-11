@@ -306,7 +306,7 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
         }
         Spacer(Modifier.width(12.dp))
         Text(s.appName, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ink, modifier = Modifier.weight(1f))
-        VoiceButton(vm.lang) { c ->
+        VoiceButton(vm.lang, { l2 -> vm.lang = l2; hctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
             when (c) {
                 Cmd.CAMERA, Cmd.NEW_CHECK -> onCamera()
                 Cmd.GALLERY -> onGallery()
@@ -532,13 +532,15 @@ private fun LibraryDialogs(vm: MainViewModel, s: S, onClose: () -> Unit) {
 
 /** Microphone button: say what you want ("take photo", "help", "फोटो लें") in the chosen language. */
 @Composable
-private fun VoiceButton(lang: Lang, onCmd: (Cmd) -> Unit) {
+private fun VoiceButton(lang: Lang, onLang: (Lang) -> Unit, onCmd: (Cmd) -> Unit) {
     val vctx = LocalContext.current
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { r ->
         val guesses = r.data?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS).orEmpty()
         if (guesses.isEmpty()) return@rememberLauncherForActivityResult
+        val newLang = guesses.firstNotNullOfOrNull { VoiceNav.matchLang(it) }
         val c = VoiceNav.matchAny(lang, guesses)
-        if (c != null) onCmd(c)
+        if (newLang != null && newLang != lang && c == null) onLang(newLang)
+        else if (c != null) onCmd(c)
         else Toast.makeText(vctx, tr(lang, "Did not understand: ", "समझ नहीं आया: ") + guesses.first() + "\n" + VoiceNav.examples(lang), Toast.LENGTH_LONG).show()
     }
     Box(Modifier.size(44.dp).clip(CircleShape).background(Ds.Brand).clickable {
@@ -637,7 +639,7 @@ private fun ResultScreen(
                     Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = s.newCheck, tint = Ink)
                 }
                 Spacer(Modifier.weight(1f))
-                VoiceButton(vm.lang) { c ->
+                VoiceButton(vm.lang, { l2 -> vm.lang = l2; ctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
                     when (c) {
                         Cmd.LISTEN -> if (entry != null) onListen(spokenText(s, entry, sev, measured))
                         Cmd.NEW_CHECK, Cmd.BACK -> vm.reset()

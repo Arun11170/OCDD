@@ -228,13 +228,35 @@ AS YELLOW হালধীয়া
         return null
     }
 
+    private val langNames: Map<Lang, List<String>> = mapOf(
+        Lang.EN to listOf("english", "अंग्रेज़ी", "अंग्रेजी"),
+        Lang.HI to listOf("hindi", "हिन्दी", "हिंदी"),
+        Lang.BN to listOf("bengali", "bangla", "বাংলা", "बंगाली", "बांग्ला"),
+        Lang.TE to listOf("telugu", "తెలుగు", "तेलुगु", "तेलुगू"),
+        Lang.MR to listOf("marathi", "मराठी"),
+        Lang.TA to listOf("tamil", "தமிழ்", "तमिल"),
+        Lang.GU to listOf("gujarati", "ગુજરાતી", "गुजराती"),
+        Lang.UR to listOf("urdu", "اردو", "उर्दू"),
+        Lang.KN to listOf("kannada", "ಕನ್ನಡ", "कन्नड़", "कन्नड"),
+        Lang.OR to listOf("odia", "oriya", "ଓଡ଼ିଆ", "ओड़िया", "उड़िया"),
+        Lang.ML to listOf("malayalam", "മലയാളം", "मलयालम"),
+        Lang.PA to listOf("punjabi", "ਪੰਜਾਬੀ", "पंजाबी"),
+        Lang.AS to listOf("assamese", "অসমীয়া", "असमिया"),
+    )
+
+    /** "Tamil", "தமிழ்", "हिंदी में" ... : the language the farmer asked for, or null. */
+    fun matchLang(heard: String): Lang? {
+        val t = norm(heard)
+        return langNames.entries.firstOrNull { (_, names) -> names.any { norm(it) in t } }?.key
+    }
+
     /** First hit among several recogniser guesses. */
     fun matchAny(lang: Lang, guesses: List<String>): Cmd? = guesses.firstNotNullOfOrNull { match(lang, it) }
 
     /** Words shown on the "say something" prompt (examples). */
     fun examples(lang: Lang): String = when (lang) {
-        Lang.EN -> "take photo, gallery, help, diary, weather"
-        Lang.HI -> "फोटो लें, गैलरी, मदद, डायरी, मौसम"
+        Lang.EN -> "take photo, gallery, help, diary, weather, Tamil"
+        Lang.HI -> "फोटो लें, गैलरी, मदद, डायरी, मौसम, तमिल"
         else -> words[lang.name]?.let { m -> listOf(Cmd.CAMERA, Cmd.GALLERY, Cmd.HELP, Cmd.DIARY, Cmd.WEATHER).mapNotNull { m[it]?.firstOrNull() }.joinToString(", ") }
             ?: "photo, help, diary"
     }

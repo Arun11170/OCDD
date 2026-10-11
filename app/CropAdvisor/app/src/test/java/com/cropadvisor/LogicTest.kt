@@ -80,5 +80,7 @@ class LogicTest {
         assertEquals(Cmd.DIARY, VoiceNav.match(Lang.UR, "ڈائری کھولیں"))
         assertEquals(Cmd.CAMERA, VoiceNav.match(Lang.ML, "camera")) // English words work in every language
         assertEquals(null, VoiceNav.match(Lang.EN, "banana"))
+        assertEquals(Lang.TA, VoiceNav.matchLang("change to Tamil"))
+        assertEquals(Lang.HI, VoiceNav.matchLang("हिंदी"))
     }
 }
