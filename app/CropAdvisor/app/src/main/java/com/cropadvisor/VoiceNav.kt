@@ -93,7 +93,7 @@ TA NEW_CHECK புதிய,மீண்டும்
 TA BACK பின்,திரும்ப,முகப்பு,மூடு,ஹோம்
 TA HELP உதவி,ஹெல்ப்
 TA CALL அழை,கால்,போன்,நிபுணர்,கிசான்
-TA DIARY நாட்குறிப்பு,டைரி,குறிப்பு
+TA DIARY நாட்குறிப்பு,டைரி,டயரி,டையரி,டைறி,குறிப்பு
 TA WEATHER வானிலை,மழை
 TA STAGES நிலை,கட்ட,ஸ்டேஜ்
 TA SETTINGS அமைப்பு,செட்டிங்
@@ -225,7 +225,42 @@ AS YELLOW হালধীয়া
             if (own?.get(c)?.any { it in t } == true) return c
             if (en?.get(c)?.any { it in t } == true) return c
         }
+        return fuzzy(own, en, t)
+    }
+
+    /** Speech engines spell loan words their own way (டைரி / டயரி), so a word that is one or two letters off still counts. */
+    private fun fuzzy(own: Map<Cmd, List<String>>?, en: Map<Cmd, List<String>>?, t: String): Cmd? {
+        val tokens = t.split(Regex("[^\\p{L}\\p{M}]+")).filter { it.length >= 3 }
+        if (tokens.isEmpty()) return null
+        for (c in order) {
+            val list = (own?.get(c) ?: emptyList()) + (en?.get(c) ?: emptyList())
+            for (w in list) {
+                if (w.length < 4) continue
+                val allowed = if (w.length >= 7) 2 else 1
+                for (tok in tokens) {
+                    if (kotlin.math.abs(tok.length - w.length) > allowed) continue
+                    if (editDistance(tok, w, allowed) <= allowed) return c
+                }
+            }
+        }
         return null
+    }
+
+    /** Levenshtein distance, giving up (returns limit+1) as soon as it must exceed [limit]. */
+    internal fun editDistance(a: String, b: String, limit: Int): Int {
+        var prev = IntArray(b.length + 1) { it }
+        for (i in 1..a.length) {
+            val cur = IntArray(b.length + 1)
+            cur[0] = i
+            var rowMin = cur[0]
+            for (j in 1..b.length) {
+                cur[j] = minOf(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + if (a[i - 1] == b[j - 1]) 0 else 1)
+                if (cur[j] < rowMin) rowMin = cur[j]
+            }
+            if (rowMin > limit) return limit + 1
+            prev = cur
+        }
+        return prev[b.length]
     }
 
     private val langNames: Map<Lang, List<String>> = mapOf(
