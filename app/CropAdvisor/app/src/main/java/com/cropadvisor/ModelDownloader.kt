@@ -16,7 +16,7 @@ import java.security.MessageDigest
 object ModelDownloader {
     /** Where the app looks first. Upload manifest.json, tokenizer.model and the .pte file(s) as assets of this GitHub release
      *  (the repository must be public), or change this to your own https address. */
-    const val DEFAULT_SERVER = "https://github.com/Arun11170/OCDD/releases/download/models-v1"
+    const val DEFAULT_SERVER = "https://github.com/Arun11170/OCDD/releases/download/model-v1"
 
     data class Item(val name: String, val sha256: String, val size: Long)
     data class Manifest(val full: Item?, val lite: Item?, val tokenizer: Item?)
