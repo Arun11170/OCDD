@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
-import android.widget.Toast
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -299,6 +298,27 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
     val hctx = LocalContext.current
     // the crop of the latest check that was a crop (not a pest): the weather and stage tools use it
     val lastCrop = vm.history.firstNotNullOfOrNull { h -> Kb.get(h.classId, Lang.EN)?.crop?.takeIf { it != "pest" } }
+    val runCmd: (Cmd) -> Unit = { c ->
+        when (c) {
+            Cmd.CAMERA, Cmd.NEW_CHECK -> onCamera()
+            Cmd.GALLERY -> onGallery()
+            Cmd.PLOT -> onPlot()
+            Cmd.LIBRARY -> tool = "lib"
+            Cmd.DIARY -> tool = "diary"
+            Cmd.WEATHER -> tool = "weather"
+            Cmd.STAGES -> tool = "stage"
+            Cmd.YELLOW -> tool = "nutrient"
+            Cmd.HELP -> tool = "help"
+            Cmd.SETTINGS -> tool = "settings"
+            Cmd.CALL -> dial(hctx)
+            Cmd.LISTEN, Cmd.BACK -> Unit
+        }
+    }
+    // a command spoken on the result screen waits here until the home screen is showing
+    androidx.compose.runtime.LaunchedEffect(vm.pendingCmd) {
+        val c = vm.pendingCmd
+        if (c != null) { vm.pendingCmd = null; runCmd(c) }
+    }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
     // top bar: logo, name, language
     Row(Modifier.fillMaxWidth().padding(start = 20.dp, end = 16.dp, top = 18.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -307,22 +327,7 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
         }
         Spacer(Modifier.width(12.dp))
         Text(s.appName, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ink, modifier = Modifier.weight(1f))
-        VoiceButton(s, vm.lang, { l2 -> vm.lang = l2; hctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
-            when (c) {
-                Cmd.CAMERA, Cmd.NEW_CHECK -> onCamera()
-                Cmd.GALLERY -> onGallery()
-                Cmd.PLOT -> onPlot()
-                Cmd.LIBRARY -> tool = "lib"
-                Cmd.DIARY -> tool = "diary"
-                Cmd.WEATHER -> tool = "weather"
-                Cmd.STAGES -> tool = "stage"
-                Cmd.YELLOW -> tool = "nutrient"
-                Cmd.HELP -> tool = "help"
-                Cmd.SETTINGS -> tool = "settings"
-                Cmd.CALL -> dial(hctx)
-                Cmd.LISTEN, Cmd.BACK -> Unit
-            }
-        }
+        VoiceButton(s, vm.lang, { l2 -> vm.lang = l2; hctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c -> runCmd(c) }
         Spacer(Modifier.width(8.dp))
         LangRow(vm, s)
     }
@@ -690,7 +695,7 @@ private fun ResultScreen(
                         Cmd.CAMERA -> onRetake()
                         Cmd.CALL, Cmd.HELP -> dial(ctx)
                         Cmd.GALLERY, Cmd.PLOT, Cmd.LIBRARY, Cmd.DIARY, Cmd.WEATHER, Cmd.STAGES, Cmd.SETTINGS, Cmd.YELLOW -> {
-                            Toast.makeText(ctx, tr(vm.lang, "Go back to the home screen first.", "पहले होम स्क्रीन पर जाएँ।"), Toast.LENGTH_SHORT).show()
+                            vm.pendingCmd = c; vm.reset()       // go home; the home screen opens it
                         }
                     }
                 }

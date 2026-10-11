@@ -145,6 +145,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     /** The small "understands any language" model for voice and typed commands (about 118 MB, optional). */
     var voiceAi by mutableStateOf<DlState>(DlState.Idle)
+    /** A voice command given on the result screen that needs the home screen (weather, diary ...): home opens it. */
+    var pendingCmd by mutableStateOf<Cmd?>(null)
     @Volatile private var voiceAiCancel = false
     fun cancelVoiceAi() { voiceAiCancel = true }
     fun voiceAiInstalled() = Embedder.installed(getApplication())

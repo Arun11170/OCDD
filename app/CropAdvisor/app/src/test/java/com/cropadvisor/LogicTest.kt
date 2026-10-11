@@ -83,6 +83,11 @@ class LogicTest {
         assertEquals(Cmd.DIARY, VoiceNav.match(Lang.TA, "டயரி திற")) // spelling differences are tolerated
         assertEquals(Cmd.DIARY, VoiceNav.match(Lang.TA, "diary"))
         assertEquals(Cmd.WEATHER, VoiceNav.match(Lang.EN, "wether today"))
+        assertEquals(Cmd.WEATHER, VoiceNav.match(Lang.TA, "vaanilai"))      // typed in English letters
+        assertEquals(Cmd.WEATHER, VoiceNav.match(Lang.TA, "வானிலை"))
+        assertEquals(Cmd.WEATHER, VoiceNav.match(Lang.HI, "mausam batao"))
+        assertEquals(Cmd.CAMERA, VoiceNav.match(Lang.TE, "photo tiyyi"))
+        assertEquals(null, VoiceNav.match(Lang.EN, "tall bank"))             // near-misses of short English words must not fire
         assertEquals(Lang.TA, VoiceNav.matchLang("change to Tamil"))
         assertEquals(Lang.HI, VoiceNav.matchLang("हिंदी"))
     }

@@ -380,6 +380,20 @@ AS SETTINGS ছেটিংছ,বিকল্প
 AS LIBRARY গ্ৰন্থাগাৰ,পোক,তালিকা,তথ্য
 AS PLOT মাটি,প্ৰতিবেদন,ৰিপৰ্ট,বিঘা
 AS YELLOW নাইট্ৰজেন,অভাৱ,পুষ্টি
+RO CAMERA foto,photo,kamera,camera,padam,pugaipadam,pukaippadam,puhaipadam,chitra,chhabi,chobi,tasveer,tasvir,tasbir,phota,photo lo,photo kheencho,photo edu,photo eduthu,photo tiyyi,photo tegi,photo kadh,photo kaadh
+RO GALLERY gallery,galari,galleri,chuno,chunen,select,thervu,therndhedu,enchuko,pasand,album
+RO LISTEN sunao,sunaiye,suno,padho,bolo,batao,kelu,kelungal,sollu,sollunga,vinu,vinipinchu,chadavu,chepu,shono,shuno,vanchi,vachun
+RO NEW_CHECK naya,nayi,phir se,dobara,agla,puthiya,pudhiya,puthu,kotta,kothha,navin,nobo,notun,nuaa,pudiya,hosa,again
+RO BACK wapas,vapas,peeche,piche,home,band karo,thirumbu,mugappu,vennaka,venakki,maage,pachhal,hinde,phera,pachha,pichhe
+RO HELP madad,sahayata,help,udhavi,uthavi,sahayam,sayam,sahay,sahaya,sahaaya,sohayota
+RO CALL phone,expert,kisan,kisaan,vallunar,nipunudu,tajna,tagya,tazna,bishesoggo,bisheshogyo,vidagdha,mahir,afsar,adhikari,adhikaari,call karo
+RO DIARY diary,dayri,dairy,dayari,daayari,kurippu,kurippugal,natkurippu,notkurippu,notes
+RO WEATHER weather,mausam,mosam,mousam,barish,baarish,barsaat,baarsaat,vaanilai,vanilai,vaaniilai,vaanilay,vanilay,mazhai,mazha,kalavastha,havaman,havamaan,paus,pavus,vatavaran,vaataavaran,hawamaan,abohawa,aabohawa,vatavaranam,vaathavaranam,varsham,varsha,payu,varsad,botor,borokhun,meeh,paniapaga,thattuveppa
+RO STAGES stage,avastha,avasta,charan,padav,tabbo,tabbakko,stej,nilai,kattam,dasha,hantha,ghattam,paryay,pariyay,porjay,dhaap,padaav
+RO SETTINGS setting,settings,seting,settingu
+RO LIBRARY library,pustak,kitab,kitaab,book,bimari,bimaari,roga,noikal,vyadhi,vyaadhi,rogam,tegulu,kida,keeda,keet,poochi,pochi,pootchi
+RO PLOT plot,khet,kheth,khetar,kheti,jameen,zameen,vayal,nilam,polam,hola,jomi,jami,jamin,shetat,khetra,pothar
+RO YELLOW peela,peeli,peele,pila,pili,yellow,manjal,pasupu,hodi,halad,haladi,halud,holud,pilu,haldiya,haladia,manja
 """
 
     private fun norm(t: String): String =
@@ -403,11 +417,13 @@ AS YELLOW নাইট্ৰজেন,অভাৱ,পুষ্টি
         if (t.isBlank()) return null
         val own = words[lang.name]
         val en = words["EN"]
+        val ro = words["RO"]            // Indian words typed in English letters: "mausam", "vaanilai", "photo lo"
         for (c in order) {
             if (own?.get(c)?.any { it in t } == true) return c
             if (en?.get(c)?.any { it in t } == true) return c
+            if (ro?.get(c)?.any { it.length >= 4 && it in t } == true) return c
         }
-        return fuzzy(own, en, t)
+        return fuzzy(own, (en ?: emptyMap()).mapValues { (c, v) -> v + (ro?.get(c) ?: emptyList()) }, t)
     }
 
     /** Speech engines spell loan words their own way (டைரி / டயரி), so a word that is one or two letters off still counts. */
@@ -417,7 +433,8 @@ AS YELLOW নাইট্ৰজেন,অভাৱ,পুষ্টি
         for (c in order) {
             val list = (own?.get(c) ?: emptyList()) + (en?.get(c) ?: emptyList())
             for (w in list) {
-                if (w.length < 4) continue
+                // English-letter words are only fuzzy-matched when long enough, or "call" would match "tall"
+                if (w.length < (if (w.all { it in 'a'..'z' }) 6 else 4)) continue
                 val allowed = if (w.length >= 7) 2 else 1
                 for (tok in tokens) {
                     if (kotlin.math.abs(tok.length - w.length) > allowed) continue
