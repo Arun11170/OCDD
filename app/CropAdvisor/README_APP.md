@@ -20,7 +20,7 @@
 
 ## Added after the first release
 - Symptom tree (assets/symptom_tree.json, Checks.kt): questions per crop, Yes/No prune the candidate problems.
-- Crop picker (Classifier.predict(photo, crop)); optional per-crop models in assets/crops/<crop>.onnx + .json.
+- One general model for all crops and pests (Classifier.predict(photo)); no crop picker. Pest answers are refused when the model also believes the leaf may be healthy.
 - First-run Llama download (SetupScreen, ModelDownloader, DeviceProfile) from ModelDownloader.DEFAULT_SERVER.
 - Village hub (hub/hub_server.py, HubClient.kt) for phones that cannot run Llama.
 - The app now has the INTERNET permission, used only for the farmer-started model download and the hub on the local Wi-Fi.

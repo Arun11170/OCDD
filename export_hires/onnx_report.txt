@@ -1,2 +1,0 @@
-vision_fp32.onnx     80.7 MB  accuracy on 1000 test photos: 0.859  (58.6 ms/photo, 2 threads, this PC)
-original PyTorch model: accuracy 0.859

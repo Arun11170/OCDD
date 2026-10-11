@@ -38,3 +38,6 @@ No doses are given. Hindi text is machine-translated and not yet reviewed by a s
 The app is a decision aid and not a substitute for advice from a local agriculture officer (KVK).
 
 Organic and low-cost options: short paraphrased points from public university and extension pages (TNAU Agritech Portal and other extension sites; each card links its source). Names only, no doses. Not a substitute for local KVK advice.
+
+
+Font: Plus Jakarta Sans, SIL Open Font License 1.1 (see OFL_PlusJakartaSans.txt).

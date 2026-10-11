@@ -12,7 +12,7 @@ Learn, with real farmers and real fields: (1) is the app's diagnosis right, (2) 
 1. Install the build on test phones; run `docs/TEST_CHECKLIST.md`.
 2. KVK officer reviews the product list and advice for the pilot crops (`review/KVK_review_sheet.csv`) and signs off or corrects.
 3. Native speakers of the pilot languages review `review/review_<lang>.csv`.
-4. Fix the language(s) and crop picker per farmer.
+4. Fix the language per farmer.
 5. Consent: explain in the local language that photos stay on the phone, that the app gives no doses, and that exports of the answers file are shared only if the farmer agrees.
 
 ## Training (30 minutes, in the field)

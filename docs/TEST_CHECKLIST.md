@@ -43,3 +43,11 @@ Build first: Android Studio, Sync Gradle (new CameraX dependencies need internet
 - [ ] Set a reminder, restart the phone: the reminder still fires (and one that came due while off shows at boot)
 - [ ] Change the language to Odia / Tamil / Urdu: buttons, card and notification text are in that language (Urdu is right-to-left)
 - [ ] Diary > Export: the CSV has a second section with Better/Same/Worse answers
+
+## Voice commands and new look (added 11 Oct 2026)
+- [ ] Mic button (green circle, top right of Home and Result): say "take photo", "help", "diary", "weather" in English. The matching screen opens
+- [ ] Change language to Hindi, Tamil, Urdu: say the same in that language ("फोटो लें", "உதவி"). If voice typing is missing for a language, a message says so
+- [ ] Result screen: say "listen" (reads the advice), "new check" or "back" (goes home), "call" (opens the dialler)
+- [ ] Take photo asks for camera permission once, then opens the camera without closing the app
+- [ ] Weather watch and Crop stages open with the crop of your latest check (no "pick your crop" text)
+- [ ] Healthy random leaf should not be called a pest

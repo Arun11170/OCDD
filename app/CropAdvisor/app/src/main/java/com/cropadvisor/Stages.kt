@@ -64,7 +64,8 @@ fun CropCalendarCard(lang: Lang, crop: String?) {
             Text(tr(lang, "Crop stage guide", "फसल अवस्था गाइड"), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
             val avail = if (crop == null) emptyList() else Stages.available(crop)
             if (crop == null || avail.isEmpty()) {
-                Text(tr(lang, "Pick your crop above to see what to watch at each stage.", "ऊपर अपनी फसल चुनें, फिर हर अवस्था में क्या देखना है यह जानें।"), fontSize = 14.sp)
+                Text(if (crop == null) tr(lang, "Check a leaf first. This guide uses the crop of your latest check.", "पहले एक पत्ता जाँचें। यह गाइड आपकी पिछली जाँच की फसल के हिसाब से है।")
+                     else tr(lang, "There is no stage guide for this crop yet.", "इस फसल के लिए अभी अवस्था गाइड नहीं है।"), fontSize = 14.sp)
                 return@Column
             }
             val cur = if (stage in avail) stage else ""

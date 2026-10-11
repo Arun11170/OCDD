@@ -1,6 +1,7 @@
 package com.cropadvisor
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -63,5 +64,21 @@ class LogicTest {
     @Test fun gateIsNeverBelowBase() {
         assertTrue(Classifier.gateFor("tomato__early_blight") >= Classifier.GATE)
         assertTrue(Classifier.gateFor("unknown") >= Classifier.GATE)
+    }
+
+    @Test fun pestAnswerRefusedWhenLeafMayBeHealthy() {
+        assertTrue(Classifier.answers("pest__aphids", 0.95f, 0.005f))
+        assertFalse(Classifier.answers("pest__aphids", 0.95f, 0.05f))
+        assertTrue(Classifier.answers("tomato__early_blight", 0.95f, 0.05f))
+    }
+
+    @Test fun voiceCommandsMatchInManyLanguages() {
+        assertEquals(Cmd.CAMERA, VoiceNav.match(Lang.EN, "take photo"))
+        assertEquals(Cmd.GALLERY, VoiceNav.match(Lang.EN, "choose photo from gallery"))
+        assertEquals(Cmd.CAMERA, VoiceNav.match(Lang.HI, "फोटो लें"))
+        assertEquals(Cmd.HELP, VoiceNav.match(Lang.TA, "உதவி"))
+        assertEquals(Cmd.DIARY, VoiceNav.match(Lang.UR, "ڈائری کھولیں"))
+        assertEquals(Cmd.CAMERA, VoiceNav.match(Lang.ML, "camera")) // English words work in every language
+        assertEquals(null, VoiceNav.match(Lang.EN, "banana"))
     }
 }

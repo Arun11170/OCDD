@@ -35,7 +35,7 @@ import org.json.JSONObject
 /** Short notes the farmer adds to a saved check ("sprayed on Monday", "rain last night"). Kept only on this phone. */
 object DiaryNotes {
     private fun prefs(c: Context) = c.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE)
-    private fun all(c: Context) = try { JSONObject(prefs(c).getString("diary_notes", "{}")) } catch (e: Exception) { JSONObject() }
+    private fun all(c: Context) = try { JSONObject(prefs(c).getString("diary_notes", "{}") ?: "{}") } catch (e: Exception) { JSONObject() }
     fun get(c: Context, ts: Long): String = all(c).optString(ts.toString(), "")
     fun set(c: Context, ts: Long, text: String) {
         val o = all(c)

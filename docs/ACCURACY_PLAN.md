@@ -7,7 +7,7 @@ Report: `accuracy_lab_report.txt`. Re-run after every new model: `python3 accura
 | Idea | Result | Decision |
 |---|---|---|
 | Average flip / zoom views (test-time averaging) | top-1 unchanged (0.921 vs 0.921). Only makes the app say "not sure" more often | **Not added** |
-| Crop picker (oracle crop) | top-1 +0.2 pt, field answers +1.1 pt. Model already separates crops well | Keep picker (it also filters outputs); not a big accuracy lever |
+| Crop picker (oracle crop) | top-1 +0.2 pt, field answers +1.1 pt. Model already separates crops well | Dropped on 11 Oct 2026 (not a big accuracy lever); the app uses one general model |
 | Per-crop gate | chilli: 85% right at 0.80 -> 88.5% at 0.90; pests: 90.1% -> 91.8% at 0.85. Overall right-when-answers 95.1 -> 95.9 (field 92.0 -> 93.2), answers 93.1% -> 91.7% | **Added** (`assets/gates.json`, never below 0.80). Rice not raised (would drop its answers 78% -> 65%) |
 | Confusion pairs | mostly pests: leafhopper/planthopper, rice leaf folder/stem borer/corn borer/army worm/cutworm; maize blight vs gray leaf spot; rice stripes vs leaf scald; okra phyllosticta vs downy mildew | Added to `Confusable.kt` (warning + points to "Check to be sure") |
 | Calibration | ECE 0.021 already (temperature scaling is inside the model) | Nothing to do |

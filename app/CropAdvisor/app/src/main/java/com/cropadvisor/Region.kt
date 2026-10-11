@@ -52,6 +52,6 @@ object Region {
         val total = w.sum() + rest
         val ranked = pred.ranked.mapIndexed { i, g -> Guess(g.classId, (w[i] / total).toFloat()) }.sortedByDescending { it.prob }
         val top = ranked.take(3)
-        return pred.copy(top = top, sure = top[0].prob >= Classifier.gateFor(top[0].classId) && (pred.usedSpecialist || pred.cropMass >= Classifier.MIN_CROP_MASS), ranked = ranked)
+        return pred.copy(top = top, sure = Classifier.answers(top[0].classId, top[0].prob, pred.healthyMass), ranked = ranked)
     }
 }

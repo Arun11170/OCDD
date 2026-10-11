@@ -20,6 +20,7 @@ data class Prediction(
     val ranked: List<Guess> = emptyList(),   // best first, up to 6 (used by "Check to be sure")
     val cropMass: Float = 1f,                // how much of the photo model's belief lies inside the crop the farmer chose
     val usedSpecialist: Boolean = false,
+    val healthyMass: Float = 0f,             // total belief that the leaf is healthy (any crop)
 )
 
 /**
@@ -33,13 +34,6 @@ class Classifier(private val ctx: Context) {
     private val env = OrtEnvironment.getEnvironment()
     private var session: OrtSession? = null
     private var inputName: String = "image"
-
-    /** Small per-crop model (assets/crops/<crop>.onnx + <crop>.json), loaded only while that crop is chosen. */
-    private class Spec(val crop: String, val classes: List<String>, val session: OrtSession, val input: String)
-    private var spec: Spec? = null
-    private val specialistCrops: Set<String> = try {
-        ctx.assets.list("crops")?.filter { it.endsWith(".onnx") }?.map { it.removeSuffix(".onnx") }?.toSet() ?: emptySet()
-    } catch (e: Exception) { emptySet() }
 
     val crops: List<String> = classes.map { it.substringBefore("__") }.distinct().filter { it != "pest" }.sorted()
 
@@ -62,48 +56,21 @@ class Classifier(private val ctx: Context) {
     fun release() {
         try { session?.close() } catch (_: Throwable) {}
         session = null
-        try { spec?.session?.close() } catch (_: Throwable) {}
-        spec = null
         LeafSeg.release(); LesionSeg.release()
     }
 
-    @Synchronized
-    private fun specialist(crop: String): Spec {
-        spec?.let { if (it.crop == crop) return it }
-        try { spec?.session?.close() } catch (_: Throwable) {}     // only one crop model in memory at a time
-        spec = null
-        val bytes = ctx.assets.open("crops/$crop.onnx").use { it.readBytes() }
-        val cls = readList(ctx.assets.open("crops/$crop.json").bufferedReader().use { it.readText() })
-        val s = env.createSession(bytes, OrtSession.SessionOptions().apply { setIntraOpNumThreads(2) })
-        return Spec(crop, cls, s, s.inputNames.first()).also { spec = it }
-    }
-
-    /** [crop] = the crop the farmer chose (null = any). With a crop, only that crop's problems and the pests can win. */
-    fun predict(photo: Bitmap, crop: String? = null): Prediction {
+    /** One general model for every crop and pest: the photo alone decides. */
+    fun predict(photo: Bitmap): Prediction {
         val t0 = System.nanoTime()
-        if (crop != null && crop in specialistCrops) {
-            try {
-                val sp = specialist(crop)
-                val p = softmax(run(sp.session, sp.input, photo))
-                val ranked = p.indices.sortedByDescending { p[it] }.take(6).map { Guess(sp.classes[it], p[it]) }
-                val top = ranked.take(3)
-                return Prediction(top, top[0].prob >= gateFor(top[0].classId), (System.nanoTime() - t0) / 1_000_000, ranked, 1f, true)
-            } catch (e: Throwable) { /* fall back to the general model */ }
-        }
         val p = softmax(run(main(), inputName, photo))
-        var mass = 1f
-        val q = if (crop != null) {
-            val allowed = BooleanArray(classes.size) { classes[it].substringBefore("__").let { c -> c == crop || c == "pest" } }
-            mass = p.indices.filter { allowed[it] }.sumOf { p[it].toDouble() }.toFloat()
-            if (mass > 1e-6f) FloatArray(p.size) { if (allowed[it]) p[it] / mass else 0f } else p
-        } else p
-        val ranked = q.indices.sortedByDescending { q[it] }.take(6).map { Guess(classes[it], q[it]) }
+        val ranked = p.indices.sortedByDescending { p[it] }.take(6).map { Guess(classes[it], p[it]) }
         val top = ranked.take(3)
-        // if most of the model's belief lies OUTSIDE the chosen crop, the photo probably is not that crop: do not claim "sure"
-        val sure = top[0].prob >= gateFor(top[0].classId) && (crop == null || mass >= MIN_CROP_MASS)
-        return Prediction(top, sure, (System.nanoTime() - t0) / 1_000_000, ranked, mass, false)
+        val healthy = classes.indices.filter { "healthy" in classes[it] }.sumOf { p[it].toDouble() }.toFloat()
+        val sure = answers(top[0].classId, top[0].prob, healthy)
+        return Prediction(top, sure, (System.nanoTime() - t0) / 1_000_000, ranked, 1f, false, healthy)
     }
 
+    @Suppress("UNCHECKED_CAST")
     private fun run(s: OrtSession, input: String, photo: Bitmap): FloatArray =
         toTensor(photo).use { x -> s.run(mapOf(input to x)).use { r -> (r[0].value as Array<FloatArray>)[0] } }
 
@@ -156,6 +123,10 @@ class Classifier(private val ctx: Context) {
         const val GATE = 0.80f
         /** Per-crop gates raised above GATE where the 1500-photo accuracy test (accuracy_lab.py) showed too many wrong answers at 0.80: chilli and pests. Never lower than GATE. */
         private var gates: Map<String, Float> = emptyMap()
+        /** A pest answer is refused when the model also believes the leaf may be healthy. In the 1500-photo test this never fired on a correct pest answer (95th percentile 0.011), so it costs nothing there. */
+        const val PEST_HEALTHY_MAX = 0.03f
+        fun answers(classId: String, prob: Float, healthyMass: Float): Boolean =
+            prob >= gateFor(classId) && !(classId.startsWith("pest__") && healthyMass >= PEST_HEALTHY_MAX)
         fun gateFor(classId: String): Float = maxOf(GATE, gates[classId.substringBefore("__")] ?: GATE)
         private fun loadGates(ctx: Context) {
             try {

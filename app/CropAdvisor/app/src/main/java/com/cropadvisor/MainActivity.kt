@@ -3,6 +3,8 @@ package com.cropadvisor
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
+import android.widget.Toast
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -33,6 +35,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -56,6 +59,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.offset
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.*
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material.icons.automirrored.rounded.MenuBook
+import androidx.compose.material.icons.automirrored.rounded.VolumeUp
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.ui.draw.shadow
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -70,12 +85,14 @@ import androidx.core.content.FileProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import java.io.File
 
-private val Green = Color(0xFF2E7D32)
-private val GreenSoft = Color(0xFFE8F5E9)
-private val Amber = Color(0xFFF9A825)
-private val AmberSoft = Color(0xFFFFF8E1)
-private val Red = Color(0xFFC62828)
-private val Ink = Color(0xFF1B1B1B)
+private val Green = Ds.Brand
+private val GreenDark = Ds.Forest
+private val GreenSoft = Ds.Mint
+private val Amber = Ds.Warn
+private val AmberSoft = Ds.WarnSoft
+private val Red = Ds.Danger
+private val Ink = Ds.Ink
+private val Page = Ds.Page
 
 class MainActivity : ComponentActivity() {
     private val model: MainViewModel by viewModels()
@@ -94,7 +111,8 @@ class MainActivity : ComponentActivity() {
             val d = LocalDensity.current
             CompositionLocalProvider(LocalDensity provides Density(d.density, d.fontScale * (if (UiPrefs.bigText) 1.25f else 1f))) {
                 MaterialTheme(
-                    colorScheme = lightColorScheme(primary = Green, onPrimary = Color.White, background = Color(0xFFFAFAF5), surface = Color.White),
+                    typography = AppTypography,
+                    colorScheme = lightColorScheme(primary = Green, onPrimary = Color.White, primaryContainer = GreenSoft, secondary = GreenDark, background = Page, surface = Color.White, surfaceVariant = GreenSoft, onBackground = Ink, onSurface = Ink),
                 ) { App() }
             }
         }
@@ -136,13 +154,21 @@ private fun AppBody(vm: MainViewModel) {
     val plotPicker = rememberLauncherForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(12)) { us ->
         if (us.isNotEmpty()) vm.analysePlot(us)
     }
-    fun launchCamera() {
+    fun startCamera() {
         val dir = File(ctx.cacheDir, "photos").apply { mkdirs() }
         dir.listFiles()?.forEach { it.delete() }   // keep the cache small
         val f = File(dir, "leaf_${System.currentTimeMillis()}.jpg").also { it.createNewFile() }
         val uri = FileProvider.getUriForFile(ctx, "${ctx.packageName}.files", f)
         pendingUri = uri
-        camera.launch(uri)
+        try { camera.launch(uri) } catch (e: Exception) { Log.w("CropAdvisor", "camera app could not start", e) }
+    }
+    // CAMERA is declared in the manifest, so Android refuses the camera intent (and the app closes) until it is granted
+    val cameraPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        if (granted) startCamera()
+    }
+    fun launchCamera() {
+        if (androidx.core.content.ContextCompat.checkSelfPermission(ctx, android.Manifest.permission.CAMERA) == android.content.pm.PackageManager.PERMISSION_GRANTED) startCamera()
+        else cameraPermission.launch(android.Manifest.permission.CAMERA)
     }
 
     val prefs = remember { ctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE) }
@@ -218,7 +244,7 @@ private fun WelcomeScreen(vm: MainViewModel, s: S, onContinue: () -> Unit) {
         LangRow(vm, s)
         Text(s.appName, fontSize = 34.sp, fontWeight = FontWeight.Bold, color = Green)
         Text(s.welcomeBody, fontSize = 18.sp)
-        Card(colors = CardDefaults.cardColors(containerColor = GreenSoft), shape = RoundedCornerShape(16.dp)) {
+        Card(colors = CardDefaults.cardColors(containerColor = GreenSoft), shape = RoundedCornerShape(20.dp)) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(s.builtWithLlama, fontSize = 22.sp, fontWeight = FontWeight.Bold)
                 Text(s.welcomeAi, fontSize = 15.sp)
@@ -227,22 +253,31 @@ private fun WelcomeScreen(vm: MainViewModel, s: S, onContinue: () -> Unit) {
         Text(s.welcomeCaution, fontSize = 15.sp, color = Color(0xFF444444))
         TextButtonLike(s.welcomeLicences) { showNotices = !showNotices }
         if (showNotices) Text(notices, fontSize = 13.sp, color = Color(0xFF444444))
-        Button(onClick = onContinue, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(16.dp)) { Text(s.welcomeContinue, fontSize = 18.sp) }
+        Button(onClick = onContinue, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(20.dp)) { Text(s.welcomeContinue, fontSize = 18.sp) }
     }
 }
 
 // ───────────────────────── Home ─────────────────────────
 
 @Composable
-private fun ToolTile(icon: String, label: String, modifier: Modifier, onClick: () -> Unit) {
-    Card(
-        modifier = modifier.clickable { onClick() }, shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White), elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+private fun ToolTile(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String, bg: Color, tint: Color, modifier: Modifier, onClick: () -> Unit) {
+    Column(
+        modifier = modifier.clip(RoundedCornerShape(22.dp)).background(Color.White).clickable { onClick() }
+            .padding(horizontal = 6.dp, vertical = 14.dp),
+        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        Column(Modifier.fillMaxWidth().heightIn(min = 92.dp).padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-            Text(icon, fontSize = 28.sp)
-            Text(label, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = Ink, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
-        }
+        IconBadge(icon, bg, tint, 46.dp, 24.dp)
+        Text(label, fontSize = 12.5.sp, lineHeight = 15.sp, fontWeight = FontWeight.SemiBold, color = Ink, textAlign = androidx.compose.ui.text.style.TextAlign.Center, minLines = 2, maxLines = 2,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+    }
+}
+
+/** Section heading with a small green bar. */
+@Composable
+private fun SectionTitle(text: String) {
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Box(Modifier.width(4.dp).height(18.dp).clip(RoundedCornerShape(2.dp)).background(Green))
+        Text(text, fontWeight = FontWeight.Bold, fontSize = 17.sp, color = Ink)
     }
 }
 
@@ -261,31 +296,55 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
     val l = vm.lang
     var tool by rememberSaveable { mutableStateOf<String?>(null) }
     val hctx = LocalContext.current
-    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        LangRow(vm, s)
-        Text(s.appName, fontSize = 32.sp, fontWeight = FontWeight.Bold, color = Green)
-        Text(s.tagline, fontSize = 18.sp, color = Ink)
-        if (vm.cropList.isNotEmpty()) {
-            Card(colors = CardDefaults.cardColors(containerColor = if (vm.cropChoice == null) AmberSoft else GreenSoft), shape = RoundedCornerShape(16.dp)) {
-                Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(s.cropPickTitle, fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                    Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        FilterChip(modifier = Modifier.heightIn(min = 44.dp), selected = vm.cropChoice == null, onClick = { vm.setCrop(null) }, label = { Text(s.cropAny, fontSize = 16.sp) })
-                        vm.cropList.forEach { c ->
-                            FilterChip(modifier = Modifier.heightIn(min = 44.dp), selected = vm.cropChoice == c, onClick = { vm.setCrop(c) }, label = { Text(s.cropName(c), fontSize = 16.sp) })
-                        }
-                    }
-                    Text(if (vm.cropChoice == null) s.cropPickNudge else s.cropPickHint, fontSize = 14.sp, color = Color(0xFF3A3A3A))
-                }
+    // the crop of the latest check that was a crop (not a pest): the weather and stage tools use it
+    val lastCrop = vm.history.firstNotNullOfOrNull { h -> Kb.get(h.classId, Lang.EN)?.crop?.takeIf { it != "pest" } }
+    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
+    // top bar: logo, name, language
+    Row(Modifier.fillMaxWidth().padding(start = 20.dp, end = 16.dp, top = 18.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+        Box(Modifier.size(42.dp).clip(RoundedCornerShape(14.dp)).background(Brush.linearGradient(listOf(Ds.BrandLight, GreenDark))), contentAlignment = Alignment.Center) {
+            Image(painter = androidx.compose.ui.res.painterResource(R.drawable.ic_launcher_foreground), contentDescription = null, modifier = Modifier.size(54.dp))
+        }
+        Spacer(Modifier.width(12.dp))
+        Text(s.appName, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ink, modifier = Modifier.weight(1f))
+        VoiceButton(vm.lang) { c ->
+            when (c) {
+                Cmd.CAMERA, Cmd.NEW_CHECK -> onCamera()
+                Cmd.GALLERY -> onGallery()
+                Cmd.PLOT -> onPlot()
+                Cmd.LIBRARY -> tool = "lib"
+                Cmd.DIARY -> tool = "diary"
+                Cmd.WEATHER -> tool = "weather"
+                Cmd.STAGES -> tool = "stage"
+                Cmd.YELLOW -> tool = "nutrient"
+                Cmd.HELP -> tool = "help"
+                Cmd.SETTINGS -> tool = "settings"
+                Cmd.CALL -> dial(hctx)
+                Cmd.LISTEN, Cmd.BACK -> Unit
             }
         }
-
+        Spacer(Modifier.width(8.dp))
+        LangRow(vm, s)
+    }
+    // hero: the one thing to do
+    Box(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp).clip(RoundedCornerShape(30.dp))
+        .background(Brush.linearGradient(listOf(GreenDark, Green)))) {
+        Image(painter = androidx.compose.ui.res.painterResource(R.drawable.ic_launcher_foreground), contentDescription = null, alpha = 0.10f,
+            modifier = Modifier.size(210.dp).align(Alignment.TopEnd).offset(x = 50.dp, y = (-30).dp))
+        Column(Modifier.fillMaxWidth().padding(22.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            Text(tr(l, "Check your crop", "अपनी फसल जाँचें"), fontSize = 27.sp, lineHeight = 32.sp, fontWeight = FontWeight.ExtraBold, color = Color.White)
+            Text(s.tagline, fontSize = 14.sp, lineHeight = 20.sp, color = Color.White.copy(alpha = 0.85f))
+            Spacer(Modifier.height(2.dp))
+            DsButton(s.takePhoto, Icons.Rounded.CameraAlt, onCamera, Modifier.fillMaxWidth(), BtnStyle.OnDark, 58.dp)
+            DsButton(s.pickPhoto, Icons.Rounded.PhotoLibrary, onGallery, Modifier.fillMaxWidth(), BtnStyle.Soft, 50.dp)
+        }
+    }
+    Column(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
         RecheckBanner(l, onCamera)
         val now = System.currentTimeMillis()
         val due = vm.history.firstOrNull { (now - it.ts) / 86_400_000L in 6L..30L && Kb.get(it.classId, l)?.isHealthy == false && !Rechecks.isSet(hctx, it.classId) && Rechecks.due(hctx, now).none { r -> r.cls == it.classId } }
         if (due != null) {
             val de = Kb.get(due.classId, l)
-            Card(colors = CardDefaults.cardColors(containerColor = AmberSoft), shape = RoundedCornerShape(16.dp)) {
+            Card(colors = CardDefaults.cardColors(containerColor = AmberSoft), shape = RoundedCornerShape(20.dp)) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(s.recheckTitle(if (de != null) s.cropName(de.crop) else due.classId, ((now - due.ts) / 86_400_000L).toInt()), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
                     Text(s.recheckBody, fontSize = 14.sp)
@@ -294,33 +353,26 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
             }
         }
 
-        Button(onClick = onCamera, modifier = Modifier.fillMaxWidth().height(64.dp), shape = RoundedCornerShape(16.dp)) {
-            Text(s.takePhoto, fontSize = 20.sp)
-        }
-        OutlinedButton(onClick = onGallery, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(16.dp)) {
-            Text(s.pickPhoto, fontSize = 18.sp)
-        }
-
-        Text(tr(l, "More tools", "और साधन"), fontWeight = FontWeight.SemiBold, fontSize = 16.sp, color = Ink)
+        SectionTitle(tr(l, "Tools", "साधन"))
         val tiles = listOf(
-            Triple("📸", tr(l, "Camera with live tips", "लाइव सुझाव कैमरा"), "coach"),
-            Triple("🌾", s.plotButton, "plot"),
-            Triple("📖", s.libraryButton, "lib"),
-            Triple("📒", tr(l, "Season diary", "मौसम की डायरी"), "diary"),
-            Triple("🌦️", tr(l, "Weather watch", "मौसम की चेतावनी"), "weather"),
-            Triple("🌱", tr(l, "Crop stage guide", "फसल अवस्था गाइड"), "stage"),
-            Triple("🍂", tr(l, "Yellow leaves check", "पीले पत्तों की जाँच"), "nutrient"),
-            Triple("📞", tr(l, "Help and helplines", "मदद और हेल्पलाइन"), "help"),
-            Triple("⚙️", tr(l, "Settings", "सेटिंग"), "settings"),
+            listOf(Icons.Rounded.PhotoCamera, tr(l, "Live tips camera", "लाइव सुझाव कैमरा"), "coach", Ds.Sky, Color(0xFF1C6FA8)),
+            listOf(Icons.Rounded.Agriculture, s.plotButton.substringBefore("(").trim(), "plot", Ds.Sand, Color(0xFF9A6A00)),
+            listOf(Icons.AutoMirrored.Rounded.MenuBook, s.libraryButton.substringBefore("(").trim(), "lib", Ds.Lilac, Color(0xFF5B3FA6)),
+            listOf(Icons.Rounded.EditNote, tr(l, "Season diary", "मौसम की डायरी"), "diary", Color(0xFFFFE9DA), Color(0xFFC25B14)),
+            listOf(Icons.Rounded.WbSunny, tr(l, "Weather watch", "मौसम की चेतावनी"), "weather", Ds.Sky, Color(0xFF1C6FA8)),
+            listOf(Icons.Rounded.Grass, tr(l, "Crop stages", "फसल अवस्था"), "stage", Ds.Mint, Ds.Brand),
+            listOf(Icons.Rounded.Eco, tr(l, "Yellow leaves", "पीले पत्ते"), "nutrient", Ds.WarnSoft, Ds.WarnInk),
+            listOf(Icons.Rounded.SupportAgent, tr(l, "Help", "मदद"), "help", Ds.Rose, Ds.Danger),
+            listOf(Icons.Rounded.Settings, tr(l, "Settings", "सेटिंग"), "settings", Color(0xFFECEFF1), Color(0xFF50606A)),
         )
-        tiles.chunked(2).forEach { row ->
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                row.forEach { (ic, label, id) ->
-                    ToolTile(ic, label, Modifier.weight(1f)) {
-                        when (id) { "coach" -> CoachState.open = true; "plot" -> onPlot(); else -> tool = id }
+        tiles.chunked(3).forEach { row ->
+            Row(Modifier.fillMaxWidth().height(IntrinsicSize.Max), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                row.forEach { t ->
+                    ToolTile(t[0] as androidx.compose.ui.graphics.vector.ImageVector, t[1] as String, t[3] as Color, t[4] as Color, Modifier.weight(1f).fillMaxHeight()) {
+                        when (val id = t[2] as String) { "coach" -> CoachState.open = true; "plot" -> onPlot(); else -> tool = id }
                     }
                 }
-                if (row.size == 1) Spacer(Modifier.weight(1f))
+                repeat(3 - row.size) { Spacer(Modifier.weight(1f)) }
             }
         }
 
@@ -328,15 +380,15 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
         when (tool) {
             "lib" -> LibraryDialogs(vm, s) { tool = null }
             "diary" -> DiaryDialog(l, vm.history, { csv -> shareText(hctx, s.exportHeader, csv) }) { tool = null }
-            "weather" -> ToolDialog(tr(l, "Weather watch", "मौसम की चेतावनी"), close, { tool = null }) { WeatherWatchCard(l, vm.cropChoice) { c -> s.cropName(c) } }
-            "stage" -> ToolDialog(tr(l, "Crop stage guide", "फसल अवस्था गाइड"), close, { tool = null }) { CropCalendarCard(l, vm.cropChoice) }
+            "weather" -> ToolDialog(tr(l, "Weather watch", "मौसम की चेतावनी"), close, { tool = null }) { WeatherWatchCard(l, lastCrop) { c -> s.cropName(c) } }
+            "stage" -> ToolDialog(tr(l, "Crop stage guide", "फसल अवस्था गाइड"), close, { tool = null }) { CropCalendarCard(l, lastCrop) }
             "nutrient" -> ToolDialog(tr(l, "Yellow leaves check", "पीले पत्तों की जाँच"), close, { tool = null }) { NutrientCheckCard(l) }
             "help" -> ToolDialog(tr(l, "Help and helplines", "मदद और हेल्पलाइन"), close, { tool = null }) { HelpCard(l) }
             "settings" -> SettingsDialog(vm, s) { tool = null }
         }
 
         if (vm.history.isNotEmpty()) {
-            Text(s.historyTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, color = Ink)
+            SectionTitle(s.historyTitle)
             vm.history.take(3).forEach { h ->
                 val e = Kb.get(h.classId, l)
                 val thumb = remember(h.file) {
@@ -346,7 +398,7 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
                     } catch (t: Throwable) { null }
                 }
                 Row(
-                    Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Color.White)
+                    Modifier.fillMaxWidth().shadow(2.dp, RoundedCornerShape(16.dp)).clip(RoundedCornerShape(16.dp)).background(Color.White)
                         .clickable { vm.analyse(Uri.fromFile(File(h.file)), save = false) }.padding(8.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically,
                 ) {
@@ -362,13 +414,14 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
             }
         }
 
-        Card(colors = CardDefaults.cardColors(containerColor = GreenSoft), shape = RoundedCornerShape(16.dp)) {
+        Card(colors = CardDefaults.cardColors(containerColor = GreenSoft), shape = RoundedCornerShape(20.dp)) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(s.tipsTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
                 s.tips.forEach { Text("•  $it", fontSize = 16.sp) }
             }
         }
-        Text(s.footer, fontSize = 13.sp, color = Color(0xFF444444))
+        Text(s.footer, fontSize = 13.sp, color = Color(0xFF5A6B5F))
+    }
     }
 }
 
@@ -434,7 +487,7 @@ private fun SettingsDialog(vm: MainViewModel, s: S, onClose: () -> Unit) {
 /** Offline browser of every disease and pest in the advice database: pick a crop (or pests), then a problem. */
 @Composable
 private fun LibraryDialogs(vm: MainViewModel, s: S, onClose: () -> Unit) {
-    var group by rememberSaveable { mutableStateOf(vm.cropChoice ?: vm.cropList.firstOrNull() ?: "pest") }
+    var group by rememberSaveable { mutableStateOf(vm.cropList.firstOrNull() ?: "pest") }
     var open by rememberSaveable { mutableStateOf<String?>(null) }
     val groups: List<String> = vm.cropList + "pest"
     val ids = Kb.allEnglish().filter { it.classId.substringBefore("__") == group && !it.isHealthy }.map { it.classId }.sorted()
@@ -477,19 +530,71 @@ private fun LibraryDialogs(vm: MainViewModel, s: S, onClose: () -> Unit) {
     }
 }
 
+/** Microphone button: say what you want ("take photo", "help", "फोटो लें") in the chosen language. */
+@Composable
+private fun VoiceButton(lang: Lang, onCmd: (Cmd) -> Unit) {
+    val vctx = LocalContext.current
+    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { r ->
+        val guesses = r.data?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS).orEmpty()
+        if (guesses.isEmpty()) return@rememberLauncherForActivityResult
+        val c = VoiceNav.matchAny(lang, guesses)
+        if (c != null) onCmd(c)
+        else Toast.makeText(vctx, tr(lang, "Did not understand: ", "समझ नहीं आया: ") + guesses.first() + "\n" + VoiceNav.examples(lang), Toast.LENGTH_LONG).show()
+    }
+    Box(Modifier.size(44.dp).clip(CircleShape).background(Ds.Brand).clickable {
+        try {
+            val i = Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, lang.locale.toLanguageTag())
+                putExtra(android.speech.RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
+                putExtra(android.speech.RecognizerIntent.EXTRA_MAX_RESULTS, 5)
+                putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, tr(lang, "Say: ", "बोलें: ") + VoiceNav.examples(lang))
+            }
+            launcher.launch(i)
+        } catch (e: Exception) {
+            Toast.makeText(vctx, tr(lang, "Voice typing is not available on this phone.", "इस फोन पर आवाज़ से लिखना उपलब्ध नहीं है।"), Toast.LENGTH_LONG).show()
+        }
+    }, contentAlignment = Alignment.Center) {
+        Icon(Icons.Rounded.Mic, contentDescription = tr(lang, "Voice command", "आवाज़ से कमांड"), tint = Color.White, modifier = Modifier.size(22.dp))
+    }
+}
+
 @Composable
 private fun LangRow(vm: MainViewModel, s: S) {
     val langCtx = LocalContext.current
-    Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.End, verticalAlignment = Alignment.CenterVertically) {
-        Text(s.language + ": ", fontSize = 14.sp)
-        Lang.entries.forEach { l ->
-            FilterChip(
-                selected = vm.lang == l,
-                onClick = { vm.lang = l; langCtx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l.code).apply() },
-                label = { Text(if (l.beta) l.label + " (beta)" else l.label) },
-                modifier = Modifier.padding(start = 6.dp),
-            )
-        }
+    var open by rememberSaveable { mutableStateOf(false) }
+    Row(
+        Modifier.clip(RoundedCornerShape(50)).background(Color.White).clickable { open = true }.padding(start = 12.dp, end = 10.dp, top = 8.dp, bottom = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(Icons.Rounded.Language, contentDescription = s.language, tint = Green, modifier = Modifier.size(18.dp))
+        Spacer(Modifier.width(6.dp))
+        Text(vm.lang.label, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = Ink)
+        Icon(Icons.Rounded.ExpandMore, contentDescription = null, tint = Ds.Muted, modifier = Modifier.size(18.dp))
+    }
+    if (open) {
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { open = false },
+            title = { Text(s.language) },
+            text = {
+                Column(Modifier.verticalScroll(rememberScrollState())) {
+                    Lang.entries.forEach { l ->
+                        Row(
+                            Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).clickable {
+                                vm.lang = l
+                                langCtx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l.code).apply()
+                                open = false
+                            }.padding(horizontal = 8.dp, vertical = 13.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Text(if (l.beta) l.label + " (beta)" else l.label, fontSize = 17.sp, fontWeight = if (vm.lang == l) FontWeight.Bold else FontWeight.Normal, modifier = Modifier.weight(1f))
+                            if (vm.lang == l) Icon(Icons.Rounded.Check, contentDescription = null, tint = Green)
+                        }
+                    }
+                }
+            },
+            confirmButton = { androidx.compose.material3.TextButton(onClick = { open = false }) { Text(s.closeText) } },
+        )
     }
 }
 
@@ -513,19 +618,54 @@ private fun ResultScreen(
     val conf = if (answered) (post[st.shownClass] ?: 0.0).toFloat() else photoConf
     val showSeverity = entry != null && entry.hasLesions && sev.ok
     // diseased leaf but almost nothing marked: the finder cannot see this kind of spot, so never claim "0% damage"
-    val cantMeasure = showSeverity && entry != null && !entry.isHealthy && sev.percent < Severity.MIN_REAL_PCT
+    val cantMeasure = showSeverity && entry?.isHealthy == false && sev.percent < Severity.MIN_REAL_PCT
     val measured = showSeverity && !cantMeasure
 
+    // folded sections: the first screen shows only the answer, damage and what to do now
+    var oSee by rememberSaveable { mutableStateOf(false) }
+    var oDo by rememberSaveable { mutableStateOf(false) }
+    var oSpray by rememberSaveable { mutableStateOf(false) }
+    var oCheck by rememberSaveable { mutableStateOf(hold || answered) }
+    var oMore by rememberSaveable { mutableStateOf(false) }
+    var oAsk by rememberSaveable { mutableStateOf(false) }
+    var oInfo by rememberSaveable { mutableStateOf(false) }
+
     LazyColumn(Modifier.fillMaxSize(), contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        item { LangRow(vm, s) }
+        item {
+            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(44.dp).clip(CircleShape).background(Color.White).clickable { vm.reset() }, contentAlignment = Alignment.Center) {
+                    Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = s.newCheck, tint = Ink)
+                }
+                Spacer(Modifier.weight(1f))
+                VoiceButton(vm.lang) { c ->
+                    when (c) {
+                        Cmd.LISTEN -> if (entry != null) onListen(spokenText(s, entry, sev, measured))
+                        Cmd.NEW_CHECK, Cmd.BACK -> vm.reset()
+                        Cmd.CAMERA -> onRetake()
+                        Cmd.CALL, Cmd.HELP -> dial(ctx)
+                        Cmd.GALLERY, Cmd.PLOT, Cmd.LIBRARY, Cmd.DIARY, Cmd.WEATHER, Cmd.STAGES, Cmd.SETTINGS, Cmd.YELLOW -> {
+                            Toast.makeText(ctx, tr(vm.lang, "Go back to the home screen first.", "पहले होम स्क्रीन पर जाएँ।"), Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+                Spacer(Modifier.width(8.dp))
+                LangRow(vm, s)
+            }
+        }
 
         // photo (original or damage overlay)
         item {
             val bmp = if (st.showMarked && sev.overlay != null) sev.overlay else st.photo
-            Image(
-                bitmap = bmp.asImageBitmap(), contentDescription = null, contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxWidth().height(240.dp).clip(RoundedCornerShape(16.dp)),
-            )
+            Box {
+                Image(
+                    bitmap = bmp.asImageBitmap(), contentDescription = null, contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxWidth().height(250.dp).clip(RoundedCornerShape(28.dp)),
+                )
+                if (entry != null) Box(Modifier.align(Alignment.BottomStart).padding(14.dp)) {
+                    if (entry.isHealthy) Pill(tr(vm.lang, "Looks healthy", "स्वस्थ दिखता है"), Color.White, Ds.Forest, Icons.Rounded.Check)
+                    else Pill(tr(vm.lang, "Problem found", "समस्या मिली"), Color.White, Ds.Danger, Icons.Rounded.Warning)
+                }
+            }
             if (measured && sev.overlay != null) {
                 TextButtonLike(if (st.showMarked) s.showOriginal else s.showMarked) { vm.toggleMarked() }
             }
@@ -547,134 +687,60 @@ private fun ResultScreen(
         // headline
         item {
             val sure = if (answered) conf >= 0.60f else st.prediction.sure
+            // green only for a healthy leaf; a problem goes from yellow (unsure) to red (very sure) with the confidence
+            val healthyOk = entry?.isHealthy == true && !hold
+            val tConf = ((conf - 0.5f) / 0.5f).coerceIn(0f, 1f)
+            val cardColor = if (healthyOk) GreenSoft else androidx.compose.ui.graphics.lerp(AmberSoft, Color(0xFFFFCDD2), tConf)
+            val barColor = if (healthyOk) Green else androidx.compose.ui.graphics.lerp(Amber, Red, tConf)
             Card(
-                colors = CardDefaults.cardColors(containerColor = if (sure) GreenSoft else AmberSoft),
-                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = cardColor),
+                shape = RoundedCornerShape(26.dp),
             ) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     if (!hold) {
-                        Text(if (sure && !st.fromPossibility) s.sureTitle else s.otherPossibilities, fontSize = 14.sp, color = Color(0xFF444444))
+                        Text(if (sure && !st.fromPossibility) s.sureTitle else s.otherPossibilities, fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = Ds.Muted)
                     } else {
-                        Text(if (st.wide) s.wideTitle else s.notSureTitle, fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color(0xFF7A5900))
-                        Text(if (st.wide) s.wideBody else s.notSureBody, fontSize = 16.sp)
-                        if (!st.wide && vm.cropChoice != null && st.prediction.cropMass < Classifier.MIN_CROP_MASS) Text(s.offCrop(s.cropName(vm.cropChoice!!)), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
+                        Text(if (st.wide) s.wideTitle else s.notSureTitle, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ds.WarnInk)
+                        Text(if (st.wide) s.wideBody else s.notSureBody, fontSize = 15.sp)
                         val fam = if (st.wide) null else Family.shared(top)
                         if (fam != null) Text(s.familyNote(fam), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
                     }
                     if (entry != null) {
-                        Text("${s.cropName(entry.crop)} — ${entry.name}", fontSize = 24.sp, fontWeight = FontWeight.Bold)
-                        Text(s.typeName(entry.type), fontSize = 16.sp, color = Green)
-                    }
-                    if (entry != null) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                                Text(s.cropName(entry.crop), fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = Ds.Muted)
+                                Text(entry.name, fontSize = 23.sp, lineHeight = 28.sp, fontWeight = FontWeight.ExtraBold, color = Ink)
+                                Text(s.typeName(entry.type), fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = if (healthyOk) Green else barColor)
+                            }
+                            ScoreRing(conf, barColor, "${(conf * 100).toInt()}%")
+                        }
                         Text(
-                            "${s.confidence}: ${s.confLabel(conf)} (${(conf * 100).toInt()}%)" + if (answered) "   (${s.photoAlone((photoConf * 100).toInt())})" else "",
-                            fontSize = 14.sp,
+                            "${s.confidence}: ${s.confLabel(conf)}" + if (answered) "   (${s.photoAlone((photoConf * 100).toInt())})" else "",
+                            fontSize = 13.sp, color = Ds.Muted,
                         )
-                        LinearProgressIndicator(progress = { conf }, modifier = Modifier.fillMaxWidth(), color = if (conf >= 0.60f) Green else Amber)
                         if (!entry.isHealthy && st.engine != null) Text(s.verdict(conf), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
                         if (!entry.isHealthy) {
                             val mates = Confusable.partners(st.shownClass).mapNotNull { Kb.get(it, vm.lang)?.name }
-                            if (mates.isNotEmpty()) Text(s.mixedUp(mates.joinToString(", ")), fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = Color(0xFF7A5900))
+                            if (mates.isNotEmpty()) Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                Icon(Icons.Rounded.Warning, contentDescription = null, tint = Ds.WarnInk, modifier = Modifier.size(18.dp))
+                                Text(s.mixedUp(mates.joinToString(", ")), fontSize = 13.5.sp, fontWeight = FontWeight.SemiBold, color = Ds.WarnInk)
+                            }
                         }
                     }
-                    if (st.fromPossibility) Text(s.possibilityNote, fontSize = 13.sp, color = Color(0xFF7A5900))
+                    if (st.fromPossibility) Text(s.possibilityNote, fontSize = 13.sp, color = Ds.WarnInk)
                     if (st.answerNote != null) Text(st.answerNote, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
                 }
             }
         }
 
-        val prevItem = st.prev
-        if (entry != null && prevItem != null && !entry.isHealthy && st.shownClass == prevItem.classId) item {
-            val days = ((System.currentTimeMillis() - prevItem.ts) / 86_400_000L).toInt()
-            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp)) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text(s.followTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
-                    Text(if (measured && prevItem.damage != null) s.followBody(days, prevItem.damage, Math.round(sev.percent)) else s.followNoDamage, fontSize = 15.sp)
-                    if (measured && prevItem.damage != null && days >= 2) {
-                        val perWeek = (Math.round(sev.percent) - prevItem.damage) * 7f / days
-                        if (Math.abs(perWeek) >= 2f) Text(s.followRate(perWeek), fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = if (perWeek > 0) Red else Green)
-                    }
-                    Text(s.followNote, fontSize = 13.sp, color = Color(0xFF444444))
-                }
-            }
-        }
-
-        if (entry != null && !entry.isHealthy) {
-            val pd = st.prev?.takeIf { st.shownClass == it.classId }?.damage
-            val worsening = measured && Outcomes.trend(pd, Math.round(sev.percent)) == Outcomes.WORSE
-            val severe = measured && sev.band == Band.SEVERE
-            if (worsening || severe) item {
-                EscalationCard(vm.lang, entry.classId, if (worsening) tr(vm.lang, "This is worse than the earlier check. Show the plant to your KVK or agriculture officer, or call the free Kisan Call Centre.",
-                    "यह पिछली जाँच से ज़्यादा ख़राब है। पौधा अपने KVK या कृषि अधिकारी को दिखाएँ, या मुफ़्त किसान कॉल सेंटर पर फ़ोन करें।") else null)
-            }
-        }
-
-        if (entry != null && !entry.isHealthy && Outcomes.betterShare(Outcomes.list(ctx), entry.classId) != null) item { OutcomeStat(vm.lang, entry.classId) }
-
-        // not-sure actions + possibilities
-        if (!st.prediction.sure) {
-            item {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(onClick = onRetake, modifier = Modifier.fillMaxWidth().height(52.dp)) { Text(s.retake, fontSize = 17.sp) }
-                    OutlinedButton(onClick = { dial(ctx) }, modifier = Modifier.fillMaxWidth().height(52.dp)) { Text(s.callExpert, fontSize = 16.sp) }
-                }
-            }
-        }
-        if (top.count { it.prob >= 0.02f } > 1) item {
-            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text(s.otherPossibilities, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
-                val chips: List<Guess> = if (answered)
-                    post.entries.sortedByDescending { it.value }.take(3).map { Guess(it.key, it.value.toFloat()) }
-                else top
-                chips.filterIndexed { i, g -> i == 0 || g.prob >= 0.02f }.forEach { g ->
-                    val e = Kb.get(g.classId, vm.lang)
-                    val label = if (e != null) "${s.cropName(e.crop)} — ${e.name}  (${(g.prob * 100).toInt()}%)" else g.classId
-                    FilterChip(
-                        selected = g.classId == st.shownClass,
-                        onClick = { vm.viewPossibility(g.classId) },
-                        label = { Text(label, fontSize = 14.sp) },
-                    )
-                }
-            }
-        }
-
-        item {
-            Card(shape = RoundedCornerShape(14.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text(s.morePhotoTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
-                    Text(s.morePhotoBody, fontSize = 13.sp, color = Color(0xFF444444))
-                    if (st.extraPhotos > 0) Text(s.morePhotoCount(st.extraPhotos), fontSize = 13.sp, color = Color(0xFF2E5E31))
-                    OutlinedButton(onClick = onAddPhoto, modifier = Modifier.fillMaxWidth()) { Text(s.morePhotoButton, fontSize = 15.sp) }
-                    val fp = st.foundPest
-                    if (fp != null) {
-                        val pe = Kb.get(fp, vm.lang)
-                        Text(s.pestFoundTitle, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = Green)
-                        Text(pe?.name ?: fp, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-                        OutlinedButton(onClick = { vm.viewPossibility(fp) }) { Text(s.seePest) }
-                    }
-                }
-            }
-        }
-
-        if (st.engine != null) item { CheckSection(vm, s, st, post) }
-
-        if (entry != null) {
-            val causes = Causes.of(st.shownClass)
-            if (causes.isNotEmpty()) item { CauseCard(vm, s, causes) }
-            item {
-                OutlinedButton(onClick = { shareSummary(ctx, s, entry, conf, if (measured) sev else null) }, modifier = Modifier.fillMaxWidth()) {
-                    Text(s.shareReport, fontSize = 15.sp)
-                }
-            }
-        }
-
+        // ── the short answer: damage + what to do now, then the main buttons ──
         if (entry != null) {
             // severity + spray-or-wait
             if (entry.isHealthy) {
                 item { InfoCard(s.healthyNote) }
             } else {
                 item {
-                    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                             Text(s.severityTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
                             if (cantMeasure) {
@@ -710,67 +776,176 @@ private fun ResultScreen(
                     }
                 }
             }
-
-            if (!entry.isHealthy) {
-                item { SprayPlanCard(vm.lang, entry, if (measured) sev.band else null) }
-                item { CostCard(vm.lang) }
-                item { ShareCardButton(vm.lang, entry, st.photo, if (measured) sev.band else null) }
-            }
-
-            if (!Kb.hasHindi(entry.classId) && vm.lang == Lang.HI) item { InfoCard(s.hindiMissing) }
-
-            // facts
-            section(s.whatYouSee, entry.symptoms)
-            if (entry.cause.isNotBlank() && entry.type != "healthy" && !entry.cause.lowercase().contains("not stated")) item { Labeled(s.cause, entry.cause) }
-            entry.lookAlikes?.let { la -> item { Labeled(s.lookAlike, la) } }
-            if (!entry.isHealthy) item { LookalikeCard(vm.lang, entry, st.prediction.ranked) }
-
-            if (!entry.isHealthy) {
-                section(s.whatToDo, entry.actions)
-                entry.whenToAct?.let { w -> item { Labeled(s.whenTitle, w) } }
-                item { FriendsCard(vm.lang, entry.classId) }
-                item { LadderCard(vm.lang, entry.treatments.isNotEmpty(), Organic.of(st.shownClass, Lang.EN) != null) }
-                Organic.of(st.shownClass, vm.lang)?.let { oi -> item { OrganicCard(s, oi) } }
-                item { TreatmentCard(s, entry) }
-                item { SafetyCard(s) }
-                item { AskSection(vm, s) }
-
-            } else {
-                section(s.whatToDo, entry.actions)
-            }
-
-            if (!entry.isHealthy) item { Labeled(s.regionNote, s.regionText(entry)) }
-
-            // sources
+        }
+        // not-sure actions + possibilities
+        if (!st.prediction.sure) {
             item {
-                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Text(s.sourcesTitle, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
-                    entry.sources.forEach { src ->
-                        Text(
-                            if (src.publisher == "other") src.title else "${src.publisher}: ${src.title}", fontSize = 13.sp, color = Color(0xFF1565C0),
-                            textDecoration = TextDecoration.Underline,
-                            modifier = Modifier.clickable { openLink(ctx, src.url) },
-                        )
-                    }
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    DsButton(s.retake, Icons.Rounded.CameraAlt, onRetake, Modifier.fillMaxWidth(), BtnStyle.Primary, 54.dp)
+                    DsButton(s.callExpert, Icons.Rounded.Call, { dial(ctx) }, Modifier.fillMaxWidth(), BtnStyle.Outline, 50.dp)
+                }
+            }
+        }
+        if (top.count { it.prob >= 0.02f } > 1) item {
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(s.otherPossibilities, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
+                val chips: List<Guess> = if (answered)
+                    post.entries.sortedByDescending { it.value }.take(3).map { Guess(it.key, it.value.toFloat()) }
+                else top
+                chips.filterIndexed { i, g -> i == 0 || g.prob >= 0.02f }.forEach { g ->
+                    val e = Kb.get(g.classId, vm.lang)
+                    val label = if (e != null) "${s.cropName(e.crop)} — ${e.name}  (${(g.prob * 100).toInt()}%)" else g.classId
+                    FilterChip(
+                        selected = g.classId == st.shownClass,
+                        onClick = { vm.viewPossibility(g.classId) },
+                        label = { Text(label, fontSize = 14.sp) },
+                    )
                 }
             }
         }
 
-        if (entry != null && st.histTs != null) item { FeedbackCard(vm, s, st.feedback) }
 
-        // listen + actions
         item {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 if (entry != null) {
-                    Button(onClick = { onListen(spokenText(s, entry, sev, measured)) }, modifier = Modifier.fillMaxWidth().height(52.dp)) {
-                        Text(if (speaking) s.stop else s.listen, fontSize = 17.sp)
-                    }
+                    DsButton(if (speaking) s.stop else s.listen, Icons.AutoMirrored.Rounded.VolumeUp, { onListen(spokenText(s, entry, sev, measured)) }, Modifier.fillMaxWidth(), BtnStyle.Primary, 58.dp)
                     if (voiceMissing) Text(s.ttsMissing, fontSize = 13.sp, color = Red)
                 }
-                OutlinedButton(onClick = { vm.reset() }, modifier = Modifier.fillMaxWidth().height(52.dp)) { Text(s.newCheck, fontSize = 17.sp) }
-                OutlinedButton(onClick = { dial(ctx) }, modifier = Modifier.fillMaxWidth()) { Text(s.callExpert, fontSize = 15.sp) }
-                Text(s.footer, fontSize = 13.sp, color = Color(0xFF444444), modifier = Modifier.padding(top = 6.dp))
+                DsButton(s.newCheck, Icons.Rounded.Refresh, { vm.reset() }, Modifier.fillMaxWidth(), BtnStyle.Soft, 52.dp)
+                DsButton(s.callExpert, Icons.Rounded.Call, { dial(ctx) }, Modifier.fillMaxWidth(), BtnStyle.Outline, 50.dp)
+                Text(s.footer, fontSize = 12.sp, color = Ds.Muted, modifier = Modifier.padding(top = 4.dp))
             }
+        }
+
+        // ── everything else is folded away: tap a heading to read it ──
+        item { Spacer(Modifier.height(4.dp)); SectionTitle(tr(vm.lang, "More details", "और जानकारी")) }
+
+        if (entry != null && (entry.symptoms.isNotEmpty() || entry.cause.isNotBlank() || entry.lookAlikes != null)) {
+            accHeader(Icons.Rounded.Search, s.whatYouSee, oSee) { oSee = !oSee }
+            if (oSee) {
+                section(s.whatYouSee, entry.symptoms)
+                if (entry.cause.isNotBlank() && entry.type != "healthy" && !entry.cause.lowercase().contains("not stated")) item { Labeled(s.cause, entry.cause) }
+                entry.lookAlikes?.let { la -> item { Labeled(s.lookAlike, la) } }
+                if (!entry.isHealthy) item { LookalikeCard(vm.lang, entry, st.prediction.ranked) }
+            }
+        }
+
+        if (entry != null) {
+            accHeader(Icons.Rounded.Build, s.whatToDo, oDo) { oDo = !oDo }
+            if (oDo) {
+                section(s.whatToDo, entry.actions)
+                if (!entry.isHealthy) {
+                    entry.whenToAct?.let { w -> item { Labeled(s.whenTitle, w) } }
+                    item { FriendsCard(vm.lang, entry.classId) }
+                    item { LadderCard(vm.lang, entry.treatments.isNotEmpty(), Organic.of(st.shownClass, Lang.EN) != null) }
+                    Organic.of(st.shownClass, vm.lang)?.let { oi -> item { OrganicCard(s, oi) } }
+                    item { TreatmentCard(s, entry) }
+                    item { SafetyCard(s) }
+                }
+            }
+        }
+
+        if (entry != null && !entry.isHealthy) {
+            accHeader(Icons.Rounded.CalendarMonth, tr(vm.lang, "Spray or wait, and cost", "छिड़काव या इंतज़ार, और खर्च"), oSpray) { oSpray = !oSpray }
+            if (oSpray) {
+                item { SprayPlanCard(vm.lang, entry, if (measured) sev.band else null) }
+                item { CostCard(vm.lang) }
+                item { ShareCardButton(vm.lang, entry, st.photo, if (measured) sev.band else null) }
+            }
+        }
+
+        if (st.engine != null) {
+            accHeader(Icons.Rounded.QuestionAnswer, s.askTitle, oCheck) { oCheck = !oCheck }
+            if (oCheck) { item { CheckSection(vm, s, st, post) } }
+        }
+
+        accHeader(Icons.Rounded.PhotoCamera, s.morePhotoTitle, oMore) { oMore = !oMore }
+        if (oMore) {
+        val prevItem = st.prev
+        if (entry != null && prevItem != null && !entry.isHealthy && st.shownClass == prevItem.classId) item {
+            val days = ((System.currentTimeMillis() - prevItem.ts) / 86_400_000L).toInt()
+            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(20.dp)) {
+                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(s.followTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+                    Text(if (measured && prevItem.damage != null) s.followBody(days, prevItem.damage, Math.round(sev.percent)) else s.followNoDamage, fontSize = 15.sp)
+                    if (measured && prevItem.damage != null && days >= 2) {
+                        val perWeek = (Math.round(sev.percent) - prevItem.damage) * 7f / days
+                        if (Math.abs(perWeek) >= 2f) Text(s.followRate(perWeek), fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = if (perWeek > 0) Red else Green)
+                    }
+                    Text(s.followNote, fontSize = 13.sp, color = Color(0xFF444444))
+                }
+            }
+        }
+
+        if (entry != null && !entry.isHealthy && Outcomes.betterShare(Outcomes.list(ctx), entry.classId) != null) item { OutcomeStat(vm.lang, entry.classId) }
+
+        item {
+            Card(shape = RoundedCornerShape(14.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(s.morePhotoTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+                    Text(s.morePhotoBody, fontSize = 13.sp, color = Color(0xFF444444))
+                    if (st.extraPhotos > 0) Text(s.morePhotoCount(st.extraPhotos), fontSize = 13.sp, color = Color(0xFF2E5E31))
+                    OutlinedButton(onClick = onAddPhoto, modifier = Modifier.fillMaxWidth()) { Text(s.morePhotoButton, fontSize = 15.sp) }
+                    val fp = st.foundPest
+                    if (fp != null) {
+                        val pe = Kb.get(fp, vm.lang)
+                        Text(s.pestFoundTitle, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = Green)
+                        Text(pe?.name ?: fp, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                        OutlinedButton(onClick = { vm.viewPossibility(fp) }) { Text(s.seePest) }
+                    }
+                }
+            }
+        }
+            if (entry != null) {
+                val causes = Causes.of(st.shownClass)
+                if (causes.isNotEmpty()) item { CauseCard(vm, s, causes) }
+            }
+        }
+
+        if (entry != null && !entry.isHealthy) {
+            accHeader(Icons.Rounded.Forum, s.askHeading, oAsk) { oAsk = !oAsk }
+            if (oAsk) item { AskSection(vm, s) }
+        }
+
+        if (entry != null) {
+            accHeader(Icons.Rounded.Info, s.sourcesTitle, oInfo) { oInfo = !oInfo }
+            if (oInfo) {
+                if (!Kb.hasHindi(entry.classId) && vm.lang == Lang.HI) item { InfoCard(s.hindiMissing) }
+                if (!entry.isHealthy) item { Labeled(s.regionNote, s.regionText(entry)) }
+            item {
+                OutlinedButton(onClick = { shareSummary(ctx, s, entry, conf, if (measured) sev else null) }, modifier = Modifier.fillMaxWidth()) {
+                    Text(s.shareReport, fontSize = 15.sp)
+                }
+            }
+                item {
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(s.sourcesTitle, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
+                        entry.sources.forEach { src ->
+                            Text(
+                                if (src.publisher == "other") src.title else "${src.publisher}: ${src.title}", fontSize = 13.sp, color = Color(0xFF1565C0),
+                                textDecoration = TextDecoration.Underline,
+                                modifier = Modifier.clickable { openLink(ctx, src.url) },
+                            )
+                        }
+                    }
+                }
+                if (st.histTs != null) item { FeedbackCard(vm, s, st.feedback) }
+            }
+        }
+
+    }
+}
+
+/** A tappable heading that opens or folds the section below it. */
+private fun androidx.compose.foundation.lazy.LazyListScope.accHeader(icon: androidx.compose.ui.graphics.vector.ImageVector, title: String, open: Boolean, onToggle: () -> Unit) {
+    item {
+        Row(
+            Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp)).background(Color.White).clickable { onToggle() }.padding(horizontal = 14.dp, vertical = 14.dp),
+            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            IconBadge(icon, GreenSoft, Green, 40.dp, 22.dp)
+            Text(title, fontSize = 16.sp, fontWeight = FontWeight.SemiBold, color = Ink, modifier = Modifier.weight(1f))
+            Icon(if (open) Icons.Rounded.ExpandLess else Icons.Rounded.ExpandMore, contentDescription = null, tint = Ds.Muted)
         }
     }
 }
@@ -778,7 +953,7 @@ private fun ResultScreen(
 private fun androidx.compose.foundation.lazy.LazyListScope.section(title: String, lines: List<String>) {
     if (lines.isEmpty()) return
     item {
-        Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+        Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(title, fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
                 lines.forEach { Text("•  $it", fontSize = 16.sp) }
@@ -790,7 +965,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(title: String
 @Composable
 private fun AskSection(vm: MainViewModel, s: S) {
     var text by remember { mutableStateOf("") }
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Text(s.askHeading, fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
 
@@ -863,7 +1038,7 @@ private fun AskSection(vm: MainViewModel, s: S) {
 private fun TreatmentCard(s: S, e: Entry) {
     // Chemical names are shown only when an Indian official source (TNAU / ICAR) names them.
     val shown = e.treatments.filter { it.indianSource }
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = AmberSoft)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = AmberSoft)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(s.treatTitle, fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
             if (shown.isEmpty()) {
@@ -1008,7 +1183,7 @@ private fun CheckSection(vm: MainViewModel, s: S, st: ResultState, post: Map<Str
 /** Pests that cause or spread the problem on screen; tapping opens that pest's own advice when we have it. */
 @Composable
 private fun CauseCard(vm: MainViewModel, s: S, causes: List<CauseLink>) {
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(s.causeTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
             causes.forEach { c ->
@@ -1038,7 +1213,7 @@ private fun shareSummary(ctx: Context, s: S, e: Entry, conf: Float, sev: Severit
 @Composable
 private fun OrganicCard(s: S, info: OrganicInfo) {
     val ctx = LocalContext.current
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             if (info.options.isNotEmpty()) {
                 Text(s.organicTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
@@ -1059,7 +1234,7 @@ private fun OrganicCard(s: S, info: OrganicInfo) {
 
 @Composable
 private fun SafetyCard(s: S) {
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = AmberSoft)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = AmberSoft)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(s.safetyTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
             s.safetyLines.forEach { Text("•  $it", fontSize = 14.sp) }
@@ -1069,7 +1244,7 @@ private fun SafetyCard(s: S) {
 
 @Composable
 private fun FeedbackCard(vm: MainViewModel, s: S, fb: Int) {
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(s.feedbackAsk, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
             if (fb == 0) {
@@ -1094,7 +1269,7 @@ private fun PlotScreen(vm: MainViewModel, s: S, st: PlotState) {
         if (st.rows.isEmpty()) InfoCard(s.plotNone)
         st.rows.forEachIndexed { i, r ->
             val e = Kb.get(r.classId, vm.lang)
-            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp)) {
+            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(20.dp)) {
                 Column(Modifier.padding(14.dp).fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     if (i == firstProblem) Text(s.plotMost, fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = Green)
                     Text(if (e != null) "${s.cropName(e.crop)} — ${e.name}" else r.classId, fontSize = 18.sp, fontWeight = FontWeight.Bold)
@@ -1119,7 +1294,7 @@ private fun shareText(ctx: Context, title: String, body: String) {
 private fun SmartSetupCard(vm: MainViewModel, s: S) {
     androidx.compose.runtime.LaunchedEffect(vm.dl) { vm.refreshDevice() }
     val d = vm.device
-    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(s.dlTitle, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
             if (d != null) {
@@ -1192,13 +1367,13 @@ private fun SetupScreen(vm: MainViewModel, s: S, onDone: () -> Unit) {
             is DlState.Failed -> Text(s.dlFailed(st.message), fontSize = 15.sp, color = Red)
         }
         if (ready) {
-            Button(onClick = onDone, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(16.dp)) { Text(s.welcomeContinue, fontSize = 18.sp) }
+            Button(onClick = onDone, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(20.dp)) { Text(s.welcomeContinue, fontSize = 18.sp) }
         } else {
             if (want != null) {
                 if (running) OutlinedButton(onClick = { vm.cancelDownload() }, modifier = Modifier.fillMaxWidth()) { Text(s.dlCancel) }
-                else Button(onClick = { vm.startDownload() }, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(16.dp)) { Text(s.setupDownload, fontSize = 18.sp) }
+                else Button(onClick = { vm.startDownload() }, modifier = Modifier.fillMaxWidth().height(56.dp), shape = RoundedCornerShape(20.dp)) { Text(s.setupDownload, fontSize = 18.sp) }
             } else Text(s.smartHub, fontSize = 15.sp)
-            if (!running) OutlinedButton(onClick = onDone, modifier = Modifier.fillMaxWidth().height(52.dp), shape = RoundedCornerShape(16.dp)) { Text(s.setupSkip, fontSize = 16.sp) }
+            if (!running) OutlinedButton(onClick = onDone, modifier = Modifier.fillMaxWidth().height(52.dp), shape = RoundedCornerShape(20.dp)) { Text(s.setupSkip, fontSize = 16.sp) }
             Text(s.setupSkipNote, fontSize = 13.sp, color = Color(0xFF444444))
         }
     }

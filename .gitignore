@@ -92,3 +92,5 @@ Thumbs.db
 desktop.ini
 .vscode/
 *.swp
+_cleanup_review/
+phone_test_photos/

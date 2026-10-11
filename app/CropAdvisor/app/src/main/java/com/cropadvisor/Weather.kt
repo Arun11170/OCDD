@@ -75,7 +75,7 @@ fun WeatherWatchCard(lang: Lang, crop: String?, cropLabel: (String) -> String) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(tr(lang, "Weather watch", "मौसम की चेतावनी"), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
             if (crop == null) {
-                Text(tr(lang, "Pick your crop above to see which problems this weather favours.", "ऊपर अपनी फसल चुनें, फिर देखें कि यह मौसम किन समस्याओं को बढ़ावा देता है।"), fontSize = 14.sp)
+                                Text(tr(lang, "Check a leaf first. This tool uses the crop of your latest check to show which problems the weather favours.", "पहले एक पत्ता जाँचें। यह साधन आपकी पिछली जाँच की फसल के हिसाब से मौसम में बढ़ने वाली समस्याएँ दिखाता है।"), fontSize = 14.sp)
                 return@Column
             }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {

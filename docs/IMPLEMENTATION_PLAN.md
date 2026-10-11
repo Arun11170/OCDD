@@ -2,7 +2,7 @@
 
 Legend: [x] written (not yet run on a phone unless stated) · [T] tested by measurement · [ ] open · **YOU** = needs your computer or phone.
 Nothing has been compiled by me since the first feature batch: the Android Studio build is the first real test of everything marked [x].
-Last updated: 9 Oct 2026.
+Last updated: 11 Oct 2026.
 
 ## 1. App features
 - [x] Photo → disease/pest with confidence gate (ONNX Runtime, 95 classes)  [T: v3 run3 test top1 0.916]
@@ -12,7 +12,9 @@ Last updated: 9 Oct 2026.
 - [x] Photo quality check, Was-this-right feedback + CSV export, follow-up comparison, spread rate per week
 - [x] Organic / low-cost options (81 problems, sourced) and spray-safety card
 - [x] Plot mode (several photos), voice question input
-- [x] Crop picker with filtered outputs; per-crop specialist loader (one crop model in memory at a time)
+- [x] Removed on 11 Oct 2026: crop picker and per-crop specialist models. The app uses one general model; the photo alone decides. (Per-problem-family confidence gates in gates.json stay: chilli 0.90, pests 0.85.)
+- [x] Voice commands in all 13 languages (mic button on Home and Result, VoiceNav.kt): take photo, gallery, listen, new check, back, help, call, diary, weather, stages, settings, library, plot, yellow leaves. Uses the phone's own speech recogniser (offline language pack must be installed). Word lists are machine-made and need a native check.
+- [x] New look v2 (11 Oct 2026): Plus Jakarta Sans font, line icons (material-icons-extended), one design file (Theme.kt) and shared parts (Ui.kt). Home: logo bar with a language pill, a green hero card with Take photo, 3-column tool grid. Result: photo with a status label, one answer card with a confidence ring, damage, Listen, then folded sections. Language is a single pill that opens a list (no chip row). Needs a Gradle sync with internet once.
 - [x] Extra photo of the same plant (underside / pest) combined or shown as the cause
 - [x] Llama build chosen by total RAM, free RAM now, free storage, CPU; photo models freed before Llama loads
 - [x] First-run download of the Llama build (resume, SHA-256, storage check)
@@ -39,13 +41,12 @@ Last updated: 9 Oct 2026.
 - [ ] `.\run_overnight.ps1` (PlantSeg download, leaf finder v3, lesion finder, run4)
 - [ ] Send export_seg\report.txt, export_lesion\report.txt, training\run4\report.txt
 - [ ] Copy new leafseg.onnx / lesionseg.onnx into app assets; export run4 (WSL, OCDD_ARCH=efficientnet_v2_s) if better than run3
-- [ ] `.\train_crops.ps1`, then WSL `bash /mnt/d/OCDD/export_crops.sh`, then `python pack_crops.py`; keep a specialist only if better than the general model on that crop
 - [ ] WSL: `OCDD_ONNX=... python /mnt/d/OCDD/benchmark.py` → benchmark_report.txt (the honest accuracy page for the presentation)
 
 ## 4. Release and tests (**YOU**)
 - [ ] Android Studio: Rebuild, run `testDebugUnitTest` (incl. the new Outcomes tests), fix any red error (send it to me)
 - [ ] Phone tests (checklist: docs\TEST_CHECKLIST.md; also reboot with a reminder set; set a Hindi/Odia language and check the notification; answer Worse): 8 GB Nothing, 4 GB OPPO (`adb logcat -d -b crash` if it crashes), pest photos, plot mode, mic, crop picker, extra photo
-- [ ] Upload manifest.json + tokenizer.model + .pte to a PUBLIC GitHub release `models-v1`; test first-run download on a clean install
+- [ ] **YOU** Run `.\publish_models.ps1` (uploads manifest.json + tokenizer.model + the .pte to the public GitHub release `models-v1`); test first-run download on a clean install
 - [ ] Measure Llama memory from the log line "llama loaded: PSS" on each phone; update DeviceProfile.FULL_NEED_MB / LITE_NEED_MB
 - [ ] Serve over https for release; remove usesCleartextTraffic
 

@@ -5,6 +5,9 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.util.Log
 import androidx.compose.runtime.getValue
+import androidx.core.content.edit
+import kotlin.math.pow
+import kotlin.math.roundToInt
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
@@ -46,7 +49,7 @@ data class ResultState(
     val histTs: Long? = null,        // id of the saved history item, if saved
     val feedback: Int = 0,           // 0 not answered, 1 right, 2 wrong
     val extraPhotos: Int = 0,        // more photos of the same plant added to the evidence
-    val foundPest: String? = null,   // a pest recognised in an extra photo
+    val foundPest: String? = null,   // a pest recognized in an extra photo
 )
 
 data class PlotRow(val classId: String, val count: Int, val avgDamage: Int?, val sample: Uri)
@@ -68,12 +71,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var state by mutableStateOf<String?>(null)
         private set
 
-    var cropChoice by mutableStateOf<String?>(null)
-        private set
     var cropList by mutableStateOf<List<String>>(emptyList())
         private set
 
-    fun setCrop(c: String?) { cropChoice = c; prefs().edit().apply { if (c == null) remove("crop_choice") else putString("crop_choice", c) }.apply() }
 
     fun chooseState(id: String?) { Region.save(getApplication(), id); state = id }
 
@@ -107,7 +107,6 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 refreshHistory()
                 classifier = Classifier(app)
                 cropList = classifier!!.crops
-                cropChoice = prefs().getString("crop_choice", null)?.takeIf { it in cropList }
                 ready.complete(true)
             } catch (e: Throwable) {
                 Log.e("CropAdvisor", "start-up failed", e)
@@ -134,12 +133,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     var hub by mutableStateOf("")
         private set
-    fun changeHub(v: String) { hub = v; prefs().edit().putString("hub_server", v).apply() }
+    fun changeHub(v: String) { hub = v; prefs().edit { putString("hub_server", v) } }
 
     fun loadServer() {
         hub = prefs().getString("hub_server", "") ?: ""
  server = prefs().getString("model_server", null) ?: ModelDownloader.DEFAULT_SERVER }
-    fun changeServer(v: String) { server = v; prefs().edit().putString("model_server", v).apply() }
+    fun changeServer(v: String) { server = v; prefs().edit { putString("model_server", v) } }
     fun refreshDevice() { device = DeviceProfile.read(getApplication()) }
     fun installed(t: LlmTier) = LlmFiles.find(getApplication(), t.dir) != null
     fun cancelDownload() { dlCancel = true }
@@ -189,32 +188,32 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             if (!ok) { screen = Screen.Error(s.loadError + "\n\n" + initError); return@launch }
             val bmp = ImageUtil.load(getApplication(), uri)
             if (bmp == null) { screen = Screen.Error(s.photoError); return@launch }
-            val pred = try { Region.apply(classifier!!.predict(bmp, cropChoice)) } catch (e: Throwable) {
+            val photoResult = try { Region.apply(classifier!!.predict(bmp)) } catch (e: Throwable) {
                 Log.e("CropAdvisor", "predict failed", e)
                 screen = Screen.Error(s.loadError + "\n\n" + e.toString().take(400)); return@launch
             }
-            val sev = try { Severity.estimate(bmp, getApplication()) } catch (e: Throwable) { Severity.Result(false) }
-            val wide = !pred.sure && !sev.ok && Severity.wideShot(bmp)
-            val quality = try { Quality.check(bmp) } catch (e: Throwable) { emptyList() }
+            val sev = runCatching { Severity.estimate(bmp, getApplication()) }.getOrElse { Severity.Result(false) }
+            val wide = !photoResult.sure && !sev.ok && Severity.wideShot(bmp)
+            val quality = runCatching { Quality.check(bmp) }.getOrElse { emptyList() }
             val now = System.currentTimeMillis()
-            val prev = if (save && pred.sure) History.previous(getApplication(), pred.top[0].classId, now) else null
+            val prev = if (save && photoResult.sure) History.previous(getApplication(), photoResult.top[0].classId, now) else null
             var ts: Long? = null
-            if (save && pred.sure) {
-                ts = History.add(getApplication(), bmp, pred.top[0].classId, pred.top[0].prob, if (sev.ok && sev.percent >= Severity.MIN_REAL_PCT) Math.round(sev.percent) else null)
+            if (save && photoResult.sure) {
+                ts = History.add(getApplication(), bmp, photoResult.top[0].classId, photoResult.top[0].prob, if (sev.ok && sev.percent >= Severity.MIN_REAL_PCT) sev.percent.roundToInt() else null)
                 refreshHistory()
             }
-            screen = Screen.Result(ResultState(bmp, pred, sev, pred.top[0].classId, fromPossibility = false, engine = CheckEngine(pred.ranked),
+            screen = Screen.Result(ResultState(bmp, photoResult, sev, photoResult.top[0].classId, fromPossibility = false, engine = CheckEngine(photoResult.ranked),
                 wide = wide, quality = quality, prev = prev, histTs = ts))
         }
     }
 
     /** Another photo of the same plant (leaf underside, other leaf, or the pest itself). Two views of the same problem
-     *  are combined; a recognised pest is shown as the likely cause instead of being mixed into the disease guess. */
+     *  are combined; a recognized pest is shown as the likely cause instead of being mixed into the disease guess. */
     fun addPhoto(uri: Uri) {
         val cur = (screen as? Screen.Result)?.state ?: return
         viewModelScope.launch(Dispatchers.Default) {
             val bmp = ImageUtil.load(getApplication(), uri) ?: return@launch
-            val p2 = try { Region.apply(classifier!!.predict(bmp, cropChoice)) } catch (e: Throwable) { return@launch }
+            val p2 = runCatching { Region.apply(classifier!!.predict(bmp)) }.getOrElse { return@launch }
             val firstPest = cur.prediction.top[0].classId.startsWith("pest__")
             val secondPest = p2.top[0].classId.startsWith("pest__")
             if (secondPest && p2.sure && !firstPest) {
@@ -225,13 +224,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             val a = cur.prediction.ranked.associate { it.classId to it.prob.toDouble() }
             val b = p2.ranked.associate { it.classId to it.prob.toDouble() }
             val ids = (a.keys + b.keys)
-            // two photos are not fully independent evidence, so the product is softened (power 0.75) before it is normalised
-            val raw = ids.associateWith { Math.pow((a[it] ?: eps) * (b[it] ?: eps), 0.75) }
+            // two photos are not fully independent evidence, so the product is softened (power 0.75) before it is normalized
+            val raw = ids.associateWith { ((a[it] ?: eps) * (b[it] ?: eps)).pow(0.75) }
             val sum = raw.values.sum()
             val ranked = raw.entries.sortedByDescending { it.value }.take(6).map { Guess(it.key, (it.value / sum).toFloat()) }
             val top = ranked.take(3)
-            val pred = cur.prediction.copy(top = top, ranked = ranked, sure = top[0].prob >= Classifier.gateFor(top[0].classId) && cur.prediction.cropMass >= Classifier.MIN_CROP_MASS)
-            update { it.copy(prediction = pred, shownClass = top[0].classId, fromPossibility = false, engine = CheckEngine(ranked), answers = emptyList(), extraPhotos = it.extraPhotos + 1) }
+            val photoResult = cur.prediction.copy(top = top, ranked = ranked, sure = Classifier.answers(top[0].classId, top[0].prob, cur.prediction.healthyMass))
+            update { it.copy(prediction = photoResult, shownClass = top[0].classId, fromPossibility = false, engine = CheckEngine(ranked), answers = emptyList(), extraPhotos = it.extraPhotos + 1) }
         }
     }
 
@@ -256,21 +255,21 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             val used = uris.take(12)
             for (u in used) {
                 val bmp = ImageUtil.load(getApplication(), u) ?: continue
-                val pred = try { Region.apply(classifier!!.predict(bmp, cropChoice)) } catch (e: Throwable) { continue }
-                if (!pred.sure) continue
-                val c = pred.top[0].classId
+                val photoResult = runCatching { Region.apply(classifier!!.predict(bmp)) }.getOrNull() ?: continue
+                if (!photoResult.sure) continue
+                val c = photoResult.top[0].classId
                 val e = Kb.get(c, Lang.EN)
                 var dmg: Int? = null
                 if (e != null && e.hasLesions) {
-                    val sv = try { Severity.estimate(bmp, getApplication()) } catch (t: Throwable) { null }
-                    if (sv != null && sv.ok && sv.percent >= Severity.MIN_REAL_PCT) dmg = Math.round(sv.percent)
+                    val sv = runCatching { Severity.estimate(bmp, getApplication()) }.getOrNull()
+                    if (sv != null && sv.ok && sv.percent >= Severity.MIN_REAL_PCT) dmg = sv.percent.roundToInt()
                 }
                 per.getOrPut(c) { mutableListOf() }.add(u to dmg)
                 clear++
             }
             val rows = per.map { (c, l) ->
                 val d = l.mapNotNull { it.second }
-                PlotRow(c, l.size, if (d.isEmpty()) null else Math.round(d.average().toFloat()), l[0].first)
+                PlotRow(c, l.size, if (d.isEmpty()) null else d.average().roundToInt(), l[0].first)
             }.sortedByDescending { it.count }
             screen = Screen.Plot(PlotState(used.size, clear, rows))
         }
@@ -329,7 +328,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         val info = DeviceProfile.read(getApplication())
         val pick = DeviceProfile.pick(getApplication(), info)
         if (pick !is DeviceProfile.Pick.Use && hub.isNotBlank()) { smartOn = true; smartInfo = s.smartViaHub; return }
-        when (val pk = pick) {
+        when (pick) {
             is DeviceProfile.Pick.Use -> { smartOn = true; smartInfo = null }
             DeviceProfile.Pick.NoCpu -> smartInfo = s.smartCpu
             DeviceProfile.Pick.NoFiles -> smartInfo = s.smartNoFiles
@@ -346,7 +345,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         val entryL = Kb.get(cur.shownClass, lang) ?: return
         val entryEn = Kb.get(cur.shownClass, Lang.EN) ?: return
         val sev = cur.severity
-        val pct = if (sev.ok && entryEn.hasLesions && sev.percent >= Severity.MIN_REAL_PCT) Math.round(sev.percent) else null
+        val pct = if (sev.ok && entryEn.hasLesions && sev.percent >= Severity.MIN_REAL_PCT) sev.percent.roundToInt() else null
         val band = if (pct != null) sev.band else null
         ask = AskState.Thinking
         viewModelScope.launch(Dispatchers.Default) {
@@ -361,7 +360,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 if (pk !is DeviceProfile.Pick.Use && hub.isNotBlank()) {
                     // phone cannot run Llama itself right now: ask the village hub, then check the answer exactly the same way
                     val facts = Grounding.facts(entryEn, band, pct)
-                    val text = try { HubClient.ask(hub, Grounding.llamaPrompt(facts, q)) } catch (e: Throwable) { null }
+                    val text = runCatching { HubClient.ask(hub, Grounding.llamaPrompt(facts, q)) }.getOrNull()
                     if (text == null) { ask = AskState.Done(plain, AskSource.PLAIN, s.hubFailed); return@launch }
                     val v = Grounding.check(text, entryEn, q, facts, pct)
                     ask = when {
@@ -391,6 +390,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                     else -> AskState.Done(plain, AskSource.PLAIN, s.smartBlocked + " (" + v.reason + ")")
                 }
             } catch (t: Throwable) {
+                Log.w("MainViewModel", "smart answer failed", t)
                 if (llm === active) { llm?.unload(); llm = null; llmLoaded = false }
                 ask = AskState.Done(plain, AskSource.PLAIN, s.smartFailed)
             }
