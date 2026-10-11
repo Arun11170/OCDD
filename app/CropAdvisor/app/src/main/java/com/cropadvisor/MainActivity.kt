@@ -454,6 +454,16 @@ private fun SettingsDialog(vm: MainViewModel, s: S, onClose: () -> Unit) {
             TextButtonLike(s.exportHistory) { shareText(prefCtx, s.exportHeader, History.csv(prefCtx)) }
         }
         SmartSetupCard(vm, s)
+        var checks by remember { mutableStateOf<List<MainViewModel.CheckLine>?>(null) }
+        var checking by remember { mutableStateOf(false) }
+        DsButton(if (checking) tr(l, "Checking…", "जाँच हो रही है…") else tr(l, "Run self-check of all features", "सभी सुविधाओं की स्व-जाँच चलाएँ"), Icons.Rounded.Check,
+            { if (!checking) { checking = true; checks = null; vm.selfCheck { r -> checks = r; checking = false } } }, Modifier.fillMaxWidth(), BtnStyle.Soft, 48.dp)
+        checks?.forEach { c ->
+            Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(if (c.ok) "✓" else "✗", color = if (c.ok) Green else Red, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                Column { Text(c.name, fontSize = 14.sp, fontWeight = FontWeight.SemiBold); Text(c.note, fontSize = 12.sp, color = Ds.Muted) }
+            }
+        }
         TextButtonLike(s.aboutLink) { showAbout = true }
         Text(s.builtWithLlama, fontSize = 13.sp, color = Color(0xFF444444))
     }

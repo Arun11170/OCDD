@@ -54,3 +54,6 @@ Build first: Android Studio, Sync Gradle (new CameraX dependencies need internet
 - [ ] Mic asks for microphone permission (in the app, not a system "voice search" box); say a command; it works. Deny permission: a clear message and a list of actions opens
 - [ ] If voice typing is missing for a language (Odia, Assamese), the message says how to install it and the action list lets you do the same thing by tapping
 - [ ] "Speak your question" in Ask uses the same mic and fills the question box
+
+## Self-check (do this first)
+Settings > "Run self-check of all features". Every line should show a tick. Screenshot any cross and send it back.

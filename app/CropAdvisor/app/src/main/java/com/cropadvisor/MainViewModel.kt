@@ -176,6 +176,56 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     fun refreshHistory() { history = History.list(getApplication()) }
 
+    /** One line of the self-check: what was tested, did it work, and a short note. */
+    data class CheckLine(val name: String, val ok: Boolean, val note: String)
+
+    /** Tests every part of the app that can be tested without a farmer, so a failure can be shown in Settings and screenshotted. */
+    fun selfCheck(onDone: (List<CheckLine>) -> Unit) {
+        viewModelScope.launch(Dispatchers.Default) {
+            val ctx: Application = getApplication()
+            val out = ArrayList<CheckLine>()
+            fun add(name: String, ok: Boolean, note: String) { out += CheckLine(name, ok, note) }
+            val modelOk = try { ready.await() } catch (e: Throwable) { false }
+            val clf = classifier
+            add("Photo model", modelOk && clf != null, if (modelOk && clf != null) "${clf.classes.size} classes loaded" else (initError ?: "did not load"))
+            if (modelOk && clf != null) {
+                val leaf = Bitmap.createBitmap(300, 300, Bitmap.Config.ARGB_8888).apply { eraseColor(0xFF3C8C3C.toInt()) }
+                try {
+                    val p = clf.predict(leaf)
+                    add("Reads a photo", true, "${p.top[0].classId} ${(p.top[0].prob * 100).toInt()}% in ${p.millis} ms")
+                } catch (e: Throwable) { add("Reads a photo", false, e.toString().take(140)) }
+                try {
+                    val sv = Severity.estimate(leaf, ctx)
+                    add("Leaf and damage finder", true, if (sv.ok) "ran" else "ran (no leaf found in the test image, normal)")
+                } catch (e: Throwable) { add("Leaf and damage finder", false, e.toString().take(140)) }
+            }
+            val kbCount = try { Kb.allEnglish().size } catch (e: Throwable) { 0 }
+            add("Advice database", kbCount > 0, "$kbCount problems")
+            val en = S(Lang.EN).takePhoto
+            val untranslated = Lang.entries.filter { it != Lang.EN && S(it).takePhoto == en }.map { it.code }
+            add("Languages", untranslated.isEmpty(), if (untranslated.isEmpty()) "all ${Lang.entries.size} load" else "not translated: " + untranslated.joinToString())
+            val tts = try { ctx.packageManager.queryIntentServices(android.content.Intent(android.speech.tts.TextToSpeech.Engine.INTENT_ACTION_TTS_SERVICE), 0).isNotEmpty() } catch (e: Throwable) { false }
+            add("Read aloud (text-to-speech)", tts, if (tts) "engine installed" else "no engine: install Google text-to-speech")
+            val stt = VoiceInput(ctx).available()
+            add("Voice typing", stt, if (stt) "service found" else "no service: install or enable the Google app")
+            fun granted(p: String) = androidx.core.content.ContextCompat.checkSelfPermission(ctx, p) == android.content.pm.PackageManager.PERMISSION_GRANTED
+            add("Camera permission", granted(android.Manifest.permission.CAMERA), if (granted(android.Manifest.permission.CAMERA)) "allowed" else "not allowed yet (asked when you take a photo)")
+            add("Microphone permission", granted(android.Manifest.permission.RECORD_AUDIO), if (granted(android.Manifest.permission.RECORD_AUDIO)) "allowed" else "not allowed yet (asked when you use the mic)")
+            val notif = androidx.core.app.NotificationManagerCompat.from(ctx).areNotificationsEnabled()
+            add("Reminder notifications", notif, if (notif) "allowed" else "off: turn on in phone Settings > Apps > Crop Advisor > Notifications")
+            val info = DeviceProfile.read(ctx)
+            add("Memory and storage", info.freeStorageMb > 500, "RAM ${info.totalMb} MB (free now ${info.availMb}), storage free ${info.freeStorageMb} MB")
+            val pick = try { DeviceProfile.pick(ctx, info) } catch (e: Throwable) { null }
+            add("Smart answers (Llama)", pick is DeviceProfile.Pick.Use, when (pick) {
+                is DeviceProfile.Pick.Use -> "ready on this phone"
+                null -> "could not check"
+                else -> "not ready: " + pick.javaClass.simpleName + " (download it in Settings, or the phone is too small)"
+            })
+            add("History", true, "${history.size} saved checks")
+            onDone(out)
+        }
+    }
+
     fun deleteHistory(ts: Long) { History.delete(getApplication(), ts); refreshHistory() }
 
     fun clearHistory() { History.clear(getApplication()); history = emptyList() }
