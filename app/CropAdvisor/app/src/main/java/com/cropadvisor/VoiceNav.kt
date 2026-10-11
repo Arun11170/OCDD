@@ -250,6 +250,9 @@ AS YELLOW হালধীয়া
         return langNames.entries.firstOrNull { (_, names) -> names.any { norm(it) in t } }?.key
     }
 
+    /** Every table word of every language, for the meaning-matcher's example list. */
+    fun allWords(): List<Pair<Cmd, String>> = words.values.flatMap { m -> m.flatMap { (c, ws) -> ws.map { c to it } } }.distinct()
+
     /** First hit among several recogniser guesses. */
     fun matchAny(lang: Lang, guesses: List<String>): Cmd? = guesses.firstNotNullOfOrNull { match(lang, it) }
 

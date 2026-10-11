@@ -19,7 +19,7 @@ object ModelDownloader {
     const val DEFAULT_SERVER = "https://github.com/Arun11170/OCDD/releases/download/model-v1"
 
     data class Item(val name: String, val sha256: String, val size: Long)
-    data class Manifest(val full: Item?, val lite: Item?, val tokenizer: Item?)
+    data class Manifest(val full: Item?, val lite: Item?, val tokenizer: Item?, val embed: Item? = null, val embedVocab: Item? = null)
 
     fun clean(base: String): String {
         var b = base.trim()
@@ -35,7 +35,7 @@ object ModelDownloader {
             if (c.responseCode != 200) throw IOException("server answered ${c.responseCode}")
             val j = JSONObject(c.inputStream.bufferedReader(Charsets.UTF_8).use { it.readText() })
             fun item(k: String): Item? = j.optJSONObject(k)?.let { Item(it.getString("file"), it.optString("sha256").lowercase(), it.optLong("size", 0)) }
-            return Manifest(item("full"), item("lite"), item("tokenizer"))
+            return Manifest(item("full"), item("lite"), item("tokenizer"), item("embed"), item("embedVocab"))
         } finally { c.disconnect() }
     }
 

@@ -107,6 +107,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         UiPrefs.bigText = getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).getBoolean("big_text", false)
         UiPrefs.simple = getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).getBoolean("simple_mode", false)
+        Embedder.warmUp(this)      // loads the optional meaning-matcher in the background if it was downloaded
         setContent {
             val d = LocalDensity.current
             CompositionLocalProvider(LocalDensity provides Density(d.density, d.fontScale * (if (UiPrefs.bigText) 1.25f else 1f))) {
@@ -454,6 +455,7 @@ private fun SettingsDialog(vm: MainViewModel, s: S, onClose: () -> Unit) {
             TextButtonLike(s.exportHistory) { shareText(prefCtx, s.exportHeader, History.csv(prefCtx)) }
         }
         SmartSetupCard(vm, s)
+        VoiceAiCard(vm, l)
         var checks by remember { mutableStateOf<List<MainViewModel.CheckLine>?>(null) }
         var checking by remember { mutableStateOf(false) }
         DsButton(if (checking) tr(l, "Checking…", "जाँच हो रही है…") else tr(l, "Run self-check of all features", "सभी सुविधाओं की स्व-जाँच चलाएँ"), Icons.Rounded.Check,
@@ -565,13 +567,16 @@ private fun cmdLabel(s: S, l: Lang, c: Cmd): String = when (c) {
 @Composable
 private fun VoiceButton(s: S, lang: Lang, onLang: (Lang) -> Unit, onCmd: (Cmd) -> Unit) {
     var fallback by remember { mutableStateOf<String?>(null) }   // non-null = show the action list, with this note
-    val start = rememberVoiceTrigger(lang, VoiceNav.examples(lang), onHeard = { guesses ->
+    var typed by remember { mutableStateOf("") }
+    // Used for both what is heard and what is typed: exact words first, then the language switch, then the meaning-matcher.
+    val handle: (List<String>) -> Unit = { guesses ->
         val newLang = guesses.firstNotNullOfOrNull { VoiceNav.matchLang(it) }
-        val c = VoiceNav.matchAny(lang, guesses)
-        if (c != null) onCmd(c)
-        else if (newLang != null && newLang != lang) onLang(newLang)
+        val c = VoiceNav.matchAny(lang, guesses) ?: Embedder.matchCommand(guesses)
+        if (c != null) { fallback = null; onCmd(c) }
+        else if (newLang != null && newLang != lang) { fallback = null; onLang(newLang) }
         else fallback = tr(lang, "I heard: ", "मैंने सुना: ") + guesses.first() + "\n" + tr(lang, "I did not understand. Pick an action:", "समझ नहीं आया। कोई काम चुनें:")
-    }, onProblem = { fallback = it })
+    }
+    val start = rememberVoiceTrigger(lang, VoiceNav.examples(lang), onHeard = { guesses -> handle(guesses) }, onProblem = { fallback = it })
     Box(Modifier.size(44.dp).clip(CircleShape).background(Ds.Brand).clickable { start() }, contentAlignment = Alignment.Center) {
         Icon(Icons.Rounded.Mic, contentDescription = tr(lang, "Voice command", "आवाज़ से कमांड"), tint = Color.White, modifier = Modifier.size(22.dp))
     }
@@ -583,6 +588,12 @@ private fun VoiceButton(s: S, lang: Lang, onLang: (Lang) -> Unit, onCmd: (Cmd) -
             text = {
                 Column(Modifier.verticalScroll(rememberScrollState())) {
                     Text(note, fontSize = 13.sp, color = Ds.Muted, modifier = Modifier.padding(bottom = 8.dp))
+                    OutlinedTextField(
+                        value = typed, onValueChange = { typed = it }, singleLine = true, modifier = Modifier.fillMaxWidth(),
+                        label = { Text(tr(lang, "Or type what you want, in any language", "या लिखें कि आप क्या चाहते हैं, किसी भी भाषा में"), fontSize = 12.sp) },
+                        trailingIcon = { androidx.compose.material3.IconButton(onClick = { if (typed.isNotBlank()) { val t = typed; typed = ""; handle(listOf(t)) } }) { Icon(Icons.Rounded.Check, contentDescription = null, tint = Ds.Brand) } },
+                    )
+                    Spacer(Modifier.height(6.dp))
                     listOf(Cmd.CAMERA, Cmd.GALLERY, Cmd.LISTEN, Cmd.NEW_CHECK, Cmd.PLOT, Cmd.LIBRARY, Cmd.DIARY, Cmd.WEATHER, Cmd.STAGES, Cmd.YELLOW, Cmd.HELP, Cmd.CALL, Cmd.SETTINGS, Cmd.BACK).forEach { c ->
                         Text(cmdLabel(s, lang, c), fontSize = 16.sp, fontWeight = FontWeight.SemiBold, color = Ds.Forest,
                             modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).clickable { fallback = null; onCmd(c) }.padding(horizontal = 8.dp, vertical = 12.dp))
@@ -1310,6 +1321,33 @@ private fun PlotScreen(vm: MainViewModel, s: S, st: PlotState) {
 private fun shareText(ctx: Context, title: String, body: String) {
     val send = Intent(Intent.ACTION_SEND).apply { type = "text/plain"; putExtra(Intent.EXTRA_SUBJECT, title); putExtra(Intent.EXTRA_TEXT, body) }
     try { ctx.startActivity(Intent.createChooser(send, title)) } catch (_: Exception) {}
+}
+
+/** Optional download that lets voice and typed commands be understood by meaning in all 13 languages. */
+@Composable
+private fun VoiceAiCard(vm: MainViewModel, l: Lang) {
+    val installed = vm.voiceAiInstalled() || vm.voiceAi is DlState.Done
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(tr(l, "Understand any language (voice and typing)", "किसी भी भाषा को समझे (आवाज़ और लिखकर)"), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+            Text(tr(l, "A small model (about 120 MB, one time, works offline afterwards). Voice and typed commands are understood by meaning, not only by exact words, in all 13 languages. Optional: the word lists work without it.",
+                "एक छोटा मॉडल (लगभग 120 MB, एक बार, बाद में बिना इंटरनेट)। आवाज़ और लिखे कमांड सिर्फ़ सटीक शब्दों से नहीं, मतलब से समझे जाते हैं, सभी 13 भाषाओं में। वैकल्पिक है।"), fontSize = 13.sp, color = Color(0xFF444444))
+            when (val st = vm.voiceAi) {
+                is DlState.Idle -> if (installed) Text(tr(l, "Installed", "इंस्टॉल है"), fontSize = 14.sp, color = Green, fontWeight = FontWeight.SemiBold)
+                is DlState.Checking -> Text(tr(l, "Checking the server…", "सर्वर जाँच रहे हैं…"), fontSize = 14.sp)
+                is DlState.Running -> {
+                    val frac = if (st.total > 0) (st.done.toFloat() / st.total).coerceIn(0f, 1f) else 0f
+                    Text("${st.done / (1024 * 1024)} / ${st.total / (1024 * 1024)} MB", fontSize = 14.sp)
+                    LinearProgressIndicator(progress = { frac }, modifier = Modifier.fillMaxWidth(), color = Green)
+                }
+                is DlState.Done -> Text(tr(l, "Installed", "इंस्टॉल है"), fontSize = 14.sp, color = Green, fontWeight = FontWeight.SemiBold)
+                is DlState.Failed -> Text(st.message, fontSize = 14.sp, color = Red)
+            }
+            val busy = vm.voiceAi is DlState.Running || vm.voiceAi is DlState.Checking
+            if (busy) OutlinedButton(onClick = { vm.cancelVoiceAi() }) { Text(tr(l, "Cancel", "रद्द करें")) }
+            else if (!installed) Button(onClick = { vm.downloadVoiceAi() }, modifier = Modifier.fillMaxWidth()) { Text(tr(l, "Download (Wi-Fi recommended)", "डाउनलोड करें (Wi-Fi बेहतर)")) }
+        }
+    }
 }
 
 @Composable

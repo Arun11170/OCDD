@@ -57,3 +57,8 @@ Build first: Android Studio, Sync Gradle (new CameraX dependencies need internet
 
 ## Self-check (do this first)
 Settings > "Run self-check of all features". Every line should show a tick. Screenshot any cross and send it back.
+
+## Understand any language (optional)
+1. On the PC: `pip install huggingface_hub tokenizers onnxruntime numpy`, then `python prepare_voice_ai.py` (look at "tokenizer identical" and "model check"), then `.\publish_voice_ai.ps1`.
+2. On the phone: Settings > "Understand any language" > Download. Then Settings > self-check: "Understands any language" should be a tick with scores.
+3. Mic > say or type a sentence that is not a keyword (for example "I need a picture of this plant" or the same in Tamil/Telugu). It should open the right action. Chatter such as "thank you" must show the action list, not open anything.

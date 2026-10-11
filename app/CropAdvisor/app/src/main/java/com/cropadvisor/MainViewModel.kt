@@ -143,6 +143,45 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     fun installed(t: LlmTier) = LlmFiles.find(getApplication(), t.dir) != null
     fun cancelDownload() { dlCancel = true }
 
+    /** The small "understands any language" model for voice and typed commands (about 118 MB, optional). */
+    var voiceAi by mutableStateOf<DlState>(DlState.Idle)
+    @Volatile private var voiceAiCancel = false
+    fun cancelVoiceAi() { voiceAiCancel = true }
+    fun voiceAiInstalled() = Embedder.installed(getApplication())
+
+    fun downloadVoiceAi() {
+        if (voiceAi is DlState.Running || voiceAi is DlState.Checking) return
+        voiceAiCancel = false
+        voiceAi = DlState.Checking
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val mf = ModelDownloader.fetchManifest(server)
+                val model = mf.embed ?: throw java.io.IOException("the language model is not on the server yet")
+                val vocab = mf.embedVocab ?: throw java.io.IOException("the language vocabulary is not on the server yet")
+                val info = DeviceProfile.read(getApplication())
+                val mb = (model.size + vocab.size) / (1024 * 1024)
+                if (model.size > 0 && !DeviceProfile.storageOk(info, mb)) throw java.io.IOException(s.dlNoSpace(mb, info.freeStorageMb))
+                val dir = Embedder.dir(getApplication())
+                var last = 0L
+                val total = model.size + vocab.size
+                if (!ModelDownloader.fetch(server, vocab, dir, {}, { voiceAiCancel })) { voiceAi = DlState.Idle; return@launch }
+                val ok = ModelDownloader.fetch(server, model, dir, { done ->
+                    val now = System.currentTimeMillis()
+                    if (now - last > 300) { last = now; voiceAi = DlState.Running("Language", done + vocab.size, total) }
+                }, { voiceAiCancel })
+                if (ok) {
+                    // the file names on the server are fixed by the publish script; make sure the app finds them under its own names
+                    if (model.name != Embedder.MODEL_FILE) java.io.File(dir, model.name).copyTo(java.io.File(dir, Embedder.MODEL_FILE), overwrite = true)
+                    if (vocab.name != Embedder.VOCAB_FILE) java.io.File(dir, vocab.name).copyTo(java.io.File(dir, Embedder.VOCAB_FILE), overwrite = true)
+                    Embedder.warmUp(getApplication())
+                    voiceAi = DlState.Done("Language")
+                } else voiceAi = DlState.Idle
+            } catch (e: Throwable) {
+                voiceAi = DlState.Failed(e.message ?: e.toString())
+            }
+        }
+    }
+
     fun startDownload() {
         if (dl is DlState.Running || dl is DlState.Checking) return
         val info = DeviceProfile.read(getApplication()); device = info
@@ -206,6 +245,10 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             add("Languages", untranslated.isEmpty(), if (untranslated.isEmpty()) "all ${Lang.entries.size} load" else "not translated: " + untranslated.joinToString())
             val tts = try { ctx.packageManager.queryIntentServices(android.content.Intent(android.speech.tts.TextToSpeech.Engine.INTENT_ACTION_TTS_SERVICE), 0).isNotEmpty() } catch (e: Throwable) { false }
             add("Read aloud (text-to-speech)", tts, if (tts) "engine installed" else "no engine: install Google text-to-speech")
+            val emb = Embedder.installed(ctx)
+            if (emb && !Embedder.ready) Embedder.warmUp(ctx)
+            val ev = if (Embedder.ready) listOf("open the camera", "मौसम कैसा रहेगा", "தயவுசெய்து புகைப்படம் எடு", "ఫోటో తీయి").joinToString("; ") { t -> Embedder.score(t)?.let { v -> "${v.cmd ?: "-"} ${"%.2f".format(v.cosine)}" } ?: "?" } else ""
+            add("Understands any language (voice)", emb && Embedder.ready, if (!emb) "not downloaded (optional): the word lists still work" else if (Embedder.ready) "ready: $ev" else (Embedder.lastError ?: "loading, run the check again in a moment"))
             val stt = VoiceInput(ctx).available()
             add("Voice typing", stt, if (stt) "service found" else "no service: install or enable the Google app")
             fun granted(p: String) = androidx.core.content.ContextCompat.checkSelfPermission(ctx, p) == android.content.pm.PackageManager.PERMISSION_GRANTED
@@ -427,7 +470,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 val files = pk.files
                 if (llmLoaded && llmTier != pk.tier) { llm?.unload(); llm = null; llmLoaded = false }   // phone state changed: switch build
                 llmTier = pk.tier
-                if (!llmLoaded) classifier?.release()          // free the photo models first: Llama gets all the memory it can
+                if (!llmLoaded) { Embedder.release(); classifier?.release() }          // free the photo models first: Llama gets all the memory it can
                 val client = llm ?: LlmClient(getApplication()).also { llm = it }
                 active = client
                 if (!llmLoaded) { client.load(files); llmLoaded = true }

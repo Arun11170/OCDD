@@ -41,3 +41,5 @@ Organic and low-cost options: short paraphrased points from public university an
 
 
 Font: Plus Jakarta Sans, SIL Open Font License 1.1 (see OFL_PlusJakartaSans.txt).
+
+multilingual-e5-small (optional download, voice/typed commands): Copyright Microsoft / Wang et al., MIT licence. ONNX int8 conversion by Xenova (Transformers.js), same licence.
