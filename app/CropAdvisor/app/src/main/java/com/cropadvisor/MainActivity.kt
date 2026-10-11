@@ -306,7 +306,7 @@ private fun HomeScreen(vm: MainViewModel, s: S, onCamera: () -> Unit, onGallery:
         }
         Spacer(Modifier.width(12.dp))
         Text(s.appName, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ink, modifier = Modifier.weight(1f))
-        VoiceButton(vm.lang, { l2 -> vm.lang = l2; hctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
+        VoiceButton(s, vm.lang, { l2 -> vm.lang = l2; hctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
             when (c) {
                 Cmd.CAMERA, Cmd.NEW_CHECK -> onCamera()
                 Cmd.GALLERY -> onGallery()
@@ -530,34 +530,57 @@ private fun LibraryDialogs(vm: MainViewModel, s: S, onClose: () -> Unit) {
     }
 }
 
-/** Microphone button: say what you want ("take photo", "help", "फोटो लें") in the chosen language. */
+/** Name of each voice action, in the screen language, for the "pick an action" list. */
+private fun cmdLabel(s: S, l: Lang, c: Cmd): String = when (c) {
+    Cmd.CAMERA -> s.takePhoto
+    Cmd.GALLERY -> s.pickPhoto
+    Cmd.LISTEN -> s.listen
+    Cmd.NEW_CHECK -> s.newCheck
+    Cmd.BACK -> tr(l, "Back to home", "होम पर वापस")
+    Cmd.HELP -> tr(l, "Help", "मदद")
+    Cmd.CALL -> s.callExpert
+    Cmd.DIARY -> tr(l, "Season diary", "मौसम की डायरी")
+    Cmd.WEATHER -> tr(l, "Weather watch", "मौसम की चेतावनी")
+    Cmd.STAGES -> tr(l, "Crop stages", "फसल अवस्था")
+    Cmd.SETTINGS -> tr(l, "Settings", "सेटिंग")
+    Cmd.LIBRARY -> s.libraryButton.substringBefore("(").trim()
+    Cmd.PLOT -> s.plotButton.substringBefore("(").trim()
+    Cmd.YELLOW -> tr(l, "Yellow leaves", "पीले पत्ते")
+}
+
+/**
+ * Microphone button: say what you want ("take photo", "help", "फोटो लें") in the chosen language.
+ * If the phone's voice typing does not work, a list of the same actions opens, so nothing is ever a dead end.
+ */
 @Composable
-private fun VoiceButton(lang: Lang, onLang: (Lang) -> Unit, onCmd: (Cmd) -> Unit) {
-    val vctx = LocalContext.current
-    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { r ->
-        val guesses = r.data?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS).orEmpty()
-        if (guesses.isEmpty()) return@rememberLauncherForActivityResult
+private fun VoiceButton(s: S, lang: Lang, onLang: (Lang) -> Unit, onCmd: (Cmd) -> Unit) {
+    var fallback by remember { mutableStateOf<String?>(null) }   // non-null = show the action list, with this note
+    val start = rememberVoiceTrigger(lang, VoiceNav.examples(lang), onHeard = { guesses ->
         val newLang = guesses.firstNotNullOfOrNull { VoiceNav.matchLang(it) }
         val c = VoiceNav.matchAny(lang, guesses)
-        if (newLang != null && newLang != lang && c == null) onLang(newLang)
-        else if (c != null) onCmd(c)
-        else Toast.makeText(vctx, tr(lang, "Did not understand: ", "समझ नहीं आया: ") + guesses.first() + "\n" + VoiceNav.examples(lang), Toast.LENGTH_LONG).show()
-    }
-    Box(Modifier.size(44.dp).clip(CircleShape).background(Ds.Brand).clickable {
-        try {
-            val i = Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-                putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-                putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, lang.locale.toLanguageTag())
-                putExtra(android.speech.RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
-                putExtra(android.speech.RecognizerIntent.EXTRA_MAX_RESULTS, 5)
-                putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, tr(lang, "Say: ", "बोलें: ") + VoiceNav.examples(lang))
-            }
-            launcher.launch(i)
-        } catch (e: Exception) {
-            Toast.makeText(vctx, tr(lang, "Voice typing is not available on this phone.", "इस फोन पर आवाज़ से लिखना उपलब्ध नहीं है।"), Toast.LENGTH_LONG).show()
-        }
-    }, contentAlignment = Alignment.Center) {
+        if (c != null) onCmd(c)
+        else if (newLang != null && newLang != lang) onLang(newLang)
+        else fallback = tr(lang, "I heard: ", "मैंने सुना: ") + guesses.first() + "\n" + tr(lang, "I did not understand. Pick an action:", "समझ नहीं आया। कोई काम चुनें:")
+    }, onProblem = { fallback = it })
+    Box(Modifier.size(44.dp).clip(CircleShape).background(Ds.Brand).clickable { start() }, contentAlignment = Alignment.Center) {
         Icon(Icons.Rounded.Mic, contentDescription = tr(lang, "Voice command", "आवाज़ से कमांड"), tint = Color.White, modifier = Modifier.size(22.dp))
+    }
+    val note = fallback
+    if (note != null) {
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { fallback = null },
+            title = { Text(tr(lang, "What do you want to do?", "आप क्या करना चाहते हैं?")) },
+            text = {
+                Column(Modifier.verticalScroll(rememberScrollState())) {
+                    Text(note, fontSize = 13.sp, color = Ds.Muted, modifier = Modifier.padding(bottom = 8.dp))
+                    listOf(Cmd.CAMERA, Cmd.GALLERY, Cmd.LISTEN, Cmd.NEW_CHECK, Cmd.PLOT, Cmd.LIBRARY, Cmd.DIARY, Cmd.WEATHER, Cmd.STAGES, Cmd.YELLOW, Cmd.HELP, Cmd.CALL, Cmd.SETTINGS, Cmd.BACK).forEach { c ->
+                        Text(cmdLabel(s, lang, c), fontSize = 16.sp, fontWeight = FontWeight.SemiBold, color = Ds.Forest,
+                            modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).clickable { fallback = null; onCmd(c) }.padding(horizontal = 8.dp, vertical = 12.dp))
+                    }
+                }
+            },
+            confirmButton = { androidx.compose.material3.TextButton(onClick = { fallback = null }) { Text(s.closeText) } },
+        )
     }
 }
 
@@ -639,7 +662,7 @@ private fun ResultScreen(
                     Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = s.newCheck, tint = Ink)
                 }
                 Spacer(Modifier.weight(1f))
-                VoiceButton(vm.lang, { l2 -> vm.lang = l2; ctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
+                VoiceButton(s, vm.lang, { l2 -> vm.lang = l2; ctx.getSharedPreferences("cropadvisor", Context.MODE_PRIVATE).edit().putString("lang", l2.code).apply() }) { c ->
                     when (c) {
                         Cmd.LISTEN -> if (entry != null) onListen(spokenText(s, entry, sev, measured))
                         Cmd.NEW_CHECK, Cmd.BACK -> vm.reset()
@@ -985,23 +1008,10 @@ private fun AskSection(vm: MainViewModel, s: S) {
                 value = text, onValueChange = { text = it },
                 placeholder = { Text(s.askHint) }, modifier = Modifier.fillMaxWidth(), minLines = 1, maxLines = 3,
             )
-            val micCtx = LocalContext.current
-            var micErr by remember { mutableStateOf(false) }
-            val mic = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { r ->
-                val spoken = r.data?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
-                if (!spoken.isNullOrBlank()) text = spoken
-            }
-            OutlinedButton(onClick = {
-                try {
-                    val i = Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-                        putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-                        putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, vm.lang.locale.toLanguageTag())
-                        putExtra(android.speech.RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
-                    }
-                    mic.launch(i); micErr = false
-                } catch (e: Exception) { micErr = true }
-            }, modifier = Modifier.fillMaxWidth()) { Text(s.micButton, fontSize = 15.sp) }
-            if (micErr) Text(s.micMissing, fontSize = 13.sp, color = Red)
+            var micNote by remember { mutableStateOf<String?>(null) }
+            val startMic = rememberVoiceTrigger(vm.lang, tr(vm.lang, "your question", "अपना सवाल"), onHeard = { g -> text = g.first(); micNote = null }, onProblem = { micNote = it })
+            OutlinedButton(onClick = { startMic() }, modifier = Modifier.fillMaxWidth()) { Text(s.micButton, fontSize = 15.sp) }
+            micNote?.let { Text(it, fontSize = 13.sp, color = Red) }
             Text(s.micNote, fontSize = 13.sp, color = Color(0xFF444444))
             Button(onClick = { vm.askQuestion(text) }, modifier = Modifier.fillMaxWidth()) { Text(s.askButton, fontSize = 16.sp) }
 

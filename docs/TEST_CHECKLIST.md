@@ -51,3 +51,6 @@ Build first: Android Studio, Sync Gradle (new CameraX dependencies need internet
 - [ ] Take photo asks for camera permission once, then opens the camera without closing the app
 - [ ] Weather watch and Crop stages open with the crop of your latest check (no "pick your crop" text)
 - [ ] Healthy random leaf should not be called a pest
+- [ ] Mic asks for microphone permission (in the app, not a system "voice search" box); say a command; it works. Deny permission: a clear message and a list of actions opens
+- [ ] If voice typing is missing for a language (Odia, Assamese), the message says how to install it and the action list lets you do the same thing by tapping
+- [ ] "Speak your question" in Ask uses the same mic and fills the question box
