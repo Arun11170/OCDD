@@ -1,0 +1,5 @@
+onnxruntime
+flask
+pillow
+numpy
+opencv-python-headless
