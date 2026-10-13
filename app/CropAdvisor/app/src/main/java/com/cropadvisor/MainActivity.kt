@@ -461,6 +461,7 @@ private fun SettingsDialog(vm: MainViewModel, s: S, onClose: () -> Unit) {
         }
         SmartSetupCard(vm, s)
         VoiceAiCard(vm, l)
+        VoiceTestCard(l)
         var checks by remember { mutableStateOf<List<MainViewModel.CheckLine>?>(null) }
         var checking by remember { mutableStateOf(false) }
         DsButton(if (checking) tr(l, "Checking…", "जाँच हो रही है…") else tr(l, "Run self-check of all features", "सभी सुविधाओं की स्व-जाँच चलाएँ"), Icons.Rounded.Check,
@@ -1326,6 +1327,52 @@ private fun PlotScreen(vm: MainViewModel, s: S, st: PlotState) {
 private fun shareText(ctx: Context, title: String, body: String) {
     val send = Intent(Intent.ACTION_SEND).apply { type = "text/plain"; putExtra(Intent.EXTRA_SUBJECT, title); putExtra(Intent.EXTRA_TEXT, body) }
     try { ctx.startActivity(Intent.createChooser(send, title)) } catch (_: Exception) {}
+}
+
+/** Shows exactly what the phone heard and how the app understood it, so a wrong or missing action can be screenshotted and fixed. */
+@Composable
+private fun VoiceTestCard(l: Lang) {
+    val ctx = LocalContext.current
+    var text by remember { mutableStateOf("") }
+    var report by remember { mutableStateOf<String?>(null) }
+    fun analyse(guesses: List<String>) {
+        val sb = StringBuilder()
+        sb.appendLine("Heard: " + guesses.joinToString("  |  "))
+        val kw = VoiceNav.matchAny(l, guesses)
+        sb.appendLine("1. Word lists: " + (kw?.name ?: "no match"))
+        val sw = guesses.firstNotNullOfOrNull { VoiceNav.matchLang(it) }
+        if (sw != null) sb.appendLine("   Language switch: " + sw.label)
+        if (Embedder.ready) {
+            val v = guesses.firstNotNullOfOrNull { Embedder.score(it) }
+            if (v != null) sb.appendLine("2. Meaning model: " + (v.cmd?.name ?: "none (chatter)") + "  similarity " + "%.2f".format(v.cosine) + ", share " + "%.2f".format(v.share))
+            val m = Embedder.matchCommand(guesses)
+            sb.appendLine("   Accepted: " + (m?.name ?: "no (too unsure)"))
+            sb.appendLine("The app would do: " + (kw ?: m)?.name)
+        } else {
+            sb.appendLine("2. Meaning model: " + when {
+                !Embedder.installed(ctx) -> "not installed"
+                Embedder.loading -> "loading, try again in a moment"
+                else -> Embedder.lastError ?: "not loaded yet, try again"
+            })
+            if (!Embedder.installed(ctx)) {} else Embedder.warmUp(ctx)
+            sb.appendLine("The app would do: " + (kw?.name ?: "show the action list"))
+        }
+        report = sb.toString()
+    }
+    val mic = rememberVoiceTrigger(l, tr(l, "any command", "कोई भी कमांड"), onHeard = { g -> text = g.first(); analyse(g) }, onProblem = { report = it })
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(tr(l, "Voice test", "आवाज़ की जाँच"), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+            Text(tr(l, "Say or type a command to see what the phone heard and what the app understood. Send me a screenshot if it is wrong.",
+                "कमांड बोलें या लिखें, फ़ोन ने क्या सुना और ऐप ने क्या समझा यह दिखेगा। गलत हो तो स्क्रीनशॉट भेजें।"), fontSize = 13.sp, color = Color(0xFF444444))
+            OutlinedTextField(value = text, onValueChange = { text = it }, singleLine = true, modifier = Modifier.fillMaxWidth(), label = { Text(tr(l, "Type a command", "कमांड लिखें"), fontSize = 12.sp) })
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                DsButton(tr(l, "Test", "जाँचें"), Icons.Rounded.Check, { if (text.isNotBlank()) analyse(listOf(text)) }, Modifier.weight(1f), BtnStyle.Soft, 48.dp)
+                DsButton(tr(l, "Speak", "बोलें"), Icons.Rounded.Mic, { mic() }, Modifier.weight(1f), BtnStyle.Primary, 48.dp)
+            }
+            report?.let { Text(it, fontSize = 13.sp, color = Ink) }
+        }
+    }
 }
 
 /** Optional download that lets voice and typed commands be understood by meaning in all 13 languages. */

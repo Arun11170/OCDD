@@ -62,3 +62,7 @@ Settings > "Run self-check of all features". Every line should show a tick. Scre
 1. On the PC: `pip install huggingface_hub tokenizers onnxruntime numpy`, then `python prepare_voice_ai.py` (look at "tokenizer identical" and "model check"), then `.\publish_voice_ai.ps1`.
 2. On the phone: Settings > "Understand any language" > Download. Then Settings > self-check: "Understands any language" should be a tick with scores.
 3. Mic > say or type a sentence that is not a keyword (for example "I need a picture of this plant" or the same in Tamil/Telugu). It should open the right action. Chatter such as "thank you" must show the action list, not open anything.
+
+## Voice: checks that need no phone
+`python voice_test\test_voice.py` reads the app's own word lists and meaning-model rules and prints a pass rate per language from `voice_test\voice_phrases.tsv` (add your own lines there). Run it after any change to VoiceNav.kt or Embedder.kt. On the phone, Settings > "Voice test" shows what the phone heard and what the app decided.
+Local builds bundle the meaning model: copy `models\voice_ai\embed.onnx` and `embed_vocab.tsv` into `app\CropAdvisor\app\src\main\assets` (they are git-ignored: too big for GitHub).

@@ -21,7 +21,7 @@ EN GALLERY gallery,choose,pick,select
 EN LISTEN listen,read,speak,play,say
 EN NEW_CHECK new,again,another,restart
 EN BACK back,home,close,return,exit
-EN HELP help,helpline
+EN HELP help
 EN CALL call,expert,kisan,phone
 EN DIARY diary,notes,record
 EN WEATHER weather,rain,forecast
@@ -217,7 +217,7 @@ HI GALLERY एल्बम,अपलोड,सेव,पुरानी,मो�
 HI LISTEN सुनाइए,सुना,बताओ,बताइए,आवाज,आवाज़,जोर से,ज़ोर से,पढ़कर,पढकर
 HI NEW_CHECK अगला,दूसरा,दूसरी,एक और,फिर से,रीसेट,नए सिरे
 HI BACK लौट,पीछे जा,मुख्य,रद्द,रुक,बाहर,वापिस,हटो
-HI HELP कैसे,गाइड,समझाओ,समझा,सहयोग,हेल्पलाइन,मार्गदर्शन
+HI HELP कैसे,गाइड,समझाओ,समझा,सहयोग,मार्गदर्शन
 HI CALL डायल,बात करो,बात करनी,संपर्क,कृषि अधिकारी,अधिकारी,टोल फ्री,एक्सपर्ट,फोन करो,बुलाओ
 HI DIARY जर्नल,नोटबुक,लिखो,रिकॉर्ड,हिसाब,खाता,बही,डायरी में
 HI WEATHER तापमान,आंधी,तूफान,तूफ़ान,ओले,गर्मी,ठंड,पाला,बादल,हवा,मानसून,बरसात,वर्षा
@@ -389,11 +389,42 @@ RO HELP madad,sahayata,help,udhavi,uthavi,sahayam,sayam,sahay,sahaya,sahaaya,soh
 RO CALL phone,expert,kisan,kisaan,vallunar,nipunudu,tajna,tagya,tazna,bishesoggo,bisheshogyo,vidagdha,mahir,afsar,adhikari,adhikaari,call karo
 RO DIARY diary,dayri,dairy,dayari,daayari,kurippu,kurippugal,natkurippu,notkurippu,notes
 RO WEATHER weather,mausam,mosam,mousam,barish,baarish,barsaat,baarsaat,vaanilai,vanilai,vaaniilai,vaanilay,vanilay,mazhai,mazha,kalavastha,havaman,havamaan,paus,pavus,vatavaran,vaataavaran,hawamaan,abohawa,aabohawa,vatavaranam,vaathavaranam,varsham,varsha,payu,varsad,botor,borokhun,meeh,paniapaga,thattuveppa
-RO STAGES stage,avastha,avasta,charan,padav,tabbo,tabbakko,stej,nilai,kattam,dasha,hantha,ghattam,paryay,pariyay,porjay,dhaap,padaav
+RO STAGES stage,avastha,avasta,charan,padav,tabbo,tabbakko,stej,kattam,dasha,hantha,ghattam,paryay,pariyay,porjay,dhaap,padaav
 RO SETTINGS setting,settings,seting,settingu
 RO LIBRARY library,pustak,kitab,kitaab,book,bimari,bimaari,roga,noikal,vyadhi,vyaadhi,rogam,tegulu,kida,keeda,keet,poochi,pochi,pootchi
 RO PLOT plot,khet,kheth,khetar,kheti,jameen,zameen,vayal,nilam,polam,hola,jomi,jami,jamin,shetat,khetra,pothar
 RO YELLOW peela,peeli,peele,pila,pili,yellow,manjal,pasupu,hodi,halad,haladi,halud,holud,pilu,haldiya,haladia,manja
+EN CALL helpline,help line,kisan helpline
+EN HELP how to use
+EN GALLERY phone photo,phone pictures,stored photo,mobile photo
+HI CALL हेल्पलाइन,हेल्प लाइन
+HI GALLERY फोन की फोटो,फोन की तस्वीर,फोन के फोटो,मोबाइल की फोटो
+BN CALL হেল্পলাইন,হেল্প লাইন
+BN GALLERY ফোনের ছবি,মোবাইলের ছবি
+TE CALL హెల్ప్లైన్,హెల్ప్ లైన్
+TE GALLERY ఫోన్లో ఉన్న ఫోటో,ఫోన్లోని ఫోటో,మొబైల్ ఫోటో
+MR CALL हेल्पलाइन,हेल्प लाइन
+MR GALLERY फोनमधले फोटो,फोनमधील फोटो,मोबाईल फोटो
+TA CALL ஹெல்ப்லைன,ஹெல்ப் லைன
+TA GALLERY போனில் உள்ள படங்கள்,போனில் உள்ள படம்,மொபைல் படங்கள்
+GU CALL હેલ્પલાઇન,હેલ્પ લાઇન
+GU GALLERY ફોનના ફોટા,ફોનની તસવીર,મોબાઇલના ફોટા
+UR CALL ہیلپ لائن,ہیلپلائن
+UR GALLERY فون کی تصویر,موبائل کی تصویر,فون کی فوٹو
+KN CALL ಹೆಲ್ಪ್ಲೈನ್,ಹೆಲ್ಪ್ ಲೈನ್
+KN GALLERY ಫೋನ್ನಲ್ಲಿರುವ ಫೋಟೋ,ಫೋನ್ ಫೋಟೋ,ಮೊಬೈಲ್ ಫೋಟೋ
+OR CALL ହେଲ୍ପଲାଇନ,ହେଲ୍ପ ଲାଇନ
+OR GALLERY ଫୋନର ଫଟୋ,ମୋବାଇଲ ଫଟୋ
+ML CALL ഹെൽപ്പ്ലൈന,ഹെൽപ്പ് ലൈൻ
+ML GALLERY ഫോണിലെ ചിത്ര,ഫോണിലെ ഫോട്ടോ,മൊബൈൽ ഫോട്ടോ
+ML DIARY കുറിച്ച,കുറിച്ചു
+PA CALL ਹੈਲਪਲਾਈਨ,ਹੈਲਪ ਲਾਈਨ
+PA GALLERY ਫੋਨ ਦੀਆਂ ਫੋਟੋ,ਫੋਨ ਦੀ ਫੋਟੋ,ਮੋਬਾਈਲ ਫੋਟੋ
+AS CALL হেল্পলাইন,হেল্প লাইন
+AS GALLERY ফোনৰ ফটো,ম'বাইলৰ ফটো
+AS DIARY টুকি,টুকা,টুকিব
+RO CALL helpline,help line,kisan helpline
+RO GALLERY phone ki photo,mobile ki photo
 """
 
     private fun norm(t: String): String =
@@ -418,12 +449,21 @@ RO YELLOW peela,peeli,peele,pila,pili,yellow,manjal,pasupu,hodi,halad,haladi,hal
         val own = words[lang.name]
         val en = words["EN"]
         val ro = words["RO"]            // Indian words typed in English letters: "mausam", "vaanilai", "photo lo"
+        // The command whose word is the LONGEST match wins ("vaanilai" is weather, not the shorter "nilai" = stage). Ties keep the order above.
+        var bestC: Cmd? = null
+        var bestLen = 0
         for (c in order) {
-            if (own?.get(c)?.any { it in t } == true) return c
-            if (en?.get(c)?.any { it in t } == true) return c
-            if (ro?.get(c)?.any { it.length >= 4 && it in t } == true) return c
+            val hit = maxOf(longestIn(own?.get(c), t, 0), longestIn(en?.get(c), t, 0), longestIn(ro?.get(c), t, 4))
+            if (hit > bestLen) { bestLen = hit; bestC = c }
         }
+        if (bestC != null) return bestC
         return fuzzy(own, (en ?: emptyMap()).mapValues { (c, v) -> v + (ro?.get(c) ?: emptyList()) }, t)
+    }
+
+    private fun longestIn(list: List<String>?, t: String, minLen: Int): Int {
+        var best = 0
+        if (list != null) for (w in list) if (w.length >= minLen && w.length > best && w in t) best = w.length
+        return best
     }
 
     /** Speech engines spell loan words their own way (டைரி / டயரி), so a word that is one or two letters off still counts. */

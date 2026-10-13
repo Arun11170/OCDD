@@ -34,7 +34,24 @@ object Embedder {
     const val MIN_SHARE = 0.50f
 
     fun dir(ctx: Context): File = File(ctx.getExternalFilesDir(null) ?: ctx.filesDir, "embed").also { it.mkdirs() }
-    fun installed(ctx: Context): Boolean = File(dir(ctx), MODEL_FILE).length() > 0 && File(dir(ctx), VOCAB_FILE).length() > 0
+    /** True when the model is inside the app (assets) or was downloaded. */
+    fun installed(ctx: Context): Boolean = bundled(ctx) || (File(dir(ctx), MODEL_FILE).length() > 0 && File(dir(ctx), VOCAB_FILE).length() > 0)
+    fun bundled(ctx: Context): Boolean = try { ctx.assets.list("")?.let { MODEL_FILE in it && VOCAB_FILE in it } == true } catch (_: Throwable) { false }
+
+    /** The model that ships inside the app is copied once to a normal file, because ONNX Runtime reads from a path. */
+    private fun ensureFiles(ctx: Context, d: File) {
+        if (!bundled(ctx)) return
+        val model = File(d, MODEL_FILE)
+        val len = ctx.assets.openFd(MODEL_FILE).use { it.length }
+        if (!model.exists() || model.length() != len) {
+            File(d, CACHE_FILE).delete()
+            ctx.assets.open(MODEL_FILE).use { i -> model.outputStream().use { o -> i.copyTo(o) } }
+        }
+        val vocab = File(d, VOCAB_FILE)
+        if (!vocab.exists() || vocab.length() < 1000) {
+            ctx.assets.open(VOCAB_FILE).use { i -> vocab.outputStream().use { o -> i.copyTo(o) } }
+        }
+    }
 
     // ── state (all guarded by this object's lock) ──
     private val env: OrtEnvironment by lazy { OrtEnvironment.getEnvironment() }
@@ -72,6 +89,7 @@ object Embedder {
     @Synchronized
     private fun load(ctx: Context) {
         val d = dir(ctx)
+        ensureFiles(ctx, d)
         // vocabulary: one "piece<TAB>score" per line, the line number is the token id
         val map = HashMap<String, Int>(300_000)
         val sc = ArrayList<Float>(260_000)
@@ -157,12 +175,12 @@ object Embedder {
     /** Example sentences per command (English; the model links them to the same meaning in the other languages) plus every table word of every language. */
     private val phrases: Map<Cmd, List<String>> = mapOf(
         Cmd.CAMERA to listOf("take a photo of the leaf", "open the camera", "I want to take a picture", "click a photo of my crop", "photograph the plant"),
-        Cmd.GALLERY to listOf("choose a photo from the gallery", "pick an existing picture", "select a saved photo", "open my photos"),
+        Cmd.GALLERY to listOf("choose a photo from the gallery", "pick an existing picture", "select a saved photo", "open my photos", "show the photos stored on my phone", "select an existing photo from my mobile"),
         Cmd.LISTEN to listOf("read the answer aloud", "tell me the result by voice", "speak it to me", "play the advice"),
         Cmd.NEW_CHECK to listOf("check another leaf", "start a new check", "do it again", "new photo please"),
         Cmd.BACK to listOf("go back", "go to the home screen", "close this", "return to the start"),
-        Cmd.HELP to listOf("I need help", "how do I use this app", "show me the help", "call the helpline for farmers"),
-        Cmd.CALL to listOf("call an agriculture expert", "phone the kisan call centre", "I want to talk to an expert", "ring the expert"),
+        Cmd.HELP to listOf("I need help", "how do I use this app", "show me the help", "what can I say here"),
+        Cmd.CALL to listOf("call an agriculture expert", "phone the kisan call centre", "I want to talk to an expert", "ring the expert", "call the kisan helpline number", "dial the farmers helpline"),
         Cmd.DIARY to listOf("open the season diary", "write a note about my crop", "show my farm notes", "record what I did today"),
         Cmd.WEATHER to listOf("what is the weather going to be", "will it rain", "weather warning for my crop", "forecast for my field"),
         Cmd.STAGES to listOf("which growth stage is my crop in", "show crop stages", "what should I do at this stage", "crop calendar"),

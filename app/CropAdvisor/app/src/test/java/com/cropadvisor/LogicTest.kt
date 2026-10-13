@@ -88,6 +88,9 @@ class LogicTest {
         assertEquals(Cmd.WEATHER, VoiceNav.match(Lang.HI, "mausam batao"))
         assertEquals(Cmd.CAMERA, VoiceNav.match(Lang.TE, "photo tiyyi"))
         assertEquals(null, VoiceNav.match(Lang.EN, "tall bank"))             // near-misses of short English words must not fire
+        assertEquals(Cmd.CALL, VoiceNav.match(Lang.EN, "call the kisan helpline"))
+        assertEquals(Cmd.CALL, VoiceNav.match(Lang.HI, "किसान हेल्पलाइन पर फोन लगाओ"))
+        assertEquals(Cmd.GALLERY, VoiceNav.match(Lang.BN, "ফোনের ছবি দেখাও"))
         assertEquals(Lang.TA, VoiceNav.matchLang("change to Tamil"))
         assertEquals(Lang.HI, VoiceNav.matchLang("हिंदी"))
     }
