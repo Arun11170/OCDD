@@ -39,6 +39,9 @@ ARCH = os.environ.get("OCDD_ARCH", "mobilenet_v3_large")
 if ARCH == "mobilenet_v3_large":
     base = models.mobilenet_v3_large(weights=None)
     base.classifier[3] = nn.Linear(base.classifier[3].in_features, len(classes))
+elif ARCH == "convnext_tiny":
+    base = models.convnext_tiny(weights=None)
+    base.classifier[2] = nn.Linear(base.classifier[2].in_features, len(classes))
 else:
     base = getattr(models, ARCH)(weights=None)
     base.classifier[1] = nn.Linear(base.classifier[1].in_features, len(classes))

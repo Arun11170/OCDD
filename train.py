@@ -115,7 +115,7 @@ def main():
     ap.add_argument("--no-pretrained", action="store_true")
     ap.add_argument("--out", default="run1")
     ap.add_argument("--sampling-power", type=float, default=0.5, help="rare-class boost: per-image weight = 1/count^p (0.5 = old, 0.75 = stronger)")
-    ap.add_argument("--arch", default="mobilenet_v3_large", choices=["mobilenet_v3_large", "efficientnet_v2_s", "efficientnet_b0"])
+    ap.add_argument("--arch", default="mobilenet_v3_large", choices=["mobilenet_v3_large", "efficientnet_v2_s", "efficientnet_b0", "convnext_tiny"])
     ap.add_argument("--crop", default="", help="train a small specialist: only this crop's classes plus the pest classes")
     ap.add_argument("--crops", default="", help="comma list: train ONE model for just these crops (e.g. rice,okra,chilli)")
     ap.add_argument("--no-pests", action="store_true", help="with --crops: leave the pest classes out")
@@ -202,6 +202,9 @@ def main():
     elif a.arch == "efficientnet_v2_s":
         model = models.efficientnet_v2_s(weights=None if a.no_pretrained else models.EfficientNet_V2_S_Weights.IMAGENET1K_V1)
         model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
+    elif a.arch == "convnext_tiny":
+        model = models.convnext_tiny(weights=None if a.no_pretrained else models.ConvNeXt_Tiny_Weights.IMAGENET1K_V1)
+        model.classifier[2] = nn.Linear(model.classifier[2].in_features, len(classes))
     else:
         model = models.efficientnet_b0(weights=None if a.no_pretrained else models.EfficientNet_B0_Weights.IMAGENET1K_V1)
         model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
