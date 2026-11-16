@@ -21,6 +21,7 @@ data class Prediction(
     val cropMass: Float = 1f,                // how much of the photo model's belief lies inside the crop the farmer chose
     val usedSpecialist: Boolean = false,
     val healthyMass: Float = 0f,             // total belief that the leaf is healthy (any crop)
+    val notPlant: Boolean = false,           // the model believes this is NOT a crop/pest photo (hand, wall, soil, very blurry ...)
 )
 
 /**
@@ -35,7 +36,7 @@ class Classifier(private val ctx: Context) {
     private var session: OrtSession? = null
     private var inputName: String = "image"
 
-    val crops: List<String> = classes.map { it.substringBefore("__") }.distinct().filter { it != "pest" }.sorted()
+    val crops: List<String> = classes.map { it.substringBefore("__") }.distinct().filter { it != "pest" && it != NONE }.sorted()
 
     @Synchronized
     private fun main(): OrtSession {
@@ -63,11 +64,15 @@ class Classifier(private val ctx: Context) {
     fun predict(photo: Bitmap): Prediction {
         val t0 = System.nanoTime()
         val p = softmax(run(main(), inputName, photo))
-        val ranked = p.indices.sortedByDescending { p[it] }.take(6).map { Guess(classes[it], p[it]) }
+        // the "none__not_plant" class (only in models trained with it) is never shown as a crop answer
+        val real = p.indices.filter { !classes[it].startsWith(NONE + "__") }
+        val notMass = classes.indices.filter { classes[it].startsWith(NONE + "__") }.sumOf { p[it].toDouble() }.toFloat()
+        val ranked = real.sortedByDescending { p[it] }.take(6).map { Guess(classes[it], p[it]) }
         val top = ranked.take(3)
         val healthy = classes.indices.filter { "healthy" in classes[it] }.sumOf { p[it].toDouble() }.toFloat()
-        val sure = answers(top[0].classId, top[0].prob, healthy)
-        return Prediction(top, sure, (System.nanoTime() - t0) / 1_000_000, ranked, 1f, false, healthy)
+        val notPlant = notMass >= NOT_PLANT_MIN
+        val sure = !notPlant && answers(top[0].classId, top[0].prob, healthy)
+        return Prediction(top, sure, (System.nanoTime() - t0) / 1_000_000, ranked, 1f, false, healthy, notPlant)
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -119,6 +124,9 @@ class Classifier(private val ctx: Context) {
 
     companion object {
         const val MODEL_FILE = "vision.onnx"
+        const val NONE = "none"
+        /** If the model puts at least this much belief on "not a plant photo", the app asks for a new photo instead of guessing. */
+        const val NOT_PLANT_MIN = 0.40f
         /** Below this the app says "not sure". From the test report: >=0.8 answers 94% of photos at 97.3% accuracy. */
         const val GATE = 0.80f
         /** Per-crop gates raised above GATE where the 1500-photo accuracy test (accuracy_lab.py) showed too many wrong answers at 0.80: chilli and pests. Never lower than GATE. */

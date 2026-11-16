@@ -215,6 +215,17 @@ class S(val l: Lang) {
         else -> t
     }
 
+    val advTitle = p("Advisory", "सलाह")
+    val advLlama = p("Written by Llama, checked against the verified facts", "Llama द्वारा लिखी, जाँचे हुए तथ्यों से मिलान की गई")
+    val advVetted = p("From the verified advice", "जाँची हुई सलाह से")
+    val advOtherLang = p("Llama writes in English and Hindi. This advice is the verified text in your language.", "Llama अंग्रेज़ी और हिंदी में लिखता है। यह आपकी भाषा में जाँची हुई सलाह है।")
+    val advExpert = p("If it keeps spreading or you are unsure, contact your agriculture extension worker or the Kisan Call Centre on {kcc} (free). This is a likely cause, not a confirmed diagnosis.", "अगर यह फैलता रहे या आप पक्के न हों, तो अपने कृषि विस्तार अधिकारी या किसान कॉल सेंटर {kcc} (मुफ़्त) से बात करें। यह संभावित कारण है, पक्की जाँच नहीं।")
+    val advWriting = p("Llama is writing your advisory…", "Llama आपकी सलाह लिख रहा है…")
+    val noPlantTitle = p("No leaf or pest found in this photo", "इस फोटो में पत्ता या कीड़ा नहीं दिख रहा")
+    val noPlantBody = p(
+        "Point the camera at one affected leaf, fruit or insect, close up and in daylight, and take it again.",
+        "कैमरा एक प्रभावित पत्ते, फल या कीड़े के पास ले जाएँ। दिन की रोशनी में दोबारा फोटो लें।",
+    )
     val wideTitle = p("This looks like a wide view", "यह दूर से ली गई फोटो लगती है")
     val wideBody = p(
         "Move close to one leaf or one insect so it fills the photo, in daylight, and take it again.",

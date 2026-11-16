@@ -2151,164 +2151,7 @@
 "b0aa991e7489": "सुरुवातीच्या पट्ट्यांसाठी शेतांची नियमित पाहणी करा.",
 "1f11d7a8ea63": "पिवळे भुकटीसारखे फोड पानावर अरुंद पट्ट्यांमध्ये आहेत का?",
 "a24c0cd8274b": "पिवळ्या भुकटीच्या पट्ट्यांऐवजी ते फिकट तपकिरी-तपकिरी चट्टे आहेत का?",
-"_t": [
-[
-"{0} of {1} checks answered",
-"{1} पैकी {0} तपासण्यांची उत्तरे दिली"
-],
-[
-"Following: {0} — {1} of {2} typical signs confirmed",
-"पाहत आहोत: {0} — {2} पैकी {1} ठराविक लक्षणे पक्की झाली"
-],
-[
-"Question {0}",
-"प्रश्न {0}"
-],
-[
-"No disease found on this {0} leaf. It looks healthy. Check again in a few days.",
-"या {0} पानावर रोग आढळला नाही. ते निरोगी दिसते. काही दिवसांनी पुन्हा तपासा."
-],
-[
-"Your answers point to {0} ({1}%).",
-"तुमच्या उत्तरांवरून {0} असण्याची शक्यता आहे ({1}%)."
-],
-[
-"Could be {0} instead.",
-"त्याऐवजी {0} असू शकते."
-],
-[
-"photo alone: {0}%",
-"फक्त फोटोवरून: {0}%"
-],
-[
-"This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.",
-"हे {0} दिसते, पण कोणत्या प्रकारचे ते अॅप सांगू शकत नाही. खालील एका शक्यतेवर टॅप करा किंवा जवळून फोटो काढा."
-],
-[
-"{0} days ago",
-"{0} दिवसांपूर्वी"
-],
-[
-"Damage was about {0}% ({1}), now about {2}%. {3}",
-"नुकसान सुमारे {0}% होते ({1}), आता सुमारे {2}%. {3}"
-],
-[
-"Check again: {0}, scanned {1} days ago",
-"पुन्हा तपासा: {0}, {1} दिवसांपूर्वी स्कॅन केले"
-],
-[
-"{0} of {1} photos were clear enough to count.",
-"{1} पैकी {0} फोटो मोजण्याइतके स्पष्ट होते."
-],
-[
-"{0} of {1} photos",
-"{1} पैकी {0} फोटो"
-],
-[
-"average damage about {0}%",
-"सरासरी नुकसान सुमारे {0}%"
-],
-[
-"{0} of {1} possible problems left. The others are ruled out by your answers.",
-"{1} पैकी {0} शक्य समस्या उरल्या. बाकीच्या तुमच्या उत्तरांमुळे वगळल्या आहेत."
-],
-[
-"Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.",
-"तुमचा फोन: {0} GB मेमरी (आता {1} MB मोकळी), {2} GB स्टोरेज मोकळे."
-],
-[
-"Downloading {0}: {1} of {2} MB",
-"{0} डाउनलोड होत आहे: {2} MB पैकी {1} MB"
-],
-[
-"{0} build is ready. Switch on Smart answers when you ask a question.",
-"{0} बिल्ड तयार आहे. प्रश्न विचारताना स्मार्ट उत्तरे चालू करा."
-],
-[
-"Download failed: {0}",
-"डाउनलोड अयशस्वी: {0}"
-],
-[
-"Not enough storage: need about {0} MB plus some spare, free is {1} MB.",
-"स्टोरेज पुरेसे नाही: सुमारे {0} MB आणि थोडी जास्तीची जागा लागते, मोकळी जागा {1} MB आहे."
-],
-[
-"Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.",
-"याची अनेकदा गल्लत होते: {0}. उपाय करण्यापूर्वी खालील \"खात्रीसाठी तपासा\" प्रश्नांची उत्तरे द्या."
-],
-[
-"This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.",
-"हा फोटो {0} सारखा दिसत नाही. तुम्ही निवडलेले पीक तपासा, किंवा 'खात्री नाही' निवडा."
-],
-[
-"{0} extra photo(s) used.",
-"{0} जादा फोटो वापरले."
-],
-[
-"Spreading: about {0} points more damage per week.",
-"पसरत आहे: आठवड्याला सुमारे {0} टक्के गुणांनी नुकसान जास्त."
-],
-[
-"Recovering: about {0} points less damage per week.",
-"सुधारत आहे: आठवड्याला सुमारे {0} टक्के गुणांनी नुकसान कमी."
-],
-[
-"The spray pays for itself only if it saves at least {0}% of the crop's value.",
-"पिकाच्या किमतीच्या किमान {0}% वाचवले तरच फवारणीचा खर्च वसूल होईल."
-],
-[
-"Worse by {0} points since the earlier check",
-"मागील तपासणीपेक्षा {0} गुणांनी वाईट"
-],
-[
-"Better by {0} points since the earlier check",
-"मागील तपासणीपेक्षा {0} गुणांनी चांगले"
-],
-[
-"Keep the field clean and look again in {0} days.",
-"शेत स्वच्छ ठेवा आणि {0} दिवसांनी पुन्हा पाहा."
-],
-[
-"Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.",
-"आज शेतातील उपाय करा आणि {0} दिवसांनी नवीन फोटो काढा. समस्या वाढली की नाही ते पाहून ठरवा."
-],
-[
-"Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.",
-"आज शेतातील उपाय करा. खालील औषधांची यादी तुमच्या KVK किंवा कृषी अधिकाऱ्याकडून तपासून घ्या आणि फवारणीपूर्वी लेबल वाचा. {0} दिवसांनी पुन्हा तपासा."
-],
-[
-"Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.",
-"बाधित झाडे उपटून नष्ट करा, व्हायरस पसरवणाऱ्या किडींवर नियंत्रण ठेवा आणि {0} दिवसांनी आजूबाजूची झाडे पाहा."
-],
-[
-"Remind me in {0} days",
-"{0} दिवसांनी आठवण करून द्या"
-],
-[
-"Time to re-check: {0}",
-"पुन्हा तपासण्याची वेळ: {0}"
-],
-[
-"Is it {0} instead?",
-"हे त्याऐवजी {0} आहे का?"
-],
-[
-"Yes → points to {0}",
-"होय → {0} कडे निर्देश"
-],
-[
-"No → points to {0}",
-"नाही → {0} कडे निर्देश"
-],
-[
-"{0} of {1} clear photos show a problem.",
-"{1} स्पष्ट फोटोंपैकी {0} मध्ये समस्या दिसली."
-],
-[
-", average damage about {0}%",
-", सरासरी नुकसान सुमारे {0}%"
-]
-],
+"_t": [["{0} of {1} checks answered", "{1} पैकी {0} तपासण्यांची उत्तरे दिली"], ["Following: {0} — {1} of {2} typical signs confirmed", "पाहत आहोत: {0} — {2} पैकी {1} ठराविक लक्षणे पक्की झाली"], ["Question {0}", "प्रश्न {0}"], ["No disease found on this {0} leaf. It looks healthy. Check again in a few days.", "या {0} पानावर रोग आढळला नाही. ते निरोगी दिसते. काही दिवसांनी पुन्हा तपासा."], ["Your answers point to {0} ({1}%).", "तुमच्या उत्तरांवरून {0} असण्याची शक्यता आहे ({1}%)."], ["Could be {0} instead.", "त्याऐवजी {0} असू शकते."], ["photo alone: {0}%", "फक्त फोटोवरून: {0}%"], ["This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.", "हे {0} दिसते, पण कोणत्या प्रकारचे ते अॅप सांगू शकत नाही. खालील एका शक्यतेवर टॅप करा किंवा जवळून फोटो काढा."], ["{0} days ago", "{0} दिवसांपूर्वी"], ["Damage was about {0}% ({1}), now about {2}%. {3}", "नुकसान सुमारे {0}% होते ({1}), आता सुमारे {2}%. {3}"], ["Check again: {0}, scanned {1} days ago", "पुन्हा तपासा: {0}, {1} दिवसांपूर्वी स्कॅन केले"], ["{0} of {1} photos were clear enough to count.", "{1} पैकी {0} फोटो मोजण्याइतके स्पष्ट होते."], ["{0} of {1} photos", "{1} पैकी {0} फोटो"], ["average damage about {0}%", "सरासरी नुकसान सुमारे {0}%"], ["{0} of {1} possible problems left. The others are ruled out by your answers.", "{1} पैकी {0} शक्य समस्या उरल्या. बाकीच्या तुमच्या उत्तरांमुळे वगळल्या आहेत."], ["Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.", "तुमचा फोन: {0} GB मेमरी (आता {1} MB मोकळी), {2} GB स्टोरेज मोकळे."], ["Downloading {0}: {1} of {2} MB", "{0} डाउनलोड होत आहे: {2} MB पैकी {1} MB"], ["{0} build is ready. Switch on Smart answers when you ask a question.", "{0} बिल्ड तयार आहे. प्रश्न विचारताना स्मार्ट उत्तरे चालू करा."], ["Download failed: {0}", "डाउनलोड अयशस्वी: {0}"], ["Not enough storage: need about {0} MB plus some spare, free is {1} MB.", "स्टोरेज पुरेसे नाही: सुमारे {0} MB आणि थोडी जास्तीची जागा लागते, मोकळी जागा {1} MB आहे."], ["Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.", "याची अनेकदा गल्लत होते: {0}. उपाय करण्यापूर्वी खालील \"खात्रीसाठी तपासा\" प्रश्नांची उत्तरे द्या."], ["This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.", "हा फोटो {0} सारखा दिसत नाही. तुम्ही निवडलेले पीक तपासा, किंवा 'खात्री नाही' निवडा."], ["{0} extra photo(s) used.", "{0} जादा फोटो वापरले."], ["Spreading: about {0} points more damage per week.", "पसरत आहे: आठवड्याला सुमारे {0} टक्के गुणांनी नुकसान जास्त."], ["Recovering: about {0} points less damage per week.", "सुधारत आहे: आठवड्याला सुमारे {0} टक्के गुणांनी नुकसान कमी."], ["The spray pays for itself only if it saves at least {0}% of the crop's value.", "पिकाच्या किमतीच्या किमान {0}% वाचवले तरच फवारणीचा खर्च वसूल होईल."], ["Worse by {0} points since the earlier check", "मागील तपासणीपेक्षा {0} गुणांनी वाईट"], ["Better by {0} points since the earlier check", "मागील तपासणीपेक्षा {0} गुणांनी चांगले"], ["Keep the field clean and look again in {0} days.", "शेत स्वच्छ ठेवा आणि {0} दिवसांनी पुन्हा पाहा."], ["Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.", "आज शेतातील उपाय करा आणि {0} दिवसांनी नवीन फोटो काढा. समस्या वाढली की नाही ते पाहून ठरवा."], ["Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.", "आज शेतातील उपाय करा. खालील औषधांची यादी तुमच्या KVK किंवा कृषी अधिकाऱ्याकडून तपासून घ्या आणि फवारणीपूर्वी लेबल वाचा. {0} दिवसांनी पुन्हा तपासा."], ["Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.", "बाधित झाडे उपटून नष्ट करा, व्हायरस पसरवणाऱ्या किडींवर नियंत्रण ठेवा आणि {0} दिवसांनी आजूबाजूची झाडे पाहा."], ["Remind me in {0} days", "{0} दिवसांनी आठवण करून द्या"], ["Time to re-check: {0}", "पुन्हा तपासण्याची वेळ: {0}"], ["Is it {0} instead?", "हे त्याऐवजी {0} आहे का?"], ["Yes → points to {0}", "होय → {0} कडे निर्देश"], ["No → points to {0}", "नाही → {0} कडे निर्देश"], ["{0} of {1} clear photos show a problem.", "{1} स्पष्ट फोटोंपैकी {0} मध्ये समस्या दिसली."], [", average damage about {0}%", ", सरासरी नुकसान सुमारे {0}%"]],
 "88625c818add": "हे अ‍ॅप प्रमाण किंवा मिसळण्याचा दर सांगत नाही, कारण ते उत्पादन, पिकाची अवस्था आणि राज्य यावर अवलंबून असते. उत्पादनाचे लेबल वाचा आणि तुमच्या KVK किंवा कृषी अधिकाऱ्याला विचारा. किसान कॉल सेंटर (मोफत):",
 "ba83901b71b8": "यावर माझ्याकडे तपासलेला सल्ला नाही. कृपया किसान कॉल सेंटरला फोन करा (मोफत):",
 "9b45b05274e8": "कॅमेऱ्याला परवानगी हवी आहे. तुम्ही 'फोटो काढा' देखील वापरू शकता, त्याने फोनचा कॅमेरा उघडतो.",
@@ -2740,5 +2583,12 @@
 "da3cc8aad2b1": "तुमच्या सुधारलेल्या पुनर्तपासण्या",
 "51e6b19f1b24": "पुन्हा तपासण्याची वेळ",
 "ae2400a9d792": "त्याच झाडाचा नवा फोटो घ्या",
-"1b4cd6d19b95": "पुन्हा तपासणी आठवणी"
+"1b4cd6d19b95": "पुन्हा तपासणी आठवणी",
+"751dd54fa877": "सल्ला",
+"4bf5d029e8fa": "Llama ने लिहिलेला, तपासलेल्या तथ्यांशी पडताळलेला",
+"a8231a3e8b81": "Llama इंग्रजी आणि हिंदीत लिहितो. हा तुमच्या भाषेतील तपासलेला सल्ला आहे.",
+"ffa2ac6d22b6": "हे पसरत राहिले किंवा तुम्हाला खात्री नसेल, तर तुमच्या कृषी विस्तार अधिकाऱ्याशी किंवा किसान कॉल सेंटरशी {kcc} (मोफत) संपर्क साधा. हे संभाव्य कारण आहे, पक्के निदान नाही.",
+"ad5b277b7d09": "Llama तुमचा सल्ला लिहित आहे…",
+"14b0b8ff5eb9": "या फोटोत पान किंवा कीड दिसली नाही",
+"683404bf044a": "बाधित एका पानाच्या, फळाच्या किंवा किडीच्या जवळ, दिवसाच्या उजेडात कॅमेरा धरून पुन्हा फोटो काढा."
 }

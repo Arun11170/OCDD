@@ -94,4 +94,54 @@ class LogicTest {
         assertEquals(Lang.TA, VoiceNav.matchLang("change to Tamil"))
         assertEquals(Lang.HI, VoiceNav.matchLang("हिंदी"))
     }
+
+    // ───────── advisory safety checks ─────────
+
+    private val entry = Entry(
+        classId = "tomato__early_blight", crop = "tomato", name = "Early blight", type = "fungal",
+        cause = "Fungus that spreads in warm, humid weather.", symptoms = listOf("Brown spots with rings on older leaves."),
+        lookAlikes = null, actions = listOf("Remove badly infected leaves.", "Avoid wetting the leaves."),
+        treatments = emptyList(), whenToAct = "Act at the first spots.", ask = emptyList(), sources = emptyList(), caveats = null,
+    )
+    private val facts = Grounding.facts(entry, Band.MILD, 12)
+
+    @Test fun advisoryAcceptsAnswerThatUsesOnlyTheFacts() {
+        val a = "This looks like early blight, a fungus that spreads in warm humid weather. About 12 percent of the leaf is damaged. Remove badly infected leaves and avoid wetting the leaves. If it keeps spreading, call the Kisan Call Centre on 1800-180-1551."
+        assertTrue(Grounding.checkAdvisory(a, entry, facts, 12, Lang.EN).ok)
+    }
+
+    @Test fun advisoryRejectsInventedChemicalAndNumber() {
+        val chem = "This is early blight. Spray mancozeb on the leaves and remove infected leaves, then call an expert for help."
+        assertFalse(Grounding.checkAdvisory(chem, entry, facts, 12, Lang.EN).ok)
+        val num = "This is early blight with 55 percent damage. Remove badly infected leaves and call an expert if it spreads further."
+        assertFalse(Grounding.checkAdvisory(num, entry, facts, 12, Lang.EN).ok)
+    }
+
+    @Test fun hindiAdvisoryNeedsHindiAndNoChemicals() {
+        val ok = "यह अर्ली ब्लाइट जैसा लगता है। पत्ते का लगभग 12 प्रतिशत हिस्सा खराब है। बहुत संक्रमित पत्ते हटा दें और पत्तों को गीला न करें। फैलता रहे तो विशेषज्ञ से बात करें।"
+        assertTrue(Grounding.checkAdvisory(ok, entry, facts, 12, Lang.HI).ok)
+        assertFalse(Grounding.checkAdvisory("This is early blight. Remove badly infected leaves and avoid wetting the leaves, then call an expert soon.", entry, facts, 12, Lang.HI).ok)
+        assertFalse(Grounding.checkAdvisory(ok + " मैंकोजेब का छिड़काव करें।", entry, facts, 12, Lang.HI).ok)
+        assertFalse(Grounding.checkAdvisory("पत्ते का १२ प्रतिशत हिस्सा खराब है। बहुत संक्रमित पत्ते हटा दें और विशेषज्ञ से बात करें, जल्दी करें।", entry, facts, 12, Lang.HI).ok)
+    }
+
+    @Test fun advisoryPromptCarriesFactsAndLanguage() {
+        val p = Grounding.advisoryPrompt(facts, Lang.HI, severe = true)
+        assertTrue(p.contains("Early blight") && p.contains("Hindi") && p.contains("today"))
+        assertTrue(Grounding.advisoryPrompt(facts, Lang.EN, severe = false).contains("in English"))
+    }
+
+    @Test fun otherLanguageAdvisoryMustUseTheVerifiedWords() {
+        val vocab = "பாதிக்கப்பட்ட இலைகளை அகற்றுங்கள் நிபுணரை தொடர்பு கொள்ளுங்கள்"
+        val good = "பாதிக்கப்பட்ட இலைகளை அகற்றுங்கள். நிபுணரை தொடர்பு கொள்ளுங்கள். பாதிக்கப்பட்ட இலைகளை அகற்றுங்கள்."
+        assertTrue(Grounding.checkAdvisory(good, entry, facts, 12, Lang.TA, vocab).ok)
+        val invented = "இலைகளை அகற்றுங்கள். மேன்கோசெப் தெளியுங்கள். நிபுணரை தொடர்பு கொள்ளுங்கள்."
+        assertFalse(Grounding.checkAdvisory(invented, entry, facts, 12, Lang.TA, vocab).ok)
+        assertFalse(Grounding.checkAdvisory("Remove the badly infected leaves and call an expert soon please.", entry, facts, 12, Lang.TA, vocab).ok)
+        assertFalse(Grounding.checkAdvisory(good, entry, facts, 12, Lang.TA, "").ok)
+    }
+
+    @Test fun everyLanguageHasAScript() {
+        for (l in Lang.values()) assertTrue(l == Lang.EN || Grounding.scriptRange(l) != null)
+    }
 }

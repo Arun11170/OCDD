@@ -96,6 +96,7 @@ fun rememberVoiceTrigger(lang: Lang, hint: String, onHeard: (List<String>) -> Un
             problem(tr(lang, "This phone has no voice typing service. Install or enable the Google app, then try again. Use the buttons below for now.", "इस फोन में आवाज़ से लिखने की सेवा नहीं है। Google ऐप इंस्टॉल या चालू करके फिर कोशिश करें। अभी नीचे के बटन इस्तेमाल करें।"))
             return
         }
+        Speech.stopAll()
         listening = true
         input.start(lang.locale.toLanguageTag(), { g -> listening = false; heard(g) }, { code -> listening = false; problem(voiceErrorText(lang, code)) })
     }

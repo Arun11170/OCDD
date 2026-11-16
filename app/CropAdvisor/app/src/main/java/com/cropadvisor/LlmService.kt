@@ -86,6 +86,7 @@ class LlmService : Service() {
                             putString("text", text)
                             putInt("tokens", tokens)
                             putLong("ms", (System.nanoTime() - t0) / 1_000_000)
+                            putLong("pss", android.os.Debug.getPss() / 1024)   // MB used by this (Llama) process
                         }
                     } catch (t: Throwable) {
                         reply(to, R_ERROR, id) { putString("message", "generate failed: ${t.message}") }

@@ -1488,164 +1488,7 @@
 "d66fdf40bf10": "মাইকী পোকে কেঁচা পাতত কণী পাৰে আৰু পাতবোৰ কাটি পেলায়।",
 "9dd58885832a": "কেঁচা পাত খয়েৰী হয়, কোঁচ খায় আৰু সৰি পৰে।",
 "32396cab7faa": "কটা পাতৰ টুকুৰা গছৰ তলত জমা হয়।",
-"_t": [
-[
-"{0} of {1} checks answered",
-"{1} টাৰ ভিতৰত {0} টা পৰীক্ষাৰ উত্তৰ দিয়া হৈছে"
-],
-[
-"Following: {0} — {1} of {2} typical signs confirmed",
-"অনুসৰণ কৰি আছে: {0} — {2} টা সাধাৰণ চিনৰ ভিতৰত {1} টা নিশ্চিত হৈছে"
-],
-[
-"Question {0}",
-"প্ৰশ্ন {0}"
-],
-[
-"No disease found on this {0} leaf. It looks healthy. Check again in a few days.",
-"এই {0} পাতত কোনো ৰোগ পোৱা নগ'ল। ভাল যেন লাগিছে। কেইদিনমান পিছত আকৌ চাওক।"
-],
-[
-"Your answers point to {0} ({1}%).",
-"আপোনাৰ উত্তৰে {0} ({1}%) লৈ ইংগিত কৰিছে।"
-],
-[
-"Could be {0} instead.",
-"ইয়াৰ সলনি {0} হ'ব পাৰে।"
-],
-[
-"photo alone: {0}%",
-"কেৱল ফটো: {0}%"
-],
-[
-"This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.",
-"এইটো {0} যেন লাগিছে, কিন্তু এপটোৱে কোনটো ধৰণ ক'ব নোৱাৰে। তলৰ এটা সম্ভাৱনাত টিপক, নহ'লে ওচৰৰ পৰা ফটো তোলক।"
-],
-[
-"{0} days ago",
-"{0} দিন আগতে"
-],
-[
-"Damage was about {0}% ({1}), now about {2}%. {3}",
-"ক্ষতি প্ৰায় {0}% আছিল ({1}), এতিয়া প্ৰায় {2}%। {3}"
-],
-[
-"Check again: {0}, scanned {1} days ago",
-"আকৌ পৰীক্ষা কৰক: {0}, {1} দিন আগতে স্কেন কৰা"
-],
-[
-"{0} of {1} photos were clear enough to count.",
-"{1} খন ফটোৰ ভিতৰত {0} খন গণনা কৰিবলৈ যথেষ্ট স্পষ্ট আছিল।"
-],
-[
-"{0} of {1} photos",
-"{1} খন ফটোৰ ভিতৰত {0} খন"
-],
-[
-"average damage about {0}%",
-"গড় ক্ষতি প্ৰায় {0}%"
-],
-[
-"{0} of {1} possible problems left. The others are ruled out by your answers.",
-"{1} টা সম্ভাৱ্য সমস্যাৰ ভিতৰত {0} টা বাকী আছে। বাকীবোৰ আপোনাৰ উত্তৰে বাদ দিছে।"
-],
-[
-"Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.",
-"আপোনাৰ ফোন: {0} GB মেমৰি (এতিয়া {1} MB খালী), {2} GB ষ্ট'ৰেজ খালী।"
-],
-[
-"Downloading {0}: {1} of {2} MB",
-"{0} ডাউনল'ড কৰি আছে: {2} MB ৰ ভিতৰত {1}"
-],
-[
-"{0} build is ready. Switch on Smart answers when you ask a question.",
-"{0} বিল্ড সাজু। প্ৰশ্ন সোধাৰ সময়ত Smart উত্তৰ চালু কৰক।"
-],
-[
-"Download failed: {0}",
-"ডাউনল'ড বিফল হ'ল: {0}"
-],
-[
-"Not enough storage: need about {0} MB plus some spare, free is {1} MB.",
-"যথেষ্ট ষ্ট'ৰেজ নাই: প্ৰায় {0} MB আৰু অলপ বেছি লাগে, খালী আছে {1} MB।"
-],
-[
-"Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.",
-"প্ৰায়ে {0} ৰ লগত ভুল হয়। ব্যৱস্থা লোৱাৰ আগতে তলৰ \"নিশ্চিত হ'বলৈ চাওক\" প্ৰশ্নবোৰৰ উত্তৰ দিয়ক।"
-],
-[
-"This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.",
-"এই ফটোখন {0} যেন লগা নাই। আপুনি বাছি লোৱা শস্য পৰীক্ষা কৰক, বা 'নিশ্চিত নহয়' বাছক।"
-],
-[
-"{0} extra photo(s) used.",
-"{0} খন অতিৰিক্ত ফটো ব্যৱহাৰ কৰা হৈছে।"
-],
-[
-"Spreading: about {0} points more damage per week.",
-"বিয়পি আছে: সপ্তাহত প্ৰায় {0} পইণ্ট বেছি ক্ষতি।"
-],
-[
-"Recovering: about {0} points less damage per week.",
-"ভাল হৈ আছে: সপ্তাহত প্ৰায় {0} পইণ্ট কম ক্ষতি।"
-],
-[
-"The spray pays for itself only if it saves at least {0}% of the crop's value.",
-"ছিটিয়ালে তেতিয়াহে খৰচ উঠিব যেতিয়া ই শস্যৰ মূল্যৰ কমেও {0}% বচায়।"
-],
-[
-"Worse by {0} points since the earlier check",
-"আগৰ পৰীক্ষাতকৈ {0} অংক বেছি"
-],
-[
-"Better by {0} points since the earlier check",
-"আগৰ পৰীক্ষাতকৈ {0} অংক কম"
-],
-[
-"Keep the field clean and look again in {0} days.",
-"পথাৰ চাফ ৰাখক আৰু {0} দিনৰ পিছত আকৌ চাওক।"
-],
-[
-"Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.",
-"আজি পথাৰৰ উপায়বোৰ কৰক আৰু {0} দিনৰ পিছত নতুন ফটো তোলক। বাঢ়িলে নে নাই সেয়া চাই সিদ্ধান্ত লওক।"
-],
-[
-"Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.",
-"আজি পথাৰৰ উপায়বোৰ কৰক। তলৰ তালিকা আপোনাৰ KVK বা কৃষি বিষয়াৰ লগত মিলাওক আৰু ছিটিওৱাৰ আগতে লেবেল পঢ়ক। {0} দিনৰ পিছত আকৌ পৰীক্ষা কৰক।"
-],
-[
-"Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.",
-"আক্ৰান্ত গছবোৰ উভালি নষ্ট কৰক, ভাইৰাছ কঢ়িয়াই নিয়া পোক-পতঙ্গ ৰোধ কৰক আৰু {0} দিনৰ পিছত ওচৰৰ গছবোৰ চাওক।"
-],
-[
-"Remind me in {0} days",
-"{0} দিনৰ পিছত সোঁৱৰাই দিয়ক"
-],
-[
-"Time to re-check: {0}",
-"আকৌ পৰীক্ষা কৰাৰ সময়: {0}"
-],
-[
-"Is it {0} instead?",
-"এয়া {0} নেকি?"
-],
-[
-"Yes → points to {0}",
-"হয় → {0} ৰ ফালে ইংগিত"
-],
-[
-"No → points to {0}",
-"নহয় → {0} ৰ ফালে ইংগিত"
-],
-[
-"{0} of {1} clear photos show a problem.",
-"{1} খন স্পষ্ট ফটোৰ ভিতৰত {0} খনত সমস্যা দেখা গ'ল।"
-],
-[
-", average damage about {0}%",
-", গড় ক্ষতি প্ৰায় {0}%"
-]
-],
+"_t": [["{0} of {1} checks answered", "{1} টাৰ ভিতৰত {0} টা পৰীক্ষাৰ উত্তৰ দিয়া হৈছে"], ["Following: {0} — {1} of {2} typical signs confirmed", "অনুসৰণ কৰি আছে: {0} — {2} টা সাধাৰণ চিনৰ ভিতৰত {1} টা নিশ্চিত হৈছে"], ["Question {0}", "প্ৰশ্ন {0}"], ["No disease found on this {0} leaf. It looks healthy. Check again in a few days.", "এই {0} পাতত কোনো ৰোগ পোৱা নগ'ল। ভাল যেন লাগিছে। কেইদিনমান পিছত আকৌ চাওক।"], ["Your answers point to {0} ({1}%).", "আপোনাৰ উত্তৰে {0} ({1}%) লৈ ইংগিত কৰিছে।"], ["Could be {0} instead.", "ইয়াৰ সলনি {0} হ'ব পাৰে।"], ["photo alone: {0}%", "কেৱল ফটো: {0}%"], ["This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.", "এইটো {0} যেন লাগিছে, কিন্তু এপটোৱে কোনটো ধৰণ ক'ব নোৱাৰে। তলৰ এটা সম্ভাৱনাত টিপক, নহ'লে ওচৰৰ পৰা ফটো তোলক।"], ["{0} days ago", "{0} দিন আগতে"], ["Damage was about {0}% ({1}), now about {2}%. {3}", "ক্ষতি প্ৰায় {0}% আছিল ({1}), এতিয়া প্ৰায় {2}%। {3}"], ["Check again: {0}, scanned {1} days ago", "আকৌ পৰীক্ষা কৰক: {0}, {1} দিন আগতে স্কেন কৰা"], ["{0} of {1} photos were clear enough to count.", "{1} খন ফটোৰ ভিতৰত {0} খন গণনা কৰিবলৈ যথেষ্ট স্পষ্ট আছিল।"], ["{0} of {1} photos", "{1} খন ফটোৰ ভিতৰত {0} খন"], ["average damage about {0}%", "গড় ক্ষতি প্ৰায় {0}%"], ["{0} of {1} possible problems left. The others are ruled out by your answers.", "{1} টা সম্ভাৱ্য সমস্যাৰ ভিতৰত {0} টা বাকী আছে। বাকীবোৰ আপোনাৰ উত্তৰে বাদ দিছে।"], ["Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.", "আপোনাৰ ফোন: {0} GB মেমৰি (এতিয়া {1} MB খালী), {2} GB ষ্ট'ৰেজ খালী।"], ["Downloading {0}: {1} of {2} MB", "{0} ডাউনল'ড কৰি আছে: {2} MB ৰ ভিতৰত {1}"], ["{0} build is ready. Switch on Smart answers when you ask a question.", "{0} বিল্ড সাজু। প্ৰশ্ন সোধাৰ সময়ত Smart উত্তৰ চালু কৰক।"], ["Download failed: {0}", "ডাউনল'ড বিফল হ'ল: {0}"], ["Not enough storage: need about {0} MB plus some spare, free is {1} MB.", "যথেষ্ট ষ্ট'ৰেজ নাই: প্ৰায় {0} MB আৰু অলপ বেছি লাগে, খালী আছে {1} MB।"], ["Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.", "প্ৰায়ে {0} ৰ লগত ভুল হয়। ব্যৱস্থা লোৱাৰ আগতে তলৰ \"নিশ্চিত হ'বলৈ চাওক\" প্ৰশ্নবোৰৰ উত্তৰ দিয়ক।"], ["This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.", "এই ফটোখন {0} যেন লগা নাই। আপুনি বাছি লোৱা শস্য পৰীক্ষা কৰক, বা 'নিশ্চিত নহয়' বাছক।"], ["{0} extra photo(s) used.", "{0} খন অতিৰিক্ত ফটো ব্যৱহাৰ কৰা হৈছে।"], ["Spreading: about {0} points more damage per week.", "বিয়পি আছে: সপ্তাহত প্ৰায় {0} পইণ্ট বেছি ক্ষতি।"], ["Recovering: about {0} points less damage per week.", "ভাল হৈ আছে: সপ্তাহত প্ৰায় {0} পইণ্ট কম ক্ষতি।"], ["The spray pays for itself only if it saves at least {0}% of the crop's value.", "ছিটিয়ালে তেতিয়াহে খৰচ উঠিব যেতিয়া ই শস্যৰ মূল্যৰ কমেও {0}% বচায়।"], ["Worse by {0} points since the earlier check", "আগৰ পৰীক্ষাতকৈ {0} অংক বেছি"], ["Better by {0} points since the earlier check", "আগৰ পৰীক্ষাতকৈ {0} অংক কম"], ["Keep the field clean and look again in {0} days.", "পথাৰ চাফ ৰাখক আৰু {0} দিনৰ পিছত আকৌ চাওক।"], ["Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.", "আজি পথাৰৰ উপায়বোৰ কৰক আৰু {0} দিনৰ পিছত নতুন ফটো তোলক। বাঢ়িলে নে নাই সেয়া চাই সিদ্ধান্ত লওক।"], ["Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.", "আজি পথাৰৰ উপায়বোৰ কৰক। তলৰ তালিকা আপোনাৰ KVK বা কৃষি বিষয়াৰ লগত মিলাওক আৰু ছিটিওৱাৰ আগতে লেবেল পঢ়ক। {0} দিনৰ পিছত আকৌ পৰীক্ষা কৰক।"], ["Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.", "আক্ৰান্ত গছবোৰ উভালি নষ্ট কৰক, ভাইৰাছ কঢ়িয়াই নিয়া পোক-পতঙ্গ ৰোধ কৰক আৰু {0} দিনৰ পিছত ওচৰৰ গছবোৰ চাওক।"], ["Remind me in {0} days", "{0} দিনৰ পিছত সোঁৱৰাই দিয়ক"], ["Time to re-check: {0}", "আকৌ পৰীক্ষা কৰাৰ সময়: {0}"], ["Is it {0} instead?", "এয়া {0} নেকি?"], ["Yes → points to {0}", "হয় → {0} ৰ ফালে ইংগিত"], ["No → points to {0}", "নহয় → {0} ৰ ফালে ইংগিত"], ["{0} of {1} clear photos show a problem.", "{1} খন স্পষ্ট ফটোৰ ভিতৰত {0} খনত সমস্যা দেখা গ'ল।"], [", average damage about {0}%", ", গড় ক্ষতি প্ৰায় {0}%"]],
 "88625c818add": "উৎপাদ, শস্যৰ পৰ্যায় আৰু ৰাজ্যৰ ওপৰত নিৰ্ভৰ কৰে বাবে এই এপে পৰিমাণ বা মিহলোৱা হাৰ নিদিয়ে। উৎপাদৰ লেবেল পঢ়ক আৰু আপোনাৰ KVK বা কৃষি বিষয়াক সোধক। কিষাণ কল চেণ্টাৰ (বিনামূলীয়া):",
 "ba83901b71b8": "এই বিষয়ে মোৰ ওচৰত যাচাই কৰা পৰামৰ্শ নাই। অনুগ্ৰহ কৰি কিষাণ কল চেণ্টাৰলৈ ফোন কৰক (বিনামূলীয়া):",
 "9b45b05274e8": "কেমেৰাটোৰ অনুমতি লাগে। আপুনি 'ফটো তোলক' ও ব্যৱহাৰ কৰিব পাৰে, যিয়ে ফোনৰ কেমেৰা খোলে।",
@@ -2740,5 +2583,12 @@
 "da3cc8aad2b1": "আপোনাৰ যিবোৰ পুনৰ পৰীক্ষা ভাল হৈছে",
 "51e6b19f1b24": "পুনৰ পৰীক্ষা কৰাৰ সময়",
 "ae2400a9d792": "একেজোপা গছৰ নতুন ফটো তুলক",
-"1b4cd6d19b95": "পুনৰ পৰীক্ষাৰ সোঁৱৰণী"
+"1b4cd6d19b95": "পুনৰ পৰীক্ষাৰ সোঁৱৰণী",
+"751dd54fa877": "পৰামৰ্শ",
+"4bf5d029e8fa": "Llama-এ লিখিছে, পৰীক্ষা কৰা তথ্যৰ লগত মিলাই চোৱা হৈছে",
+"a8231a3e8b81": "Llama-এ ইংৰাজী আৰু হিন্দীত লিখে। এইটো আপোনাৰ ভাষাত পৰীক্ষা কৰা পৰামৰ্শ।",
+"ffa2ac6d22b6": "এইটো বিয়পি থাকিলে বা আপুনি নিশ্চিত নহ'লে, আপোনাৰ কৃষি সম্প্ৰসাৰণ বিষয়া বা কিষাণ কল চেন্টাৰত {kcc} (বিনামূলীয়া) যোগাযোগ কৰক। এইটো সম্ভাব্য কাৰণ, নিশ্চিত ৰোগ নিৰ্ণয় নহয়।",
+"ad5b277b7d09": "Llama-এ আপোনাৰ পৰামৰ্শ লিখি আছে…",
+"14b0b8ff5eb9": "এই ফটোত পাত বা পোক পোৱা নগ'ল",
+"683404bf044a": "আক্ৰান্ত এখন পাত, ফল বা পোকৰ ওচৰত, দিনৰ পোহৰত কেমেৰা ধৰি পুনৰ ফটো তোলক।"
 }

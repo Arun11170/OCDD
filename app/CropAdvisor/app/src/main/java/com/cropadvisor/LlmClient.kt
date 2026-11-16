@@ -16,7 +16,7 @@ import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.withTimeout
 import java.io.File
 
-data class LlmAnswer(val text: String, val tokens: Int, val ms: Long) {
+data class LlmAnswer(val text: String, val tokens: Int, val ms: Long, val pssMb: Long = 0) {
     val tokensPerSecond: Float get() = if (ms <= 0) 0f else tokens * 1000f / ms
 }
 
@@ -115,7 +115,7 @@ class LlmClient(private val ctx: Context) {
 
     suspend fun ask(prompt: String): LlmAnswer {
         val b = call(LlmService.MSG_ASK, Bundle().apply { putString("prompt", prompt) }, 120_000)
-        return LlmAnswer(b.getString("text").orEmpty(), b.getInt("tokens"), b.getLong("ms"))
+        return LlmAnswer(b.getString("text").orEmpty(), b.getInt("tokens"), b.getLong("ms"), b.getLong("pss"))
     }
 
     fun stop() {

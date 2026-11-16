@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 ONNX = os.environ.get("OCDD_ONNX", ROOT + "/app/CropAdvisor/app/src/main/assets/vision.onnx")
 INTERIM = os.environ.get("OCDD_INTERIM", "interim_v2")
 LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 1500
-GATE = 0.80; TARGET = 0.92
+GATE = 0.80; TARGET = float(os.environ.get("OCDD_TARGET", "0.92"))   # set OCDD_TARGET=0.95 for the stricter target
 
 src = ast.parse(open(ROOT + "/train.py", encoding="utf-8").read())
 ns = {"os": os, "hashlib": hashlib}
@@ -23,7 +23,7 @@ for n in src.body:
     if (isinstance(n, ast.Assign) and any(getattr(t, "id", "") in ("TOMATO_MAP", "PEST_MERGE") for t in n.targets)) or (isinstance(n, ast.FunctionDef) and n.name == "unify"):
         exec(compile(ast.Module([n], []), "train", "exec"), ns)
 unify = ns["unify"]
-classes = json.load(open(ROOT + "/app/CropAdvisor/app/src/main/assets/classes.json"))
+classes = json.load(open(os.environ.get("OCDD_CLASSES", ROOT + "/app/CropAdvisor/app/src/main/assets/classes.json")))   # OCDD_CLASSES = class list of the model being tested
 if isinstance(classes, dict): classes = [classes[k] for k in sorted(classes, key=int)]
 cidx = {c: i for i, c in enumerate(classes)}
 crop_of = np.array([c.split("__")[0] for c in classes])

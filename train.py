@@ -191,7 +191,7 @@ def main():
     # only the training loader keeps its workers alive. Validation/test loaders use a few short-lived workers:
     # three full sets of persistent workers (e.g. 3 x 9 = 27 processes, each importing torch) exhausted Windows memory (WinError 1455)
     kw = dict(num_workers=nw, pin_memory=(dev == "cuda"), persistent_workers=nw > 0)
-    kw_ev = dict(num_workers=min(nw, 3), pin_memory=(dev == "cuda"), persistent_workers=False)
+    kw_ev = dict(num_workers=min(nw, 1), pin_memory=(dev == "cuda"), persistent_workers=False)   # 1: a crash at epoch 2 (WinError 1455) showed that every extra torch process matters on this PC
     dl_tr = DataLoader(DS(tr, tr_tf), batch_size=a.batch, sampler=sampler, drop_last=True, **kw)
     dl_va = DataLoader(DS(va, ev_tf), batch_size=128, **kw_ev)
     dl_te = DataLoader(DS(te, ev_tf), batch_size=128, **kw_ev)

@@ -98,3 +98,9 @@ phone_test_photos/
 # meaning model is bundled into local builds only (118 MB: over GitHub file limit); clean clones download it in Settings
 app/CropAdvisor/app/src/main/assets/embed.onnx
 app/CropAdvisor/app/src/main/assets/embed_vocab.tsv
+
+# dataset photos are not redistributed (see docs/DATA_LICENSES.md)
+phone_samples/*.jpg
+export_v7/
+data/negatives/
+release/

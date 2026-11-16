@@ -1378,164 +1378,7 @@
 "b50466134ac4": "ಹಾನಿ ಸ್ಥಳೀಯ ಮಿತಿ ದಾಟಿದಾಗ ಸಿಂಪಡಿಸಿ; ಅದನ್ನು ನಿಮ್ಮ ಕೃಷಿ ವಿಜ್ಞಾನ ಕೇಂದ್ರದಲ್ಲಿ (KVK) ಪರಿಶೀಲಿಸಿ.",
 "6769057f3e00": "ಓಸ್ಟ್ರಿನಿಯಾ ಜೋಳ ಕೊರಕಗಳು ತೆರೆದು ನೋಡಿದ ಭಾರತೀಯ ಮೂಲದಲ್ಲಿ ಸಿಕ್ಕಿಲ್ಲ. IIMR ಪುಟ ಗುಲಾಬಿ ಕಾಂಡ ಕೊರಕವನ್ನೂ ಒಳಗೊಂಡಿದೆ; ಹೆಚ್ಚಾಗಿ ತಮಿಳುನಾಡು ಮತ್ತು ಮೆಕ್ಕೆಜೋಳ ಪ್ರದೇಶಗಳಿಗಾಗಿ ಬರೆದಿದೆ.",
 "5bd446489aa9": "ಲಾರ್ವಾ ಹಳದಿ-ಕಂದು ಬಣ್ಣದ್ದಾಗಿ ಕಂದು ತಲೆ ಹೊಂದಿರುತ್ತದೆ; ಪತಂಗಗಳು ಹುಲ್ಲಿನ ಬಣ್ಣದವು.",
-"_t": [
-[
-"{0} of {1} checks answered",
-"{1} ಪರಿಶೀಲನೆಗಳಲ್ಲಿ {0} ಕ್ಕೆ ಉತ್ತರಿಸಿದ್ದೀರಿ"
-],
-[
-"Following: {0} — {1} of {2} typical signs confirmed",
-"ಅನುಸರಿಸುತ್ತಿರುವುದು: {0} — {2} ಸಾಮಾನ್ಯ ಲಕ್ಷಣಗಳಲ್ಲಿ {1} ಖಚಿತವಾಗಿವೆ"
-],
-[
-"Question {0}",
-"ಪ್ರಶ್ನೆ {0}"
-],
-[
-"No disease found on this {0} leaf. It looks healthy. Check again in a few days.",
-"ಈ {0} ಎಲೆಯಲ್ಲಿ ರೋಗ ಕಂಡುಬಂದಿಲ್ಲ. ಆರೋಗ್ಯವಾಗಿ ಕಾಣುತ್ತಿದೆ. ಕೆಲವು ದಿನಗಳ ನಂತರ ಮತ್ತೆ ನೋಡಿ."
-],
-[
-"Your answers point to {0} ({1}%).",
-"ನಿಮ್ಮ ಉತ್ತರಗಳು {0} ({1}%) ಕಡೆಗೆ ಬೆರಳು ಮಾಡುತ್ತಿವೆ."
-],
-[
-"Could be {0} instead.",
-"ಬದಲಿಗೆ {0} ಆಗಿರಬಹುದು."
-],
-[
-"photo alone: {0}%",
-"ಫೋಟೋ ಮಾತ್ರ: {0}%"
-],
-[
-"This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.",
-"ಇದು {0} ಆಗಿ ಕಾಣುತ್ತದೆ, ಆದರೆ ಯಾವ ಬಗೆ ಎಂದು ಆ್ಯಪ್‌ಗೆ ಹೇಳಲು ಆಗುತ್ತಿಲ್ಲ. ಕೆಳಗಿನ ಒಂದು ಸಾಧ್ಯತೆಯನ್ನು ಒತ್ತಿ, ಅಥವಾ ಹತ್ತಿರದಿಂದ ಫೋಟೋ ತೆಗೆಯಿರಿ."
-],
-[
-"{0} days ago",
-"{0} ದಿನಗಳ ಹಿಂದೆ"
-],
-[
-"Damage was about {0}% ({1}), now about {2}%. {3}",
-"ಹಾನಿ ಸುಮಾರು {0}% ({1}) ಇತ್ತು, ಈಗ ಸುಮಾರು {2}%. {3}"
-],
-[
-"Check again: {0}, scanned {1} days ago",
-"ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ: {0}, {1} ದಿನಗಳ ಹಿಂದೆ ಸ್ಕ್ಯಾನ್ ಮಾಡಲಾಗಿದೆ"
-],
-[
-"{0} of {1} photos were clear enough to count.",
-"{1} ಫೋಟೋಗಳಲ್ಲಿ {0} ಲೆಕ್ಕಕ್ಕೆ ತೆಗೆದುಕೊಳ್ಳುವಷ್ಟು ಸ್ಪಷ್ಟವಾಗಿದ್ದವು."
-],
-[
-"{0} of {1} photos",
-"{1} ಫೋಟೋಗಳಲ್ಲಿ {0}"
-],
-[
-"average damage about {0}%",
-"ಸರಾಸರಿ ಹಾನಿ ಸುಮಾರು {0}%"
-],
-[
-"{0} of {1} possible problems left. The others are ruled out by your answers.",
-"{1} ಸಾಧ್ಯ ಸಮಸ್ಯೆಗಳಲ್ಲಿ {0} ಉಳಿದಿವೆ. ಉಳಿದವನ್ನು ನಿಮ್ಮ ಉತ್ತರಗಳು ತಳ್ಳಿಹಾಕಿವೆ."
-],
-[
-"Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.",
-"ನಿಮ್ಮ ಫೋನ್: {0} GB ಮೆಮರಿ (ಈಗ {1} MB ಖಾಲಿ), {2} GB ಸ್ಟೋರೇಜ್ ಖಾಲಿ."
-],
-[
-"Downloading {0}: {1} of {2} MB",
-"{0} ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ: {2} MB ಯಲ್ಲಿ {1}"
-],
-[
-"{0} build is ready. Switch on Smart answers when you ask a question.",
-"{0} ಆವೃತ್ತಿ ಸಿದ್ಧವಾಗಿದೆ. ಪ್ರಶ್ನೆ ಕೇಳುವಾಗ ಸ್ಮಾರ್ಟ್ ಉತ್ತರಗಳನ್ನು ಆನ್ ಮಾಡಿ."
-],
-[
-"Download failed: {0}",
-"ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಯಿತು: {0}"
-],
-[
-"Not enough storage: need about {0} MB plus some spare, free is {1} MB.",
-"ಸಾಕಷ್ಟು ಸ್ಟೋರೇಜ್ ಇಲ್ಲ: ಸುಮಾರು {0} MB ಜೊತೆಗೆ ಸ್ವಲ್ಪ ಹೆಚ್ಚುವರಿ ಬೇಕು, ಖಾಲಿ ಇರುವುದು {1} MB."
-],
-[
-"Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.",
-"ಇದನ್ನು ಹೆಚ್ಚಾಗಿ {0} ಜೊತೆ ಗೊಂದಲ ಮಾಡಿಕೊಳ್ಳುತ್ತಾರೆ. ಕ್ರಮ ಕೈಗೊಳ್ಳುವ ಮೊದಲು ಕೆಳಗಿನ \"ಖಚಿತಪಡಿಸಲು ಪರಿಶೀಲಿಸಿ\" ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಿ."
-],
-[
-"This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.",
-"ಈ ಫೋಟೋ {0} ರಂತೆ ಕಾಣುತ್ತಿಲ್ಲ. ನೀವು ಆರಿಸಿದ ಬೆಳೆಯನ್ನು ಪರಿಶೀಲಿಸಿ, ಅಥವಾ 'ಖಚಿತವಿಲ್ಲ' ಆರಿಸಿ."
-],
-[
-"{0} extra photo(s) used.",
-"{0} ಹೆಚ್ಚುವರಿ ಫೋಟೋ ಬಳಸಲಾಗಿದೆ."
-],
-[
-"Spreading: about {0} points more damage per week.",
-"ಹರಡುತ್ತಿದೆ: ವಾರಕ್ಕೆ ಸುಮಾರು {0} ಅಂಕ ಹೆಚ್ಚು ಹಾನಿ."
-],
-[
-"Recovering: about {0} points less damage per week.",
-"ಚೇತರಿಸುತ್ತಿದೆ: ವಾರಕ್ಕೆ ಸುಮಾರು {0} ಅಂಕ ಕಡಿಮೆ ಹಾನಿ."
-],
-[
-"The spray pays for itself only if it saves at least {0}% of the crop's value.",
-"ಬೆಳೆ ಮೌಲ್ಯದ ಕನಿಷ್ಠ {0}% ಉಳಿಸಿದರೆ ಮಾತ್ರ ಸಿಂಪಡಣೆ ಲಾಭ ಕೊಡುತ್ತದೆ."
-],
-[
-"Worse by {0} points since the earlier check",
-"ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಿಂತ {0} ಅಂಕ ಕೆಟ್ಟಿದೆ"
-],
-[
-"Better by {0} points since the earlier check",
-"ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಿಂತ {0} ಅಂಕ ಉತ್ತಮವಾಗಿದೆ"
-],
-[
-"Keep the field clean and look again in {0} days.",
-"ಹೊಲವನ್ನು ಸ್ವಚ್ಛವಾಗಿಡಿ, {0} ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನೋಡಿ."
-],
-[
-"Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.",
-"ಇಂದೇ ಹೊಲದ ಕ್ರಮಗಳನ್ನು ಮಾಡಿ, {0} ದಿನಗಳಲ್ಲಿ ಹೊಸ ಫೋಟೋ ತೆಗೆಯಿರಿ. ಅದು ಬೆಳೆದಿದೆಯೇ ಎಂದು ನೋಡಿ ತೀರ್ಮಾನಿಸಿ."
-],
-[
-"Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.",
-"ಇಂದೇ ಹೊಲದ ಕ್ರಮಗಳನ್ನು ಮಾಡಿ. ಕೆಳಗಿನ ಔಷಧ ಪಟ್ಟಿಯನ್ನು ನಿಮ್ಮ KVK ಅಥವಾ ಕೃಷಿ ಅಧಿಕಾರಿಯೊಂದಿಗೆ ನೋಡಿ; ಸಿಂಪಡಿಸುವ ಮುನ್ನ ಲೇಬಲ್ ಓದಿ. {0} ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನೋಡಿ."
-],
-[
-"Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.",
-"ಬಾಧಿತ ಗಿಡಗಳನ್ನು ಕಿತ್ತು ನಾಶಮಾಡಿ, ವೈರಸ್ ಹರಡುವ ಕೀಟಗಳನ್ನು ನಿಯಂತ್ರಿಸಿ, {0} ದಿನಗಳಲ್ಲಿ ಹತ್ತಿರದ ಗಿಡಗಳನ್ನು ನೋಡಿ."
-],
-[
-"Remind me in {0} days",
-"{0} ದಿನಗಳಲ್ಲಿ ನನಗೆ ನೆನಪಿಸಿ"
-],
-[
-"Time to re-check: {0}",
-"ಮತ್ತೆ ನೋಡುವ ಸಮಯ: {0}"
-],
-[
-"Is it {0} instead?",
-"ಇದು ಬದಲಿಗೆ {0} ಇರಬಹುದೇ?"
-],
-[
-"Yes → points to {0}",
-"ಹೌದು → {0} ಎಂದು ಸೂಚಿಸುತ್ತದೆ"
-],
-[
-"No → points to {0}",
-"ಇಲ್ಲ → {0} ಎಂದು ಸೂಚಿಸುತ್ತದೆ"
-],
-[
-"{0} of {1} clear photos show a problem.",
-"ಸ್ಪಷ್ಟವಾದ {1} ಫೋಟೋಗಳಲ್ಲಿ {0} ರಲ್ಲಿ ಸಮಸ್ಯೆ ಕಾಣುತ್ತಿದೆ."
-],
-[
-", average damage about {0}%",
-", ಸರಾಸರಿ ಹಾನಿ ಸುಮಾರು {0}%"
-]
-],
+"_t": [["{0} of {1} checks answered", "{1} ಪರಿಶೀಲನೆಗಳಲ್ಲಿ {0} ಕ್ಕೆ ಉತ್ತರಿಸಿದ್ದೀರಿ"], ["Following: {0} — {1} of {2} typical signs confirmed", "ಅನುಸರಿಸುತ್ತಿರುವುದು: {0} — {2} ಸಾಮಾನ್ಯ ಲಕ್ಷಣಗಳಲ್ಲಿ {1} ಖಚಿತವಾಗಿವೆ"], ["Question {0}", "ಪ್ರಶ್ನೆ {0}"], ["No disease found on this {0} leaf. It looks healthy. Check again in a few days.", "ಈ {0} ಎಲೆಯಲ್ಲಿ ರೋಗ ಕಂಡುಬಂದಿಲ್ಲ. ಆರೋಗ್ಯವಾಗಿ ಕಾಣುತ್ತಿದೆ. ಕೆಲವು ದಿನಗಳ ನಂತರ ಮತ್ತೆ ನೋಡಿ."], ["Your answers point to {0} ({1}%).", "ನಿಮ್ಮ ಉತ್ತರಗಳು {0} ({1}%) ಕಡೆಗೆ ಬೆರಳು ಮಾಡುತ್ತಿವೆ."], ["Could be {0} instead.", "ಬದಲಿಗೆ {0} ಆಗಿರಬಹುದು."], ["photo alone: {0}%", "ಫೋಟೋ ಮಾತ್ರ: {0}%"], ["This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.", "ಇದು {0} ಆಗಿ ಕಾಣುತ್ತದೆ, ಆದರೆ ಯಾವ ಬಗೆ ಎಂದು ಆ್ಯಪ್‌ಗೆ ಹೇಳಲು ಆಗುತ್ತಿಲ್ಲ. ಕೆಳಗಿನ ಒಂದು ಸಾಧ್ಯತೆಯನ್ನು ಒತ್ತಿ, ಅಥವಾ ಹತ್ತಿರದಿಂದ ಫೋಟೋ ತೆಗೆಯಿರಿ."], ["{0} days ago", "{0} ದಿನಗಳ ಹಿಂದೆ"], ["Damage was about {0}% ({1}), now about {2}%. {3}", "ಹಾನಿ ಸುಮಾರು {0}% ({1}) ಇತ್ತು, ಈಗ ಸುಮಾರು {2}%. {3}"], ["Check again: {0}, scanned {1} days ago", "ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ: {0}, {1} ದಿನಗಳ ಹಿಂದೆ ಸ್ಕ್ಯಾನ್ ಮಾಡಲಾಗಿದೆ"], ["{0} of {1} photos were clear enough to count.", "{1} ಫೋಟೋಗಳಲ್ಲಿ {0} ಲೆಕ್ಕಕ್ಕೆ ತೆಗೆದುಕೊಳ್ಳುವಷ್ಟು ಸ್ಪಷ್ಟವಾಗಿದ್ದವು."], ["{0} of {1} photos", "{1} ಫೋಟೋಗಳಲ್ಲಿ {0}"], ["average damage about {0}%", "ಸರಾಸರಿ ಹಾನಿ ಸುಮಾರು {0}%"], ["{0} of {1} possible problems left. The others are ruled out by your answers.", "{1} ಸಾಧ್ಯ ಸಮಸ್ಯೆಗಳಲ್ಲಿ {0} ಉಳಿದಿವೆ. ಉಳಿದವನ್ನು ನಿಮ್ಮ ಉತ್ತರಗಳು ತಳ್ಳಿಹಾಕಿವೆ."], ["Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.", "ನಿಮ್ಮ ಫೋನ್: {0} GB ಮೆಮರಿ (ಈಗ {1} MB ಖಾಲಿ), {2} GB ಸ್ಟೋರೇಜ್ ಖಾಲಿ."], ["Downloading {0}: {1} of {2} MB", "{0} ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ: {2} MB ಯಲ್ಲಿ {1}"], ["{0} build is ready. Switch on Smart answers when you ask a question.", "{0} ಆವೃತ್ತಿ ಸಿದ್ಧವಾಗಿದೆ. ಪ್ರಶ್ನೆ ಕೇಳುವಾಗ ಸ್ಮಾರ್ಟ್ ಉತ್ತರಗಳನ್ನು ಆನ್ ಮಾಡಿ."], ["Download failed: {0}", "ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಯಿತು: {0}"], ["Not enough storage: need about {0} MB plus some spare, free is {1} MB.", "ಸಾಕಷ್ಟು ಸ್ಟೋರೇಜ್ ಇಲ್ಲ: ಸುಮಾರು {0} MB ಜೊತೆಗೆ ಸ್ವಲ್ಪ ಹೆಚ್ಚುವರಿ ಬೇಕು, ಖಾಲಿ ಇರುವುದು {1} MB."], ["Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.", "ಇದನ್ನು ಹೆಚ್ಚಾಗಿ {0} ಜೊತೆ ಗೊಂದಲ ಮಾಡಿಕೊಳ್ಳುತ್ತಾರೆ. ಕ್ರಮ ಕೈಗೊಳ್ಳುವ ಮೊದಲು ಕೆಳಗಿನ \"ಖಚಿತಪಡಿಸಲು ಪರಿಶೀಲಿಸಿ\" ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಿ."], ["This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.", "ಈ ಫೋಟೋ {0} ರಂತೆ ಕಾಣುತ್ತಿಲ್ಲ. ನೀವು ಆರಿಸಿದ ಬೆಳೆಯನ್ನು ಪರಿಶೀಲಿಸಿ, ಅಥವಾ 'ಖಚಿತವಿಲ್ಲ' ಆರಿಸಿ."], ["{0} extra photo(s) used.", "{0} ಹೆಚ್ಚುವರಿ ಫೋಟೋ ಬಳಸಲಾಗಿದೆ."], ["Spreading: about {0} points more damage per week.", "ಹರಡುತ್ತಿದೆ: ವಾರಕ್ಕೆ ಸುಮಾರು {0} ಅಂಕ ಹೆಚ್ಚು ಹಾನಿ."], ["Recovering: about {0} points less damage per week.", "ಚೇತರಿಸುತ್ತಿದೆ: ವಾರಕ್ಕೆ ಸುಮಾರು {0} ಅಂಕ ಕಡಿಮೆ ಹಾನಿ."], ["The spray pays for itself only if it saves at least {0}% of the crop's value.", "ಬೆಳೆ ಮೌಲ್ಯದ ಕನಿಷ್ಠ {0}% ಉಳಿಸಿದರೆ ಮಾತ್ರ ಸಿಂಪಡಣೆ ಲಾಭ ಕೊಡುತ್ತದೆ."], ["Worse by {0} points since the earlier check", "ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಿಂತ {0} ಅಂಕ ಕೆಟ್ಟಿದೆ"], ["Better by {0} points since the earlier check", "ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಿಂತ {0} ಅಂಕ ಉತ್ತಮವಾಗಿದೆ"], ["Keep the field clean and look again in {0} days.", "ಹೊಲವನ್ನು ಸ್ವಚ್ಛವಾಗಿಡಿ, {0} ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನೋಡಿ."], ["Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.", "ಇಂದೇ ಹೊಲದ ಕ್ರಮಗಳನ್ನು ಮಾಡಿ, {0} ದಿನಗಳಲ್ಲಿ ಹೊಸ ಫೋಟೋ ತೆಗೆಯಿರಿ. ಅದು ಬೆಳೆದಿದೆಯೇ ಎಂದು ನೋಡಿ ತೀರ್ಮಾನಿಸಿ."], ["Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.", "ಇಂದೇ ಹೊಲದ ಕ್ರಮಗಳನ್ನು ಮಾಡಿ. ಕೆಳಗಿನ ಔಷಧ ಪಟ್ಟಿಯನ್ನು ನಿಮ್ಮ KVK ಅಥವಾ ಕೃಷಿ ಅಧಿಕಾರಿಯೊಂದಿಗೆ ನೋಡಿ; ಸಿಂಪಡಿಸುವ ಮುನ್ನ ಲೇಬಲ್ ಓದಿ. {0} ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನೋಡಿ."], ["Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.", "ಬಾಧಿತ ಗಿಡಗಳನ್ನು ಕಿತ್ತು ನಾಶಮಾಡಿ, ವೈರಸ್ ಹರಡುವ ಕೀಟಗಳನ್ನು ನಿಯಂತ್ರಿಸಿ, {0} ದಿನಗಳಲ್ಲಿ ಹತ್ತಿರದ ಗಿಡಗಳನ್ನು ನೋಡಿ."], ["Remind me in {0} days", "{0} ದಿನಗಳಲ್ಲಿ ನನಗೆ ನೆನಪಿಸಿ"], ["Time to re-check: {0}", "ಮತ್ತೆ ನೋಡುವ ಸಮಯ: {0}"], ["Is it {0} instead?", "ಇದು ಬದಲಿಗೆ {0} ಇರಬಹುದೇ?"], ["Yes → points to {0}", "ಹೌದು → {0} ಎಂದು ಸೂಚಿಸುತ್ತದೆ"], ["No → points to {0}", "ಇಲ್ಲ → {0} ಎಂದು ಸೂಚಿಸುತ್ತದೆ"], ["{0} of {1} clear photos show a problem.", "ಸ್ಪಷ್ಟವಾದ {1} ಫೋಟೋಗಳಲ್ಲಿ {0} ರಲ್ಲಿ ಸಮಸ್ಯೆ ಕಾಣುತ್ತಿದೆ."], [", average damage about {0}%", ", ಸರಾಸರಿ ಹಾನಿ ಸುಮಾರು {0}%"]],
 "88625c818add": "ಉತ್ಪನ್ನ, ಬೆಳೆಯ ಹಂತ ಮತ್ತು ರಾಜ್ಯವನ್ನು ಅವಲಂಬಿಸಿರುವುದರಿಂದ ಈ ಆ್ಯಪ್ ಪ್ರಮಾಣ ಅಥವಾ ಮಿಶ್ರಣ ದರವನ್ನು ನೀಡುವುದಿಲ್ಲ. ಉತ್ಪನ್ನದ ಲೇಬಲ್ ಓದಿ ಮತ್ತು ನಿಮ್ಮ KVK ಅಥವಾ ಕೃಷಿ ಅಧಿಕಾರಿಯನ್ನು ಕೇಳಿ. ಕಿಸಾನ್ ಕಾಲ್ ಸೆಂಟರ್ (ಉಚಿತ):",
 "ba83901b71b8": "ಈ ಬಗ್ಗೆ ನನ್ನ ಬಳಿ ಪರಿಶೀಲಿತ ಸಲಹೆ ಇಲ್ಲ. ದಯವಿಟ್ಟು ಕಿಸಾನ್ ಕಾಲ್ ಸೆಂಟರ್‌ಗೆ ಕರೆ ಮಾಡಿ (ಉಚಿತ):",
 "9b45b05274e8": "ಕ್ಯಾಮೆರಾಕ್ಕೆ ಅನುಮತಿ ಬೇಕು. ನೀವು 'ಫೋಟೋ ತೆಗೆಯಿರಿ' ಅನ್ನೂ ಬಳಸಬಹುದು; ಅದು ನಿಮ್ಮ ಫೋನ್ ಕ್ಯಾಮೆರಾ ತೆರೆಯುತ್ತದೆ.",
@@ -2623,5 +2466,12 @@
 "da3cc8aad2b1": "ಉತ್ತಮವಾದ ನಿಮ್ಮ ಮರು ಪರೀಕ್ಷೆಗಳು",
 "51e6b19f1b24": "ಮತ್ತೆ ಪರೀಕ್ಷಿಸುವ ಸಮಯ",
 "ae2400a9d792": "ಅದೇ ಗಿಡದ ಹೊಸ ಫೋಟೋ ತೆಗೆಯಿರಿ",
-"1b4cd6d19b95": "ಮರು ಪರೀಕ್ಷೆ ಜ್ಞಾಪನೆಗಳು"
+"1b4cd6d19b95": "ಮರು ಪರೀಕ್ಷೆ ಜ್ಞಾಪನೆಗಳು",
+"751dd54fa877": "ಸಲಹೆ",
+"4bf5d029e8fa": "Llama ಬರೆದದ್ದು, ಪರಿಶೀಲಿತ ಮಾಹಿತಿಯೊಂದಿಗೆ ತಾಳೆ ನೋಡಲಾಗಿದೆ",
+"a8231a3e8b81": "Llama ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಹಿಂದಿಯಲ್ಲಿ ಬರೆಯುತ್ತದೆ. ಇದು ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಪರಿಶೀಲಿತ ಸಲಹೆ.",
+"ffa2ac6d22b6": "ಇದು ಹರಡುತ್ತಲೇ ಇದ್ದರೆ ಅಥವಾ ನಿಮಗೆ ಖಚಿತವಿಲ್ಲದಿದ್ದರೆ, ನಿಮ್ಮ ಕೃಷಿ ವಿಸ್ತರಣಾ ಅಧಿಕಾರಿಯನ್ನು ಅಥವಾ ಕಿಸಾನ್ ಕಾಲ್ ಸೆಂಟರ್ ಅನ್ನು {kcc} (ಉಚಿತ) ಸಂಪರ್ಕಿಸಿ. ಇದು ಸಂಭವನೀಯ ಕಾರಣ, ಖಚಿತ ರೋಗನಿರ್ಣಯವಲ್ಲ.",
+"ad5b277b7d09": "Llama ನಿಮ್ಮ ಸಲಹೆಯನ್ನು ಬರೆಯುತ್ತಿದೆ…",
+"14b0b8ff5eb9": "ಈ ಫೋಟೋದಲ್ಲಿ ಎಲೆ ಅಥವಾ ಕೀಟ ಕಾಣಿಸಲಿಲ್ಲ",
+"683404bf044a": "ಬಾಧಿತ ಒಂದು ಎಲೆ, ಹಣ್ಣು ಅಥವಾ ಕೀಟದ ಹತ್ತಿರ, ಹಗಲಿನ ಬೆಳಕಿನಲ್ಲಿ ಕ್ಯಾಮೆರಾ ತೋರಿಸಿ ಮತ್ತೆ ಫೋಟೋ ತೆಗೆಯಿರಿ."
 }

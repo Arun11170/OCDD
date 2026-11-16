@@ -1188,164 +1188,7 @@
 "9a8876f5223a": "ଡାଳ ଟିପ୍‌ରୁ ତଳକୁ ଶୁଖୁଛି ଓ ଭିତରର କାଠ ବାଦାମୀ କି?",
 "3998127f4787": "ପତ୍ରରେ ବାଦାମୀ ଛିଦ୍ର ଥିବା ଦାଗ ବା ଫଳରେ କଳା ଦାଗ ଅଛି କି?",
 "90c7218becbb": "ସ୍ପ୍ରେ ବା କଟା ମୁଣ୍ଡରେ ଲଗାଇବା ପାଇଁ ଦିଆଯାଇଛି; ପ୍ରଡକ୍ଟ ଲେବଲ୍ ଅନୁସାରେ କରନ୍ତୁ; ମାତ୍ରା ଦିଆଯାଇ ନାହିଁ। ଏହି ନାମ CIB&RC ପଞ୍ଜୀକୃତ ତାଲିକାରେ ଅଛି (31.03.2026); ଫସଲ ଓ ରୋଗ-ପୋକ ପାଇଁ ଲେବଲ୍ ଦାବି ଯାଞ୍ଚ କରାଯାଇ ନାହିଁ।",
-"_t": [
-[
-"{0} of {1} checks answered",
-"{1} ମଧ୍ୟରୁ {0} ଯାଞ୍ଚର ଉତ୍ତର ଦିଆଗଲା"
-],
-[
-"Following: {0} — {1} of {2} typical signs confirmed",
-"ଅନୁସରଣ: {0} — {2} ମଧ୍ୟରୁ {1} ସାଧାରଣ ଚିହ୍ନ ନିଶ୍ଚିତ ହେଲା"
-],
-[
-"Question {0}",
-"ପ୍ରଶ୍ନ {0}"
-],
-[
-"No disease found on this {0} leaf. It looks healthy. Check again in a few days.",
-"ଏହି {0} ପତ୍ରରେ କୌଣସି ରୋଗ ମିଳିଲା ନାହିଁ। ଭଲ ଦେଖାଯାଉଛି। କିଛି ଦିନ ପରେ ପୁଣି ଦେଖନ୍ତୁ।"
-],
-[
-"Your answers point to {0} ({1}%).",
-"ଆପଣଙ୍କ ଉତ୍ତର {0} ({1}%) ଆଡ଼କୁ ଇଶାରା କରୁଛି।"
-],
-[
-"Could be {0} instead.",
-"ଏହା ବଦଳରେ {0} ହୋଇପାରେ।"
-],
-[
-"photo alone: {0}%",
-"କେବଳ ଫଟୋରୁ: {0}%"
-],
-[
-"This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.",
-"ଏହା {0} ପରି ଲାଗୁଛି, କିନ୍ତୁ ଆପ୍ କେଉଁ ପ୍ରକାର ତାହା କହିପାରୁନାହିଁ। ତଳେ ଥିବା ଗୋଟିଏ ସମ୍ଭାବନା ଉପରେ ଟିପନ୍ତୁ, ଅଥବା ପାଖରୁ ଫଟୋ ଉଠାନ୍ତୁ।"
-],
-[
-"{0} days ago",
-"{0} ଦିନ ପୂର୍ବେ"
-],
-[
-"Damage was about {0}% ({1}), now about {2}%. {3}",
-"କ୍ଷତି ପ୍ରାୟ {0}% ({1}) ଥିଲା, ଏବେ ପ୍ରାୟ {2}%। {3}"
-],
-[
-"Check again: {0}, scanned {1} days ago",
-"ପୁଣି ଯାଞ୍ଚ କରନ୍ତୁ: {0}, {1} ଦିନ ପୂର୍ବେ ସ୍କାନ୍ ହୋଇଥିଲା"
-],
-[
-"{0} of {1} photos were clear enough to count.",
-"{1} ମଧ୍ୟରୁ {0} ଫଟୋ ଗଣିବା ପାଇଁ ଯଥେଷ୍ଟ ସ୍ପଷ୍ଟ ଥିଲା।"
-],
-[
-"{0} of {1} photos",
-"{1} ମଧ୍ୟରୁ {0} ଫଟୋ"
-],
-[
-"average damage about {0}%",
-"ହାରାହାରି କ୍ଷତି ପ୍ରାୟ {0}%"
-],
-[
-"{0} of {1} possible problems left. The others are ruled out by your answers.",
-"{1} ମଧ୍ୟରୁ {0} ସମ୍ଭାବ୍ୟ ସମସ୍ୟା ବାକି ଅଛି। ଆପଣଙ୍କ ଉତ୍ତରରେ ଅନ୍ୟଗୁଡ଼ିକ ବାଦ ପଡ଼ିଗଲା।"
-],
-[
-"Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.",
-"ଆପଣଙ୍କ ଫୋନ୍: {0} GB ମେମୋରୀ (ବର୍ତ୍ତମାନ {1} MB ଖାଲି), {2} GB ଷ୍ଟୋରେଜ୍ ଖାଲି।"
-],
-[
-"Downloading {0}: {1} of {2} MB",
-"{0} ଡାଉନଲୋଡ୍ ହେଉଛି: {2} MB ମଧ୍ୟରୁ {1}"
-],
-[
-"{0} build is ready. Switch on Smart answers when you ask a question.",
-"{0} ବିଲ୍ଡ ପ୍ରସ୍ତୁତ। ପ୍ରଶ୍ନ ପଚାରିବା ବେଳେ ସ୍ମାର୍ଟ ଉତ୍ତର ଚାଲୁ କରନ୍ତୁ।"
-],
-[
-"Download failed: {0}",
-"ଡାଉନଲୋଡ୍ ବିଫଳ: {0}"
-],
-[
-"Not enough storage: need about {0} MB plus some spare, free is {1} MB.",
-"ଯଥେଷ୍ଟ ଷ୍ଟୋରେଜ୍ ନାହିଁ: ପ୍ରାୟ {0} MB ଓ ଟିକିଏ ଅତିରିକ୍ତ ଜାଗା ଦରକାର, ଖାଲି ଅଛି {1} MB।"
-],
-[
-"Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.",
-"ପ୍ରାୟତଃ {0} ସହ ଭୁଲ ହୁଏ। କାମ କରିବା ପୂର୍ବରୁ ତଳେ ଥିବା \"ନିଶ୍ଚିତ ହେବାକୁ ଦେଖନ୍ତୁ\" ପ୍ରଶ୍ନର ଉତ୍ତର ଦିଅନ୍ତୁ।"
-],
-[
-"This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.",
-"ଏହି ଫଟୋ {0} ପରି ଲାଗୁନାହିଁ। ଆପଣ ବାଛିଥିବା ଫସଲ ଦେଖନ୍ତୁ, ବା 'ନିଶ୍ଚିତ ନୁହେଁ' ବାଛନ୍ତୁ।"
-],
-[
-"{0} extra photo(s) used.",
-"{0} ଟି ଅତିରିକ୍ତ ଫଟୋ ବ୍ୟବହାର ହେଲା।"
-],
-[
-"Spreading: about {0} points more damage per week.",
-"ବ୍ୟାପୁଛି: ସପ୍ତାହକୁ ପ୍ରାୟ {0} ପଏଣ୍ଟ ଅଧିକ କ୍ଷତି।"
-],
-[
-"Recovering: about {0} points less damage per week.",
-"ଭଲ ହେଉଛି: ସପ୍ତାହକୁ ପ୍ରାୟ {0} ପଏଣ୍ଟ କମ୍ କ୍ଷତି।"
-],
-[
-"The spray pays for itself only if it saves at least {0}% of the crop's value.",
-"ଫସଲ ମୂଲ୍ୟର ଅତିକମରେ {0}% ବଞ୍ଚାଇଲେ ହିଁ ସ୍ପ୍ରେ ଲାଭ ଦେବ।"
-],
-[
-"Worse by {0} points since the earlier check",
-"ପୂର୍ବ ଯାଞ୍ଚ ତୁଳନାରେ {0} ପଏଣ୍ଟ ଖରାପ ହୋଇଛି"
-],
-[
-"Better by {0} points since the earlier check",
-"ପୂର୍ବ ଯାଞ୍ଚ ତୁଳନାରେ {0} ପଏଣ୍ଟ ଭଲ ହୋଇଛି"
-],
-[
-"Keep the field clean and look again in {0} days.",
-"କ୍ଷେତ ସଫା ରଖନ୍ତୁ ଓ {0} ଦିନ ପରେ ପୁଣି ଦେଖନ୍ତୁ।"
-],
-[
-"Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.",
-"ଆଜି ହିଁ କ୍ଷେତର କାମ କରନ୍ତୁ ଓ {0} ଦିନ ପରେ ନୂଆ ଫଟୋ ତୋଳନ୍ତୁ। ତାହା ବଢ଼ିଛି କି ନାହିଁ ଦେଖି ସ୍ଥିର କରନ୍ତୁ।"
-],
-[
-"Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.",
-"ଆଜି ହିଁ କ୍ଷେତର କାମ କରନ୍ତୁ। ତଳେ ଥିବା ଔଷଧ ତାଲିକା ଆପଣଙ୍କ KVK କିମ୍ବା କୃଷି ଅଧିକାରୀଙ୍କ ସହ ଦେଖନ୍ତୁ; ସ୍ପ୍ରେ ପୂର୍ବରୁ ଲେବେଲ ପଢ଼ନ୍ତୁ। {0} ଦିନ ପରେ ପୁଣି ଦେଖନ୍ତୁ।"
-],
-[
-"Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.",
-"ପ୍ରଭାବିତ ଗଛକୁ ଉପାଡ଼ି ନଷ୍ଟ କରନ୍ତୁ, ଭାଇରସ୍ ବହନ କରୁଥିବା ପୋକକୁ ଦମନ କରନ୍ତୁ ଓ {0} ଦିନ ପରେ ପାଖ ଗଛଗୁଡ଼ିକୁ ଦେଖନ୍ତୁ।"
-],
-[
-"Remind me in {0} days",
-"{0} ଦିନ ପରେ ମୋତେ ମନେପକାଇଦିଅ"
-],
-[
-"Time to re-check: {0}",
-"ପୁଣି ଦେଖିବାର ସମୟ: {0}"
-],
-[
-"Is it {0} instead?",
-"ଏହା ବଦଳରେ {0} କି?"
-],
-[
-"Yes → points to {0}",
-"ହଁ → {0} ଆଡକୁ ଇଙ୍ଗିତ କରେ"
-],
-[
-"No → points to {0}",
-"ନା → {0} ଆଡକୁ ଇଙ୍ଗିତ କରେ"
-],
-[
-"{0} of {1} clear photos show a problem.",
-"{1} ଟି ସ୍ପଷ୍ଟ ଫଟୋ ମଧ୍ୟରୁ {0} ଟିରେ ସମସ୍ୟା ଦେଖାଯାଉଛି।"
-],
-[
-", average damage about {0}%",
-", ହାରାହାରି କ୍ଷତି ପ୍ରାୟ {0}%"
-]
-],
+"_t": [["{0} of {1} checks answered", "{1} ମଧ୍ୟରୁ {0} ଯାଞ୍ଚର ଉତ୍ତର ଦିଆଗଲା"], ["Following: {0} — {1} of {2} typical signs confirmed", "ଅନୁସରଣ: {0} — {2} ମଧ୍ୟରୁ {1} ସାଧାରଣ ଚିହ୍ନ ନିଶ୍ଚିତ ହେଲା"], ["Question {0}", "ପ୍ରଶ୍ନ {0}"], ["No disease found on this {0} leaf. It looks healthy. Check again in a few days.", "ଏହି {0} ପତ୍ରରେ କୌଣସି ରୋଗ ମିଳିଲା ନାହିଁ। ଭଲ ଦେଖାଯାଉଛି। କିଛି ଦିନ ପରେ ପୁଣି ଦେଖନ୍ତୁ।"], ["Your answers point to {0} ({1}%).", "ଆପଣଙ୍କ ଉତ୍ତର {0} ({1}%) ଆଡ଼କୁ ଇଶାରା କରୁଛି।"], ["Could be {0} instead.", "ଏହା ବଦଳରେ {0} ହୋଇପାରେ।"], ["photo alone: {0}%", "କେବଳ ଫଟୋରୁ: {0}%"], ["This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.", "ଏହା {0} ପରି ଲାଗୁଛି, କିନ୍ତୁ ଆପ୍ କେଉଁ ପ୍ରକାର ତାହା କହିପାରୁନାହିଁ। ତଳେ ଥିବା ଗୋଟିଏ ସମ୍ଭାବନା ଉପରେ ଟିପନ୍ତୁ, ଅଥବା ପାଖରୁ ଫଟୋ ଉଠାନ୍ତୁ।"], ["{0} days ago", "{0} ଦିନ ପୂର୍ବେ"], ["Damage was about {0}% ({1}), now about {2}%. {3}", "କ୍ଷତି ପ୍ରାୟ {0}% ({1}) ଥିଲା, ଏବେ ପ୍ରାୟ {2}%। {3}"], ["Check again: {0}, scanned {1} days ago", "ପୁଣି ଯାଞ୍ଚ କରନ୍ତୁ: {0}, {1} ଦିନ ପୂର୍ବେ ସ୍କାନ୍ ହୋଇଥିଲା"], ["{0} of {1} photos were clear enough to count.", "{1} ମଧ୍ୟରୁ {0} ଫଟୋ ଗଣିବା ପାଇଁ ଯଥେଷ୍ଟ ସ୍ପଷ୍ଟ ଥିଲା।"], ["{0} of {1} photos", "{1} ମଧ୍ୟରୁ {0} ଫଟୋ"], ["average damage about {0}%", "ହାରାହାରି କ୍ଷତି ପ୍ରାୟ {0}%"], ["{0} of {1} possible problems left. The others are ruled out by your answers.", "{1} ମଧ୍ୟରୁ {0} ସମ୍ଭାବ୍ୟ ସମସ୍ୟା ବାକି ଅଛି। ଆପଣଙ୍କ ଉତ୍ତରରେ ଅନ୍ୟଗୁଡ଼ିକ ବାଦ ପଡ଼ିଗଲା।"], ["Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.", "ଆପଣଙ୍କ ଫୋନ୍: {0} GB ମେମୋରୀ (ବର୍ତ୍ତମାନ {1} MB ଖାଲି), {2} GB ଷ୍ଟୋରେଜ୍ ଖାଲି।"], ["Downloading {0}: {1} of {2} MB", "{0} ଡାଉନଲୋଡ୍ ହେଉଛି: {2} MB ମଧ୍ୟରୁ {1}"], ["{0} build is ready. Switch on Smart answers when you ask a question.", "{0} ବିଲ୍ଡ ପ୍ରସ୍ତୁତ। ପ୍ରଶ୍ନ ପଚାରିବା ବେଳେ ସ୍ମାର୍ଟ ଉତ୍ତର ଚାଲୁ କରନ୍ତୁ।"], ["Download failed: {0}", "ଡାଉନଲୋଡ୍ ବିଫଳ: {0}"], ["Not enough storage: need about {0} MB plus some spare, free is {1} MB.", "ଯଥେଷ୍ଟ ଷ୍ଟୋରେଜ୍ ନାହିଁ: ପ୍ରାୟ {0} MB ଓ ଟିକିଏ ଅତିରିକ୍ତ ଜାଗା ଦରକାର, ଖାଲି ଅଛି {1} MB।"], ["Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.", "ପ୍ରାୟତଃ {0} ସହ ଭୁଲ ହୁଏ। କାମ କରିବା ପୂର୍ବରୁ ତଳେ ଥିବା \"ନିଶ୍ଚିତ ହେବାକୁ ଦେଖନ୍ତୁ\" ପ୍ରଶ୍ନର ଉତ୍ତର ଦିଅନ୍ତୁ।"], ["This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.", "ଏହି ଫଟୋ {0} ପରି ଲାଗୁନାହିଁ। ଆପଣ ବାଛିଥିବା ଫସଲ ଦେଖନ୍ତୁ, ବା 'ନିଶ୍ଚିତ ନୁହେଁ' ବାଛନ୍ତୁ।"], ["{0} extra photo(s) used.", "{0} ଟି ଅତିରିକ୍ତ ଫଟୋ ବ୍ୟବହାର ହେଲା।"], ["Spreading: about {0} points more damage per week.", "ବ୍ୟାପୁଛି: ସପ୍ତାହକୁ ପ୍ରାୟ {0} ପଏଣ୍ଟ ଅଧିକ କ୍ଷତି।"], ["Recovering: about {0} points less damage per week.", "ଭଲ ହେଉଛି: ସପ୍ତାହକୁ ପ୍ରାୟ {0} ପଏଣ୍ଟ କମ୍ କ୍ଷତି।"], ["The spray pays for itself only if it saves at least {0}% of the crop's value.", "ଫସଲ ମୂଲ୍ୟର ଅତିକମରେ {0}% ବଞ୍ଚାଇଲେ ହିଁ ସ୍ପ୍ରେ ଲାଭ ଦେବ।"], ["Worse by {0} points since the earlier check", "ପୂର୍ବ ଯାଞ୍ଚ ତୁଳନାରେ {0} ପଏଣ୍ଟ ଖରାପ ହୋଇଛି"], ["Better by {0} points since the earlier check", "ପୂର୍ବ ଯାଞ୍ଚ ତୁଳନାରେ {0} ପଏଣ୍ଟ ଭଲ ହୋଇଛି"], ["Keep the field clean and look again in {0} days.", "କ୍ଷେତ ସଫା ରଖନ୍ତୁ ଓ {0} ଦିନ ପରେ ପୁଣି ଦେଖନ୍ତୁ।"], ["Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.", "ଆଜି ହିଁ କ୍ଷେତର କାମ କରନ୍ତୁ ଓ {0} ଦିନ ପରେ ନୂଆ ଫଟୋ ତୋଳନ୍ତୁ। ତାହା ବଢ଼ିଛି କି ନାହିଁ ଦେଖି ସ୍ଥିର କରନ୍ତୁ।"], ["Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.", "ଆଜି ହିଁ କ୍ଷେତର କାମ କରନ୍ତୁ। ତଳେ ଥିବା ଔଷଧ ତାଲିକା ଆପଣଙ୍କ KVK କିମ୍ବା କୃଷି ଅଧିକାରୀଙ୍କ ସହ ଦେଖନ୍ତୁ; ସ୍ପ୍ରେ ପୂର୍ବରୁ ଲେବେଲ ପଢ଼ନ୍ତୁ। {0} ଦିନ ପରେ ପୁଣି ଦେଖନ୍ତୁ।"], ["Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.", "ପ୍ରଭାବିତ ଗଛକୁ ଉପାଡ଼ି ନଷ୍ଟ କରନ୍ତୁ, ଭାଇରସ୍ ବହନ କରୁଥିବା ପୋକକୁ ଦମନ କରନ୍ତୁ ଓ {0} ଦିନ ପରେ ପାଖ ଗଛଗୁଡ଼ିକୁ ଦେଖନ୍ତୁ।"], ["Remind me in {0} days", "{0} ଦିନ ପରେ ମୋତେ ମନେପକାଇଦିଅ"], ["Time to re-check: {0}", "ପୁଣି ଦେଖିବାର ସମୟ: {0}"], ["Is it {0} instead?", "ଏହା ବଦଳରେ {0} କି?"], ["Yes → points to {0}", "ହଁ → {0} ଆଡକୁ ଇଙ୍ଗିତ କରେ"], ["No → points to {0}", "ନା → {0} ଆଡକୁ ଇଙ୍ଗିତ କରେ"], ["{0} of {1} clear photos show a problem.", "{1} ଟି ସ୍ପଷ୍ଟ ଫଟୋ ମଧ୍ୟରୁ {0} ଟିରେ ସମସ୍ୟା ଦେଖାଯାଉଛି।"], [", average damage about {0}%", ", ହାରାହାରି କ୍ଷତି ପ୍ରାୟ {0}%"]],
 "88625c818add": "ଉତ୍ପାଦ, ଫସଲର ପର୍ଯ୍ୟାୟ ଏବଂ ରାଜ୍ୟ ଉପରେ ନିର୍ଭର କରୁଥିବାରୁ ଏହି ଆପ୍ ପରିମାଣ କିମ୍ବା ମିଶାଇବା ହାର ଦିଏ ନାହିଁ। ଉତ୍ପାଦର ଲେବଲ୍ ପଢ଼ନ୍ତୁ ଏବଂ ଆପଣଙ୍କ KVK କିମ୍ବା କୃଷି ଅଧିକାରୀଙ୍କୁ ପଚାରନ୍ତୁ। କିଷାନ କଲ୍ ସେଣ୍ଟର (ମାଗଣା):",
 "ba83901b71b8": "ଏ ବିଷୟରେ ମୋ ପାଖରେ ଯାଞ୍ଚ କରାଯାଇଥିବା ପରାମର୍ଶ ନାହିଁ। ଦୟାକରି କିଷାନ କଲ୍ ସେଣ୍ଟରକୁ ଫୋନ୍ କରନ୍ତୁ (ମାଗଣା):",
 "9b45b05274e8": "କ୍ୟାମେରାକୁ ଅନୁମତି ଦରକାର। ଆପଣ 'ଫଟୋ ତୋଳନ୍ତୁ' ମଧ୍ୟ ବ୍ୟବହାର କରିପାରିବେ; ତାହା ଆପଣଙ୍କ ଫୋନ୍ କ୍ୟାମେରା ଖୋଲିବ।",
@@ -2740,5 +2583,12 @@
 "da3cc8aad2b1": "ଆପଣଙ୍କ ଯେଉଁ ପୁନଃଯାଞ୍ଚ ଭଲ ହୋଇଛି",
 "51e6b19f1b24": "ପୁଣି ଯାଞ୍ଚ କରିବାର ସମୟ",
 "ae2400a9d792": "ସେହି ଗଛର ନୂଆ ଫଟୋ ନିଅନ୍ତୁ",
-"1b4cd6d19b95": "ପୁନଃଯାଞ୍ଚ ସ୍ମରଣ"
+"1b4cd6d19b95": "ପୁନଃଯାଞ୍ଚ ସ୍ମରଣ",
+"751dd54fa877": "ପରାମର୍ଶ",
+"4bf5d029e8fa": "Llama ଲେଖିଛି, ଯାଞ୍ଚ ହୋଇଥିବା ତଥ୍ୟ ସହ ମିଳାଯାଇଛି",
+"a8231a3e8b81": "Llama ଇଂରାଜୀ ଓ ହିନ୍ଦୀରେ ଲେଖେ। ଏହା ଆପଣଙ୍କ ଭାଷାରେ ଯାଞ୍ଚ ହୋଇଥିବା ପରାମର୍ଶ।",
+"ffa2ac6d22b6": "ଏହା ବ୍ୟାପୁଥିଲେ କିମ୍ବା ଆପଣ ନିଶ୍ଚିତ ନଥିଲେ, ଆପଣଙ୍କ କୃଷି ସମ୍ପ୍ରସାରଣ ଅଧିକାରୀ କିମ୍ବା କିଷାନ କଲ ସେଣ୍ଟରକୁ {kcc} (ମାଗଣା) ଯୋଗାଯୋଗ କରନ୍ତୁ। ଏହା ସମ୍ଭାବ୍ୟ କାରଣ, ନିଶ୍ଚିତ ନିର୍ଣ୍ଣୟ ନୁହେଁ।",
+"ad5b277b7d09": "Llama ଆପଣଙ୍କ ପରାମର୍ଶ ଲେଖୁଛି…",
+"14b0b8ff5eb9": "ଏହି ଫଟୋରେ ପତ୍ର କିମ୍ବା ପୋକ ମିଳିଲା ନାହିଁ",
+"683404bf044a": "ପ୍ରଭାବିତ ଗୋଟିଏ ପତ୍ର, ଫଳ କିମ୍ବା ପୋକ ପାଖରେ, ଦିନର ଆଲୋକରେ କ୍ୟାମେରା ଧରି ପୁଣି ଫଟୋ ନିଅନ୍ତୁ।"
 }

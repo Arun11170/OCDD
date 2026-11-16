@@ -10,7 +10,14 @@ class Speech(ctx: Context, private val finished: () -> Unit) {
     private var ready = false
     private var tts: TextToSpeech? = null
 
+    companion object {
+        @Volatile private var current: Speech? = null
+        /** Silences the voice from anywhere (a new check, a new photo, the microphone ...). Safe to call when nothing is playing. */
+        fun stopAll() { try { current?.stop() } catch (_: Throwable) {} }
+    }
+
     init {
+        current = this
         tts = TextToSpeech(ctx.applicationContext) { status ->
             ready = status == TextToSpeech.SUCCESS
             if (ready) {
@@ -38,6 +45,7 @@ class Speech(ctx: Context, private val finished: () -> Unit) {
     fun stop() { tts?.stop() }
 
     fun shutdown() {
+        if (current === this) current = null
         tts?.stop()
         tts?.shutdown()
         tts = null

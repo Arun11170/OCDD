@@ -8,10 +8,10 @@
 4. Llama ("Smart answers") looks for the model in `/data/local/tmp/llama` (already pushed) - no extra step.
 
 ## What is inside
-- Photo -> disease model (MobileNetV3 int8, ExecuTorch) -> confidence gate 0.80 -> damage % (OpenCV) -> verified advice (kb.json / kb_hi.json) -> voice.
+- Photo -> disease model (EfficientNet-V2-S, ONNX Runtime) -> confidence gate 0.80 -> damage % (OpenCV) -> verified advice (kb.json / kb_hi.json) -> voice.
 - Below the gate the app says "not sure" and shows no advice until the farmer picks a possibility.
 - Ask section: quick buttons from the verified advice (every phone); "Smart answers" switch uses Llama in a separate process, English only, with a safety check (blocks numbers, chemicals, organisms and disease names that are not in the facts). Dose questions are never answered.
-- No INTERNET permission.
+- The INTERNET permission is used only for the optional one-time model download and the optional village hub; photo, vision and advisory never use the network (see docs/OFFLINE_AUDIT.md).
 
 ## If the build complains
 - `LlmService.kt`: "overrides nothing" on `onError` -> delete that one line.

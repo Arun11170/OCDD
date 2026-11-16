@@ -1378,164 +1378,7 @@
 "b50466134ac4": "ਜਦੋਂ ਹਮਲਾ ਸਥਾਨਕ ਹੱਦ ਤੋਂ ਵੱਧ ਜਾਵੇ ਤਾਂ ਸਪਰੇਅ ਕਰੋ; ਇਹ ਹੱਦ ਆਪਣੇ KVK ਤੋਂ ਪੁੱਛੋ।",
 "6769057f3e00": "ਕਿਸੇ ਖੋਲ੍ਹੇ ਭਾਰਤੀ ਸੋਮੇ ਵਿੱਚ Ostrinia ਮੱਕੀ ਦੇ ਛੇਦਕ ਨਹੀਂ ਮਿਲੇ। IIMR ਦਾ ਪੰਨਾ ਗੁਲਾਬੀ ਤਣਾ ਛੇਦਕ ਨੂੰ ਵੀ ਲੈਂਦਾ ਹੈ; ਮੁੱਖ ਤੌਰ ਉੱਤੇ ਤਾਮਿਲਨਾਡੂ ਅਤੇ ਮੱਕੀ ਵਾਲੇ ਇਲਾਕਿਆਂ ਲਈ ਲਿਖਿਆ ਗਿਆ।",
 "5bd446489aa9": "ਸੁੰਡੀਆਂ ਪੀਲੀਆਂ-ਭੂਰੀਆਂ ਹੁੰਦੀਆਂ ਹਨ ਜਿਨ੍ਹਾਂ ਦਾ ਸਿਰ ਭੂਰਾ ਹੈ; ਪਤੰਗੇ ਪਰਾਲੀ ਰੰਗੇ ਹੁੰਦੇ ਹਨ।",
-"_t": [
-[
-"{0} of {1} checks answered",
-"{1} ਵਿੱਚੋਂ {0} ਜਾਂਚਾਂ ਦੇ ਜਵਾਬ ਦਿੱਤੇ"
-],
-[
-"Following: {0} — {1} of {2} typical signs confirmed",
-"ਪਿੱਛਾ ਕਰ ਰਹੇ ਹਾਂ: {0} — {2} ਵਿੱਚੋਂ {1} ਆਮ ਨਿਸ਼ਾਨ ਪੱਕੇ ਹੋਏ"
-],
-[
-"Question {0}",
-"ਸਵਾਲ {0}"
-],
-[
-"No disease found on this {0} leaf. It looks healthy. Check again in a few days.",
-"ਇਸ {0} ਦੇ ਪੱਤੇ ਉੱਤੇ ਕੋਈ ਬਿਮਾਰੀ ਨਹੀਂ ਮਿਲੀ। ਇਹ ਤੰਦਰੁਸਤ ਲੱਗਦਾ ਹੈ। ਕੁਝ ਦਿਨਾਂ ਬਾਅਦ ਫਿਰ ਦੇਖੋ।"
-],
-[
-"Your answers point to {0} ({1}%).",
-"ਤੁਹਾਡੇ ਜਵਾਬ {0} ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦੇ ਹਨ ({1}%)।"
-],
-[
-"Could be {0} instead.",
-"ਇਸ ਦੀ ਥਾਂ {0} ਹੋ ਸਕਦਾ ਹੈ।"
-],
-[
-"photo alone: {0}%",
-"ਸਿਰਫ਼ ਫ਼ੋਟੋ ਤੋਂ: {0}%"
-],
-[
-"This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.",
-"ਇਹ {0} ਲੱਗਦਾ ਹੈ, ਪਰ ਐਪ ਇਹ ਨਹੀਂ ਦੱਸ ਸਕਦਾ ਕਿ ਕਿਹੜੀ ਕਿਸਮ ਹੈ। ਥੱਲੇ ਕਿਸੇ ਸੰਭਾਵਨਾ ਉੱਤੇ ਛੂਹੋ, ਜਾਂ ਨੇੜਿਓਂ ਫ਼ੋਟੋ ਖਿੱਚੋ।"
-],
-[
-"{0} days ago",
-"{0} ਦਿਨ ਪਹਿਲਾਂ"
-],
-[
-"Damage was about {0}% ({1}), now about {2}%. {3}",
-"ਨੁਕਸਾਨ ਲਗਭਗ {0}% ਸੀ ({1}), ਹੁਣ ਲਗਭਗ {2}% ਹੈ। {3}"
-],
-[
-"Check again: {0}, scanned {1} days ago",
-"ਫਿਰ ਜਾਂਚੋ: {0}, {1} ਦਿਨ ਪਹਿਲਾਂ ਜਾਂਚਿਆ ਸੀ"
-],
-[
-"{0} of {1} photos were clear enough to count.",
-"{1} ਵਿੱਚੋਂ {0} ਫ਼ੋਟੋਆਂ ਗਿਣਨ ਲਈ ਕਾਫ਼ੀ ਸਾਫ਼ ਸਨ।"
-],
-[
-"{0} of {1} photos",
-"{1} ਵਿੱਚੋਂ {0} ਫ਼ੋਟੋਆਂ"
-],
-[
-"average damage about {0}%",
-"ਔਸਤ ਨੁਕਸਾਨ ਲਗਭਗ {0}%"
-],
-[
-"{0} of {1} possible problems left. The others are ruled out by your answers.",
-"{1} ਸੰਭਵ ਸਮੱਸਿਆਵਾਂ ਵਿੱਚੋਂ {0} ਬਚੀਆਂ ਹਨ। ਬਾਕੀ ਤੁਹਾਡੇ ਜਵਾਬਾਂ ਨਾਲ ਕੱਟ ਗਈਆਂ ਹਨ।"
-],
-[
-"Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.",
-"ਤੁਹਾਡਾ ਫ਼ੋਨ: {0} GB ਮੈਮਰੀ (ਹੁਣ {1} MB ਖਾਲੀ), {2} GB ਸਟੋਰੇਜ ਖਾਲੀ।"
-],
-[
-"Downloading {0}: {1} of {2} MB",
-"{0} ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ: {2} MB ਵਿੱਚੋਂ {1}"
-],
-[
-"{0} build is ready. Switch on Smart answers when you ask a question.",
-"{0} ਬਿਲਡ ਤਿਆਰ ਹੈ। ਸਵਾਲ ਪੁੱਛਣ ਵੇਲੇ ਸਮਾਰਟ ਜਵਾਬ ਚਾਲੂ ਕਰੋ।"
-],
-[
-"Download failed: {0}",
-"ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋਇਆ: {0}"
-],
-[
-"Not enough storage: need about {0} MB plus some spare, free is {1} MB.",
-"ਸਟੋਰੇਜ ਕਾਫ਼ੀ ਨਹੀਂ: ਲਗਭਗ {0} MB ਅਤੇ ਕੁਝ ਵਾਧੂ ਚਾਹੀਦਾ ਹੈ, ਖਾਲੀ {1} MB ਹੈ।"
-],
-[
-"Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.",
-"ਅਕਸਰ ਇਸ ਨਾਲ ਰਲਗੱਡ ਹੋ ਜਾਂਦਾ ਹੈ: {0}। ਕੁਝ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਥੱਲੇ ਦਿੱਤੇ “ਪੱਕਾ ਕਰਨ ਲਈ ਜਾਂਚੋ” ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦਿਓ।"
-],
-[
-"This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.",
-"ਇਹ ਫ਼ੋਟੋ {0} ਵਰਗੀ ਨਹੀਂ ਲੱਗਦੀ। ਜੋ ਫ਼ਸਲ ਚੁਣੀ ਹੈ ਉਹ ਜਾਂਚੋ, ਜਾਂ ‘ਪੱਕਾ ਨਹੀਂ’ ਚੁਣੋ।"
-],
-[
-"{0} extra photo(s) used.",
-"{0} ਵਾਧੂ ਫ਼ੋਟੋ ਵਰਤੀ ਗਈ।"
-],
-[
-"Spreading: about {0} points more damage per week.",
-"ਫੈਲ ਰਿਹਾ ਹੈ: ਹਰ ਹਫ਼ਤੇ ਲਗਭਗ {0} ਅੰਕ ਵੱਧ ਨੁਕਸਾਨ।"
-],
-[
-"Recovering: about {0} points less damage per week.",
-"ਠੀਕ ਹੋ ਰਿਹਾ ਹੈ: ਹਰ ਹਫ਼ਤੇ ਲਗਭਗ {0} ਅੰਕ ਘੱਟ ਨੁਕਸਾਨ।"
-],
-[
-"The spray pays for itself only if it saves at least {0}% of the crop's value.",
-"ਛਿੜਕਾਅ ਦਾ ਖਰਚਾ ਤਾਂ ਹੀ ਪੂਰਾ ਹੋਵੇਗਾ ਜੇ ਉਹ ਫ਼ਸਲ ਦੀ ਕੀਮਤ ਦਾ ਘੱਟੋ-ਘੱਟ {0}% ਬਚਾਵੇ।"
-],
-[
-"Worse by {0} points since the earlier check",
-"ਪਿਛਲੀ ਜਾਂਚ ਤੋਂ {0} ਅੰਕ ਵਧਿਆ"
-],
-[
-"Better by {0} points since the earlier check",
-"ਪਿਛਲੀ ਜਾਂਚ ਤੋਂ {0} ਅੰਕ ਘਟਿਆ"
-],
-[
-"Keep the field clean and look again in {0} days.",
-"ਖੇਤ ਸਾਫ਼ ਰੱਖੋ ਅਤੇ {0} ਦਿਨ ਬਾਅਦ ਫਿਰ ਦੇਖੋ।"
-],
-[
-"Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.",
-"ਅੱਜ ਖੇਤ ਦੇ ਉਪਾਅ ਕਰੋ ਅਤੇ {0} ਦਿਨ ਬਾਅਦ ਨਵੀਂ ਫੋਟੋ ਖਿੱਚੋ। ਵਧਿਆ ਜਾਂ ਨਹੀਂ, ਇਹ ਦੇਖ ਕੇ ਫ਼ੈਸਲਾ ਕਰੋ।"
-],
-[
-"Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.",
-"ਅੱਜ ਖੇਤ ਦੇ ਉਪਾਅ ਕਰੋ। ਹੇਠਾਂ ਦੀ ਸੂਚੀ ਆਪਣੇ KVK ਜਾਂ ਖੇਤੀਬਾੜੀ ਅਫ਼ਸਰ ਨਾਲ ਮਿਲਾਓ ਅਤੇ ਛਿੜਕਾਅ ਤੋਂ ਪਹਿਲਾਂ ਲੇਬਲ ਪੜ੍ਹੋ। {0} ਦਿਨ ਬਾਅਦ ਫਿਰ ਜਾਂਚੋ।"
-],
-[
-"Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.",
-"ਪ੍ਰਭਾਵਿਤ ਪੌਦੇ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰੋ, ਵਾਇਰਸ ਫੈਲਾਉਣ ਵਾਲੇ ਕੀੜੇ ਰੋਕੋ ਅਤੇ {0} ਦਿਨ ਬਾਅਦ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਪੌਦੇ ਦੇਖੋ।"
-],
-[
-"Remind me in {0} days",
-"{0} ਦਿਨ ਬਾਅਦ ਯਾਦ ਕਰਵਾਓ"
-],
-[
-"Time to re-check: {0}",
-"ਦੁਬਾਰਾ ਜਾਂਚਣ ਦਾ ਸਮਾਂ: {0}"
-],
-[
-"Is it {0} instead?",
-"ਕੀ ਇਹ {0} ਹੈ?"
-],
-[
-"Yes → points to {0}",
-"ਹਾਂ → {0} ਵੱਲ ਇਸ਼ਾਰਾ"
-],
-[
-"No → points to {0}",
-"ਨਹੀਂ → {0} ਵੱਲ ਇਸ਼ਾਰਾ"
-],
-[
-"{0} of {1} clear photos show a problem.",
-"{1} ਸਾਫ਼ ਫੋਟੋਆਂ ਵਿੱਚੋਂ {0} ਵਿੱਚ ਸਮੱਸਿਆ ਦਿਸੀ।"
-],
-[
-", average damage about {0}%",
-", ਔਸਤ ਨੁਕਸਾਨ ਲਗਭਗ {0}%"
-]
-],
+"_t": [["{0} of {1} checks answered", "{1} ਵਿੱਚੋਂ {0} ਜਾਂਚਾਂ ਦੇ ਜਵਾਬ ਦਿੱਤੇ"], ["Following: {0} — {1} of {2} typical signs confirmed", "ਪਿੱਛਾ ਕਰ ਰਹੇ ਹਾਂ: {0} — {2} ਵਿੱਚੋਂ {1} ਆਮ ਨਿਸ਼ਾਨ ਪੱਕੇ ਹੋਏ"], ["Question {0}", "ਸਵਾਲ {0}"], ["No disease found on this {0} leaf. It looks healthy. Check again in a few days.", "ਇਸ {0} ਦੇ ਪੱਤੇ ਉੱਤੇ ਕੋਈ ਬਿਮਾਰੀ ਨਹੀਂ ਮਿਲੀ। ਇਹ ਤੰਦਰੁਸਤ ਲੱਗਦਾ ਹੈ। ਕੁਝ ਦਿਨਾਂ ਬਾਅਦ ਫਿਰ ਦੇਖੋ।"], ["Your answers point to {0} ({1}%).", "ਤੁਹਾਡੇ ਜਵਾਬ {0} ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦੇ ਹਨ ({1}%)।"], ["Could be {0} instead.", "ਇਸ ਦੀ ਥਾਂ {0} ਹੋ ਸਕਦਾ ਹੈ।"], ["photo alone: {0}%", "ਸਿਰਫ਼ ਫ਼ੋਟੋ ਤੋਂ: {0}%"], ["This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.", "ਇਹ {0} ਲੱਗਦਾ ਹੈ, ਪਰ ਐਪ ਇਹ ਨਹੀਂ ਦੱਸ ਸਕਦਾ ਕਿ ਕਿਹੜੀ ਕਿਸਮ ਹੈ। ਥੱਲੇ ਕਿਸੇ ਸੰਭਾਵਨਾ ਉੱਤੇ ਛੂਹੋ, ਜਾਂ ਨੇੜਿਓਂ ਫ਼ੋਟੋ ਖਿੱਚੋ।"], ["{0} days ago", "{0} ਦਿਨ ਪਹਿਲਾਂ"], ["Damage was about {0}% ({1}), now about {2}%. {3}", "ਨੁਕਸਾਨ ਲਗਭਗ {0}% ਸੀ ({1}), ਹੁਣ ਲਗਭਗ {2}% ਹੈ। {3}"], ["Check again: {0}, scanned {1} days ago", "ਫਿਰ ਜਾਂਚੋ: {0}, {1} ਦਿਨ ਪਹਿਲਾਂ ਜਾਂਚਿਆ ਸੀ"], ["{0} of {1} photos were clear enough to count.", "{1} ਵਿੱਚੋਂ {0} ਫ਼ੋਟੋਆਂ ਗਿਣਨ ਲਈ ਕਾਫ਼ੀ ਸਾਫ਼ ਸਨ।"], ["{0} of {1} photos", "{1} ਵਿੱਚੋਂ {0} ਫ਼ੋਟੋਆਂ"], ["average damage about {0}%", "ਔਸਤ ਨੁਕਸਾਨ ਲਗਭਗ {0}%"], ["{0} of {1} possible problems left. The others are ruled out by your answers.", "{1} ਸੰਭਵ ਸਮੱਸਿਆਵਾਂ ਵਿੱਚੋਂ {0} ਬਚੀਆਂ ਹਨ। ਬਾਕੀ ਤੁਹਾਡੇ ਜਵਾਬਾਂ ਨਾਲ ਕੱਟ ਗਈਆਂ ਹਨ।"], ["Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.", "ਤੁਹਾਡਾ ਫ਼ੋਨ: {0} GB ਮੈਮਰੀ (ਹੁਣ {1} MB ਖਾਲੀ), {2} GB ਸਟੋਰੇਜ ਖਾਲੀ।"], ["Downloading {0}: {1} of {2} MB", "{0} ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ: {2} MB ਵਿੱਚੋਂ {1}"], ["{0} build is ready. Switch on Smart answers when you ask a question.", "{0} ਬਿਲਡ ਤਿਆਰ ਹੈ। ਸਵਾਲ ਪੁੱਛਣ ਵੇਲੇ ਸਮਾਰਟ ਜਵਾਬ ਚਾਲੂ ਕਰੋ।"], ["Download failed: {0}", "ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋਇਆ: {0}"], ["Not enough storage: need about {0} MB plus some spare, free is {1} MB.", "ਸਟੋਰੇਜ ਕਾਫ਼ੀ ਨਹੀਂ: ਲਗਭਗ {0} MB ਅਤੇ ਕੁਝ ਵਾਧੂ ਚਾਹੀਦਾ ਹੈ, ਖਾਲੀ {1} MB ਹੈ।"], ["Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.", "ਅਕਸਰ ਇਸ ਨਾਲ ਰਲਗੱਡ ਹੋ ਜਾਂਦਾ ਹੈ: {0}। ਕੁਝ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਥੱਲੇ ਦਿੱਤੇ “ਪੱਕਾ ਕਰਨ ਲਈ ਜਾਂਚੋ” ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦਿਓ।"], ["This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.", "ਇਹ ਫ਼ੋਟੋ {0} ਵਰਗੀ ਨਹੀਂ ਲੱਗਦੀ। ਜੋ ਫ਼ਸਲ ਚੁਣੀ ਹੈ ਉਹ ਜਾਂਚੋ, ਜਾਂ ‘ਪੱਕਾ ਨਹੀਂ’ ਚੁਣੋ।"], ["{0} extra photo(s) used.", "{0} ਵਾਧੂ ਫ਼ੋਟੋ ਵਰਤੀ ਗਈ।"], ["Spreading: about {0} points more damage per week.", "ਫੈਲ ਰਿਹਾ ਹੈ: ਹਰ ਹਫ਼ਤੇ ਲਗਭਗ {0} ਅੰਕ ਵੱਧ ਨੁਕਸਾਨ।"], ["Recovering: about {0} points less damage per week.", "ਠੀਕ ਹੋ ਰਿਹਾ ਹੈ: ਹਰ ਹਫ਼ਤੇ ਲਗਭਗ {0} ਅੰਕ ਘੱਟ ਨੁਕਸਾਨ।"], ["The spray pays for itself only if it saves at least {0}% of the crop's value.", "ਛਿੜਕਾਅ ਦਾ ਖਰਚਾ ਤਾਂ ਹੀ ਪੂਰਾ ਹੋਵੇਗਾ ਜੇ ਉਹ ਫ਼ਸਲ ਦੀ ਕੀਮਤ ਦਾ ਘੱਟੋ-ਘੱਟ {0}% ਬਚਾਵੇ।"], ["Worse by {0} points since the earlier check", "ਪਿਛਲੀ ਜਾਂਚ ਤੋਂ {0} ਅੰਕ ਵਧਿਆ"], ["Better by {0} points since the earlier check", "ਪਿਛਲੀ ਜਾਂਚ ਤੋਂ {0} ਅੰਕ ਘਟਿਆ"], ["Keep the field clean and look again in {0} days.", "ਖੇਤ ਸਾਫ਼ ਰੱਖੋ ਅਤੇ {0} ਦਿਨ ਬਾਅਦ ਫਿਰ ਦੇਖੋ।"], ["Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.", "ਅੱਜ ਖੇਤ ਦੇ ਉਪਾਅ ਕਰੋ ਅਤੇ {0} ਦਿਨ ਬਾਅਦ ਨਵੀਂ ਫੋਟੋ ਖਿੱਚੋ। ਵਧਿਆ ਜਾਂ ਨਹੀਂ, ਇਹ ਦੇਖ ਕੇ ਫ਼ੈਸਲਾ ਕਰੋ।"], ["Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.", "ਅੱਜ ਖੇਤ ਦੇ ਉਪਾਅ ਕਰੋ। ਹੇਠਾਂ ਦੀ ਸੂਚੀ ਆਪਣੇ KVK ਜਾਂ ਖੇਤੀਬਾੜੀ ਅਫ਼ਸਰ ਨਾਲ ਮਿਲਾਓ ਅਤੇ ਛਿੜਕਾਅ ਤੋਂ ਪਹਿਲਾਂ ਲੇਬਲ ਪੜ੍ਹੋ। {0} ਦਿਨ ਬਾਅਦ ਫਿਰ ਜਾਂਚੋ।"], ["Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.", "ਪ੍ਰਭਾਵਿਤ ਪੌਦੇ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰੋ, ਵਾਇਰਸ ਫੈਲਾਉਣ ਵਾਲੇ ਕੀੜੇ ਰੋਕੋ ਅਤੇ {0} ਦਿਨ ਬਾਅਦ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਪੌਦੇ ਦੇਖੋ।"], ["Remind me in {0} days", "{0} ਦਿਨ ਬਾਅਦ ਯਾਦ ਕਰਵਾਓ"], ["Time to re-check: {0}", "ਦੁਬਾਰਾ ਜਾਂਚਣ ਦਾ ਸਮਾਂ: {0}"], ["Is it {0} instead?", "ਕੀ ਇਹ {0} ਹੈ?"], ["Yes → points to {0}", "ਹਾਂ → {0} ਵੱਲ ਇਸ਼ਾਰਾ"], ["No → points to {0}", "ਨਹੀਂ → {0} ਵੱਲ ਇਸ਼ਾਰਾ"], ["{0} of {1} clear photos show a problem.", "{1} ਸਾਫ਼ ਫੋਟੋਆਂ ਵਿੱਚੋਂ {0} ਵਿੱਚ ਸਮੱਸਿਆ ਦਿਸੀ।"], [", average damage about {0}%", ", ਔਸਤ ਨੁਕਸਾਨ ਲਗਭਗ {0}%"]],
 "88625c818add": "ਇਹ ਐਪ ਮਾਤਰਾ ਜਾਂ ਮਿਲਾਉਣ ਦੀ ਦਰ ਨਹੀਂ ਦੱਸਦੀ, ਕਿਉਂਕਿ ਇਹ ਉਤਪਾਦ, ਫ਼ਸਲ ਦੀ ਅਵਸਥਾ ਅਤੇ ਰਾਜ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ। ਉਤਪਾਦ ਦਾ ਲੇਬਲ ਪੜ੍ਹੋ ਅਤੇ ਆਪਣੇ KVK ਜਾਂ ਖੇਤੀ ਅਧਿਕਾਰੀ ਤੋਂ ਪੁੱਛੋ। ਕਿਸਾਨ ਕਾਲ ਸੈਂਟਰ (ਮੁਫ਼ਤ):",
 "ba83901b71b8": "ਇਸ ਬਾਰੇ ਮੇਰੇ ਕੋਲ ਪਰਖੀ ਹੋਈ ਸਲਾਹ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕਿਸਾਨ ਕਾਲ ਸੈਂਟਰ ਨੂੰ ਫ਼ੋਨ ਕਰੋ (ਮੁਫ਼ਤ):",
 "9b45b05274e8": "ਕੈਮਰੇ ਨੂੰ ਇਜਾਜ਼ਤ ਚਾਹੀਦੀ ਹੈ। ਤੁਸੀਂ 'ਫੋਟੋ ਖਿੱਚੋ' ਵੀ ਵਰਤ ਸਕਦੇ ਹੋ, ਜੋ ਫੋਨ ਦਾ ਕੈਮਰਾ ਖੋਲ੍ਹਦਾ ਹੈ।",
@@ -2740,5 +2583,12 @@
 "da3cc8aad2b1": "ਤੁਹਾਡੀਆਂ ਜੋ ਮੁੜ ਜਾਂਚਾਂ ਬਿਹਤਰ ਹੋਈਆਂ",
 "51e6b19f1b24": "ਮੁੜ ਜਾਂਚ ਦਾ ਸਮਾਂ",
 "ae2400a9d792": "ਉਸੇ ਪੌਦੇ ਦੀ ਨਵੀਂ ਫ਼ੋਟੋ ਲਓ",
-"1b4cd6d19b95": "ਮੁੜ ਜਾਂਚ ਦੀਆਂ ਯਾਦਾਂ"
+"1b4cd6d19b95": "ਮੁੜ ਜਾਂਚ ਦੀਆਂ ਯਾਦਾਂ",
+"751dd54fa877": "ਸਲਾਹ",
+"4bf5d029e8fa": "Llama ਨੇ ਲਿਖੀ, ਜਾਂਚੇ ਹੋਏ ਤੱਥਾਂ ਨਾਲ ਮਿਲਾਈ ਗਈ",
+"a8231a3e8b81": "Llama ਅੰਗਰੇਜ਼ੀ ਅਤੇ ਹਿੰਦੀ ਵਿੱਚ ਲਿਖਦਾ ਹੈ। ਇਹ ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਜਾਂਚੀ ਹੋਈ ਸਲਾਹ ਹੈ।",
+"ffa2ac6d22b6": "ਜੇ ਇਹ ਫੈਲਦਾ ਰਹੇ ਜਾਂ ਤੁਹਾਨੂੰ ਪੱਕਾ ਨਾ ਪਤਾ ਹੋਵੇ, ਤਾਂ ਆਪਣੇ ਖੇਤੀਬਾੜੀ ਵਿਸਥਾਰ ਅਧਿਕਾਰੀ ਜਾਂ ਕਿਸਾਨ ਕਾਲ ਸੈਂਟਰ ਨਾਲ {kcc} (ਮੁਫ਼ਤ) ਸੰਪਰਕ ਕਰੋ। ਇਹ ਸੰਭਾਵਿਤ ਕਾਰਨ ਹੈ, ਪੱਕੀ ਜਾਂਚ ਨਹੀਂ।",
+"ad5b277b7d09": "Llama ਤੁਹਾਡੀ ਸਲਾਹ ਲਿਖ ਰਿਹਾ ਹੈ…",
+"14b0b8ff5eb9": "ਇਸ ਫੋਟੋ ਵਿੱਚ ਪੱਤਾ ਜਾਂ ਕੀੜਾ ਨਹੀਂ ਮਿਲਿਆ",
+"683404bf044a": "ਪ੍ਰਭਾਵਿਤ ਇੱਕ ਪੱਤੇ, ਫਲ ਜਾਂ ਕੀੜੇ ਦੇ ਨੇੜੇ, ਦਿਨ ਦੀ ਰੌਸ਼ਨੀ ਵਿੱਚ ਕੈਮਰਾ ਕਰਕੇ ਦੁਬਾਰਾ ਫੋਟੋ ਲਓ।"
 }

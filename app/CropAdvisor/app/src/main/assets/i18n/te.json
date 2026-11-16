@@ -2152,164 +2152,7 @@
 "b0aa991e7489": "తొలి చారల కోసం పొలాలను క్రమం తప్పకుండా పరిశీలించండి.",
 "1f11d7a8ea63": "పసుపు పొడిలాంటి పొక్కులు ఆకు వెంబడి సన్నని చారలుగా అమరి ఉన్నాయా?",
 "a24c0cd8274b": "మచ్చలు పసుపు పొడి చారలుగా కాకుండా లేత గోధుమ-గోధుమ మచ్చలుగా ఉన్నాయా?",
-"_t": [
-[
-"{0} of {1} checks answered",
-"{1} ప్రశ్నల్లో {0} కి జవాబిచ్చారు"
-],
-[
-"Following: {0} — {1} of {2} typical signs confirmed",
-"అనుసరిస్తున్నది: {0} — {2} సాధారణ సంకేతాల్లో {1} నిర్ధారణ అయ్యాయి"
-],
-[
-"Question {0}",
-"ప్రశ్న {0}"
-],
-[
-"No disease found on this {0} leaf. It looks healthy. Check again in a few days.",
-"ఈ {0} ఆకుపై తెగులు కనిపించలేదు. ఆరోగ్యంగా ఉన్నట్టు ఉంది. కొన్ని రోజుల తర్వాత మళ్లీ చూడండి."
-],
-[
-"Your answers point to {0} ({1}%).",
-"మీ జవాబులు {0} ని సూచిస్తున్నాయి ({1}%)."
-],
-[
-"Could be {0} instead.",
-"బదులుగా {0} కావచ్చు."
-],
-[
-"photo alone: {0}%",
-"ఫోటో మాత్రమే: {0}%"
-],
-[
-"This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.",
-"ఇది {0} లా కనిపిస్తోంది, కానీ ఏ రకమో యాప్ చెప్పలేకపోతోంది. కింద ఉన్న అవకాశాల్లో ఒకదాన్ని నొక్కండి, లేదా దగ్గరగా ఫోటో తీయండి."
-],
-[
-"{0} days ago",
-"{0} రోజుల క్రితం"
-],
-[
-"Damage was about {0}% ({1}), now about {2}%. {3}",
-"నష్టం సుమారు {0}% ఉండేది ({1}), ఇప్పుడు సుమారు {2}%. {3}"
-],
-[
-"Check again: {0}, scanned {1} days ago",
-"మళ్లీ చూడండి: {0}, {1} రోజుల క్రితం స్కాన్ చేశారు"
-],
-[
-"{0} of {1} photos were clear enough to count.",
-"{1} ఫోటోల్లో {0} లెక్కించడానికి సరిపడా స్పష్టంగా ఉన్నాయి."
-],
-[
-"{0} of {1} photos",
-"{1} ఫోటోల్లో {0}"
-],
-[
-"average damage about {0}%",
-"సగటు నష్టం సుమారు {0}%"
-],
-[
-"{0} of {1} possible problems left. The others are ruled out by your answers.",
-"{1} సమస్యల్లో {0} మిగిలాయి. మీ జవాబుల వల్ల మిగతావి తొలగిపోయాయి."
-],
-[
-"Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.",
-"మీ ఫోన్: {0} GB మెమరీ (ఇప్పుడు {1} MB ఖాళీ), {2} GB స్టోరేజ్ ఖాళీ."
-],
-[
-"Downloading {0}: {1} of {2} MB",
-"{0} డౌన్‌లోడ్ అవుతోంది: {2} MB లో {1}"
-],
-[
-"{0} build is ready. Switch on Smart answers when you ask a question.",
-"{0} బిల్డ్ సిద్ధంగా ఉంది. ప్రశ్న అడిగేటప్పుడు స్మార్ట్ జవాబులను ఆన్ చేయండి."
-],
-[
-"Download failed: {0}",
-"డౌన్‌లోడ్ విఫలమైంది: {0}"
-],
-[
-"Not enough storage: need about {0} MB plus some spare, free is {1} MB.",
-"స్టోరేజ్ సరిపోలేదు: సుమారు {0} MB, ఇంకా కొంత అదనం కావాలి, ఖాళీగా ఉన్నది {1} MB."
-],
-[
-"Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.",
-"తరచుగా దీనితో కలగలుపుతారు: {0}. చర్య తీసుకునే ముందు కింద ఉన్న \"నిర్ధారణ కోసం చూడండి\" ప్రశ్నలకు జవాబివ్వండి."
-],
-[
-"This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.",
-"ఈ ఫోటో {0} లా కనిపించడం లేదు. మీరు ఎంచుకున్న పంటను చూడండి, లేదా 'తెలియదు' ఎంచుకోండి."
-],
-[
-"{0} extra photo(s) used.",
-"అదనంగా {0} ఫోటో(లు) వాడాం."
-],
-[
-"Spreading: about {0} points more damage per week.",
-"వ్యాపిస్తోంది: వారానికి సుమారు {0} పాయింట్లు ఎక్కువ నష్టం."
-],
-[
-"Recovering: about {0} points less damage per week.",
-"కోలుకుంటోంది: వారానికి సుమారు {0} పాయింట్లు తక్కువ నష్టం."
-],
-[
-"The spray pays for itself only if it saves at least {0}% of the crop's value.",
-"పంట విలువలో కనీసం {0}% కాపాడితేనే పిచికారీ ఖర్చు గిట్టుబాటు అవుతుంది."
-],
-[
-"Worse by {0} points since the earlier check",
-"ముందటి పరీక్ష కంటే {0} పాయింట్లు ఎక్కువ చెడింది"
-],
-[
-"Better by {0} points since the earlier check",
-"ముందటి పరీక్ష కంటే {0} పాయింట్లు మెరుగైంది"
-],
-[
-"Keep the field clean and look again in {0} days.",
-"పొలాన్ని శుభ్రంగా ఉంచి {0} రోజుల తర్వాత మళ్ళీ చూడండి."
-],
-[
-"Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.",
-"ఈ రోజు పొలంలో చేసే పనులు చేయండి, {0} రోజుల తర్వాత కొత్త ఫోటో తీయండి. సమస్య పెరిగిందో లేదో చూసి నిర్ణయించండి."
-],
-[
-"Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.",
-"ఈ రోజు పొలంలో చేసే పనులు చేయండి. కింది మందుల జాబితాను మీ KVK లేదా వ్యవసాయ అధికారితో సరిచూసుకోండి, పిచికారీకి ముందు లేబుల్ చదవండి. {0} రోజుల తర్వాత మళ్ళీ పరీక్షించండి."
-],
-[
-"Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.",
-"సోకిన మొక్కలను పీకి నాశనం చేయండి, వైరస్ మోసే పురుగులను అరికట్టండి, {0} రోజుల తర్వాత చుట్టుపక్కల మొక్కలను చూడండి."
-],
-[
-"Remind me in {0} days",
-"{0} రోజుల తర్వాత గుర్తు చేయండి"
-],
-[
-"Time to re-check: {0}",
-"మళ్ళీ పరీక్షించే సమయం: {0}"
-],
-[
-"Is it {0} instead?",
-"ఇది బదులుగా {0} ఏమో?"
-],
-[
-"Yes → points to {0}",
-"అవును → {0} వైపు సూచన"
-],
-[
-"No → points to {0}",
-"కాదు → {0} వైపు సూచన"
-],
-[
-"{0} of {1} clear photos show a problem.",
-"{1} స్పష్టమైన ఫోటోలలో {0} ఫోటోలలో సమస్య కనిపించింది."
-],
-[
-", average damage about {0}%",
-", సగటు నష్టం సుమారు {0}%"
-]
-],
+"_t": [["{0} of {1} checks answered", "{1} ప్రశ్నల్లో {0} కి జవాబిచ్చారు"], ["Following: {0} — {1} of {2} typical signs confirmed", "అనుసరిస్తున్నది: {0} — {2} సాధారణ సంకేతాల్లో {1} నిర్ధారణ అయ్యాయి"], ["Question {0}", "ప్రశ్న {0}"], ["No disease found on this {0} leaf. It looks healthy. Check again in a few days.", "ఈ {0} ఆకుపై తెగులు కనిపించలేదు. ఆరోగ్యంగా ఉన్నట్టు ఉంది. కొన్ని రోజుల తర్వాత మళ్లీ చూడండి."], ["Your answers point to {0} ({1}%).", "మీ జవాబులు {0} ని సూచిస్తున్నాయి ({1}%)."], ["Could be {0} instead.", "బదులుగా {0} కావచ్చు."], ["photo alone: {0}%", "ఫోటో మాత్రమే: {0}%"], ["This looks like a {0}, but the app cannot tell which kind. Tap a possibility below, or take a closer photo.", "ఇది {0} లా కనిపిస్తోంది, కానీ ఏ రకమో యాప్ చెప్పలేకపోతోంది. కింద ఉన్న అవకాశాల్లో ఒకదాన్ని నొక్కండి, లేదా దగ్గరగా ఫోటో తీయండి."], ["{0} days ago", "{0} రోజుల క్రితం"], ["Damage was about {0}% ({1}), now about {2}%. {3}", "నష్టం సుమారు {0}% ఉండేది ({1}), ఇప్పుడు సుమారు {2}%. {3}"], ["Check again: {0}, scanned {1} days ago", "మళ్లీ చూడండి: {0}, {1} రోజుల క్రితం స్కాన్ చేశారు"], ["{0} of {1} photos were clear enough to count.", "{1} ఫోటోల్లో {0} లెక్కించడానికి సరిపడా స్పష్టంగా ఉన్నాయి."], ["{0} of {1} photos", "{1} ఫోటోల్లో {0}"], ["average damage about {0}%", "సగటు నష్టం సుమారు {0}%"], ["{0} of {1} possible problems left. The others are ruled out by your answers.", "{1} సమస్యల్లో {0} మిగిలాయి. మీ జవాబుల వల్ల మిగతావి తొలగిపోయాయి."], ["Your phone: {0} GB memory ({1} MB free now), {2} GB storage free.", "మీ ఫోన్: {0} GB మెమరీ (ఇప్పుడు {1} MB ఖాళీ), {2} GB స్టోరేజ్ ఖాళీ."], ["Downloading {0}: {1} of {2} MB", "{0} డౌన్‌లోడ్ అవుతోంది: {2} MB లో {1}"], ["{0} build is ready. Switch on Smart answers when you ask a question.", "{0} బిల్డ్ సిద్ధంగా ఉంది. ప్రశ్న అడిగేటప్పుడు స్మార్ట్ జవాబులను ఆన్ చేయండి."], ["Download failed: {0}", "డౌన్‌లోడ్ విఫలమైంది: {0}"], ["Not enough storage: need about {0} MB plus some spare, free is {1} MB.", "స్టోరేజ్ సరిపోలేదు: సుమారు {0} MB, ఇంకా కొంత అదనం కావాలి, ఖాళీగా ఉన్నది {1} MB."], ["Often mixed up with: {0}. Answer the \"Check to be sure\" questions below before you act.", "తరచుగా దీనితో కలగలుపుతారు: {0}. చర్య తీసుకునే ముందు కింద ఉన్న \"నిర్ధారణ కోసం చూడండి\" ప్రశ్నలకు జవాబివ్వండి."], ["This photo does not look like {0}. Check the crop you chose, or choose 'Not sure'.", "ఈ ఫోటో {0} లా కనిపించడం లేదు. మీరు ఎంచుకున్న పంటను చూడండి, లేదా 'తెలియదు' ఎంచుకోండి."], ["{0} extra photo(s) used.", "అదనంగా {0} ఫోటో(లు) వాడాం."], ["Spreading: about {0} points more damage per week.", "వ్యాపిస్తోంది: వారానికి సుమారు {0} పాయింట్లు ఎక్కువ నష్టం."], ["Recovering: about {0} points less damage per week.", "కోలుకుంటోంది: వారానికి సుమారు {0} పాయింట్లు తక్కువ నష్టం."], ["The spray pays for itself only if it saves at least {0}% of the crop's value.", "పంట విలువలో కనీసం {0}% కాపాడితేనే పిచికారీ ఖర్చు గిట్టుబాటు అవుతుంది."], ["Worse by {0} points since the earlier check", "ముందటి పరీక్ష కంటే {0} పాయింట్లు ఎక్కువ చెడింది"], ["Better by {0} points since the earlier check", "ముందటి పరీక్ష కంటే {0} పాయింట్లు మెరుగైంది"], ["Keep the field clean and look again in {0} days.", "పొలాన్ని శుభ్రంగా ఉంచి {0} రోజుల తర్వాత మళ్ళీ చూడండి."], ["Do the field steps today and take a new photo in {0} days. Decide after you see whether it grew.", "ఈ రోజు పొలంలో చేసే పనులు చేయండి, {0} రోజుల తర్వాత కొత్త ఫోటో తీయండి. సమస్య పెరిగిందో లేదో చూసి నిర్ణయించండి."], ["Do the field steps today. Check the product list below with your KVK or agriculture officer and read the label before any spray. Re-check in {0} days.", "ఈ రోజు పొలంలో చేసే పనులు చేయండి. కింది మందుల జాబితాను మీ KVK లేదా వ్యవసాయ అధికారితో సరిచూసుకోండి, పిచికారీకి ముందు లేబుల్ చదవండి. {0} రోజుల తర్వాత మళ్ళీ పరీక్షించండి."], ["Pull out and destroy the affected plants, control the insects that carry the virus, and look at nearby plants in {0} days.", "సోకిన మొక్కలను పీకి నాశనం చేయండి, వైరస్ మోసే పురుగులను అరికట్టండి, {0} రోజుల తర్వాత చుట్టుపక్కల మొక్కలను చూడండి."], ["Remind me in {0} days", "{0} రోజుల తర్వాత గుర్తు చేయండి"], ["Time to re-check: {0}", "మళ్ళీ పరీక్షించే సమయం: {0}"], ["Is it {0} instead?", "ఇది బదులుగా {0} ఏమో?"], ["Yes → points to {0}", "అవును → {0} వైపు సూచన"], ["No → points to {0}", "కాదు → {0} వైపు సూచన"], ["{0} of {1} clear photos show a problem.", "{1} స్పష్టమైన ఫోటోలలో {0} ఫోటోలలో సమస్య కనిపించింది."], [", average damage about {0}%", ", సగటు నష్టం సుమారు {0}%"]],
 "88625c818add": "ఈ యాప్ మోతాదు లేదా కలిపే నిష్పత్తులను ఇవ్వదు, ఎందుకంటే అవి ఉత్పత్తి, పంట దశ మరియు రాష్ట్రంపై ఆధారపడతాయి. ఉత్పత్తి లేబుల్ చదివి మీ KVK లేదా వ్యవసాయ అధికారిని అడగండి. కిసాన్ కాల్ సెంటర్ (ఉచితం):",
 "ba83901b71b8": "దీని గురించి నా దగ్గర ధృవీకరించిన సలహా లేదు. దయచేసి కిసాన్ కాల్ సెంటర్‌కు ఫోన్ చేయండి (ఉచితం):",
 "9b45b05274e8": "కెమెరాకు అనుమతి కావాలి. మీరు 'ఫోటో తీయండి' కూడా వాడవచ్చు, అది మీ ఫోన్ కెమెరాను తెరుస్తుంది.",
@@ -2740,5 +2583,12 @@
 "da3cc8aad2b1": "మెరుగైన మీ మళ్లీ తనిఖీలు",
 "51e6b19f1b24": "మళ్లీ తనిఖీ చేయాల్సిన సమయం",
 "ae2400a9d792": "అదే మొక్క కొత్త ఫోటో తీయండి",
-"1b4cd6d19b95": "మళ్లీ తనిఖీ గుర్తుచేతలు"
+"1b4cd6d19b95": "మళ్లీ తనిఖీ గుర్తుచేతలు",
+"751dd54fa877": "సలహా",
+"4bf5d029e8fa": "Llama రాసినది, ధృవీకరించిన వాస్తవాలతో సరిచూసినది",
+"a8231a3e8b81": "Llama ఇంగ్లీష్ మరియు హిందీలో రాస్తుంది. ఇది మీ భాషలో ధృవీకరించిన సలహా.",
+"ffa2ac6d22b6": "ఇది వ్యాపిస్తూ ఉంటే లేదా మీకు నిశ్చయం లేకపోతే, మీ వ్యవసాయ విస్తరణ అధికారిని లేదా కిసాన్ కాల్ సెంటర్‌ను {kcc} (ఉచితం) సంప్రదించండి. ఇది సంభావ్య కారణం మాత్రమే, నిర్ధారిత నిర్ధారణ కాదు.",
+"ad5b277b7d09": "Llama మీ సలహా రాస్తోంది…",
+"14b0b8ff5eb9": "ఈ ఫోటోలో ఆకు లేదా పురుగు కనిపించలేదు",
+"683404bf044a": "ప్రభావితమైన ఒక ఆకు, పండు లేదా పురుగుకు దగ్గరగా, పగటి వెలుతురులో కెమెరా చూపించి మళ్లీ ఫోటో తీయండి."
 }

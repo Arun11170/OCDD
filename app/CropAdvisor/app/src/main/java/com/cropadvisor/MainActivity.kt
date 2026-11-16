@@ -140,6 +140,10 @@ private fun AppBody(vm: MainViewModel) {
         onDispose { sp.shutdown() }
     }
 
+    // Never read old advice over something new: stop the voice when the screen, the photo, the problem or the language changes.
+    val shownKey = (vm.screen as? Screen.Result)?.state?.let { "R" + System.identityHashCode(it.photo) + it.shownClass } ?: vm.screen.javaClass.simpleName
+    androidx.compose.runtime.LaunchedEffect(shownKey, vm.lang) { Speech.stopAll(); speaking = false }
+
     var pendingUri by rememberSaveable { mutableStateOf<Uri?>(null) }
     var addMode by rememberSaveable { mutableStateOf(false) }
     val camera = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { ok ->
@@ -462,6 +466,7 @@ private fun SettingsDialog(vm: MainViewModel, s: S, onClose: () -> Unit) {
         SmartSetupCard(vm, s)
         VoiceAiCard(vm, l)
         VoiceTestCard(l)
+        BenchmarkCard(vm)
         var checks by remember { mutableStateOf<List<MainViewModel.CheckLine>?>(null) }
         var checking by remember { mutableStateOf(false) }
         DsButton(if (checking) tr(l, "Checking…", "जाँच हो रही है…") else tr(l, "Run self-check of all features", "सभी सुविधाओं की स्व-जाँच चलाएँ"), Icons.Rounded.Check,
@@ -752,9 +757,10 @@ private fun ResultScreen(
                     if (!hold) {
                         Text(if (sure && !st.fromPossibility) s.sureTitle else s.otherPossibilities, fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = Ds.Muted)
                     } else {
-                        Text(if (st.wide) s.wideTitle else s.notSureTitle, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ds.WarnInk)
-                        Text(if (st.wide) s.wideBody else s.notSureBody, fontSize = 15.sp)
-                        val fam = if (st.wide) null else Family.shared(top)
+                        val np = st.prediction.notPlant
+                        Text(if (np) s.noPlantTitle else if (st.wide) s.wideTitle else s.notSureTitle, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ds.WarnInk)
+                        Text(if (np) s.noPlantBody else if (st.wide) s.wideBody else s.notSureBody, fontSize = 15.sp)
+                        val fam = if (st.wide || np) null else Family.shared(top)
                         if (fam != null) Text(s.familyNote(fam), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
                     }
                     if (entry != null) {
@@ -955,6 +961,7 @@ private fun ResultScreen(
         }
 
         if (entry != null && !entry.isHealthy) {
+            item { AdvisoryCard(vm, s, st.shownClass) }
             accHeader(Icons.Rounded.Forum, s.askHeading, oAsk) { oAsk = !oAsk }
             if (oAsk) item { AskSection(vm, s) }
         }
@@ -1009,6 +1016,35 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(title: String
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(title, fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
                 lines.forEach { Text("•  $it", fontSize = 16.sp) }
+            }
+        }
+    }
+}
+
+/** The automatic advisory: starts by itself when the result is shown and re-runs when the language or the problem changes. */
+@Composable
+private fun AdvisoryCard(vm: MainViewModel, s: S, shown: String) {
+    androidx.compose.runtime.LaunchedEffect(shown, vm.lang) { vm.advise() }
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = GreenSoft)) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(s.advTitle, fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
+            when (val a = vm.advisory) {
+                is AdvState.Idle -> Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(Modifier.height(24.dp), color = Green, strokeWidth = 2.dp)
+                    Text(s.advWriting, Modifier.padding(start = 10.dp), fontSize = 15.sp)
+                }
+                is AdvState.Thinking -> {
+                    Text(a.plain, fontSize = 16.sp)   // the verified advice is readable straight away; Llama's checked version replaces it
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        CircularProgressIndicator(Modifier.height(20.dp), color = Green, strokeWidth = 2.dp)
+                        Text(s.advWriting, Modifier.padding(start = 10.dp), fontSize = 13.sp, color = Color(0xFF444444))
+                    }
+                }
+                is AdvState.Done -> {
+                    Text(a.text, fontSize = 16.sp)
+                    Text(if (a.llama) s.advLlama else s.advVetted, fontSize = 13.sp, color = Color(0xFF2E5E31), fontWeight = FontWeight.SemiBold)
+                    a.note?.let { Text(it, fontSize = 13.sp, color = Color(0xFF444444)) }
+                }
             }
         }
     }
@@ -1126,25 +1162,21 @@ private fun bandColor(b: Band) = when (b) {
     Band.SEVERE -> Red
 }
 
-/** What the voice reads: name, damage and decision, what you see, what to do. No chemicals are read out. */
+/** What the voice reads: the problem, the one-line decision and what to do. Short on purpose; the full details stay on screen. No chemicals are read out. */
 private fun spokenText(s: S, e: Entry, sev: Severity.Result, showSeverity: Boolean): String {
     val b = StringBuilder()
     b.append("${s.cropName(e.crop)}. ${e.name}. ")
     if (e.isHealthy) {
-        b.append(s.healthyNote).append(' ')
-    } else if (showSeverity) {
-        b.append("${s.band(sev.band)}, ${Math.round(sev.percent)} %. ")
-        b.append(s.decision(sev.band, e.type)).append(' ')
-    } else if (e.type == "viral") {
-        b.append(s.decision(Band.MILD, "viral")).append(' ')
+        b.append(s.healthyNote)
+        return b.toString()
     }
-    e.symptoms.take(3).forEach { b.append(it).append(". ") }
-    if (!e.isHealthy) {
+    if (showSeverity) b.append(s.decision(sev.band, e.type)).append(' ')
+    else if (e.type == "viral") b.append(s.decision(Band.MILD, "viral")).append(' ')
+    if (e.actions.isNotEmpty()) {
         b.append(s.whatToDo).append(". ")
-        e.actions.take(4).forEach { b.append(it).append(". ") }
+        e.actions.take(3).forEach { b.append(it.trimEnd('.')).append(". ") }
     }
-    b.append(s.footer)
-    return b.toString()
+    return b.toString().trim()
 }
 
 private fun dial(ctx: Context) {
@@ -1330,6 +1362,19 @@ private fun shareText(ctx: Context, title: String, body: String) {
 }
 
 /** Shows exactly what the phone heard and how the app understood it, so a wrong or missing action can be screenshotted and fixed. */
+/** Developer tool for the report: runs 20 Llama advisories and records speed, memory, battery, temperature and checker results. */
+@Composable
+private fun BenchmarkCard(vm: MainViewModel) {
+    Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text("Llama benchmark (for the report)", fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
+            Text("Runs 39 advisories (3 in each of the 13 languages) and writes speed, memory, battery, temperature and the safety-check result per language. About 10 minutes. Unplug the charger and keep the screen on.", fontSize = 14.sp)
+            Button(onClick = { vm.runBenchmark() }, enabled = vm.bench?.startsWith("Running") != true, modifier = Modifier.fillMaxWidth()) { Text("Run benchmark", fontSize = 16.sp) }
+            vm.bench?.let { Text(it, fontSize = 14.sp) }
+        }
+    }
+}
+
 @Composable
 private fun VoiceTestCard(l: Lang) {
     val ctx = LocalContext.current

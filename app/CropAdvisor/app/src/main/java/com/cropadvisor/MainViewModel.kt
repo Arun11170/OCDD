@@ -18,6 +18,14 @@ import kotlinx.coroutines.launch
 
 enum class AskSource { PLAIN, LLAMA, SAFETY }
 
+/** The automatic advisory on the result screen. */
+sealed interface AdvState {
+    data object Idle : AdvState
+    /** Llama is still writing; [plain] (the verified advice) is shown meanwhile so the farmer never waits for nothing. */
+    data class Thinking(val plain: String) : AdvState
+    data class Done(val text: String, val llama: Boolean, val note: String? = null) : AdvState
+}
+
 sealed interface DlState {
     data object Idle : DlState
     data object Checking : DlState
@@ -80,6 +88,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var ask by mutableStateOf<AskState>(AskState.Idle)
         private set
     var smartOn by mutableStateOf(false)
+    var advisory by mutableStateOf<AdvState>(AdvState.Idle)
         private set
     var smartInfo by mutableStateOf<String?>(null)
         private set
@@ -276,7 +285,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     fun clearHistory() { History.clear(getApplication()); history = emptyList() }
 
     fun analyse(uri: Uri, save: Boolean = true) {
-        ask = AskState.Idle
+        ask = AskState.Idle; advisory = AdvState.Idle
         screen = Screen.Busy
         viewModelScope.launch(Dispatchers.Default) {
             val ok = ready.await()
@@ -287,6 +296,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 Log.e("CropAdvisor", "predict failed", e)
                 screen = Screen.Error(s.loadError + "\n\n" + e.toString().take(400)); return@launch
             }
+            Metrics.log(getApplication(), "vision", lang.name, photoResult.millis, 0, Metrics.myPssMb())
             val sev = runCatching { Severity.estimate(bmp, getApplication()) }.getOrElse { Severity.Result(false) }
             val wide = !photoResult.sure && !sev.ok && Severity.wideShot(bmp)
             val quality = runCatching { Quality.check(bmp) }.getOrElse { emptyList() }
@@ -341,7 +351,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     /** Several photos of one plot: counts which problem shows up most and the average damage. */
     fun analysePlot(uris: List<Uri>) {
         if (uris.isEmpty()) return
-        ask = AskState.Idle
+        ask = AskState.Idle; advisory = AdvState.Idle
         screen = Screen.Busy
         viewModelScope.launch(Dispatchers.Default) {
             if (!ready.await()) { screen = Screen.Error(s.loadError + "\n\n" + initError); return@launch }
@@ -377,7 +387,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     fun toggleMarked() = update { it.copy(showMarked = !it.showMarked) }
 
-    fun viewPossibility(classId: String) { ask = AskState.Idle; viewPossibilityInner(classId) }
+    fun viewPossibility(classId: String) { ask = AskState.Idle; advisory = AdvState.Idle; viewPossibilityInner(classId) }
 
     private fun viewPossibilityInner(classId: String) = update {
         it.copy(shownClass = classId, fromPossibility = classId != it.prediction.top[0].classId, answerNote = null, revealed = true)
@@ -399,7 +409,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Ask-back answer: the database says which class the answer points to. */
-    fun answer(target: String) { ask = AskState.Idle; answerInner(target) }
+    fun answer(target: String) { ask = AskState.Idle; advisory = AdvState.Idle; answerInner(target) }
 
     private fun answerInner(target: String) = update { st ->
         when {
@@ -411,7 +421,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     fun reset() {
         unloadLlm()
-        ask = AskState.Idle
+        ask = AskState.Idle; advisory = AdvState.Idle
         screen = Screen.Home
     }
 
@@ -488,6 +498,111 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 Log.w("MainViewModel", "smart answer failed", t)
                 if (llm === active) { llm?.unload(); llm = null; llmLoaded = false }
                 ask = AskState.Done(plain, AskSource.PLAIN, s.smartFailed)
+            }
+        }
+    }
+
+    /**
+     * The advisory pipeline: vision findings (crop, problem, confidence, damage) + verified facts from the knowledge base
+     * go to Llama 3.2 1B (ExecuTorch, own process); its text is checked before it is shown. If Llama is not available,
+     * the language is not English/Hindi, or the check fails, the verified text is shown instead - never an unchecked answer.
+     */
+    fun advise() {
+        val cur = (screen as? Screen.Result)?.state ?: return
+        if (advisory is AdvState.Thinking) return
+        val entryL = Kb.get(cur.shownClass, lang) ?: return
+        val entryEn = Kb.get(cur.shownClass, Lang.EN) ?: return
+        val sev = cur.severity
+        val pct = if (sev.ok && entryEn.hasLesions && sev.percent >= Severity.MIN_REAL_PCT) sev.percent.roundToInt() else null
+        val band = if (pct != null) sev.band else null
+        val plain = Grounding.composeAdvisory(entryL, band, pct, s)
+        val l = lang
+        val vocab = plain + " " + entryL.symptoms.joinToString(" ") + " " + (entryL.lookAlikes ?: "")
+        val enabled = l in Grounding.llamaLangs
+        advisory = if (enabled) AdvState.Thinking(plain) else AdvState.Done(plain, false, s.advOtherLang)
+        if (!enabled) return
+        viewModelScope.launch(Dispatchers.Default) {
+            var active: LlmClient? = null
+            try {
+                val pk = DeviceProfile.pick(getApplication())
+                if (pk !is DeviceProfile.Pick.Use) {
+                    advisory = AdvState.Done(plain, false, if (pk == DeviceProfile.Pick.NoFiles) s.smartNoFiles else s.smartLowRam); return@launch
+                }
+                if (llmLoaded && llmTier != pk.tier) { llm?.unload(); llm = null; llmLoaded = false }
+                llmTier = pk.tier
+                var loadMs = 0L
+                if (!llmLoaded) { Embedder.release(); classifier?.release() }
+                val client = llm ?: LlmClient(getApplication()).also { llm = it }
+                active = client
+                if (!llmLoaded) { loadMs = client.load(pk.files); llmLoaded = true; Metrics.log(getApplication(), "llama_load", l.name, loadMs) }
+                // crop, problem, damage and the farmer's region (if chosen in Settings) go to Llama together with the verified facts
+                val regionLine = state?.let { st -> "\nRegion: ${Region.label(st, Lang.EN)}." } ?: ""
+                val facts = Grounding.facts(entryEn, band, pct) + regionLine
+                val severe = band == Band.SEVERE || band == Band.MODERATE && (pct ?: 0) >= 30
+                val a = client.ask(Grounding.advisoryPrompt(facts, l, severe, if (l == Lang.EN) "" else plain))
+                Metrics.log(getApplication(), "llama_advisory", l.name, a.ms, a.tokens, a.pssMb)
+                val v = Grounding.checkAdvisory(a.text, entryEn, facts, pct, l, vocab)
+                advisory = if (v.ok && !v.refusal)
+                    AdvState.Done(a.text, true, "%.1f tokens/s · %.1f s · %d MB".format(a.tokensPerSecond, a.ms / 1000f, a.pssMb))
+                else AdvState.Done(plain, false, s.smartBlocked + " (" + v.reason + ")")
+            } catch (t: Throwable) {
+                Log.w("MainViewModel", "advisory failed", t)
+                if (llm === active) { llm?.unload(); llm = null; llmLoaded = false }
+                advisory = AdvState.Done(plain, false, s.smartFailed)
+            }
+        }
+    }
+
+    /** Progress text of the Llama benchmark (null = never run). Developer tool: its numbers go to metrics.csv for the report. */
+    var bench by mutableStateOf<String?>(null)
+
+    /** Runs [runs] advisories (alternating English / Hindi, over different problems) and logs speed, memory, battery and the checker result. */
+    fun runBenchmark(runs: Int = 39) {
+        if (bench?.startsWith("Running") == true) return
+        bench = "Running… preparing"
+        viewModelScope.launch(Dispatchers.Default) {
+            var active: LlmClient? = null
+            try {
+                val pk = DeviceProfile.pick(getApplication())
+                if (pk !is DeviceProfile.Pick.Use) { bench = "Llama is not ready on this phone (" + pk.javaClass.simpleName + ")"; return@launch }
+                val ids = (classifier?.classes ?: emptyList()).filter { id -> Kb.get(id, Lang.EN)?.let { !it.isHealthy } == true }
+                if (ids.isEmpty()) { bench = "No problems found in the knowledge base"; return@launch }
+                llmTier = pk.tier
+                if (!llmLoaded) { Embedder.release(); classifier?.release() }
+                val client = llm ?: LlmClient(getApplication()).also { llm = it }
+                active = client
+                if (!llmLoaded) { val ms = client.load(pk.files); llmLoaded = true; Metrics.log(getApplication(), "llama_load", "EN", ms) }
+                var pass = 0
+                val passByLang = HashMap<Lang, Int>(); val runsByLang = HashMap<Lang, Int>()
+                for (i in 0 until runs) {
+                    bench = "Running… ${i + 1} of $runs"
+                    val l = Lang.values()[i % Lang.values().size]
+                    val e = Kb.get(ids[(i * 7) % ids.size], Lang.EN) ?: continue
+                    val eL = Kb.get(ids[(i * 7) % ids.size], l) ?: e
+                    val pct = if (e.hasLesions) 10 + (i * 13) % 50 else null
+                    val band = pct?.let { Severity.bandOf(it.toFloat()) }
+                    val facts = Grounding.facts(e, band, pct)
+                    val plainL = Grounding.composeAdvisory(eL, band, pct, S(l))
+                    val vocabL = plainL + " " + eL.symptoms.joinToString(" ") + " " + (eL.lookAlikes ?: "")
+                    val a = client.ask(Grounding.advisoryPrompt(facts, l, band == Band.SEVERE, if (l == Lang.EN) "" else plainL))
+                    Metrics.log(getApplication(), "llama_advisory", l.name, a.ms, a.tokens, a.pssMb)
+                    val verdict = Grounding.checkAdvisory(a.text, e, facts, pct, l, vocabL)
+                    val ok = verdict.ok && !verdict.refusal
+                    if (ok) { pass++; passByLang[l] = (passByLang[l] ?: 0) + 1 }
+                    runsByLang[l] = (runsByLang[l] ?: 0) + 1
+                    // every advisory is saved as text so a person can score its correctness for the report (advisories.txt)
+                    runCatching {
+                        val dir = getApplication<Application>().getExternalFilesDir(null) ?: getApplication<Application>().filesDir
+                        java.io.File(dir, "advisories.txt").appendText("#${i + 1} ${l.name} ${e.classId} damage=${pct ?: "-"} check=${if (ok) "PASS" else "FAIL(" + verdict.reason + ")"}\nFACTS: ${facts.replace("\n", " | ")}\nANSWER: ${a.text}\n\n")
+                    }
+                    Metrics.log(getApplication(), if (ok) "check_pass" else "check_fail", l.name, 0)
+                }
+                val perLang = Lang.values().joinToString(", ") { lg -> val n = passByLang[lg] ?: 0; val t = runsByLang[lg] ?: 0; "${lg.code} $n/$t" }
+                bench = "Finished: the safety check passed $pass of $runs Llama advisories. By language: $perLang. Copy metrics.csv and advisories.txt from the app's files folder (Android/data/com.cropadvisor/files)."
+            } catch (t: Throwable) {
+                Log.w("MainViewModel", "benchmark failed", t)
+                if (llm === active) { llm?.unload(); llm = null; llmLoaded = false }
+                bench = "Benchmark stopped: " + (t.message ?: t.javaClass.simpleName)
             }
         }
     }
