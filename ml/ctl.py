@@ -1,7 +1,7 @@
 """Small helpers shared by the training scripts: pause request, low priority, safe checkpoint saving.
 
-Pause:   create the file D:\\OCDD\\PAUSE (double-click pause.bat). The running step finishes its current epoch, saves, and exits with code 3.
-Resume:  double-click run_all.bat again. Finished steps are skipped and the unfinished step continues from its last saved epoch.
+Pause:   create the file D:\\OCDD\\PAUSE (optional pause switch). The running step finishes its current epoch, saves, and exits with code 3.
+Resume:  run the same training command again. Finished steps are skipped and the unfinished step continues from its last saved epoch.
 Closing the window or pressing Ctrl+C also works: you only lose the epoch that was running (about 5-10 minutes of work).
 """
 import os, sys
@@ -16,7 +16,7 @@ def pause_requested():
 
 
 def exit_paused(what):
-    print("\n=== PAUSED after %s (progress saved). Run run_all.bat to continue. ===" % what, flush=True)
+    print("\n=== PAUSED after %s (progress saved). Run the same training command to continue. ===" % what, flush=True)
     sys.exit(PAUSED_CODE)
 
 

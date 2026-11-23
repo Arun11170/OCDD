@@ -16,14 +16,11 @@ Other languages (Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, 
 Confident / unsure (call an extension worker) / cannot judge (blurry, wide, not a plant). Severe damage always adds the Kisan Call Centre / extension-worker prompt. Every result is a likely cause, not a confirmed diagnosis. Dose questions are never answered.
 
 ## Layout
-- `app/CropAdvisor/`: the Android app (Kotlin, Jetpack Compose).
-- `ml/`: training, export and evaluation: `train.py`, `export_onnx.py`, `get_negatives.py`, `accuracy_lab.py`, `benchmark.py`, data preparation, and the leaf and lesion segmentation trainers.
-- `scripts/`: Windows launchers (`run_v7.bat` trains, `apply_run7.bat` installs the model, `build_apk.bat` builds the APK, `make_video.bat` converts the demo video).
-- `tools/`: `summarize_metrics.py` (phone measurements to report tables), `make_gates.py` (per-crop confidence gates), voice tests.
-- `kb_src/` and `app/kb_src/`: verified knowledge base sources and the scripts that build it. `pi5/`: Raspberry Pi 5 variant.
-- `results/`: evidence reports (held-out test report and the independent 1,500-photo check for the final model).
-- `docs/`: reproduction steps, offline audit, data licences, third-party notices, limits statement.
-- `submission/`: final report (PDF) and demo video script.
+- `app/CropAdvisor/`: the Android app (Kotlin, Jetpack Compose) with the bundled models and knowledge base.
+- `ml/`: training, export and evaluation code (`train.py`, `export_onnx.py`, `get_negatives.py`, `accuracy_lab.py`, data preparation, segmentation trainers, `make_gates.py`, `summarize_metrics.py`).
+- `results/`: held-out test report and the independent 1,500-photo check for the final model.
+- `docs/`: reproduction steps, offline audit, data sources and licences, third-party notices, limits statement.
+- `submission/`: the final project report (PDF).
 
 ## Results (final model, held-out photos)
 | Measure | Result |
@@ -38,10 +35,10 @@ Confident / unsure (call an extension worker) / cannot judge (blurry, wide, not 
 Full details, charts and the on-device method are in `submission/Field_Assistant_Final_Report.pdf`; raw numbers are in `results/`.
 
 ## Run the app
-Install the APK from the repository's Releases page on an Arm Android phone (about 6 GB RAM recommended). Open it once with internet to download the Llama model (1.2 GB); after that it works fully offline. Build from source with `scripts/build_apk.bat` (needs Android Studio).
+Install the APK from the repository's Releases page on an Arm Android phone (about 6 GB RAM recommended). Open it once with internet to download the Llama model (1.2 GB); after that it works fully offline. Build from source by opening `app/CropAdvisor` in Android Studio (release build).
 
 ## Reproduce training
-See `docs/REPRODUCE.md`. Offline evidence: `docs/OFFLINE_AUDIT.md`. Measurements: Settings > Run benchmark, then `python tools/summarize_metrics.py metrics.csv`.
+See `docs/REPRODUCE.md`. Offline evidence: `docs/OFFLINE_AUDIT.md`. Measurements: Settings > Run benchmark, then `python ml/summarize_metrics.py metrics.csv`.
 
 ## Licences
 Llama 3.2 under the Llama 3.2 Community Licence; datasets and other models: `docs/DATA_LICENSES.md`, `docs/THIRD_PARTY_NOTICES.md`.

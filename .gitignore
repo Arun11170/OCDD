@@ -124,3 +124,7 @@ accuracy_lab_*.json
 accuracy_lab_*.npz
 accuracy_lab_report.txt
 benchmark_report.txt
+
+# local-only helpers
+scripts/
+_local/
