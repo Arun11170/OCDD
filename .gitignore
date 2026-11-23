@@ -107,3 +107,20 @@ release/
 kaggle_upload/
 training/run7/
 submission/FINAL_REPORT.*
+
+# --- local-only (kept out of the public repo) ---
+_archive/
+_cleanup_review/
+training/
+export/
+export_*/
+kaggle/
+kaggle_upload/
+release/
+review/
+phone_samples/
+phone_test_photos/
+accuracy_lab_*.json
+accuracy_lab_*.npz
+accuracy_lab_report.txt
+benchmark_report.txt

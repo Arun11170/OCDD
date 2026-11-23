@@ -24,6 +24,6 @@ Code: `pi5/`. It reads the app's own files (`app/CropAdvisor/app/src/main/assets
 `python pi5/cli.py leaf.jpg --lang hi`     `python pi5/cli.py --selftest`
 
 ## Known limits
-- Same photo model as the phone: it can be wrong on plants and backgrounds it was never trained on (see ACCURACY_PLAN.md).
+- Same photo model as the phone: it can be wrong on plants and backgrounds it was never trained on.
 - The Smart (Llama) Q&A and voice commands are phone-only for now. On the Pi, offline voice would need Vosk/Whisper and a Pi-format Llama (GGUF): a later step.
 - Not tested on a real Pi yet: the code ran on a Linux PC. Send me any error from `journalctl -u ocdd -n 50`.

@@ -14,10 +14,14 @@ Other languages (Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, 
 Confident / unsure (call an extension worker) / cannot judge (blurry, wide, not a plant). Severe damage always adds the Kisan Call Centre / extension-worker prompt. Every result is a likely cause, not a confirmed diagnosis. Dose questions are never answered.
 
 ## Layout
-- `app/CropAdvisor`: the Android app. `pi5/`: Raspberry Pi 5 variant (same models and knowledge base).
-- `train.py`, `export_onnx.py`, `get_negatives.py`, `accuracy_lab.py`: training and evaluation. `kb/`, `kb_src/`: knowledge base.
-- `tools/summarize_metrics.py`: turns on-device measurements into report tables.
-- `docs/`: reproduction steps, offline audit, test protocols, demo script, report skeleton, data licences.
+- `app/CropAdvisor/`: the Android app (Kotlin, Jetpack Compose).
+- `ml/`: training, export and evaluation: `train.py`, `export_onnx.py`, `get_negatives.py`, `accuracy_lab.py`, `benchmark.py`, data preparation, and the leaf and lesion segmentation trainers.
+- `scripts/`: Windows launchers (`run_v7.bat` trains, `apply_run7.bat` installs the model, `build_apk.bat` builds the APK, `make_video.bat` converts the demo video).
+- `tools/`: `summarize_metrics.py` (phone measurements to report tables), `make_gates.py` (per-crop confidence gates), voice tests.
+- `kb_src/`, `kb/`: verified knowledge base and the scripts that build it. `pi5/`: Raspberry Pi 5 variant.
+- `results/`: evidence reports (held-out test, independent 1,500-photo check, training reports).
+- `docs/`: reproduction steps, offline audit, data licences, third-party notices, limits statement.
+- `submission/`: final report (PDF) and demo video script.
 
 ## Run / reproduce
 See `docs/REPRODUCE.md`. Offline evidence: `docs/OFFLINE_AUDIT.md`. Measurements: Settings > Run benchmark, then `python tools/summarize_metrics.py metrics.csv`.
