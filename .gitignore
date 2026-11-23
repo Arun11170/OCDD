@@ -104,3 +104,5 @@ phone_samples/*.jpg
 export_v7/
 data/negatives/
 release/
+kaggle_upload/
+training/run7/
