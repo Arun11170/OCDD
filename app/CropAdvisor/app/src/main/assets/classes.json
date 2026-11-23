@@ -38,6 +38,7 @@
  "mango__healthy",
  "mango__powdery_mildew",
  "mango__sooty_mould",
+ "none__not_plant",
  "okra__alternaria_leaf_spot",
  "okra__cercospora_leaf_spot",
  "okra__downy_mildew",
