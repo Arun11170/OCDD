@@ -1,5 +1,7 @@
 # Field Assistant: offline crop disease and pest advisor
 
+Team Dexters (Pravin Arun R J, Nithishwaran S, Muhil T A) | Bharat AI-SoC Student Challenge, Field Assistant problem statement
+
 **Built with Llama.** (Llama 3.2 1B Instruct, Meta; used under the Llama 3.2 Community License.)
 
 An Android app (Kotlin, Jetpack Compose) that works with **no internet**. A farmer or extension worker photographs a leaf, fruit or pest; the phone names the likely problem, measures how bad it is, and writes practical advice in a local language.
@@ -18,12 +20,27 @@ Confident / unsure (call an extension worker) / cannot judge (blurry, wide, not 
 - `ml/`: training, export and evaluation: `train.py`, `export_onnx.py`, `get_negatives.py`, `accuracy_lab.py`, `benchmark.py`, data preparation, and the leaf and lesion segmentation trainers.
 - `scripts/`: Windows launchers (`run_v7.bat` trains, `apply_run7.bat` installs the model, `build_apk.bat` builds the APK, `make_video.bat` converts the demo video).
 - `tools/`: `summarize_metrics.py` (phone measurements to report tables), `make_gates.py` (per-crop confidence gates), voice tests.
-- `kb_src/`, `kb/`: verified knowledge base and the scripts that build it. `pi5/`: Raspberry Pi 5 variant.
-- `results/`: evidence reports (held-out test, independent 1,500-photo check, training reports).
+- `kb_src/` and `app/kb_src/`: verified knowledge base sources and the scripts that build it. `pi5/`: Raspberry Pi 5 variant.
+- `results/`: evidence reports (held-out test report and the independent 1,500-photo check for the final model).
 - `docs/`: reproduction steps, offline audit, data licences, third-party notices, limits statement.
 - `submission/`: final report (PDF) and demo video script.
 
-## Run / reproduce
+## Results (final model, held-out photos)
+| Measure | Result |
+|---|---|
+| Test accuracy / macro-F1 (15,561 photos) | 91.8% / 0.897 |
+| Field photos / lab photos | 88.0% / 99.8% |
+| Answers at gate 0.80 / correct when it answers | 93.3% / 95.3% |
+| Independent 1,500-photo check (top-1, field) | 93.0% (89.2%) |
+| Non-plant photos recognised | 97.8% |
+| Calibration error (ECE) | 0.021 |
+
+Full details, charts and the on-device method are in `submission/Field_Assistant_Final_Report.pdf`; raw numbers are in `results/`.
+
+## Run the app
+Install the APK from the repository's Releases page on an Arm Android phone (about 6 GB RAM recommended). Open it once with internet to download the Llama model (1.2 GB); after that it works fully offline. Build from source with `scripts/build_apk.bat` (needs Android Studio).
+
+## Reproduce training
 See `docs/REPRODUCE.md`. Offline evidence: `docs/OFFLINE_AUDIT.md`. Measurements: Settings > Run benchmark, then `python tools/summarize_metrics.py metrics.csv`.
 
 ## Licences
