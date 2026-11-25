@@ -840,7 +840,6 @@ private fun ResultScreen(
             item {
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     DsButton(s.retake, Icons.Rounded.CameraAlt, onRetake, Modifier.fillMaxWidth(), BtnStyle.Primary, 54.dp)
-                    DsButton(s.callExpert, Icons.Rounded.Call, { dial(ctx) }, Modifier.fillMaxWidth(), BtnStyle.Outline, 50.dp)
                 }
             }
         }
