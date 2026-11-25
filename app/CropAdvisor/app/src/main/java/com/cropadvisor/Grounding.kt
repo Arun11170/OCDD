@@ -181,7 +181,7 @@ object Grounding {
     fun checkAdvisory(answer: String, e: Entry, facts: String, pct: Int?, lang: Lang, vocab: String = ""): Verdict {
         val a = answer.trim()
         if (a.length < 25) return Verdict(false, "too short")
-        val v = check(a, e, "", "$facts $KCC", pct)   // the helpline number is added by the prompt, so it is allowed
+        val v = check(a, e, "", "$facts $KCC", pct, if (lang == Lang.HI) 140 else 90)   // the helpline number is added by the prompt, so it is allowed
         if (!v.ok || v.refusal) return v
         val range = scriptRange(lang) ?: return Verdict(true)
         if (nativeDigits.containsMatchIn(a)) return Verdict(false, "native digits")
@@ -245,11 +245,11 @@ object Grounding {
     private val num = Regex("""\d+(?:\.\d+)?""")
     private val word = Regex("""[A-Za-z][A-Za-z\-]+""")
 
-    fun check(answer: String, e: Entry, question: String, factsText: String, pct: Int?): Verdict {
+    fun check(answer: String, e: Entry, question: String, factsText: String, pct: Int?, maxWords: Int = 90): Verdict {
         val a = answer.trim()
         if (a.isEmpty()) return Verdict(false, "empty")
         if (a.lowercase().contains(REFUSAL_MARK)) return Verdict(true, refusal = true)
-        if (a.split(Regex("\\s+")).size > 90) return Verdict(false, "too long")
+        if (a.split(Regex("\\s+")).size > maxWords) return Verdict(false, "too long")
 
         val allowedText = (factsText + " " + question).lowercase()
         val allowedNums = num.findAll(allowedText).map { it.value }.toMutableSet()
@@ -267,7 +267,7 @@ object Grounding {
             if (m.value !in allowedWords) return Verdict(false, "chemical-like '${m.value}' not in facts")
         }
         val kbPathogens = pathogenWords + knownCauses.flatMap { c -> word.findAll(c).map { it.value.lowercase() }.toList() }
-            .filter { it.length > 5 }
+            .filter { it.length > 5 && it != "disease" && it != "diseases" }
         for (w in aWords) {
             if (w in kbPathogens && w !in allowedWords) return Verdict(false, "organism '$w' not in facts")
         }
