@@ -1459,18 +1459,18 @@ private fun SmartSetupCard(vm: MainViewModel, s: S) {
                 Text(s.dlRecommended(DeviceProfile.wanted(d)), fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = Green)
             }
             Text(s.dlInstalled(vm.installed(LlmTier.FULL), vm.installed(LlmTier.LITE)), fontSize = 13.sp)
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                FilterChip(modifier = Modifier.heightIn(min = 44.dp), selected = vm.forceTier == null, onClick = { vm.forceTier = null }, label = { Text(s.dlAuto, fontSize = 13.sp) })
-                FilterChip(modifier = Modifier.heightIn(min = 44.dp), selected = vm.forceTier == LlmTier.FULL, onClick = { vm.forceTier = LlmTier.FULL }, label = { Text(s.dlFull, fontSize = 13.sp) })
-                FilterChip(modifier = Modifier.heightIn(min = 44.dp), selected = vm.forceTier == LlmTier.LITE, onClick = { vm.forceTier = LlmTier.LITE }, label = { Text(s.dlLite, fontSize = 13.sp) })
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                FilterChip(modifier = Modifier.weight(1f).heightIn(min = 44.dp), selected = vm.forceTier == null, onClick = { vm.forceTier = null }, label = { Text(s.dlAuto, fontSize = 13.sp, maxLines = 1, modifier = Modifier.fillMaxWidth(), textAlign = androidx.compose.ui.text.style.TextAlign.Center) })
+                FilterChip(modifier = Modifier.weight(1f).heightIn(min = 44.dp), selected = vm.forceTier == LlmTier.FULL, onClick = { vm.forceTier = LlmTier.FULL }, label = { Text(s.dlFull, fontSize = 13.sp, maxLines = 1, modifier = Modifier.fillMaxWidth(), textAlign = androidx.compose.ui.text.style.TextAlign.Center) })
+                FilterChip(modifier = Modifier.weight(1f).heightIn(min = 44.dp), selected = vm.forceTier == LlmTier.LITE, onClick = { vm.forceTier = LlmTier.LITE }, label = { Text(s.dlLite, fontSize = 13.sp, maxLines = 1, modifier = Modifier.fillMaxWidth(), textAlign = androidx.compose.ui.text.style.TextAlign.Center) })
             }
             OutlinedTextField(
                 value = vm.server, onValueChange = { vm.changeServer(it) }, singleLine = true,
-                label = { Text(s.dlServerLabel, fontSize = 13.sp) }, modifier = Modifier.fillMaxWidth(),
+                label = { Text(s.dlServerLabel, fontSize = 13.sp, maxLines = 1) }, textStyle = androidx.compose.ui.text.TextStyle(fontSize = 14.sp), modifier = Modifier.fillMaxWidth(),
             )
             OutlinedTextField(
                 value = vm.hub, onValueChange = { vm.changeHub(it) }, singleLine = true,
-                label = { Text(s.hubLabel, fontSize = 13.sp) }, modifier = Modifier.fillMaxWidth(),
+                label = { Text(s.hubLabel, fontSize = 13.sp, maxLines = 1) }, textStyle = androidx.compose.ui.text.TextStyle(fontSize = 14.sp), modifier = Modifier.fillMaxWidth(),
             )
             Text(s.dlWifi, fontSize = 13.sp, color = Color(0xFF444444))
             when (val st = vm.dl) {

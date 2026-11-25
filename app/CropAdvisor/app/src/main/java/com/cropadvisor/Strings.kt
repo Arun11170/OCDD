@@ -384,7 +384,7 @@ class S(val l: Lang) {
         "Installed: " + listOfNotNull(if (full) "Full" else null, if (lite) "Light" else null).ifEmpty { listOf("none") }.joinToString(", "),
         "लगे हुए: " + listOfNotNull(if (full) "पूरा" else null, if (lite) "हल्का" else null).ifEmpty { listOf("कोई नहीं") }.joinToString(", "),
     )
-    val dlServerLabel = p("Model server address (for example 192.168.1.5:8000)", "मॉडल सर्वर का पता (जैसे 192.168.1.5:8000)")
+    val dlServerLabel = p("Model server address", "मॉडल सर्वर का पता")
     val dlStart = p("Download the right build", "सही संस्करण डाउनलोड करें")
     val dlCancel = p("Cancel", "रद्द करें")
     val dlChecking = p("Contacting the server…", "सर्वर से जुड़ रहे हैं…")
@@ -442,7 +442,7 @@ class S(val l: Lang) {
     }
 
     // ── village hub ──
-    val hubLabel = p("Village hub address, optional (for small phones)", "गाँव के हब का पता, वैकल्पिक (छोटे फोन के लिए)")
+    val hubLabel = p("Village hub address (optional)", "गाँव के हब का पता (वैकल्पिक)")
     val smartViaHub = p("Smart answers will be produced by your village hub and checked on this phone.", "Smart उत्तर आपके गाँव का हब बनाएगा और इस फोन पर जाँचे जाएँगे।")
     val viaHubNote = p("Answered by the village hub, checked on this phone.", "गाँव के हब ने उत्तर दिया, इस फोन पर जाँचा गया।")
     val hubFailed = p("Could not reach the village hub. Showing the advice text instead.", "गाँव के हब से संपर्क नहीं हुआ। सलाह का पाठ दिखा रहे हैं।")
