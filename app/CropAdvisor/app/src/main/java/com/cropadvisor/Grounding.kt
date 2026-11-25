@@ -181,7 +181,7 @@ object Grounding {
     fun checkAdvisory(answer: String, e: Entry, facts: String, pct: Int?, lang: Lang, vocab: String = ""): Verdict {
         val a = answer.trim()
         if (a.length < 25) return Verdict(false, "too short")
-        val v = check(a, e, "", "$facts $KCC", pct, if (lang == Lang.HI) 140 else 90)   // the helpline number is added by the prompt, so it is allowed
+        val v = check(a, e, "", "$facts $KCC", pct, if (lang == Lang.HI) 100 else 90)   // the helpline number is added by the prompt, so it is allowed
         if (!v.ok || v.refusal) return v
         val range = scriptRange(lang) ?: return Verdict(true)
         if (nativeDigits.containsMatchIn(a)) return Verdict(false, "native digits")
