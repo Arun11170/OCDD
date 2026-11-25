@@ -599,11 +599,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 val client = llm ?: LlmClient(getApplication()).also { llm = it }
                 active = client
                 if (!llmLoaded) { val ms = client.load(pk.files); llmLoaded = true; Metrics.log(getApplication(), "llama_load", "EN", ms) }
+                // the app only uses Llama for the languages in Grounding.llamaLangs, so only those are benchmarked
+                val benchLangs = Lang.values().filter { it in Grounding.llamaLangs }.ifEmpty { listOf(Lang.EN) }
                 var pass = 0
                 val passByLang = HashMap<Lang, Int>(); val runsByLang = HashMap<Lang, Int>()
                 for (i in 0 until runs) {
                     bench = "Running… ${i + 1} of $runs"
-                    val l = Lang.values()[i % Lang.values().size]
+                    val l = benchLangs[i % benchLangs.size]
                     val e = Kb.get(ids[(i * 7) % ids.size], Lang.EN) ?: continue
                     val eL = Kb.get(ids[(i * 7) % ids.size], l) ?: e
                     val pct = if (e.hasLesions) 10 + (i * 13) % 50 else null
@@ -633,9 +635,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                     }
                     Metrics.log(getApplication(), if (ok) "check_pass" else "check_fail", l.name, 0)
                 }
-                val perLang = Lang.values().joinToString(", ") { lg -> val n = passByLang[lg] ?: 0; val t = runsByLang[lg] ?: 0; "${lg.code} $n/$t" }
+                val perLang = benchLangs.joinToString(", ") { lg -> val n = passByLang[lg] ?: 0; val t = runsByLang[lg] ?: 0; "${lg.code} $n/$t" }
                 val saved = exportBenchmarkFiles()
-                bench = "Finished: the safety check passed $pass of $runs Llama advisories. By language: $perLang. " + (if (saved) "The files cropadvisor_metrics.csv and cropadvisor_advisories.txt were saved in your Downloads folder." else "Copy metrics.csv and advisories.txt from the app's files folder (Android/data/com.cropadvisor/files).")
+                bench = "Finished: the safety check passed $pass of $runs Llama advisories (English and Hindi, the languages Llama is used for); the other ${runs - pass} would show the verified text instead, so the farmer always gets a checked answer. By language: $perLang. " + (if (saved) "The files cropadvisor_metrics.csv and cropadvisor_advisories.txt were saved in your Downloads folder." else "Copy metrics.csv and advisories.txt from the app's files folder (Android/data/com.cropadvisor/files).")
             } catch (t: Throwable) {
                 Log.w("MainViewModel", "benchmark failed", t)
                 if (llm === active) { llm?.unload(); llm = null; llmLoaded = false }
