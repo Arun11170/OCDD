@@ -73,7 +73,9 @@ class LlmService : Service() {
                         var tokens = 0
                         var err: String? = null
                         val t0 = System.nanoTime()
-                        val seqLen = minOf(2048, prompt.length / 3 + 256)
+                        // Indian scripts use many more tokens per character than English; a too-small limit makes ExecuTorch fail with "Invalid argument"
+                        val nonAscii = prompt.count { it.code > 127 }
+                        val seqLen = if (nonAscii * 5 > prompt.length) minOf(2048, prompt.length + 384) else minOf(2048, prompt.length / 3 + 256)
                         mod.generate(prompt, seqLen, object : LlmCallback {
                             override fun onResult(result: String) { sb.append(result); tokens++ }
                             override fun onStats(stats: String) {}

@@ -584,7 +584,16 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                     val facts = Grounding.facts(e, band, pct)
                     val plainL = Grounding.composeAdvisory(eL, band, pct, S(l))
                     val vocabL = plainL + " " + eL.symptoms.joinToString(" ") + " " + (eL.lookAlikes ?: "")
-                    val a = client.ask(Grounding.advisoryPrompt(facts, l, band == Band.SEVERE, if (l == Lang.EN) "" else plainL))
+                    val a = try { client.ask(Grounding.advisoryPrompt(facts, l, band == Band.SEVERE, if (l == Lang.EN) "" else plainL)) } catch (t: Throwable) {
+                        // one failed advisory must not stop the whole run: record it and carry on
+                        runsByLang[l] = (runsByLang[l] ?: 0) + 1
+                        runCatching {
+                            val dir = getApplication<Application>().getExternalFilesDir(null) ?: getApplication<Application>().filesDir
+                            java.io.File(dir, "advisories.txt").appendText("#${i + 1} ${l.name} ${e.classId} ERROR: ${(t.message ?: t.javaClass.simpleName).take(160)}\n\n")
+                        }
+                        Metrics.log(getApplication(), "check_fail", l.name, 0)
+                        continue
+                    }
                     Metrics.log(getApplication(), "llama_advisory", l.name, a.ms, a.tokens, a.pssMb)
                     val verdict = Grounding.checkAdvisory(a.text, e, facts, pct, l, vocabL)
                     val ok = verdict.ok && !verdict.refusal
