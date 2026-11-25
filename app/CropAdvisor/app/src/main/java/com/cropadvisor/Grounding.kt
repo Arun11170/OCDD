@@ -181,7 +181,7 @@ object Grounding {
     fun checkAdvisory(answer: String, e: Entry, facts: String, pct: Int?, lang: Lang, vocab: String = ""): Verdict {
         val a = answer.trim()
         if (a.length < 25) return Verdict(false, "too short")
-        val v = check(a, e, "", "$facts $KCC", pct, if (lang == Lang.HI) 100 else 90)   // the helpline number is added by the prompt, so it is allowed
+        val v = check(a, e, "", "$facts $KCC", pct)   // the helpline number is added by the prompt, so it is allowed
         if (!v.ok || v.refusal) return v
         val range = scriptRange(lang) ?: return Verdict(true)
         if (nativeDigits.containsMatchIn(a)) return Verdict(false, "native digits")
@@ -248,11 +248,14 @@ object Grounding {
     private val num = Regex("""\d+(?:\.\d+)?""")
     private val word = Regex("""[A-Za-z][A-Za-z\-]+""")
 
-    fun check(answer: String, e: Entry, question: String, factsText: String, pct: Int?, maxWords: Int = 90): Verdict {
+    fun check(answer: String, e: Entry, question: String, factsText: String, pct: Int?, maxWords: Int = Int.MAX_VALUE): Verdict {
         val a = answer.trim()
         if (a.isEmpty()) return Verdict(false, "empty")
         if (a.lowercase().contains(REFUSAL_MARK)) return Verdict(true, refusal = true)
         if (a.split(Regex("\\s+")).size > maxWords) return Verdict(false, "too long")
+        // no length limit, but an answer that repeats the same sentence (the model looping) is rejected
+        val sents = a.split(Regex("[.!?\u0964\\n]+")).map { it.trim() }.filter { it.length > 15 }
+        if (sents.size != sents.toSet().size) return Verdict(false, "repeats itself")
 
         val allowedText = (factsText + " " + question).lowercase()
         val allowedNums = num.findAll(allowedText).map { it.value }.toMutableSet()
