@@ -242,6 +242,9 @@ object Grounding {
     /** All "cause" lines of the database (set once at start-up); organism names in them count as known organisms. */
     var knownCauses: Collection<String> = emptyList()
 
+    /** Ordinary English words that appear in cause lines but are not organism names (they must not be treated as invented organisms). */
+    private val plainWords = setOf("disease", "diseases", "spread", "spreads", "spreading", "damage", "damaged", "caused", "causes", "infected", "infection")
+
     private val num = Regex("""\d+(?:\.\d+)?""")
     private val word = Regex("""[A-Za-z][A-Za-z\-]+""")
 
@@ -267,7 +270,7 @@ object Grounding {
             if (m.value !in allowedWords) return Verdict(false, "chemical-like '${m.value}' not in facts")
         }
         val kbPathogens = pathogenWords + knownCauses.flatMap { c -> word.findAll(c).map { it.value.lowercase() }.toList() }
-            .filter { it.length > 5 && it != "disease" && it != "diseases" }
+            .filter { it.length > 5 && it !in plainWords }
         for (w in aWords) {
             if (w in kbPathogens && w !in allowedWords) return Verdict(false, "organism '$w' not in facts")
         }
