@@ -557,9 +557,36 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var bench by mutableStateOf<String?>(null)
 
     /** Runs [runs] advisories (alternating English / Hindi, over different problems) and logs speed, memory, battery and the checker result. */
+    /** Copies the benchmark files to the public Downloads folder so they can be shared from a phone (Android hides Android/data). */
+    private fun exportBenchmarkFiles(): Boolean {
+        if (android.os.Build.VERSION.SDK_INT < 29) return false
+        return runCatching {
+            val app = getApplication<Application>()
+            val dir = app.getExternalFilesDir(null) ?: app.filesDir
+            var all = true
+            for (name in listOf("metrics.csv", "advisories.txt")) {
+                val src = java.io.File(dir, name)
+                if (!src.exists()) { all = false; continue }
+                val v = android.content.ContentValues().apply {
+                    put(android.provider.MediaStore.Downloads.DISPLAY_NAME, "cropadvisor_$name")
+                    put(android.provider.MediaStore.Downloads.MIME_TYPE, "text/plain")
+                    put(android.provider.MediaStore.Downloads.RELATIVE_PATH, android.os.Environment.DIRECTORY_DOWNLOADS)
+                }
+                val uri = app.contentResolver.insert(android.provider.MediaStore.Downloads.EXTERNAL_CONTENT_URI, v)
+                if (uri == null) { all = false; continue }
+                app.contentResolver.openOutputStream(uri)?.use { out -> src.inputStream().use { it.copyTo(out) } }
+            }
+            all
+        }.getOrDefault(false)
+    }
+
     fun runBenchmark(runs: Int = 39) {
         if (bench?.startsWith("Running") == true) return
         bench = "Running… preparing"
+        runCatching {
+            val d0 = getApplication<Application>().getExternalFilesDir(null) ?: getApplication<Application>().filesDir
+            java.io.File(d0, "advisories.txt").delete(); java.io.File(d0, "metrics.csv").delete()
+        }
         viewModelScope.launch(Dispatchers.Default) {
             var active: LlmClient? = null
             try {
@@ -607,7 +634,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                     Metrics.log(getApplication(), if (ok) "check_pass" else "check_fail", l.name, 0)
                 }
                 val perLang = Lang.values().joinToString(", ") { lg -> val n = passByLang[lg] ?: 0; val t = runsByLang[lg] ?: 0; "${lg.code} $n/$t" }
-                bench = "Finished: the safety check passed $pass of $runs Llama advisories. By language: $perLang. Copy metrics.csv and advisories.txt from the app's files folder (Android/data/com.cropadvisor/files)."
+                val saved = exportBenchmarkFiles()
+                bench = "Finished: the safety check passed $pass of $runs Llama advisories. By language: $perLang. " + (if (saved) "The files cropadvisor_metrics.csv and cropadvisor_advisories.txt were saved in your Downloads folder." else "Copy metrics.csv and advisories.txt from the app's files folder (Android/data/com.cropadvisor/files).")
             } catch (t: Throwable) {
                 Log.w("MainViewModel", "benchmark failed", t)
                 if (llm === active) { llm?.unload(); llm = null; llmLoaded = false }

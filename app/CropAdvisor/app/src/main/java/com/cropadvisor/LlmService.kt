@@ -32,6 +32,8 @@ class LlmService : Service() {
 
     private val worker = Executors.newSingleThreadExecutor()
     @Volatile private var module: LlmModule? = null
+    @Volatile private var lastModel = ""
+    @Volatile private var lastTok = ""
     private val messenger = Messenger(Handler(Looper.getMainLooper()) { m -> onMessage(m); true })
 
     override fun onBind(intent: Intent?): IBinder = messenger.binder
@@ -52,6 +54,7 @@ class LlmService : Service() {
                         val t0 = System.nanoTime()
                         if (module == null) {
                             val mod = LlmModule(model, tok, 0.2f)   // low temperature = stays close to the facts
+                            lastModel = model; lastTok = tok
                             val rc: Any? = mod.load()                // Int status in some versions, Unit in others
                             if (rc is Int && rc != 0) throw IllegalStateException("load status $rc")
                             module = mod
@@ -66,9 +69,15 @@ class LlmService : Service() {
             MSG_ASK -> {
                 val prompt = m.data.getString("prompt").orEmpty()
                 worker.execute {
-                    val mod = module
-                    if (mod == null) { reply(to, R_ERROR, id) { putString("message", "model not loaded") }; return@execute }
+                    var mod: LlmModule = module ?: run { reply(to, R_ERROR, id) { putString("message", "model not loaded") }; return@execute }
                     try {
+                        // every advisory starts from an empty context: otherwise the 2048-token memory fills up after a few answers and every later request fails
+                        val cleared = try { mod.javaClass.getMethod("resetContext").invoke(mod); true } catch (_: Throwable) { false }
+                        if (!cleared && lastModel.isNotEmpty()) {
+                            val nm = LlmModule(lastModel, lastTok, 0.2f)
+                            nm.load()
+                            module = nm; mod = nm
+                        }
                         val sb = StringBuilder()
                         var tokens = 0
                         var err: String? = null
